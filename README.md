@@ -1,0 +1,121 @@
+# Mercado Inmobiliario Digital en Diez de Octubre, La Habana
+
+## Historia del proyecto
+
+Este proyecto responde a una pregunta sencilla: **¿Cuánto cuesta realmente vivir en el municipio Diez de Octubre, La Habana?**
+
+Una persona que quiera comprar o alquilar una vivienda en esa zona no tiene una referencia clara de precios ni de qué tipo de inmuebles están disponibles en el mercado digital. Con este trabajo caracterizo el mercado inmobiliario local usando:
+
+1. Anuncios reales publicados en línea (Revolico).
+2. Datos oficiales del Anuario Estadístico de Cuba (ONEI) como contexto general.
+
+El objetivo es ofrecer una guía clara, sin tecnicismos, para cualquier persona interesada en comprar o alquilar vivienda en Diez de Octubre: cuánto cuesta, en qué zona, qué características afectan el precio y en qué moneda se declaran los anuncios.
+
+## Objetivos
+
+- Analizar la oferta inmobiliaria publicada en plataformas digitales cubanas enfocada al municipio Diez de Octubre.
+- Caracterizar precios, tipos de inmueble, zonas, moneda declarada y características físicas.
+- Responder 30 preguntas de investigación coherentes entre sí, comunicables a personas sin conocimientos técnicos ni del tema inmobiliario.
+- Proporcionar una base replicable y abierta para futuros análisis del mercado digital cubano.
+
+## Fuentes de datos
+
+| Fuente | Aporte |
+|--------|--------|
+| **Revolico** (scraping propio) | Anuncios actuales de inmobiliaria en Diez de Octubre: precios, tipos, zonas, moneda. |
+| **Anuario Estadístico de Cuba (ONEI)** | Contexto oficial: población, vivienda y tenencia del municipio para enmarcar la muestra digital. |
+| **Otras fuentes con concurrencia y validez** | Solo se usan si aportan datos públicos y verificables del mercado informal cubano. |
+
+> Nota: Este proyecto no aborda aspectos políticos ni hace comparativas que no sean directamente hacia el mercado inmobiliario.
+
+## Estructura del repositorio
+
+```
+proyecto-mercado-10-octubre/
+├── README.md                      # Historia, objetivos, fuentes y estructura
+├── datos/brutos/revolico_crudos.json       # Anuncios originales de Revolico
+├── datos/brutos/revolico_sin_municipio.json # Anuncios sin municipio detectado
+├── datos/limpios/.gitkeep               # Espacio para datos limpios
+├── notebooks/.gitkeep                   # Espacio para Jupyter Notebooks
+├── src/scrape_revolico.py             # Script de descarga de anuncios
+├── analisis/informe_final.md          # 30 preguntas + respuestas + conclusiones
+├── presentacion/.gitkeep              # Espacio para diapositivas de exposición
+└── fuentes/anuario_estadistico_notas.md # Notas de fuentes oficiales consultadas
+```
+
+## Las 30 preguntas de investigación
+
+Todas apuntan al mismo objetivo: entender el mercado inmobiliario digital de Diez de Octubre. Están organizadas en 6 bloques temáticos y son coherentes entre sí.
+
+### Bloque A: Precios del mercado (6)
+1. ¿Cuál es el precio promedio de venta en USD en Diez de Octubre?
+2. ¿Cuál es el precio mediano de alquiler en USD?
+3. ¿Cuál es el rango de precios que cubre el 80% de los anuncios de venta?
+4. ¿Cuál es el anuncio de venta más caro y el más barato publicado?
+5. ¿Qué proporción de anuncios no declara precio?
+6. ¿Existe diferencia significativa entre el precio promedio de venta y el de alquiler?
+
+### Bloque B: Tipos de inmueble (6)
+7. ¿Cuáles son los tipos de inmueble más publicados? (casa, apartamento, local, terreno)
+8. ¿Qué porcentaje son casas independientes frente a apartamentos?
+9. ¿Cuál es el precio promedio de venta por tipo de inmueble?
+10. ¿Qué tipo de inmueble concentra el precio máximo declarado?
+11. ¿Cuántos anuncios son de venta frente a cuántos son de alquiler?
+12. ¿Qué tipo de inmueble domina en las zonas con precios más altos?
+
+### Bloque C: Características físicas (6)
+13. ¿Cuál es la cantidad más común de cuartos/habitaciones?
+14. ¿Cómo varía el precio según el número de cuartos?
+15. ¿Qué porcentaje de anuncios menciona garaje y cómo afecta al precio?
+16. ¿Cuántos anuncios especifican "planta baja" y cuál es su precio promedio?
+17. ¿Qué porcentaje menciona metraje (m²) y cuál es el promedio?
+18. ¿Qué características físicas se mencionan con más frecuencia? (patio, azotea, cocina, etc.)
+
+### Bloque D: Ubicación dentro de Diez de Octubre (6)
+19. ¿Qué zonas o barrios aparecen con más frecuencia en los anuncios? (Santos Suárez, La Víbora, Lawton, Luyano, El Sevillano, etc.)
+20. ¿Qué zona tiene el precio promedio de venta más alto?
+21. ¿Qué zona tiene la mayor cantidad de anuncios publicados?
+22. ¿Hay diferencia de precios entre zonas dentro del mismo municipio?
+23. ¿Qué zonas aparecen solo en venta o solo en alquiler?
+24. ¿Cuántos anuncios no especifican zona dentro del municipio?
+
+### Bloque E: Moneda y mercado informal (6)
+25. ¿Qué proporción de anuncios declara precios en USD frente a CUP?
+26. ¿Cuál es el precio promedio de los anuncios declarados en CUP?
+27. ¿Qué porcentaje de anuncios incluye palabras como "oportunidad", "ganga" o "permuta"?
+28. ¿Qué rango de precios es más frecuente para ventas en USD?
+29. ¿Cuántos anuncios parecen ser de particulares frente a posibles anuncios repetidos o agencias (por lenguaje o título)?
+30. ¿Qué recomendación práctica se puede hacer a alguien que quiera comprar o alquilar en Diez de Octubre según estos datos?
+
+## Cómo ejecutar el scraping
+
+Desde la carpeta raíz del proyecto:
+
+```bash
+python3 src/scrape_revolico.py
+```
+
+Esto descargará los anuncios de inmobiliaria de Diez de Octubre desde Revolico y guardará los resultados en:
+- `datos/brutos/revolico_crudos.json`
+- `datos/brutos/revolico_sin_municipio.json`
+
+## Herramientas utilizadas
+
+- **Python** con `requests` y `BeautifulSoup` para el scraping.
+- **Pandas** y **Matplotlib/Seaborn** para el análisis y visualizaciones (en los notebooks).
+- No se usan Excel, SQL ni Power BI.
+
+## Limitaciones
+
+- Los datos provienen únicamente de anuncios publicados en un portal digital; no representan la totalidad del mercado físico.
+- Algunos anuncios no declaran precio ni ubicación específica dentro del municipio.
+- La detección de municipio se basa en palabras clave presentes en el título y el enlace del anuncio.
+
+## Exposición
+
+El proyecto incluye materiales para una exposición de aproximadamente 5-10 minutos, pensada para personas sin conocimientos técnicos ni del tema inmobiliario. Se recomienda presentar:
+1. El problema: ¿cuánto cuesta vivir en Diez de Octubre?
+2. La fuente: anuncios reales de Revolico + contexto del Anuario Estadístico.
+3. Los 3 hallazgos más importantes (precio promedio, zona más cara, tipo más común).
+4. Qué significa esto para una persona común.
+5. Limitaciones de los datos.
