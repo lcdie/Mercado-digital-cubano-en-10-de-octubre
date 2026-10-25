@@ -5,7 +5,8 @@
     "moneda": "USD",
     "municipio": "Diez de Octubre",
     "enlace": "https://www.elcaiman.com/propiedad/tengo-esta-casa-en-planta-alta-en-arroyo-naranjo-reparto-el-retiro-arroyo",
-    "fuente": "elcaiman"
+    "fuente": "elcaiman",
+    "permuta": false
   },
   {
     "titulo": "✨ ¡CASA INDEPENDIENTE EN VENTA EN LA LISA, REPARTO ELENA!",
@@ -13,7 +14,8 @@
     "moneda": "USD",
     "municipio": "Diez de Octubre",
     "enlace": "https://www.elcaiman.com/propiedad/casa-independiente-en-venta-en-la-lisa-reparto-elena-la-lisa-la-habana",
-    "fuente": "elcaiman"
+    "fuente": "elcaiman",
+    "permuta": false
   },
   {
     "titulo": "🏠✨ ¡APARTAMENTO EN VENTA EN CENTRO HABANA!",
@@ -21,7 +23,8 @@
     "moneda": "USD",
     "municipio": "Diez de Octubre",
     "enlace": "https://www.elcaiman.com/propiedad/apartamento-en-venta-en-centro-habana-centro-habana-la-habana",
-    "fuente": "elcaiman"
+    "fuente": "elcaiman",
+    "permuta": false
   },
   {
     "titulo": "casa de 4 habitaciones, 2 banos de los cuales uno intercalado), dos terrazas y garaje, altos de una biplanta",
@@ -29,7 +32,8 @@
     "moneda": "USD",
     "municipio": "Diez de Octubre",
     "enlace": "https://www.elcaiman.com/propiedad/casa-de-4-habitaciones-2-banos-de-los-cuales-uno-intercalado-dos-terrazas-y",
-    "fuente": "elcaiman"
+    "fuente": "elcaiman",
+    "permuta": false
   },
   {
     "titulo": "Casa de 5 habitaciones ubicada en Infanta",
@@ -37,7 +41,8 @@
     "moneda": "USD",
     "municipio": "Diez de Octubre",
     "enlace": "https://www.elcaiman.com/propiedad/casa-de-5-habitaciones-ubicada-en-infanta-centro-habana-la-habana",
-    "fuente": "elcaiman"
+    "fuente": "elcaiman",
+    "permuta": false
   },
   {
     "titulo": "Finca con casa pequeña y propiedad",
@@ -45,7 +50,8 @@
     "moneda": "USD",
     "municipio": "Diez de Octubre",
     "enlace": "https://www.elcaiman.com/propiedad/finca-con-casa-pequena-y-propiedad-la-lisa-la-habana",
-    "fuente": "elcaiman"
+    "fuente": "elcaiman",
+    "permuta": false
   },
   {
     "titulo": "APARTAMENTO EN LA PLAYA",
@@ -53,7 +59,8 @@
     "moneda": "USD",
     "municipio": "Diez de Octubre",
     "enlace": "https://www.elcaiman.com/propiedad/apartamento-en-la-playa-playa-la-habana",
-    "fuente": "elcaiman"
+    "fuente": "elcaiman",
+    "permuta": false
   },
   {
     "titulo": "Apt en santa fe playa",
@@ -61,6 +68,7 @@
     "moneda": "USD",
     "municipio": "Diez de Octubre",
     "enlace": "https://www.elcaiman.com/propiedad/apt-en-santa-fe-playa-playa-la-habana",
-    "fuente": "elcaiman"
+    "fuente": "elcaiman",
+    "permuta": false
   }
 ]
