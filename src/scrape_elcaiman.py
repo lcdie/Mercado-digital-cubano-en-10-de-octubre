@@ -9,9 +9,10 @@ enlaces <a> cuyo href contenga '/propiedad/'.
 Dentro de cada bloque de anuncio se extrae:
   - titulo: texto del nodo <p> con el título del anuncio.
   - precio: nodo que contenga 'USD' (formato $X,XXX USD).
+  - telefono: se extrae desde la ficha del anuncio cuando esté visible.
 Se priorizan los atributos data-testid cuando existan.
 
-Resultados: datos/brutos/elcaiman_crudos.json  (titulo, precio, moneda, municipio, enlace, fuente)
+Resultados: datos/brutos/elcaiman_crudos.json  (titulo, precio, moneda, municipio, telefono, enlace, fuente)
 """
 
 import json
@@ -43,6 +44,25 @@ HEADERS = {
     "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
+
+# Patrón para teléfonos cubanos
+TELEFONO_PATTERN = re.compile(r'(?:\+53\s*)?[567]\d{7}', re.IGNORECASE)
+
+
+def extraer_telefono(url):
+    """Extrae el número de teléfono desde la ficha del anuncio."""
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=15)
+        if resp.status_code != 200:
+            return "NO DISPONIBLE"
+        texto = resp.text
+        matches = TELEFONO_PATTERN.findall(texto)
+        if matches:
+            tel = matches[0].strip().replace(' ', '')
+            return tel
+        return "NO DISPONIBLE"
+    except Exception:
+        return "NO DISPONIBLE"
 
 
 def parse_precio_elcaiman(texto):
@@ -130,12 +150,15 @@ def extraer_anuncios(html, base_url):
                 break
 
         precio_numero, moneda = parse_precio_elcaiman(precio_texto)
+        telefono = extraer_telefono(enlace_absoluto)
+        time.sleep(1)
 
         anuncios.append({
             "titulo": titulo,
             "precio": precio_numero,
             "moneda": moneda,
             "municipio": "Diez de Octubre",
+            "telefono": telefono,
             "enlace": enlace_absoluto,
             "fuente": "elcaiman",
         })

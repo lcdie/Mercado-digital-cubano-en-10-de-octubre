@@ -55,6 +55,25 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 
+# Patrón para teléfonos cubanos
+TELEFONO_PATTERN = re.compile(r'(?:\+53\s*)?[567]\d{7}', re.IGNORECASE)
+
+
+def extraer_telefono(url):
+    """Extrae el número de teléfono desde la ficha del anuncio."""
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=15)
+        if resp.status_code != 200:
+            return "NO DISPONIBLE"
+        texto = resp.text
+        matches = TELEFONO_PATTERN.findall(texto)
+        if matches:
+            tel = matches[0].strip().replace(' ', '')
+            return tel
+        return "NO DISPONIBLE"
+    except Exception:
+        return "NO DISPONIBLE"
+
 
 def _sin_tildes(texto):
     """Devuelve el texto en minúsculas sin tildes ni caracteres especiales."""
@@ -278,12 +297,15 @@ def extraer_anuncios(html, base_url):
         precio_info = extraer_precio(a)
         titulo = _titulo_del_anuncio(a, precio_info["texto"])
         municipio = detectar_municipio(titulo, enlace_absoluto)
+        telefono = extraer_telefono(enlace_absoluto)
+        time.sleep(1)
 
         anuncios.append({
             "titulo": titulo,
             "precio": precio_info["numero"],
             "moneda": precio_info["moneda"],
             "municipio": municipio,
+            "telefono": telefono,
             "enlace": enlace_absoluto,
         })
 
