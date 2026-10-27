@@ -1,0 +1,1318 @@
+==========================================================================================
+LISTA DE ANUNCIOS CON TELÉFONO, MUNICIPIO, PROVINCIA Y ENLACES
+==========================================================================================
+Fecha: 2026-10-27
+Total de anuncios: 109
+Nota: Los teléfonos NO aparecen en los listados JSON de Revolico ni El Caimán. 
+Para obtenerlos hay que acceder a cada ficha del anuncio. 
+Se incluyen TODOS los anuncios con sus datos disponibles.
+==========================================================================================
+
+1. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/publish
+   TÍTULO: Publicar anuncio
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+2. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-57317211?p
+   TÍTULO: Venta apto 2/4 en Santo Suárez moderno municipio 10 octubre
+   PRECIO: 25000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+3. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
+   TÍTULO: Venta de apart o cambio con un vuelto $ por algo más grande
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: SI
+   FUENTE: revolico
+
+==========================================================================================
+
+4. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-apartamento-58193578
+   TÍTULO: SE VENDE APARTAMENTO
+   PRECIO: 12500 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+5. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-casa-57692514
+   TÍTULO: SE VENDE CASA
+   PRECIO: 60000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+6. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-independiente-en-santos-suarez53022922-mandy-44964739
+   TÍTULO: (al319)-25000-Casa independiente en Santos Suárez.(53022922).
+   PRECIO: 25000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+7. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/al297-biplanta-en-santos-suarez53o22922-44935344
+   TÍTULO: (al297)-Biplanta en Santos Suárez.(53o22922).
+   PRECIO: 20000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+8. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/al313-78000-casa-independiente-de-4-niveles-en-santos-suarez53o22922wwwventacasasmandycom-51131233
+   TÍTULO: (al313)-70000-Casa independiente de 4 niveles en Santos Suárez.(53o22922).(www.ventacasasmandy.com)
+   PRECIO: 70000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+9. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-grande-para-almacen-240m2-56416044
+   TÍTULO: 🔴Casa Grande para Almacén 240m²📦
+   PRECIO: 80000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+10. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-en-venta-56985062
+   TÍTULO: Casa en venta
+   PRECIO: 60000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+11. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/compro-apto-en-playa-vedado-y-nuevo-vedado-tengo-8500-57956298
+   TÍTULO: Compro apto en playa, vedado y nuevo vedado. Tengo 8500
+   PRECIO: 8500 USD
+   MUNICIPIO: Nuevo Vedado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+12. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-o-permuta-de-apartamento-en-el-sevillano-57695761
+   TÍTULO: Venta o permuta de apartamento en el sevillano
+   PRECIO: 13000 USD
+   MUNICIPIO: El Sevillano
+   PROVINCIA: La Habana
+   PERMUTA: SI
+   FUENTE: revolico
+
+==========================================================================================
+
+13. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apartamento-en-la-vibora-54960186
+   TÍTULO: Apartamento en la Vibora
+   PRECIO: 45000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+14. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-58279727
+   TÍTULO: 70,000 USD
+   PRECIO: 70000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+15. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
+   TÍTULO: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
+   PRECIO: 100000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+16. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
+   TÍTULO: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
+   PRECIO: 48000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+17. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-independiente-en-santo-suarez-con-garaje-58176457
+   TÍTULO: Casa independiente en Santo Suárez con garaje
+   PRECIO: 64000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+18. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vendo-casa-independiente-en-lawton-10-de-octubreplaca-libregarajepatio-y-papeles-en-regla-56370283
+   TÍTULO: Vendo Casa independiente en Lawton 10 de Octubre,placa libre,garaje,patio y papeles en regla. Me ajusto en el precio.
+   PRECIO: 18000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+19. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apto-en-bajo-en-santos-suarez-cerca-de-santa-catalina-58042185
+   TÍTULO: Apto en bajo en Santos Suárez cerca de Santa Catalina
+   PRECIO: 12000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+20. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-en-santos-suarez-57431071
+   TÍTULO: Casa en Santos Suárez
+   PRECIO: 29000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+21. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-apto-en-un-1er-piso-cerca-de-santa-catalina-56642821
+   TÍTULO: Casa apto en un 1er piso cerca de Santa Catalina
+   PRECIO: 45000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+22. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-independiente-en-santos-suarez-cerca-d-santa-catalina-55718174
+   TÍTULO: Casa Independiente en Santos Suárez cerca d Santa Catalina
+   PRECIO: 50000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+23. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/ganga-2-en-1-por-el-precio-de-1-casa-en-luyano-2-en-1-25-000-usd-57683040
+   TÍTULO: 22,500 USD
+   PRECIO: 22500 USD
+   MUNICIPIO: Luyano
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+24. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-de-casa-en-lautow-placa-libre-58319790
+   TÍTULO: Venta de casa en Lautow/ placa libre
+   PRECIO: 22000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+25. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/nueva-casa-puesta-en-venta-en-10-de-octubre-santo-suares-con-todo-adentro-55866599
+   TÍTULO: 25,000 USD
+   PRECIO: 25000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+26. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-en-la-vibora-3-hab-con-garaje-55492641
+   TÍTULO: Casa en la Víbora en bajos, 3 hab con garaje.
+   PRECIO: 28000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+27. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58334346
+   TÍTULO: Permuto y recojo buelto a mi favor
+   PRECIO: 11223778 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: SI
+   FUENTE: revolico
+
+==========================================================================================
+
+28. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/permuto-casa-en-10-de-octubre-58334287
+   TÍTULO: Permuto casa en 10 de octubre
+   PRECIO: 11122222 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: SI
+   FUENTE: revolico
+
+==========================================================================================
+
+29. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58333525
+   TÍTULO: Permuto y recojo buelto a mi favor
+   PRECIO: 1111111111 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: SI
+   FUENTE: revolico
+
+==========================================================================================
+
+30. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/permuto-2-apartamento-y-recojo-buelto-a-mi-favor-58333411
+   TÍTULO: Permuto 2 apartamento y recojo buelto a mi favor
+   PRECIO: 1111111111 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: SI
+   FUENTE: revolico
+
+==========================================================================================
+
+31. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apartamento-de-dos-cuartos-56030942
+   TÍTULO: Apartamento de dos  cuartos
+   PRECIO: 6000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+32. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa_en-altos_-luyano_-diez-de-octubre-58095731
+   TÍTULO: CASA_EN ALTOS_ LUYANÓ_ DIEZ DE OCTUBRE
+   PRECIO: 15000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+33. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta_apartamento_en-altos_luyano_diez-de-octubre-58117455
+   TÍTULO: VENTA_APARTAMENTO_EN ALTOS_LUYANÓ_DIEZ DE OCTUBRE
+   PRECIO: 25000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+34. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta_casa-en-alto_monaco_diez-de-octubre-58088194
+   TÍTULO: VENTA_CASA EN ALTO_MÓNACO_DIEZ DE OCTUBRE  ¡
+   PRECIO: 15000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+35. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta_casa-en-la-asuncion_lawton_diez-de-octubre-58095520
+   TÍTULO: VENTA_CASA EN LA ASUNCIÓN_LAWTON_DIEZ DE OCTUBRE
+   PRECIO: 35000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+36. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/alquiler-de-apartamento-con-electricidad-e-internet-24h-ideal-para-agentes-de-ventas-57230152
+   TÍTULO: Alquiler de apartamento con electricidad e internet 24H (Ideal para agentes de ventas)
+   PRECIO: 10 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+37. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vendo-casa-grande-totalmente-independientes-en-reparto-santos-suarez-56360375
+   TÍTULO: Vendo casa grande totalmente independientes en reparto Santos Suárez
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+38. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vendo-casa-de-dos-plantas-en-santos-suarez-56678413
+   TÍTULO: Vendo casa de dos plantas en santos Suárez
+   PRECIO: 18000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+39. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/biplanta-independiente-en-el-cerro-57954437
+   TÍTULO: Biplanta independiente en el Cerro
+   PRECIO: 45000 USD
+   MUNICIPIO: Cerro
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+40. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vendo-apto-de-34-en-la-vibora-58330788
+   TÍTULO: Vendo apto. de 3/4 en la Víbora
+   PRECIO: 15000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+41. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/alquiler-58286882
+   TÍTULO: Alquiler
+   PRECIO: 50000 CUP
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+42. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-de-casa-en-lawton-58329459
+   TÍTULO: Venta de Casa en Lawton
+   PRECIO: 33000 USD
+   MUNICIPIO: Lawton
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+43. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-de-casa-en-paya-58329119
+   TÍTULO: Venta de casa en Playa
+   PRECIO: 25 USD
+   MUNICIPIO: Playa
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+44. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-de-casas-55845341
+   TÍTULO: Venta de casa en Lawton
+   PRECIO: 30000 USD
+   MUNICIPIO: Lawton
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+45. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-57689093
+   TÍTULO: Se vende casa independiente en Santo Suárez
+   PRECIO: 1 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+46. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-propiedad-independiente-57323098
+   TÍTULO: 🚨 Se Vende propiedad independiente
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+47. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-casa-en-santos-suarez-57961246
+   TÍTULO: Se Vende Casa en santos Suárez
+   PRECIO: 17000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+48. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vende-tu-casa-rapido-57282965
+   TÍTULO: Vende tu casa rápido
+   PRECIO: 1 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+49. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/gran-oportunidad-de-inversion-y-vivienda-10-de-octubre-58327646
+   TÍTULO: ✨ GRAN OPORTUNIDAD DE INVERSIÓN Y VIVIENDA – 10 DE OCTUBRE 🏡
+   PRECIO: 45000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+50. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/permuto-1x2-57895191
+   TÍTULO: Permuto 1x2
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: SI
+   FUENTE: revolico
+
+==========================================================================================
+
+51. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-de-casa-reparto-residencial-asuncion-10-de-octubre-58326838
+   TÍTULO: ✨ VENTA DE CASA – REPARTO RESIDENCIAL ASUNCIÓN, 10 DE OCTUBRE 🏡
+   PRECIO: 70000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+52. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-58326298
+   TÍTULO: ✨ OPORTUNIDAD ÚNICA: HOGAR + NEGOCIO EN UN SOLO INMUEBLE 🏠
+   PRECIO: 75000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+53. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/habitacion-independiente-con-cocina-y-patio-en-la-vibora-ref-1394-51079049
+   TÍTULO: 250 USD
+   PRECIO: 250 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+54. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vendo-casa-independiente-en-nuevo-vedado-56754991
+   TÍTULO: Vendo casa independiente en Nuevo Vedado
+   PRECIO: 270000 USD
+   MUNICIPIO: Nuevo Vedado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+55. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-de-casa-interior-57847360
+   TÍTULO: Venta de casa interior
+   PRECIO: 9000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+56. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-apartamento-capitalista-la-vibora-42-57579769
+   TÍTULO: 🏡 SE VENDE APARTAMENTO CAPITALISTA – LA VÍBORA (42)
+   PRECIO: 21000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+57. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/ofertas-de-verano-varadero-la-habana-cayo-santa-maria-kinetica-55738219
+   TÍTULO: Hoteles todo incluído - Varadero - Jibacoa - Cayo Santa María (Kinetica)
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+58. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/oportunidad-de-apartamento-en-diez-de-octubre-56202133
+   TÍTULO: Oportunidad de apartamento en Diez de Octubre
+   PRECIO: 23000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+59. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/oportunidad-de-inmueble-en-lawton-diez-de-octubre-57455124
+   TÍTULO: Oportunidad de inmueble en Lawton, Diez de Octubre
+   PRECIO: 18000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+60. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-apartamento-capitalista-en-la-vibora-92m2-cerca-del-palacio-de-los-matrimonios-y-matias-rodriguez-58325911
+   TÍTULO: Se vende apartamento capitalista en la Víbora 92m2 cerca del Palacio de los matrimonios y matias Rodríguez
+   PRECIO: 25000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+61. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/oportunidad-de-vivienda-en-el-sevillano-10-de-octubre-55201555
+   TÍTULO: Oportunidad de vivienda en el Sevillano-10 de octubre
+   PRECIO: 23000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+62. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/oportunidad-de-inmueble-en-reparto-lawtondiez-de-octubre-57455071
+   TÍTULO: Oportunidad de inmueble en Reparto Lawton,Diez de Octubre
+   PRECIO: 27000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+63. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/piscina-disponible-para-renta-en-san-miguel-57832714
+   TÍTULO: PISCINA DISPONIBLE PARA RENTA EN SAN MIGUEL.
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: San Miguel del Padrón
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+64. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vendo-casa-en-lawton-58132964
+   TÍTULO: Vendo casa en Lawton
+   PRECIO: 15000 USD
+   MUNICIPIO: Lawton
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+65. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-casa-en-santo-suarez-57427179
+   TÍTULO: Se vende casa en Santo Suarez
+   PRECIO: 35000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+66. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vendo-apartamento-capitalista-garaje-ultimo-piso-con-balcon-semi-interior-en-la-vibora-cerca-del-tribunal-provincial-58325597
+   TÍTULO: Vendo apartamento capitalista garaje último piso con balcón semi interior en la Víbora cerca del Tribunal provincial
+   PRECIO: 15000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+67. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-o-se-permuta-apartamento-en-planta-baja-sevillano-10-de-octubre-55911834
+   TÍTULO: 🏡 SE VENDE O SE PERMUTA APARTAMENTO EN PLANTA BAJA, SEVILLANO, 10 DE OCTUBRE.
+   PRECIO: 12000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: SI
+   FUENTE: revolico
+
+==========================================================================================
+
+68. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/10-de-octubre-y-via-blancaapto-de-24-en-3erpisoventanales-a-la-calleazotea-propiay-una-casita-de-madera-independien-57857150
+   TÍTULO: 10 de Octubre y Vía Blanca:Apto de 2/4 en 3erPiso,Ventanales a la Calle,Azotea Propia,y Una Casita De Madera Independien
+   PRECIO: 7000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+69. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/6500-58324814
+   TÍTULO: 💥6500💥
+   PRECIO: 6500 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+70. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/4000-usd-con-cosas-dentro-58324660
+   TÍTULO: 4,000 USD
+   PRECIO: 4000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+71. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-bastante-grande-57324516
+   TÍTULO: Casa bastante grande
+   PRECIO: 25000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+72. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apartamento-espacioso-de-1-habitacion-en-la-vibora-ref-1393-50373980
+   TÍTULO: 35 USD
+   PRECIO: 35 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+73. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apartamento-independiente-en-santos-suarez-de-2-cuartos-pasadias-a-varadero-y-vinales-ref-1303-49744411
+   TÍTULO: 35 USD
+   PRECIO: 35 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+74. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-independiente-en-el-sevillano-57760771
+   TÍTULO: Casa independiente en el sevillano
+   PRECIO: 55000 USD
+   MUNICIPIO: El Sevillano
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+75. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-independiente-con-respaldo-energetico-en-la-vibora-57509349
+   TÍTULO: Casa independiente con respaldo energetico en la vibora
+   PRECIO: 45000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+76. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apartamento-amplio-en-10-de-octubre-la-vibora-58323680
+   TÍTULO: Apartamento amplio en 10 de octubre la víbora
+   PRECIO: 26000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+77. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apartamento-en-sevillano-57531862
+   TÍTULO: Apartamento en Sevillano
+   PRECIO: 9000 USD
+   MUNICIPIO: El Sevillano
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+78. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-en-sevillano-diez-de-octubre-43m2-55602820
+   TÍTULO: Casa en Sevillano Diez de Octubre 43m²
+   PRECIO: 12000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+79. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-en-alto-en-luyano-oportunidad-58323247
+   TÍTULO: ✨ CASA EN ALTO EN LUYANO – OPORTUNIDAD 🏡🔑
+   PRECIO: 15000 USD
+   MUNICIPIO: Luyano
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+80. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-en-alto-en-el-monaco-diez-de-octubre-58323094
+   TÍTULO: ✨ CASA EN ALTO EN EL MÓNACO – DIEZ DE OCTUBRE 🏠
+   PRECIO: 15000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+81. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-calzada-10-de-octubre-57758389
+   TÍTULO: 🏠 *OPORTUNIDAD ÚNICA: HOGAR + NEGOCIO EN UN SOLO INMUEBLE | CALZADA 10 DE OCTUBRE*
+   PRECIO: 85000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+82. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-casa-en-alto-en-monaco-154-57941793
+   TÍTULO: ¡SE VENDE CASA EN ALTO  EN MÓNACO! #154
+   PRECIO: 15000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+83. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-en-alto-en-luyano-155-57941736
+   TÍTULO: Casa en alto en Luyano #155
+   PRECIO: 15000 USD
+   MUNICIPIO: Luyano
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+84. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apto-micro-en-la-vibora-57925343
+   TÍTULO: Apto micro en la vibora
+   PRECIO: 12000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+85. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-de-2-plantas-y-auto-el-hogar-para-la-familia-por-siempre-45-000-usd-lawton-58322852
+   TÍTULO: Casa de 2 plantas y auto. El hogar para la  familia por siempre 45 000 usd. Lawton
+   PRECIO: 45000 USD
+   MUNICIPIO: Lawton
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+86. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-de-2-plantas-y-auto-el-hogar-para-la-familia-por-siempre-45-000-usd-lawton-58322851
+   TÍTULO: Casa de 2 plantas y auto. El hogar para la  familia por siempre 45 000 usd. Lawton
+   PRECIO: 45000 USD
+   MUNICIPIO: Lawton
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+87. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-biplanta-en-10-de-octubre-56110832
+   TÍTULO: Casa biplanta en 10 de octubre
+   PRECIO: 75000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+88. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/se-vende-casa-en-luyanoganga-56917688
+   TÍTULO: SE VENDE CASA EN LUYANO..GANGA!!!🛑
+   PRECIO: 11000 USD
+   MUNICIPIO: Luyano
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+89. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/j-casa-de-renta-para-parejas-o-grupos-en-reparto-sevillano-municipio-diez-de-octubre-oct-003-58276593
+   TÍTULO: J Casa de renta para parejas o grupos en Reparto Sevillano municipio Diez de Octubre. OCT-003
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+90. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/apto-en-alto-en-lawton-57022144
+   TÍTULO: apto en alto en lawton
+   PRECIO: 25000 USD
+   MUNICIPIO: Lawton
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+91. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/150-usd-apartamento-de-14-en-santos-suarez-58160551
+   TÍTULO: 150 USD
+   PRECIO: 150 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+92. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/puertas-blindadas-polimetalicas-53869917
+   TÍTULO: Puertas blindadas Polimetalicas
+   PRECIO: 410 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+93. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-con-5-cuartos-4-banos-piscina-2-entradas-independientes-cerca-de-santa-catalina-y-10-de-octubre-54193773
+   TÍTULO: Casa en interior, 5 cuartos, 4 baños + piscina, 2 entradas independientes. Cerca de Santa Catalina y 10 de Octubre
+   PRECIO: 35000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+94. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/puerta-para-exterior-e-interior-58321879
+   TÍTULO: Puerta para exterior e interior
+   PRECIO: 250 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+95. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/el-plan-perfecto-en-lawton-56219131
+   TÍTULO: ☀️ ¡EL PLAN PERFECTO EN LAWTON! ☀️
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: Lawton
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+96. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/piscina-jacuzzi-y-privacidad-total-para-tus-pasadias-y-estancias-58180723
+   TÍTULO: ¡Piscina, Jacuzzi y Privacidad Total para tus Pasadías y Estancias! 🏊♂️🌴
+   PRECIO: NO DISPONIBLE
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+97. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/vendo-mi-casa-por-el-semaforo-de-acosta-y-porvenir-descripcion-abajo-38mil-ajustable-con-cosas-adentro-58321529
+   TÍTULO: Vendo mi casa por el Semáforo de Acosta y Porvenir descripción abajo ⬇️ 38mil ajustable con cosas adentro
+   PRECIO: 1 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+98. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/venta-de-casa-independiente-3-habitacionessanto-suarez-58279874
+   TÍTULO: Venta de Casa Independiente 3 habitaciones(Santo Suárez)🏠
+   PRECIO: 16000 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+99. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/amplia-casa-de-2-habitaciones-en-santos-suarez-10-de-octubre-57482712
+   TÍTULO: 450 USD
+   PRECIO: 450 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+100. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/casa-de-renta-57619950
+   TÍTULO: Casa de Renta
+   PRECIO: 50 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+101. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.revolico.com/item/gran-vivienda-en-venta-en-10-de-octubre-58320925
+   TÍTULO: Gran vivienda en venta en 10 de octubre
+   PRECIO: 45000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: revolico
+
+==========================================================================================
+
+102. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.elcaiman.com/propiedad/tengo-esta-casa-en-planta-alta-en-arroyo-naranjo-reparto-el-retiro-arroyo
+   TÍTULO: Tengo esta casa en planta alta en Arroyo Naranjo reparto El retiro.
+   PRECIO: 4000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: elcaiman
+
+==========================================================================================
+
+103. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.elcaiman.com/propiedad/casa-independiente-en-venta-en-la-lisa-reparto-elena-la-lisa-la-habana
+   TÍTULO: ✨ ¡CASA INDEPENDIENTE EN VENTA EN LA LISA, REPARTO ELENA!
+   PRECIO: 30000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: elcaiman
+
+==========================================================================================
+
+104. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.elcaiman.com/propiedad/apartamento-en-venta-en-centro-habana-centro-habana-la-habana
+   TÍTULO: 🏠✨ ¡APARTAMENTO EN VENTA EN CENTRO HABANA!
+   PRECIO: 23000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: elcaiman
+
+==========================================================================================
+
+105. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.elcaiman.com/propiedad/casa-de-4-habitaciones-2-banos-de-los-cuales-uno-intercalado-dos-terrazas-y
+   TÍTULO: casa de 4 habitaciones, 2 banos de los cuales uno intercalado), dos terrazas y garaje, altos de una biplanta
+   PRECIO: 95000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: elcaiman
+
+==========================================================================================
+
+106. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.elcaiman.com/propiedad/casa-de-5-habitaciones-ubicada-en-infanta-centro-habana-la-habana
+   TÍTULO: Casa de 5 habitaciones ubicada en Infanta
+   PRECIO: 40000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: elcaiman
+
+==========================================================================================
+
+107. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.elcaiman.com/propiedad/finca-con-casa-pequena-y-propiedad-la-lisa-la-habana
+   TÍTULO: Finca con casa pequeña y propiedad
+   PRECIO: 15000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: elcaiman
+
+==========================================================================================
+
+108. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.elcaiman.com/propiedad/apartamento-en-la-playa-playa-la-habana
+   TÍTULO: APARTAMENTO EN LA PLAYA
+   PRECIO: 36000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: elcaiman
+
+==========================================================================================
+
+109. TELÉFONO: NO DISPONIBLE
+   ENLACES:
+   https://www.elcaiman.com/propiedad/apt-en-santa-fe-playa-playa-la-habana
+   TÍTULO: Apt en santa fe playa
+   PRECIO: 9000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   PERMUTA: NO
+   FUENTE: elcaiman
+
+==========================================================================================
+
