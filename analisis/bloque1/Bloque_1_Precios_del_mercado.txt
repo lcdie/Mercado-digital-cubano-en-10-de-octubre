@@ -1,0 +1,52 @@
+================================================================================
+BLOQUE 1: PRECIOS DEL MERCADO INMOBILIARIO DIGITAL EN DIEZ DE OCTUBRE
+================================================================================
+
+Fecha de análisis: 2026-10-27 10:30:08
+Fuentes analizadas: Revolico (101 anuncios), El Caimán (8 anuncios)
+Total de anuncios: 109
+Anuncios con precio: 99
+Anuncios sin precio: 10
+
+================================================================================
+
+1. ¿Cuál es el precio promedio de venta en USD en Diez de Octubre?
+   Respuesta: 31,072.20 USD
+   (Basado en 35 anuncios de venta con precio en USD)
+
+2. ¿Cuál es el precio mediano de alquiler en USD?
+   Respuesta: 50.00 USD
+   (Basado en 3 anuncios de alquiler con precio en USD)
+
+3. ¿Cuál es el rango de precios que cubre el 80% de los anuncios de venta?
+   Respuesta: Entre 7,000.00 USD y 60,000.00 USD (percentiles 10-90)
+   (El 80% central de los anuncios de venta se encuentra en este rango)
+
+4. ¿Cuál es el anuncio de venta más caro y el más barato publicado?
+   MÁS BARATO:
+     Título: Se vende casa independiente en Santo Suárez
+     Precio: 1.00 USD
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-57689093
+   MÁS CARO:
+     Título: Vendo casa independiente en Nuevo Vedado
+     Precio: 270,000.00 USD
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-nuevo-vedado-56754991
+
+5. ¿Qué proporción de anuncios no declara precio?
+   Respuesta: 9.17% (10 de 109 anuncios no declaran precio)
+
+6. ¿Existe diferencia significativa entre el precio promedio de venta y el de alquiler?
+   Respuesta: Sí, existe una diferencia considerable.
+     Precio promedio de VENTA (USD): 31,072.20 USD (n=35)
+     Precio promedio de ALQUILER (USD): 33,353.33 USD (n=3)
+     Precio mediano de VENTA (USD): 18,000.00 USD
+     Precio mediano de ALQUILER (USD): 50.00 USD
+     Las viviendas en venta cuestan aproximadamente 0.9 veces más que las de alquiler.
+
+
+================================================================================
+NOTA: Los tipos de anuncio (venta/alquiler) fueron inferidos del título.
+Los archivos individuales de datos brutos se mantienen sin modificaciones.
+================================================================================
