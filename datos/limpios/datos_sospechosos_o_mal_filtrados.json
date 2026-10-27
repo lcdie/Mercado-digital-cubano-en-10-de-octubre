@@ -1,0 +1,270 @@
+[
+  {
+    "titulo": "Publicar anuncio",
+    "precio": null,
+    "moneda": "",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/publish",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "BOTON_PUBLICAR_ANUNCIO"
+    ]
+  },
+  {
+    "titulo": "70,000 USD",
+    "precio": 70000,
+    "moneda": "USD",
+    "municipio": "Diez de Octubre",
+    "enlace": "https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-58279727",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "22,500 USD",
+    "precio": 22500,
+    "moneda": "USD",
+    "municipio": "Luyano",
+    "enlace": "https://www.revolico.com/item/ganga-2-en-1-por-el-precio-de-1-casa-en-luyano-2-en-1-25-000-usd-57683040",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "25,000 USD",
+    "precio": 25000,
+    "moneda": "USD",
+    "municipio": "Diez de Octubre",
+    "enlace": "https://www.revolico.com/item/nueva-casa-puesta-en-venta-en-10-de-octubre-santo-suares-con-todo-adentro-55866599",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "Permuto y recojo buelto a mi favor",
+    "precio": 11223778,
+    "moneda": "USD",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58334346",
+    "permuta": true,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "PRECIO_SURREALISTA_MILLONES",
+      "PERMUTA_PRECIO_SURREALISTA"
+    ]
+  },
+  {
+    "titulo": "Permuto casa en 10 de octubre",
+    "precio": 11122222,
+    "moneda": "USD",
+    "municipio": "Diez de Octubre",
+    "enlace": "https://www.revolico.com/item/permuto-casa-en-10-de-octubre-58334287",
+    "permuta": true,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "PRECIO_SURREALISTA_MILLONES",
+      "PERMUTA_PRECIO_SURREALISTA"
+    ]
+  },
+  {
+    "titulo": "Permuto y recojo buelto a mi favor",
+    "precio": 1111111111,
+    "moneda": "USD",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58333525",
+    "permuta": true,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "PRECIO_SURREALISTA_MILLONES",
+      "PERMUTA_PRECIO_SURREALISTA"
+    ]
+  },
+  {
+    "titulo": "Permuto 2 apartamento y recojo buelto a mi favor",
+    "precio": 1111111111,
+    "moneda": "USD",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/permuto-2-apartamento-y-recojo-buelto-a-mi-favor-58333411",
+    "permuta": true,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "PRECIO_SURREALISTA_MILLONES",
+      "PERMUTA_PRECIO_SURREALISTA"
+    ]
+  },
+  {
+    "titulo": "Alquiler de apartamento con electricidad e internet 24H (Ideal para agentes de ventas)",
+    "precio": 10,
+    "moneda": "USD",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/alquiler-de-apartamento-con-electricidad-e-internet-24h-ideal-para-agentes-de-ventas-57230152",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "PRECIO_MUY_BAJO_SOSPECHOSO"
+    ]
+  },
+  {
+    "titulo": "Alquiler",
+    "precio": 50000,
+    "moneda": "CUP",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/alquiler-58286882",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "Se vende casa independiente en Santo Suárez",
+    "precio": 1,
+    "moneda": "USD",
+    "municipio": "Santos Suárez",
+    "enlace": "https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-57689093",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "PRECIO_MUY_BAJO_SOSPECHOSO"
+    ]
+  },
+  {
+    "titulo": "Vende tu casa rápido",
+    "precio": 1,
+    "moneda": "USD",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/vende-tu-casa-rapido-57282965",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "PRECIO_MUY_BAJO_SOSPECHOSO"
+    ]
+  },
+  {
+    "titulo": "250 USD",
+    "precio": 250,
+    "moneda": "USD",
+    "municipio": "La Víbora",
+    "enlace": "https://www.revolico.com/item/habitacion-independiente-con-cocina-y-patio-en-la-vibora-ref-1394-51079049",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "Hoteles todo incluído - Varadero - Jibacoa - Cayo Santa María (Kinetica)",
+    "precio": null,
+    "moneda": "",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/ofertas-de-verano-varadero-la-habana-cayo-santa-maria-kinetica-55738219",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "SIN_PRECIO_SPAM"
+    ]
+  },
+  {
+    "titulo": "💥6500💥",
+    "precio": 6500,
+    "moneda": "USD",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/6500-58324814",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "4,000 USD",
+    "precio": 4000,
+    "moneda": "USD",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/4000-usd-con-cosas-dentro-58324660",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "35 USD",
+    "precio": 35,
+    "moneda": "USD",
+    "municipio": "La Víbora",
+    "enlace": "https://www.revolico.com/item/apartamento-espacioso-de-1-habitacion-en-la-vibora-ref-1393-50373980",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "35 USD",
+    "precio": 35,
+    "moneda": "USD",
+    "municipio": "Santos Suárez",
+    "enlace": "https://www.revolico.com/item/apartamento-independiente-en-santos-suarez-de-2-cuartos-pasadias-a-varadero-y-vinales-ref-1303-49744411",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "150 USD",
+    "precio": 150,
+    "moneda": "USD",
+    "municipio": "Santos Suárez",
+    "enlace": "https://www.revolico.com/item/150-usd-apartamento-de-14-en-santos-suarez-58160551",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  },
+  {
+    "titulo": "¡Piscina, Jacuzzi y Privacidad Total para tus Pasadías y Estancias! 🏊♂️🌴",
+    "precio": null,
+    "moneda": "",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/piscina-jacuzzi-y-privacidad-total-para-tus-pasadias-y-estancias-58180723",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "SIN_PRECIO_SPAM"
+    ]
+  },
+  {
+    "titulo": "Vendo mi casa por el Semáforo de Acosta y Porvenir descripción abajo ⬇️ 38mil ajustable con cosas adentro",
+    "precio": 1,
+    "moneda": "USD",
+    "municipio": "no especificado",
+    "enlace": "https://www.revolico.com/item/vendo-mi-casa-por-el-semaforo-de-acosta-y-porvenir-descripcion-abajo-38mil-ajustable-con-cosas-adentro-58321529",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "PRECIO_MUY_BAJO_SOSPECHOSO"
+    ]
+  },
+  {
+    "titulo": "450 USD",
+    "precio": 450,
+    "moneda": "USD",
+    "municipio": "Diez de Octubre",
+    "enlace": "https://www.revolico.com/item/amplia-casa-de-2-habitaciones-en-santos-suarez-10-de-octubre-57482712",
+    "permuta": false,
+    "fuente": "revolico",
+    "motivo_filtrado": [
+      "TITULO_CORTO_SOLO_PRECIO"
+    ]
+  }
+]

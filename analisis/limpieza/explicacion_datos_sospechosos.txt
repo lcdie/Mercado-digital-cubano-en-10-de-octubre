@@ -1,0 +1,267 @@
+==========================================================================================
+ANÁLISIS DE DATOS SOSPECHOSOS, SURRREALES O INCONCLUSOS
+==========================================================================================
+
+Fecha: 2026-10-27 20:44:15
+Total de anuncios analizados: 109
+Datos potencialmente limpios: 87
+Datos sospechosos/mal filtrados/separados: 22
+
+==========================================================================================
+CRITERIOS USADOS PARA SEPARARLOS
+==========================================================================================
+
+1. BOTON_PUBLICAR_ANUNCIO - Enlace /item/publish o título 'Publicar anuncio'
+2. PRECIO_SURREALISTA_MILLONES - Precios > 1,000,000 USD
+3. PRECIO_MUY_BAJO_SOSPECHOSO - Precios 1 USD o 10 USD
+4. PRECIO_CUP_SURREALISTA - Precios CUP > 100,000
+5. PERMUTA_PRECIO_SURREALISTA - Permutas con precios > 1,000,000
+6. TITULO_CORTO_SOLO_PRECIO - Títulos muy cortos con solo precio
+7. SIN_PRECIO_SPAM - Sin precio con títulos sospechosos
+
+==========================================================================================
+LISTADO DETALLADO DE DATOS SEPARADOS
+==========================================================================================
+
+1. Publicar anuncio
+   Precio: None 
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: BOTON_PUBLICAR_ANUNCIO
+   Enlace: https://www.revolico.com/item/publish
+
+------------------------------------------------------------------------------------------
+
+2. 70,000 USD
+   Precio: 70000 USD
+   Municipio: Diez de Octubre
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-58279727
+
+------------------------------------------------------------------------------------------
+
+3. 22,500 USD
+   Precio: 22500 USD
+   Municipio: Luyano
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/ganga-2-en-1-por-el-precio-de-1-casa-en-luyano-2-en-1-25-000-usd-57683040
+
+------------------------------------------------------------------------------------------
+
+4. 25,000 USD
+   Precio: 25000 USD
+   Municipio: Diez de Octubre
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/nueva-casa-puesta-en-venta-en-10-de-octubre-santo-suares-con-todo-adentro-55866599
+
+------------------------------------------------------------------------------------------
+
+5. Permuto y recojo buelto a mi favor
+   Precio: 11223778 USD
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: SI
+   Fuente: revolico
+   Motivos: PRECIO_SURREALISTA_MILLONES, PERMUTA_PRECIO_SURREALISTA
+   Enlace: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58334346
+
+------------------------------------------------------------------------------------------
+
+6. Permuto casa en 10 de octubre
+   Precio: 11122222 USD
+   Municipio: Diez de Octubre
+   Teléfono: NO DISPONIBLE
+   Permuta: SI
+   Fuente: revolico
+   Motivos: PRECIO_SURREALISTA_MILLONES, PERMUTA_PRECIO_SURREALISTA
+   Enlace: https://www.revolico.com/item/permuto-casa-en-10-de-octubre-58334287
+
+------------------------------------------------------------------------------------------
+
+7. Permuto y recojo buelto a mi favor
+   Precio: 1111111111 USD
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: SI
+   Fuente: revolico
+   Motivos: PRECIO_SURREALISTA_MILLONES, PERMUTA_PRECIO_SURREALISTA
+   Enlace: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58333525
+
+------------------------------------------------------------------------------------------
+
+8. Permuto 2 apartamento y recojo buelto a mi favor
+   Precio: 1111111111 USD
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: SI
+   Fuente: revolico
+   Motivos: PRECIO_SURREALISTA_MILLONES, PERMUTA_PRECIO_SURREALISTA
+   Enlace: https://www.revolico.com/item/permuto-2-apartamento-y-recojo-buelto-a-mi-favor-58333411
+
+------------------------------------------------------------------------------------------
+
+9. Alquiler de apartamento con electricidad e internet 24H (Ideal para agentes de ventas)
+   Precio: 10 USD
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: PRECIO_MUY_BAJO_SOSPECHOSO
+   Enlace: https://www.revolico.com/item/alquiler-de-apartamento-con-electricidad-e-internet-24h-ideal-para-agentes-de-ventas-57230152
+
+------------------------------------------------------------------------------------------
+
+10. Alquiler
+   Precio: 50000 CUP
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/alquiler-58286882
+
+------------------------------------------------------------------------------------------
+
+11. Se vende casa independiente en Santo Suárez
+   Precio: 1 USD
+   Municipio: Santos Suárez
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: PRECIO_MUY_BAJO_SOSPECHOSO
+   Enlace: https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-57689093
+
+------------------------------------------------------------------------------------------
+
+12. Vende tu casa rápido
+   Precio: 1 USD
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: PRECIO_MUY_BAJO_SOSPECHOSO
+   Enlace: https://www.revolico.com/item/vende-tu-casa-rapido-57282965
+
+------------------------------------------------------------------------------------------
+
+13. 250 USD
+   Precio: 250 USD
+   Municipio: La Víbora
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/habitacion-independiente-con-cocina-y-patio-en-la-vibora-ref-1394-51079049
+
+------------------------------------------------------------------------------------------
+
+14. Hoteles todo incluído - Varadero - Jibacoa - Cayo Santa María (Kinetica)
+   Precio: None 
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: SIN_PRECIO_SPAM
+   Enlace: https://www.revolico.com/item/ofertas-de-verano-varadero-la-habana-cayo-santa-maria-kinetica-55738219
+
+------------------------------------------------------------------------------------------
+
+15. 💥6500💥
+   Precio: 6500 USD
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/6500-58324814
+
+------------------------------------------------------------------------------------------
+
+16. 4,000 USD
+   Precio: 4000 USD
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/4000-usd-con-cosas-dentro-58324660
+
+------------------------------------------------------------------------------------------
+
+17. 35 USD
+   Precio: 35 USD
+   Municipio: La Víbora
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/apartamento-espacioso-de-1-habitacion-en-la-vibora-ref-1393-50373980
+
+------------------------------------------------------------------------------------------
+
+18. 35 USD
+   Precio: 35 USD
+   Municipio: Santos Suárez
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/apartamento-independiente-en-santos-suarez-de-2-cuartos-pasadias-a-varadero-y-vinales-ref-1303-49744411
+
+------------------------------------------------------------------------------------------
+
+19. 150 USD
+   Precio: 150 USD
+   Municipio: Santos Suárez
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/150-usd-apartamento-de-14-en-santos-suarez-58160551
+
+------------------------------------------------------------------------------------------
+
+20. ¡Piscina, Jacuzzi y Privacidad Total para tus Pasadías y Estancias! 🏊♂️🌴
+   Precio: None 
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: SIN_PRECIO_SPAM
+   Enlace: https://www.revolico.com/item/piscina-jacuzzi-y-privacidad-total-para-tus-pasadias-y-estancias-58180723
+
+------------------------------------------------------------------------------------------
+
+21. Vendo mi casa por el Semáforo de Acosta y Porvenir descripción abajo ⬇️ 38mil ajustable con cosas adentro
+   Precio: 1 USD
+   Municipio: no especificado
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: PRECIO_MUY_BAJO_SOSPECHOSO
+   Enlace: https://www.revolico.com/item/vendo-mi-casa-por-el-semaforo-de-acosta-y-porvenir-descripcion-abajo-38mil-ajustable-con-cosas-adentro-58321529
+
+------------------------------------------------------------------------------------------
+
+22. 450 USD
+   Precio: 450 USD
+   Municipio: Diez de Octubre
+   Teléfono: NO DISPONIBLE
+   Permuta: NO
+   Fuente: revolico
+   Motivos: TITULO_CORTO_SOLO_PRECIO
+   Enlace: https://www.revolico.com/item/amplia-casa-de-2-habitaciones-en-santos-suarez-10-de-octubre-57482712
+
+------------------------------------------------------------------------------------------
+
