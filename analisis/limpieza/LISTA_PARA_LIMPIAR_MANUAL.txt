@@ -1,0 +1,638 @@
+===============================================================================================
+LISTA PARA LIMPIAR A MANUAL O CONFIRMAR INFORMACIÓN
+===============================================================================================
+
+Fecha: 2026-10-27 20:47:16
+Total de anuncios brutos: 109
+Anuncios que requieren revisión manual: 48
+Potencialmente limpios (sin marcar): 87
+Sospechosos separados: 22
+
+===============================================================================================
+INSTRUCCIONES: Revisa cada uno, confirma o corrige la información directamente
+===============================================================================================
+
+1. TÍTULO: Publicar anuncio
+   PRECIO: None 
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/publish
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | SIN_PRECIO_CONFIRMAR | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+2. TÍTULO: Venta de apart o cambio con un vuelto $ por algo más grande
+   PRECIO: None 
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: SI
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
+   RAZONES PARA REVISAR: SIN_PRECIO_CONFIRMAR | ES_PERMUTA_CONFIRMAR_SI_VALE_PARA_ANALISIS | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+3. TÍTULO: SE VENDE APARTAMENTO
+   PRECIO: 12500 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/se-vende-apartamento-58193578
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+4. TÍTULO: SE VENDE CASA
+   PRECIO: 60000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/se-vende-casa-57692514
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+5. TÍTULO: 🔴Casa Grande para Almacén 240m²📦
+   PRECIO: 80000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/casa-grande-para-almacen-240m2-56416044
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+6. TÍTULO: Casa en venta
+   PRECIO: 60000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/casa-en-venta-56985062
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+7. TÍTULO: Venta o permuta de apartamento en el sevillano
+   PRECIO: 13000 USD
+   MUNICIPIO: El Sevillano
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: SI
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/venta-o-permuta-de-apartamento-en-el-sevillano-57695761
+   RAZONES PARA REVISAR: ES_PERMUTA_CONFIRMAR_SI_VALE_PARA_ANALISIS
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+8. TÍTULO: 70,000 USD
+   PRECIO: 70000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-58279727
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+9. TÍTULO: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
+   PRECIO: 100000 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
+   RAZONES PARA REVISAR: PRECIO_ALTO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+10. TÍTULO: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
+   PRECIO: 48000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+11. TÍTULO: Casa apto en un 1er piso cerca de Santa Catalina
+   PRECIO: 45000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/casa-apto-en-un-1er-piso-cerca-de-santa-catalina-56642821
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+12. TÍTULO: 22,500 USD
+   PRECIO: 22500 USD
+   MUNICIPIO: Luyano
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/ganga-2-en-1-por-el-precio-de-1-casa-en-luyano-2-en-1-25-000-usd-57683040
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+13. TÍTULO: Venta de casa en Lautow/ placa libre
+   PRECIO: 22000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/venta-de-casa-en-lautow-placa-libre-58319790
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+14. TÍTULO: 25,000 USD
+   PRECIO: 25000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/nueva-casa-puesta-en-venta-en-10-de-octubre-santo-suares-con-todo-adentro-55866599
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+15. TÍTULO: Permuto y recojo buelto a mi favor
+   PRECIO: 11223778 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: SI
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58334346
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_ALTO_CONFIRMAR | ES_PERMUTA_CONFIRMAR_SI_VALE_PARA_ANALISIS | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+16. TÍTULO: Permuto casa en 10 de octubre
+   PRECIO: 11122222 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: SI
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/permuto-casa-en-10-de-octubre-58334287
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_ALTO_CONFIRMAR | ES_PERMUTA_CONFIRMAR_SI_VALE_PARA_ANALISIS
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+17. TÍTULO: Permuto y recojo buelto a mi favor
+   PRECIO: 1111111111 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: SI
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58333525
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_ALTO_CONFIRMAR | ES_PERMUTA_CONFIRMAR_SI_VALE_PARA_ANALISIS | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+18. TÍTULO: Permuto 2 apartamento y recojo buelto a mi favor
+   PRECIO: 1111111111 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: SI
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/permuto-2-apartamento-y-recojo-buelto-a-mi-favor-58333411
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_ALTO_CONFIRMAR | ES_PERMUTA_CONFIRMAR_SI_VALE_PARA_ANALISIS | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+19. TÍTULO: Apartamento de dos  cuartos
+   PRECIO: 6000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/apartamento-de-dos-cuartos-56030942
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+20. TÍTULO: Alquiler de apartamento con electricidad e internet 24H (Ideal para agentes de ventas)
+   PRECIO: 10 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/alquiler-de-apartamento-con-electricidad-e-internet-24h-ideal-para-agentes-de-ventas-57230152
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_MUY_BAJO_CONFIRMAR | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+21. TÍTULO: Vendo casa grande totalmente independientes en reparto Santos Suárez
+   PRECIO: None 
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/vendo-casa-grande-totalmente-independientes-en-reparto-santos-suarez-56360375
+   RAZONES PARA REVISAR: SIN_PRECIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+22. TÍTULO: Alquiler
+   PRECIO: 50000 CUP
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/alquiler-58286882
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_CUP_CONFIRMAR | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+23. TÍTULO: Se vende casa independiente en Santo Suárez
+   PRECIO: 1 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-57689093
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_MUY_BAJO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+24. TÍTULO: 🚨 Se Vende propiedad independiente
+   PRECIO: None 
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/se-vende-propiedad-independiente-57323098
+   RAZONES PARA REVISAR: SIN_PRECIO_CONFIRMAR | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+25. TÍTULO: Vende tu casa rápido
+   PRECIO: 1 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/vende-tu-casa-rapido-57282965
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_MUY_BAJO_CONFIRMAR | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+26. TÍTULO: Permuto 1x2
+   PRECIO: None 
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: SI
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/permuto-1x2-57895191
+   RAZONES PARA REVISAR: SIN_PRECIO_CONFIRMAR | ES_PERMUTA_CONFIRMAR_SI_VALE_PARA_ANALISIS | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+27. TÍTULO: ✨ OPORTUNIDAD ÚNICA: HOGAR + NEGOCIO EN UN SOLO INMUEBLE 🏠
+   PRECIO: 75000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-58326298
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+28. TÍTULO: 250 USD
+   PRECIO: 250 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/habitacion-independiente-con-cocina-y-patio-en-la-vibora-ref-1394-51079049
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+29. TÍTULO: Vendo casa independiente en Nuevo Vedado
+   PRECIO: 270000 USD
+   MUNICIPIO: Nuevo Vedado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/vendo-casa-independiente-en-nuevo-vedado-56754991
+   RAZONES PARA REVISAR: PRECIO_ALTO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+30. TÍTULO: Venta de casa interior
+   PRECIO: 9000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/venta-de-casa-interior-57847360
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+31. TÍTULO: Hoteles todo incluído - Varadero - Jibacoa - Cayo Santa María (Kinetica)
+   PRECIO: None 
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/ofertas-de-verano-varadero-la-habana-cayo-santa-maria-kinetica-55738219
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | SIN_PRECIO_CONFIRMAR | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+32. TÍTULO: PISCINA DISPONIBLE PARA RENTA EN SAN MIGUEL.
+   PRECIO: None 
+   MUNICIPIO: San Miguel del Padrón
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/piscina-disponible-para-renta-en-san-miguel-57832714
+   RAZONES PARA REVISAR: SIN_PRECIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+33. TÍTULO: 🏡 SE VENDE O SE PERMUTA APARTAMENTO EN PLANTA BAJA, SEVILLANO, 10 DE OCTUBRE.
+   PRECIO: 12000 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: SI
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/se-vende-o-se-permuta-apartamento-en-planta-baja-sevillano-10-de-octubre-55911834
+   RAZONES PARA REVISAR: ES_PERMUTA_CONFIRMAR_SI_VALE_PARA_ANALISIS
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+34. TÍTULO: 💥6500💥
+   PRECIO: 6500 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/6500-58324814
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+35. TÍTULO: 4,000 USD
+   PRECIO: 4000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/4000-usd-con-cosas-dentro-58324660
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+36. TÍTULO: Casa bastante grande
+   PRECIO: 25000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/casa-bastante-grande-57324516
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+37. TÍTULO: 35 USD
+   PRECIO: 35 USD
+   MUNICIPIO: La Víbora
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/apartamento-espacioso-de-1-habitacion-en-la-vibora-ref-1393-50373980
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+38. TÍTULO: 35 USD
+   PRECIO: 35 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/apartamento-independiente-en-santos-suarez-de-2-cuartos-pasadias-a-varadero-y-vinales-ref-1303-49744411
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+39. TÍTULO: ¡SE VENDE CASA EN ALTO  EN MÓNACO! #154
+   PRECIO: 15000 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/se-vende-casa-en-alto-en-monaco-154-57941793
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+40. TÍTULO: J Casa de renta para parejas o grupos en Reparto Sevillano municipio Diez de Octubre. OCT-003
+   PRECIO: None 
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/j-casa-de-renta-para-parejas-o-grupos-en-reparto-sevillano-municipio-diez-de-octubre-oct-003-58276593
+   RAZONES PARA REVISAR: SIN_PRECIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+41. TÍTULO: 150 USD
+   PRECIO: 150 USD
+   MUNICIPIO: Santos Suárez
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/150-usd-apartamento-de-14-en-santos-suarez-58160551
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+42. TÍTULO: Puertas blindadas Polimetalicas
+   PRECIO: 410 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/puertas-blindadas-polimetalicas-53869917
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+43. TÍTULO: Puerta para exterior e interior
+   PRECIO: 250 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/puerta-para-exterior-e-interior-58321879
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+44. TÍTULO: ☀️ ¡EL PLAN PERFECTO EN LAWTON! ☀️
+   PRECIO: None 
+   MUNICIPIO: Lawton
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/el-plan-perfecto-en-lawton-56219131
+   RAZONES PARA REVISAR: SIN_PRECIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+45. TÍTULO: ¡Piscina, Jacuzzi y Privacidad Total para tus Pasadías y Estancias! 🏊♂️🌴
+   PRECIO: None 
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/piscina-jacuzzi-y-privacidad-total-para-tus-pasadias-y-estancias-58180723
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | SIN_PRECIO_CONFIRMAR | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+46. TÍTULO: Vendo mi casa por el Semáforo de Acosta y Porvenir descripción abajo ⬇️ 38mil ajustable con cosas adentro
+   PRECIO: 1 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/vendo-mi-casa-por-el-semaforo-de-acosta-y-porvenir-descripcion-abajo-38mil-ajustable-con-cosas-adentro-58321529
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO | PRECIO_MUY_BAJO_CONFIRMAR | SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+47. TÍTULO: 450 USD
+   PRECIO: 450 USD
+   MUNICIPIO: Diez de Octubre
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/amplia-casa-de-2-habitaciones-en-santos-suarez-10-de-octubre-57482712
+   RAZONES PARA REVISAR: MARCADO_SOSPECHOSO_POR_FILTRO
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
+48. TÍTULO: Casa de Renta
+   PRECIO: 50 USD
+   MUNICIPIO: no especificado
+   PROVINCIA: La Habana
+   TELÉFONO: NO DISPONIBLE
+   PERMUTA: NO
+   FUENTE: revolico
+   ENLACE: https://www.revolico.com/item/casa-de-renta-57619950
+   RAZONES PARA REVISAR: SIN_MUNICIPIO_CONFIRMAR
+   ACCIÓN: [ ] MANTENER  [ ] ELIMINAR  [ ] CORREGIR (escribir corrección aquí)
+
+===============================================================================================
+
