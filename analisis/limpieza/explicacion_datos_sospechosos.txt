@@ -25,7 +25,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 1. Publicar anuncio
    Precio: None 
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -47,7 +47,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 3. 22,500 USD
    Precio: 22500 USD
-   Municipio: Luyano
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -69,7 +69,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 5. Permuto y recojo buelto a mi favor
    Precio: 11223778 USD
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: SI
    Fuente: revolico
@@ -91,7 +91,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 7. Permuto y recojo buelto a mi favor
    Precio: 1111111111 USD
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: SI
    Fuente: revolico
@@ -102,7 +102,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 8. Permuto 2 apartamento y recojo buelto a mi favor
    Precio: 1111111111 USD
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: SI
    Fuente: revolico
@@ -113,7 +113,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 9. Alquiler de apartamento con electricidad e internet 24H (Ideal para agentes de ventas)
    Precio: 10 USD
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -124,7 +124,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 10. Alquiler
    Precio: 50000 CUP
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -135,7 +135,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 11. Se vende casa independiente en Santo Suárez
    Precio: 1 USD
-   Municipio: Santos Suárez
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -146,7 +146,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 12. Vende tu casa rápido
    Precio: 1 USD
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -157,7 +157,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 13. 250 USD
    Precio: 250 USD
-   Municipio: La Víbora
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -168,7 +168,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 14. Hoteles todo incluído - Varadero - Jibacoa - Cayo Santa María (Kinetica)
    Precio: None 
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -179,7 +179,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 15. 💥6500💥
    Precio: 6500 USD
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -190,7 +190,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 16. 4,000 USD
    Precio: 4000 USD
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -201,7 +201,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 17. 35 USD
    Precio: 35 USD
-   Municipio: La Víbora
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -212,7 +212,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 18. 35 USD
    Precio: 35 USD
-   Municipio: Santos Suárez
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -223,7 +223,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 19. 150 USD
    Precio: 150 USD
-   Municipio: Santos Suárez
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -234,7 +234,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 20. ¡Piscina, Jacuzzi y Privacidad Total para tus Pasadías y Estancias! 🏊♂️🌴
    Precio: None 
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico
@@ -245,7 +245,7 @@ LISTADO DETALLADO DE DATOS SEPARADOS
 
 21. Vendo mi casa por el Semáforo de Acosta y Porvenir descripción abajo ⬇️ 38mil ajustable con cosas adentro
    Precio: 1 USD
-   Municipio: no especificado
+   Municipio: 10 de Octubre
    Teléfono: NO DISPONIBLE
    Permuta: NO
    Fuente: revolico

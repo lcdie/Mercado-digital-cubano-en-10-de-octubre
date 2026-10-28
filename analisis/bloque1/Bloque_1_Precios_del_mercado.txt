@@ -31,7 +31,7 @@ RESPUESTAS A LAS PREGUNTAS DEL BLOQUE 1
      Título: Se vende casa independiente en Santo Suárez
      Precio: 1.00 USD
      Moneda: USD
-     Municipio: Santos Suárez
+     Municipio: 10 de Octubre
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-57689093
 
@@ -39,7 +39,7 @@ RESPUESTAS A LAS PREGUNTAS DEL BLOQUE 1
      Título: Vendo casa independiente en Nuevo Vedado
      Precio: 270,000.00 USD
      Moneda: USD
-     Municipio: Nuevo Vedado
+     Municipio: 10 de Octubre
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-nuevo-vedado-56754991
 

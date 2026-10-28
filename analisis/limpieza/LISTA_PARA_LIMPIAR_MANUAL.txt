@@ -18,7 +18,7 @@ LEYENDA DE RAZONES:
 
 1. TÍTULO: Publicar anuncio
    PRECIO: None 
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -32,7 +32,7 @@ LEYENDA DE RAZONES:
 
 2. TÍTULO: Venta de apart o cambio con un vuelto $ por algo más grande
    PRECIO: None 
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: SI
@@ -46,7 +46,7 @@ LEYENDA DE RAZONES:
 
 3. TÍTULO: SE VENDE APARTAMENTO
    PRECIO: 12500 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -60,7 +60,7 @@ LEYENDA DE RAZONES:
 
 4. TÍTULO: SE VENDE CASA
    PRECIO: 60000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -74,7 +74,7 @@ LEYENDA DE RAZONES:
 
 5. TÍTULO: 🔴Casa Grande para Almacén 240m²📦
    PRECIO: 80000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -88,7 +88,7 @@ LEYENDA DE RAZONES:
 
 6. TÍTULO: Casa en venta
    PRECIO: 60000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -102,7 +102,7 @@ LEYENDA DE RAZONES:
 
 7. TÍTULO: Venta o permuta de apartamento en el sevillano
    PRECIO: 13000 USD
-   MUNICIPIO: El Sevillano
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: SI
@@ -130,7 +130,7 @@ LEYENDA DE RAZONES:
 
 9. TÍTULO: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
    PRECIO: 100000 USD
-   MUNICIPIO: La Víbora
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -144,7 +144,7 @@ LEYENDA DE RAZONES:
 
 10. TÍTULO: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
    PRECIO: 48000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -158,7 +158,7 @@ LEYENDA DE RAZONES:
 
 11. TÍTULO: Casa apto en un 1er piso cerca de Santa Catalina
    PRECIO: 45000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -172,7 +172,7 @@ LEYENDA DE RAZONES:
 
 12. TÍTULO: 22,500 USD
    PRECIO: 22500 USD
-   MUNICIPIO: Luyano
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -186,7 +186,7 @@ LEYENDA DE RAZONES:
 
 13. TÍTULO: Venta de casa en Lautow/ placa libre
    PRECIO: 22000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -214,7 +214,7 @@ LEYENDA DE RAZONES:
 
 15. TÍTULO: Permuto y recojo buelto a mi favor
    PRECIO: 11223778 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: SI
@@ -242,7 +242,7 @@ LEYENDA DE RAZONES:
 
 17. TÍTULO: Permuto y recojo buelto a mi favor
    PRECIO: 1111111111 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: SI
@@ -256,7 +256,7 @@ LEYENDA DE RAZONES:
 
 18. TÍTULO: Permuto 2 apartamento y recojo buelto a mi favor
    PRECIO: 1111111111 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: SI
@@ -270,7 +270,7 @@ LEYENDA DE RAZONES:
 
 19. TÍTULO: Apartamento de dos  cuartos
    PRECIO: 6000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -284,7 +284,7 @@ LEYENDA DE RAZONES:
 
 20. TÍTULO: Alquiler de apartamento con electricidad e internet 24H (Ideal para agentes de ventas)
    PRECIO: 10 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -298,7 +298,7 @@ LEYENDA DE RAZONES:
 
 21. TÍTULO: Vendo casa grande totalmente independientes en reparto Santos Suárez
    PRECIO: None 
-   MUNICIPIO: Santos Suárez
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -312,7 +312,7 @@ LEYENDA DE RAZONES:
 
 22. TÍTULO: Alquiler
    PRECIO: 50000 CUP
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -326,7 +326,7 @@ LEYENDA DE RAZONES:
 
 23. TÍTULO: Se vende casa independiente en Santo Suárez
    PRECIO: 1 USD
-   MUNICIPIO: Santos Suárez
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -340,7 +340,7 @@ LEYENDA DE RAZONES:
 
 24. TÍTULO: 🚨 Se Vende propiedad independiente
    PRECIO: None 
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -354,7 +354,7 @@ LEYENDA DE RAZONES:
 
 25. TÍTULO: Vende tu casa rápido
    PRECIO: 1 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -368,7 +368,7 @@ LEYENDA DE RAZONES:
 
 26. TÍTULO: Permuto 1x2
    PRECIO: None 
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: SI
@@ -382,7 +382,7 @@ LEYENDA DE RAZONES:
 
 27. TÍTULO: ✨ OPORTUNIDAD ÚNICA: HOGAR + NEGOCIO EN UN SOLO INMUEBLE 🏠
    PRECIO: 75000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -396,7 +396,7 @@ LEYENDA DE RAZONES:
 
 28. TÍTULO: 250 USD
    PRECIO: 250 USD
-   MUNICIPIO: La Víbora
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -410,7 +410,7 @@ LEYENDA DE RAZONES:
 
 29. TÍTULO: Vendo casa independiente en Nuevo Vedado
    PRECIO: 270000 USD
-   MUNICIPIO: Nuevo Vedado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -424,7 +424,7 @@ LEYENDA DE RAZONES:
 
 30. TÍTULO: Venta de casa interior
    PRECIO: 9000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -438,7 +438,7 @@ LEYENDA DE RAZONES:
 
 31. TÍTULO: Hoteles todo incluído - Varadero - Jibacoa - Cayo Santa María (Kinetica)
    PRECIO: None 
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -452,7 +452,7 @@ LEYENDA DE RAZONES:
 
 32. TÍTULO: PISCINA DISPONIBLE PARA RENTA EN SAN MIGUEL.
    PRECIO: None 
-   MUNICIPIO: San Miguel del Padrón
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -480,7 +480,7 @@ LEYENDA DE RAZONES:
 
 34. TÍTULO: 💥6500💥
    PRECIO: 6500 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -494,7 +494,7 @@ LEYENDA DE RAZONES:
 
 35. TÍTULO: 4,000 USD
    PRECIO: 4000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -508,7 +508,7 @@ LEYENDA DE RAZONES:
 
 36. TÍTULO: Casa bastante grande
    PRECIO: 25000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -522,7 +522,7 @@ LEYENDA DE RAZONES:
 
 37. TÍTULO: 35 USD
    PRECIO: 35 USD
-   MUNICIPIO: La Víbora
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -536,7 +536,7 @@ LEYENDA DE RAZONES:
 
 38. TÍTULO: 35 USD
    PRECIO: 35 USD
-   MUNICIPIO: Santos Suárez
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -550,7 +550,7 @@ LEYENDA DE RAZONES:
 
 39. TÍTULO: ¡SE VENDE CASA EN ALTO  EN MÓNACO! #154
    PRECIO: 15000 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -578,7 +578,7 @@ LEYENDA DE RAZONES:
 
 41. TÍTULO: 150 USD
    PRECIO: 150 USD
-   MUNICIPIO: Santos Suárez
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -592,7 +592,7 @@ LEYENDA DE RAZONES:
 
 42. TÍTULO: Puertas blindadas Polimetalicas
    PRECIO: 410 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -606,7 +606,7 @@ LEYENDA DE RAZONES:
 
 43. TÍTULO: Puerta para exterior e interior
    PRECIO: 250 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -620,7 +620,7 @@ LEYENDA DE RAZONES:
 
 44. TÍTULO: ☀️ ¡EL PLAN PERFECTO EN LAWTON! ☀️
    PRECIO: None 
-   MUNICIPIO: Lawton
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -634,7 +634,7 @@ LEYENDA DE RAZONES:
 
 45. TÍTULO: ¡Piscina, Jacuzzi y Privacidad Total para tus Pasadías y Estancias! 🏊♂️🌴
    PRECIO: None 
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -648,7 +648,7 @@ LEYENDA DE RAZONES:
 
 46. TÍTULO: Vendo mi casa por el Semáforo de Acosta y Porvenir descripción abajo ⬇️ 38mil ajustable con cosas adentro
    PRECIO: 1 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
@@ -676,7 +676,7 @@ LEYENDA DE RAZONES:
 
 48. TÍTULO: Casa de Renta
    PRECIO: 50 USD
-   MUNICIPIO: no especificado
+   Municipio: 10 de Octubre
    PROVINCIA: La Habana
    TELÉFONO: NO DISPONIBLE
    PERMUTA: NO
