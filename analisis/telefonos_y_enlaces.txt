@@ -3,25 +3,35 @@ TELEFONOS Y ENLACES DE ANUNCIOS - ORGANIZADO POR TELEFONO
 ================================================================================
 
 Total de anuncios: 101
-Anuncios con telefono: 19
-Anuncios sin telefono: 82
+Total de telefonos unicos: 16
+Anuncios con telefono: 17
+Anuncios sin telefono: 84
 
 --------------------------------------------------------------------------------
-1. TELEFONO: 2643689
+1. TELEFONO: 5148754
    NOMBRE: 
 --------------------------------------------------------------------------------
 
    ANUNCIO 1:
-     Titulo: Casa en venta
-     Precio: 60000
+     Titulo: Apto en bajo en Santos Suárez cerca de Santa Catalina
+     Precio: 12000
      Moneda: USD
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-venta-56985062
+     Enlace: https://www.revolico.com/item/apto-en-bajo-en-santos-suarez-cerca-de-santa-catalina-58042185
+
+   ANUNCIO 2:
+     Titulo: Casa en Santos Suárez
+     Precio: 29000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/casa-en-santos-suarez-57431071
 
 --------------------------------------------------------------------------------
-2. TELEFONO: 3022922
+2. TELEFONO: 53022922
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -53,163 +63,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/al313-78000-casa-independiente-de-4-niveles-en-santos-suarez53o22922wwwventacasasmandycom-51131233
 
 --------------------------------------------------------------------------------
-3. TELEFONO: 4485987
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Apartamento en la Vibora
-     Precio: 45000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-54960186
-
-   ANUNCIO 2:
-     Titulo: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
-     Precio: 100000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
-
-   ANUNCIO 3:
-     Titulo: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
-     Precio: 48000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
-
-   ANUNCIO 4:
-     Titulo: Casa independiente en Santo Suárez con garaje
-     Precio: 64000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-en-santo-suarez-con-garaje-58176457
-
---------------------------------------------------------------------------------
-4. TELEFONO: 44964739
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: (al319)-25000-Casa independiente en Santos Suárez.(53022922).
-     Precio: 25000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-en-santos-suarez53022922-mandy-44964739
-
---------------------------------------------------------------------------------
-5. TELEFONO: 4500104
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Apartamento en la Vibora
-     Precio: 45000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-54960186
-
-   ANUNCIO 2:
-     Titulo: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
-     Precio: 100000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
-
-   ANUNCIO 3:
-     Titulo: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
-     Precio: 48000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
-
-   ANUNCIO 4:
-     Titulo: Casa independiente en Santo Suárez con garaje
-     Precio: 64000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-en-santo-suarez-con-garaje-58176457
-
---------------------------------------------------------------------------------
-6. TELEFONO: 4834613
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Compro apto en playa, vedado y nuevo vedado. Tengo 8500
-     Precio: 8500
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/compro-apto-en-playa-vedado-y-nuevo-vedado-tengo-8500-57956298
-
-   ANUNCIO 2:
-     Titulo: Venta o permuta de apartamento en el sevillano
-     Precio: 13000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: SI
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-o-permuta-de-apartamento-en-el-sevillano-57695761
-
---------------------------------------------------------------------------------
-7. TELEFONO: 5148754
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Apto en bajo en Santos Suárez cerca de Santa Catalina
-     Precio: 12000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apto-en-bajo-en-santos-suarez-cerca-de-santa-catalina-58042185
-
-   ANUNCIO 2:
-     Titulo: Casa en Santos Suárez
-     Precio: 29000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-santos-suarez-57431071
-
---------------------------------------------------------------------------------
-8. TELEFONO: 53022922
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: (al319)-25000-Casa independiente en Santos Suárez.(53022922).
-     Precio: 25000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-en-santos-suarez53022922-mandy-44964739
-
---------------------------------------------------------------------------------
-9. TELEFONO: 5351194
+3. TELEFONO: 5351194
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -223,7 +77,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-57317211?p
 
 --------------------------------------------------------------------------------
-10. TELEFONO: 5375769
+4. TELEFONO: 5375769
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -237,7 +91,71 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/casa-grande-para-almacen-240m2-56416044
 
 --------------------------------------------------------------------------------
-11. TELEFONO: 54834613
+5. TELEFONO: 54485987
+   NOMBRE: 
+--------------------------------------------------------------------------------
+
+   ANUNCIO 1:
+     Titulo: Apartamento en la Vibora
+     Precio: 45000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-54960186
+
+   ANUNCIO 2:
+     Titulo: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
+     Precio: 100000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
+
+   ANUNCIO 3:
+     Titulo: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
+     Precio: 48000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
+
+--------------------------------------------------------------------------------
+6. TELEFONO: 54500104
+   NOMBRE: 
+--------------------------------------------------------------------------------
+
+   ANUNCIO 1:
+     Titulo: Apartamento en la Vibora
+     Precio: 45000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-54960186
+
+   ANUNCIO 2:
+     Titulo: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
+     Precio: 100000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
+
+   ANUNCIO 3:
+     Titulo: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
+     Precio: 48000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
+
+--------------------------------------------------------------------------------
+7. TELEFONO: 54834613
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -251,7 +169,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/venta-o-permuta-de-apartamento-en-el-sevillano-57695761
 
 --------------------------------------------------------------------------------
-12. TELEFONO: 5517730
+8. TELEFONO: 5517730
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -265,7 +183,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-lawton-10-de-octubreplaca-libregarajepatio-y-papeles-en-regla-56370283
 
 --------------------------------------------------------------------------------
-13. TELEFONO: 55351194
+9. TELEFONO: 55351194
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -279,7 +197,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-57317211?p
 
 --------------------------------------------------------------------------------
-14. TELEFONO: 56295484
+10. TELEFONO: 56295484
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -293,7 +211,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/se-vende-casa-57692514
 
 --------------------------------------------------------------------------------
-15. TELEFONO: 58140525
+11. TELEFONO: 58140525
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -307,7 +225,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-58279727
 
 --------------------------------------------------------------------------------
-16. TELEFONO: 59032598
+12. TELEFONO: 59032598
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -321,7 +239,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
 
 --------------------------------------------------------------------------------
-17. TELEFONO: 6091960
+13. TELEFONO: 6091960
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -335,7 +253,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/al297-biplanta-en-santos-suarez53o22922-44935344
 
 --------------------------------------------------------------------------------
-18. TELEFONO: 6295484
+14. TELEFONO: 6295484
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -358,7 +276,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/se-vende-casa-57692514
 
 --------------------------------------------------------------------------------
-19. TELEFONO: 6499871
+15. TELEFONO: 6499871
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -372,7 +290,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/casa-en-venta-56985062
 
 --------------------------------------------------------------------------------
-20. TELEFONO: 78676471
+16. TELEFONO: 78676471
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -386,122 +304,7 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
 
 --------------------------------------------------------------------------------
-21. TELEFONO: 8140525
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: 70,000 USD
-     Precio: 70000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-58279727
-
---------------------------------------------------------------------------------
-22. TELEFONO: 8793428
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: SE VENDE APARTAMENTO
-     Precio: 12500
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-apartamento-58193578
-
-   ANUNCIO 2:
-     Titulo: SE VENDE CASA
-     Precio: 60000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-57692514
-
---------------------------------------------------------------------------------
-23. TELEFONO: 9032598
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Venta de apart o cambio con un vuelto $ por algo más grande
-     Precio: NO DECLARADO
-     Moneda: -
-     Municipio: 10 de Octubre
-     Permuta: SI
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
-
---------------------------------------------------------------------------------
-24. TELEFONO: +53 54485987
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Apartamento en la Vibora
-     Precio: 45000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-54960186
-
-   ANUNCIO 2:
-     Titulo: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
-     Precio: 100000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
-
-   ANUNCIO 3:
-     Titulo: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
-     Precio: 48000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
-
---------------------------------------------------------------------------------
-25. TELEFONO: +53 54500104
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Apartamento en la Vibora
-     Precio: 45000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-54960186
-
-   ANUNCIO 2:
-     Titulo: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
-     Precio: 100000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
-
-   ANUNCIO 3:
-     Titulo: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
-     Precio: 48000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
-
---------------------------------------------------------------------------------
-26. TELEFONO: 
+17. TELEFONO: 
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -517,6 +320,24 @@ Anuncios sin telefono: 82
      Enlace: https://www.revolico.com/item/publish
 
    ANUNCIO 2:
+     Titulo: Compro apto en playa, vedado y nuevo vedado. Tengo 8500
+     Precio: 8500
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/compro-apto-en-playa-vedado-y-nuevo-vedado-tengo-8500-57956298
+
+   ANUNCIO 3:
+     Titulo: Casa independiente en Santo Suárez con garaje
+     Precio: 64000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/casa-independiente-en-santo-suarez-con-garaje-58176457
+
+   ANUNCIO 4:
      Titulo: Casa apto en un 1er piso cerca de Santa Catalina
      Precio: 45000
      Moneda: USD
@@ -525,7 +346,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-apto-en-un-1er-piso-cerca-de-santa-catalina-56642821
 
-   ANUNCIO 3:
+   ANUNCIO 5:
      Titulo: Casa Independiente en Santos Suárez cerca d Santa Catalina
      Precio: 50000
      Moneda: USD
@@ -534,7 +355,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-independiente-en-santos-suarez-cerca-d-santa-catalina-55718174
 
-   ANUNCIO 4:
+   ANUNCIO 6:
      Titulo: 22,500 USD
      Precio: 22500
      Moneda: USD
@@ -543,7 +364,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/ganga-2-en-1-por-el-precio-de-1-casa-en-luyano-2-en-1-25-000-usd-57683040
 
-   ANUNCIO 5:
+   ANUNCIO 7:
      Titulo: Venta de casa en Lautow/ placa libre
      Precio: 22000
      Moneda: USD
@@ -552,7 +373,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta-de-casa-en-lautow-placa-libre-58319790
 
-   ANUNCIO 6:
+   ANUNCIO 8:
      Titulo: 25,000 USD
      Precio: 25000
      Moneda: USD
@@ -561,7 +382,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/nueva-casa-puesta-en-venta-en-10-de-octubre-santo-suares-con-todo-adentro-55866599
 
-   ANUNCIO 7:
+   ANUNCIO 9:
      Titulo: Casa en la Víbora en bajos, 3 hab con garaje.
      Precio: 28000
      Moneda: USD
@@ -570,7 +391,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-en-la-vibora-3-hab-con-garaje-55492641
 
-   ANUNCIO 8:
+   ANUNCIO 10:
      Titulo: Permuto y recojo buelto a mi favor
      Precio: 11223778
      Moneda: USD
@@ -579,7 +400,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58334346
 
-   ANUNCIO 9:
+   ANUNCIO 11:
      Titulo: Permuto casa en 10 de octubre
      Precio: 11122222
      Moneda: USD
@@ -588,7 +409,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/permuto-casa-en-10-de-octubre-58334287
 
-   ANUNCIO 10:
+   ANUNCIO 12:
      Titulo: Permuto y recojo buelto a mi favor
      Precio: 1111111111
      Moneda: USD
@@ -597,7 +418,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58333525
 
-   ANUNCIO 11:
+   ANUNCIO 13:
      Titulo: Permuto 2 apartamento y recojo buelto a mi favor
      Precio: 1111111111
      Moneda: USD
@@ -606,7 +427,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/permuto-2-apartamento-y-recojo-buelto-a-mi-favor-58333411
 
-   ANUNCIO 12:
+   ANUNCIO 14:
      Titulo: Apartamento de dos  cuartos
      Precio: 6000
      Moneda: USD
@@ -615,7 +436,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/apartamento-de-dos-cuartos-56030942
 
-   ANUNCIO 13:
+   ANUNCIO 15:
      Titulo: CASA_EN ALTOS_ LUYANÓ_ DIEZ DE OCTUBRE
      Precio: 15000
      Moneda: USD
@@ -624,7 +445,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa_en-altos_-luyano_-diez-de-octubre-58095731
 
-   ANUNCIO 14:
+   ANUNCIO 16:
      Titulo: VENTA_APARTAMENTO_EN ALTOS_LUYANÓ_DIEZ DE OCTUBRE
      Precio: 25000
      Moneda: USD
@@ -633,7 +454,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta_apartamento_en-altos_luyano_diez-de-octubre-58117455
 
-   ANUNCIO 15:
+   ANUNCIO 17:
      Titulo: VENTA_CASA EN ALTO_MÓNACO_DIEZ DE OCTUBRE  ¡
      Precio: 15000
      Moneda: USD
@@ -642,7 +463,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta_casa-en-alto_monaco_diez-de-octubre-58088194
 
-   ANUNCIO 16:
+   ANUNCIO 18:
      Titulo: VENTA_CASA EN LA ASUNCIÓN_LAWTON_DIEZ DE OCTUBRE
      Precio: 35000
      Moneda: USD
@@ -651,7 +472,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta_casa-en-la-asuncion_lawton_diez-de-octubre-58095520
 
-   ANUNCIO 17:
+   ANUNCIO 19:
      Titulo: Alquiler de apartamento con electricidad e internet 24H (Ideal para agentes de ventas)
      Precio: 10
      Moneda: USD
@@ -660,7 +481,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/alquiler-de-apartamento-con-electricidad-e-internet-24h-ideal-para-agentes-de-ventas-57230152
 
-   ANUNCIO 18:
+   ANUNCIO 20:
      Titulo: Vendo casa grande totalmente independientes en reparto Santos Suárez
      Precio: NO DECLARADO
      Moneda: -
@@ -669,7 +490,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vendo-casa-grande-totalmente-independientes-en-reparto-santos-suarez-56360375
 
-   ANUNCIO 19:
+   ANUNCIO 21:
      Titulo: Vendo casa de dos plantas en santos Suárez
      Precio: 18000
      Moneda: USD
@@ -678,7 +499,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vendo-casa-de-dos-plantas-en-santos-suarez-56678413
 
-   ANUNCIO 20:
+   ANUNCIO 22:
      Titulo: Biplanta independiente en el Cerro
      Precio: 45000
      Moneda: USD
@@ -687,7 +508,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/biplanta-independiente-en-el-cerro-57954437
 
-   ANUNCIO 21:
+   ANUNCIO 23:
      Titulo: Vendo apto. de 3/4 en la Víbora
      Precio: 15000
      Moneda: USD
@@ -696,7 +517,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vendo-apto-de-34-en-la-vibora-58330788
 
-   ANUNCIO 22:
+   ANUNCIO 24:
      Titulo: Alquiler
      Precio: 50000
      Moneda: CUP
@@ -705,7 +526,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/alquiler-58286882
 
-   ANUNCIO 23:
+   ANUNCIO 25:
      Titulo: Venta de Casa en Lawton
      Precio: 33000
      Moneda: USD
@@ -714,7 +535,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta-de-casa-en-lawton-58329459
 
-   ANUNCIO 24:
+   ANUNCIO 26:
      Titulo: Venta de casa en Playa
      Precio: 25
      Moneda: USD
@@ -723,7 +544,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta-de-casa-en-paya-58329119
 
-   ANUNCIO 25:
+   ANUNCIO 27:
      Titulo: Venta de casa en Lawton
      Precio: 30000
      Moneda: USD
@@ -732,7 +553,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta-de-casas-55845341
 
-   ANUNCIO 26:
+   ANUNCIO 28:
      Titulo: Se vende casa independiente en Santo Suárez
      Precio: 1
      Moneda: USD
@@ -741,7 +562,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-57689093
 
-   ANUNCIO 27:
+   ANUNCIO 29:
      Titulo: 🚨 Se Vende propiedad independiente
      Precio: NO DECLARADO
      Moneda: -
@@ -750,7 +571,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-propiedad-independiente-57323098
 
-   ANUNCIO 28:
+   ANUNCIO 30:
      Titulo: Se Vende Casa en santos Suárez
      Precio: 17000
      Moneda: USD
@@ -759,7 +580,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-casa-en-santos-suarez-57961246
 
-   ANUNCIO 29:
+   ANUNCIO 31:
      Titulo: Vende tu casa rápido
      Precio: 1
      Moneda: USD
@@ -768,7 +589,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vende-tu-casa-rapido-57282965
 
-   ANUNCIO 30:
+   ANUNCIO 32:
      Titulo: ✨ GRAN OPORTUNIDAD DE INVERSIÓN Y VIVIENDA – 10 DE OCTUBRE 🏡
      Precio: 45000
      Moneda: USD
@@ -777,7 +598,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/gran-oportunidad-de-inversion-y-vivienda-10-de-octubre-58327646
 
-   ANUNCIO 31:
+   ANUNCIO 33:
      Titulo: Permuto 1x2
      Precio: NO DECLARADO
      Moneda: -
@@ -786,7 +607,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/permuto-1x2-57895191
 
-   ANUNCIO 32:
+   ANUNCIO 34:
      Titulo: ✨ VENTA DE CASA – REPARTO RESIDENCIAL ASUNCIÓN, 10 DE OCTUBRE 🏡
      Precio: 70000
      Moneda: USD
@@ -795,7 +616,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta-de-casa-reparto-residencial-asuncion-10-de-octubre-58326838
 
-   ANUNCIO 33:
+   ANUNCIO 35:
      Titulo: ✨ OPORTUNIDAD ÚNICA: HOGAR + NEGOCIO EN UN SOLO INMUEBLE 🏠
      Precio: 75000
      Moneda: USD
@@ -804,7 +625,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-58326298
 
-   ANUNCIO 34:
+   ANUNCIO 36:
      Titulo: 250 USD
      Precio: 250
      Moneda: USD
@@ -813,7 +634,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/habitacion-independiente-con-cocina-y-patio-en-la-vibora-ref-1394-51079049
 
-   ANUNCIO 35:
+   ANUNCIO 37:
      Titulo: Vendo casa independiente en Nuevo Vedado
      Precio: 270000
      Moneda: USD
@@ -822,7 +643,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-nuevo-vedado-56754991
 
-   ANUNCIO 36:
+   ANUNCIO 38:
      Titulo: Venta de casa interior
      Precio: 9000
      Moneda: USD
@@ -831,7 +652,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta-de-casa-interior-57847360
 
-   ANUNCIO 37:
+   ANUNCIO 39:
      Titulo: 🏡 SE VENDE APARTAMENTO CAPITALISTA – LA VÍBORA (42)
      Precio: 21000
      Moneda: USD
@@ -840,7 +661,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-apartamento-capitalista-la-vibora-42-57579769
 
-   ANUNCIO 38:
+   ANUNCIO 40:
      Titulo: Hoteles todo incluído - Varadero - Jibacoa - Cayo Santa María (Kinetica)
      Precio: NO DECLARADO
      Moneda: -
@@ -849,7 +670,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/ofertas-de-verano-varadero-la-habana-cayo-santa-maria-kinetica-55738219
 
-   ANUNCIO 39:
+   ANUNCIO 41:
      Titulo: Oportunidad de apartamento en Diez de Octubre
      Precio: 23000
      Moneda: USD
@@ -858,7 +679,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/oportunidad-de-apartamento-en-diez-de-octubre-56202133
 
-   ANUNCIO 40:
+   ANUNCIO 42:
      Titulo: Oportunidad de inmueble en Lawton, Diez de Octubre
      Precio: 18000
      Moneda: USD
@@ -867,7 +688,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/oportunidad-de-inmueble-en-lawton-diez-de-octubre-57455124
 
-   ANUNCIO 41:
+   ANUNCIO 43:
      Titulo: Se vende apartamento capitalista en la Víbora 92m2 cerca del Palacio de los matrimonios y matias Rodríguez
      Precio: 25000
      Moneda: USD
@@ -876,7 +697,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-apartamento-capitalista-en-la-vibora-92m2-cerca-del-palacio-de-los-matrimonios-y-matias-rodriguez-58325911
 
-   ANUNCIO 42:
+   ANUNCIO 44:
      Titulo: Oportunidad de vivienda en el Sevillano-10 de octubre
      Precio: 23000
      Moneda: USD
@@ -885,7 +706,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/oportunidad-de-vivienda-en-el-sevillano-10-de-octubre-55201555
 
-   ANUNCIO 43:
+   ANUNCIO 45:
      Titulo: Oportunidad de inmueble en Reparto Lawton,Diez de Octubre
      Precio: 27000
      Moneda: USD
@@ -894,7 +715,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/oportunidad-de-inmueble-en-reparto-lawtondiez-de-octubre-57455071
 
-   ANUNCIO 44:
+   ANUNCIO 46:
      Titulo: PISCINA DISPONIBLE PARA RENTA EN SAN MIGUEL.
      Precio: NO DECLARADO
      Moneda: -
@@ -903,7 +724,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/piscina-disponible-para-renta-en-san-miguel-57832714
 
-   ANUNCIO 45:
+   ANUNCIO 47:
      Titulo: Vendo casa en Lawton
      Precio: 15000
      Moneda: USD
@@ -912,7 +733,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vendo-casa-en-lawton-58132964
 
-   ANUNCIO 46:
+   ANUNCIO 48:
      Titulo: Se vende casa en Santo Suarez
      Precio: 35000
      Moneda: USD
@@ -921,7 +742,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-casa-en-santo-suarez-57427179
 
-   ANUNCIO 47:
+   ANUNCIO 49:
      Titulo: Vendo apartamento capitalista garaje último piso con balcón semi interior en la Víbora cerca del Tribunal provincial
      Precio: 15000
      Moneda: USD
@@ -930,7 +751,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vendo-apartamento-capitalista-garaje-ultimo-piso-con-balcon-semi-interior-en-la-vibora-cerca-del-tribunal-provincial-58325597
 
-   ANUNCIO 48:
+   ANUNCIO 50:
      Titulo: 🏡 SE VENDE O SE PERMUTA APARTAMENTO EN PLANTA BAJA, SEVILLANO, 10 DE OCTUBRE.
      Precio: 12000
      Moneda: USD
@@ -939,7 +760,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-o-se-permuta-apartamento-en-planta-baja-sevillano-10-de-octubre-55911834
 
-   ANUNCIO 49:
+   ANUNCIO 51:
      Titulo: 10 de Octubre y Vía Blanca:Apto de 2/4 en 3erPiso,Ventanales a la Calle,Azotea Propia,y Una Casita De Madera Independien
      Precio: 7000
      Moneda: USD
@@ -948,7 +769,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/10-de-octubre-y-via-blancaapto-de-24-en-3erpisoventanales-a-la-calleazotea-propiay-una-casita-de-madera-independien-57857150
 
-   ANUNCIO 50:
+   ANUNCIO 52:
      Titulo: 💥6500💥
      Precio: 6500
      Moneda: USD
@@ -957,7 +778,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/6500-58324814
 
-   ANUNCIO 51:
+   ANUNCIO 53:
      Titulo: 4,000 USD
      Precio: 4000
      Moneda: USD
@@ -966,7 +787,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/4000-usd-con-cosas-dentro-58324660
 
-   ANUNCIO 52:
+   ANUNCIO 54:
      Titulo: Casa bastante grande
      Precio: 25000
      Moneda: USD
@@ -975,7 +796,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-bastante-grande-57324516
 
-   ANUNCIO 53:
+   ANUNCIO 55:
      Titulo: 35 USD
      Precio: 35
      Moneda: USD
@@ -984,7 +805,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/apartamento-espacioso-de-1-habitacion-en-la-vibora-ref-1393-50373980
 
-   ANUNCIO 54:
+   ANUNCIO 56:
      Titulo: 35 USD
      Precio: 35
      Moneda: USD
@@ -993,7 +814,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/apartamento-independiente-en-santos-suarez-de-2-cuartos-pasadias-a-varadero-y-vinales-ref-1303-49744411
 
-   ANUNCIO 55:
+   ANUNCIO 57:
      Titulo: Casa independiente en el sevillano
      Precio: 55000
      Moneda: USD
@@ -1002,7 +823,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-independiente-en-el-sevillano-57760771
 
-   ANUNCIO 56:
+   ANUNCIO 58:
      Titulo: Casa independiente con respaldo energetico en la vibora
      Precio: 45000
      Moneda: USD
@@ -1011,7 +832,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-independiente-con-respaldo-energetico-en-la-vibora-57509349
 
-   ANUNCIO 57:
+   ANUNCIO 59:
      Titulo: Apartamento amplio en 10 de octubre la víbora
      Precio: 26000
      Moneda: USD
@@ -1020,7 +841,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/apartamento-amplio-en-10-de-octubre-la-vibora-58323680
 
-   ANUNCIO 58:
+   ANUNCIO 60:
      Titulo: Apartamento en Sevillano
      Precio: 9000
      Moneda: USD
@@ -1029,7 +850,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/apartamento-en-sevillano-57531862
 
-   ANUNCIO 59:
+   ANUNCIO 61:
      Titulo: Casa en Sevillano Diez de Octubre 43m²
      Precio: 12000
      Moneda: USD
@@ -1038,7 +859,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-en-sevillano-diez-de-octubre-43m2-55602820
 
-   ANUNCIO 60:
+   ANUNCIO 62:
      Titulo: ✨ CASA EN ALTO EN LUYANO – OPORTUNIDAD 🏡🔑
      Precio: 15000
      Moneda: USD
@@ -1047,7 +868,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-en-alto-en-luyano-oportunidad-58323247
 
-   ANUNCIO 61:
+   ANUNCIO 63:
      Titulo: ✨ CASA EN ALTO EN EL MÓNACO – DIEZ DE OCTUBRE 🏠
      Precio: 15000
      Moneda: USD
@@ -1056,7 +877,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-en-alto-en-el-monaco-diez-de-octubre-58323094
 
-   ANUNCIO 62:
+   ANUNCIO 64:
      Titulo: 🏠 *OPORTUNIDAD ÚNICA: HOGAR + NEGOCIO EN UN SOLO INMUEBLE | CALZADA 10 DE OCTUBRE*
      Precio: 85000
      Moneda: USD
@@ -1065,7 +886,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-calzada-10-de-octubre-57758389
 
-   ANUNCIO 63:
+   ANUNCIO 65:
      Titulo: ¡SE VENDE CASA EN ALTO  EN MÓNACO! #154
      Precio: 15000
      Moneda: USD
@@ -1074,7 +895,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-casa-en-alto-en-monaco-154-57941793
 
-   ANUNCIO 64:
+   ANUNCIO 66:
      Titulo: Casa en alto en Luyano #155
      Precio: 15000
      Moneda: USD
@@ -1083,7 +904,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-en-alto-en-luyano-155-57941736
 
-   ANUNCIO 65:
+   ANUNCIO 67:
      Titulo: Apto micro en la vibora
      Precio: 12000
      Moneda: USD
@@ -1092,7 +913,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/apto-micro-en-la-vibora-57925343
 
-   ANUNCIO 66:
+   ANUNCIO 68:
      Titulo: Casa de 2 plantas y auto. El hogar para la  familia por siempre 45 000 usd. Lawton
      Precio: 45000
      Moneda: USD
@@ -1101,7 +922,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-de-2-plantas-y-auto-el-hogar-para-la-familia-por-siempre-45-000-usd-lawton-58322852
 
-   ANUNCIO 67:
+   ANUNCIO 69:
      Titulo: Casa de 2 plantas y auto. El hogar para la  familia por siempre 45 000 usd. Lawton
      Precio: 45000
      Moneda: USD
@@ -1110,7 +931,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-de-2-plantas-y-auto-el-hogar-para-la-familia-por-siempre-45-000-usd-lawton-58322851
 
-   ANUNCIO 68:
+   ANUNCIO 70:
      Titulo: Casa biplanta en 10 de octubre
      Precio: 75000
      Moneda: USD
@@ -1119,7 +940,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-biplanta-en-10-de-octubre-56110832
 
-   ANUNCIO 69:
+   ANUNCIO 71:
      Titulo: SE VENDE CASA EN LUYANO..GANGA!!!🛑
      Precio: 11000
      Moneda: USD
@@ -1128,7 +949,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/se-vende-casa-en-luyanoganga-56917688
 
-   ANUNCIO 70:
+   ANUNCIO 72:
      Titulo: J Casa de renta para parejas o grupos en Reparto Sevillano municipio Diez de Octubre. OCT-003
      Precio: NO DECLARADO
      Moneda: -
@@ -1137,7 +958,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/j-casa-de-renta-para-parejas-o-grupos-en-reparto-sevillano-municipio-diez-de-octubre-oct-003-58276593
 
-   ANUNCIO 71:
+   ANUNCIO 73:
      Titulo: apto en alto en lawton
      Precio: 25000
      Moneda: USD
@@ -1146,7 +967,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/apto-en-alto-en-lawton-57022144
 
-   ANUNCIO 72:
+   ANUNCIO 74:
      Titulo: 150 USD
      Precio: 150
      Moneda: USD
@@ -1155,7 +976,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/150-usd-apartamento-de-14-en-santos-suarez-58160551
 
-   ANUNCIO 73:
+   ANUNCIO 75:
      Titulo: Puertas blindadas Polimetalicas
      Precio: 410
      Moneda: USD
@@ -1164,7 +985,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/puertas-blindadas-polimetalicas-53869917
 
-   ANUNCIO 74:
+   ANUNCIO 76:
      Titulo: Casa en interior, 5 cuartos, 4 baños + piscina, 2 entradas independientes. Cerca de Santa Catalina y 10 de Octubre
      Precio: 35000
      Moneda: USD
@@ -1173,7 +994,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-con-5-cuartos-4-banos-piscina-2-entradas-independientes-cerca-de-santa-catalina-y-10-de-octubre-54193773
 
-   ANUNCIO 75:
+   ANUNCIO 77:
      Titulo: Puerta para exterior e interior
      Precio: 250
      Moneda: USD
@@ -1182,7 +1003,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/puerta-para-exterior-e-interior-58321879
 
-   ANUNCIO 76:
+   ANUNCIO 78:
      Titulo: ☀️ ¡EL PLAN PERFECTO EN LAWTON! ☀️
      Precio: NO DECLARADO
      Moneda: -
@@ -1191,7 +1012,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/el-plan-perfecto-en-lawton-56219131
 
-   ANUNCIO 77:
+   ANUNCIO 79:
      Titulo: ¡Piscina, Jacuzzi y Privacidad Total para tus Pasadías y Estancias! 🏊♂️🌴
      Precio: NO DECLARADO
      Moneda: -
@@ -1200,7 +1021,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/piscina-jacuzzi-y-privacidad-total-para-tus-pasadias-y-estancias-58180723
 
-   ANUNCIO 78:
+   ANUNCIO 80:
      Titulo: Vendo mi casa por el Semáforo de Acosta y Porvenir descripción abajo ⬇️ 38mil ajustable con cosas adentro
      Precio: 1
      Moneda: USD
@@ -1209,7 +1030,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/vendo-mi-casa-por-el-semaforo-de-acosta-y-porvenir-descripcion-abajo-38mil-ajustable-con-cosas-adentro-58321529
 
-   ANUNCIO 79:
+   ANUNCIO 81:
      Titulo: Venta de Casa Independiente 3 habitaciones(Santo Suárez)🏠
      Precio: 16000
      Moneda: USD
@@ -1218,7 +1039,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta-de-casa-independiente-3-habitacionessanto-suarez-58279874
 
-   ANUNCIO 80:
+   ANUNCIO 82:
      Titulo: 450 USD
      Precio: 450
      Moneda: USD
@@ -1227,7 +1048,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/amplia-casa-de-2-habitaciones-en-santos-suarez-10-de-octubre-57482712
 
-   ANUNCIO 81:
+   ANUNCIO 83:
      Titulo: Casa de Renta
      Precio: 50
      Moneda: USD
@@ -1236,7 +1057,7 @@ Anuncios sin telefono: 82
      Fuente: revolico
      Enlace: https://www.revolico.com/item/casa-de-renta-57619950
 
-   ANUNCIO 82:
+   ANUNCIO 84:
      Titulo: Gran vivienda en venta en 10 de octubre
      Precio: 45000
      Moneda: USD
