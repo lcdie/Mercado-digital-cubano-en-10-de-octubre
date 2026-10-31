@@ -31,7 +31,100 @@ Anuncios sin telefono: 84
      Enlace: https://www.revolico.com/item/casa-en-santos-suarez-57431071
 
 --------------------------------------------------------------------------------
-2. TELEFONO: 53022922
+2. TELEFONO: 5351194
+   NOMBRE: 
+--------------------------------------------------------------------------------
+
+   ANUNCIO 1:
+     Titulo: Venta apto 2/4 en Santo Suárez moderno municipio 10 octubre
+     Precio: 25000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-57317211?p
+
+--------------------------------------------------------------------------------
+3. TELEFONO: 5375769
+   NOMBRE: 
+--------------------------------------------------------------------------------
+
+   ANUNCIO 1:
+     Titulo: 🔴Casa Grande para Almacén 240m²📦
+     Precio: 80000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/casa-grande-para-almacen-240m2-56416044
+
+--------------------------------------------------------------------------------
+4. TELEFONO: 5517730
+   NOMBRE: 
+--------------------------------------------------------------------------------
+
+   ANUNCIO 1:
+     Titulo: Vendo Casa independiente en Lawton 10 de Octubre,placa libre,garaje,patio y papeles en regla. Me ajusto en el precio.
+     Precio: 18000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-lawton-10-de-octubreplaca-libregarajepatio-y-papeles-en-regla-56370283
+
+--------------------------------------------------------------------------------
+5. TELEFONO: 6091960
+   NOMBRE: 
+--------------------------------------------------------------------------------
+
+   ANUNCIO 1:
+     Titulo: (al297)-Biplanta en Santos Suárez.(53o22922).
+     Precio: 20000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/al297-biplanta-en-santos-suarez53o22922-44935344
+
+--------------------------------------------------------------------------------
+6. TELEFONO: 6295484
+   NOMBRE: 
+--------------------------------------------------------------------------------
+
+   ANUNCIO 1:
+     Titulo: SE VENDE APARTAMENTO
+     Precio: 12500
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/se-vende-apartamento-58193578
+
+   ANUNCIO 2:
+     Titulo: SE VENDE CASA
+     Precio: 60000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/se-vende-casa-57692514
+
+--------------------------------------------------------------------------------
+7. TELEFONO: 6499871
+   NOMBRE: 
+--------------------------------------------------------------------------------
+
+   ANUNCIO 1:
+     Titulo: Casa en venta
+     Precio: 60000
+     Moneda: USD
+     Municipio: 10 de Octubre
+     Permuta: NO
+     Fuente: revolico
+     Enlace: https://www.revolico.com/item/casa-en-venta-56985062
+
+--------------------------------------------------------------------------------
+8. TELEFONO: 53022922
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -63,35 +156,7 @@ Anuncios sin telefono: 84
      Enlace: https://www.revolico.com/item/al313-78000-casa-independiente-de-4-niveles-en-santos-suarez53o22922wwwventacasasmandycom-51131233
 
 --------------------------------------------------------------------------------
-3. TELEFONO: 5351194
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Venta apto 2/4 en Santo Suárez moderno municipio 10 octubre
-     Precio: 25000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-57317211?p
-
---------------------------------------------------------------------------------
-4. TELEFONO: 5375769
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: 🔴Casa Grande para Almacén 240m²📦
-     Precio: 80000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-grande-para-almacen-240m2-56416044
-
---------------------------------------------------------------------------------
-5. TELEFONO: 54485987
+9. TELEFONO: 54485987
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -123,7 +188,7 @@ Anuncios sin telefono: 84
      Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
 
 --------------------------------------------------------------------------------
-6. TELEFONO: 54500104
+10. TELEFONO: 54500104
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -155,7 +220,7 @@ Anuncios sin telefono: 84
      Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
 
 --------------------------------------------------------------------------------
-7. TELEFONO: 54834613
+11. TELEFONO: 54834613
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -169,21 +234,7 @@ Anuncios sin telefono: 84
      Enlace: https://www.revolico.com/item/venta-o-permuta-de-apartamento-en-el-sevillano-57695761
 
 --------------------------------------------------------------------------------
-8. TELEFONO: 5517730
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Vendo Casa independiente en Lawton 10 de Octubre,placa libre,garaje,patio y papeles en regla. Me ajusto en el precio.
-     Precio: 18000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-lawton-10-de-octubreplaca-libregarajepatio-y-papeles-en-regla-56370283
-
---------------------------------------------------------------------------------
-9. TELEFONO: 55351194
+12. TELEFONO: 55351194
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -197,7 +248,7 @@ Anuncios sin telefono: 84
      Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-57317211?p
 
 --------------------------------------------------------------------------------
-10. TELEFONO: 56295484
+13. TELEFONO: 56295484
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -211,7 +262,7 @@ Anuncios sin telefono: 84
      Enlace: https://www.revolico.com/item/se-vende-casa-57692514
 
 --------------------------------------------------------------------------------
-11. TELEFONO: 58140525
+14. TELEFONO: 58140525
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -225,7 +276,7 @@ Anuncios sin telefono: 84
      Enlace: https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-58279727
 
 --------------------------------------------------------------------------------
-12. TELEFONO: 59032598
+15. TELEFONO: 59032598
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -237,57 +288,6 @@ Anuncios sin telefono: 84
      Permuta: SI
      Fuente: revolico
      Enlace: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
-
---------------------------------------------------------------------------------
-13. TELEFONO: 6091960
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: (al297)-Biplanta en Santos Suárez.(53o22922).
-     Precio: 20000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/al297-biplanta-en-santos-suarez53o22922-44935344
-
---------------------------------------------------------------------------------
-14. TELEFONO: 6295484
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: SE VENDE APARTAMENTO
-     Precio: 12500
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-apartamento-58193578
-
-   ANUNCIO 2:
-     Titulo: SE VENDE CASA
-     Precio: 60000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-57692514
-
---------------------------------------------------------------------------------
-15. TELEFONO: 6499871
-   NOMBRE: 
---------------------------------------------------------------------------------
-
-   ANUNCIO 1:
-     Titulo: Casa en venta
-     Precio: 60000
-     Moneda: USD
-     Municipio: 10 de Octubre
-     Permuta: NO
-     Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-venta-56985062
 
 --------------------------------------------------------------------------------
 16. TELEFONO: 78676471
