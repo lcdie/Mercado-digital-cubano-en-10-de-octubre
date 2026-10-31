@@ -14,9 +14,12 @@ Se priorizan los atributos data-testid (data-testid="ad-card",
 data-testid="ad-price") cuando existan en el HTML.
 
 El precio se convierte a número y se conserva la moneda declarada.
-También se detecta el municipio a partir del título y el enlace.
+El municipio se asume como "Diez de Octubre" porque la URL de búsqueda
+ya filtra por ese municipio (evita falsos positivos de detección por
+palabras clave).
 
-Resultados: datos_brutos/revolico_crudos.json  (titulo, precio, moneda, municipio, enlace)
+Resultados: datos/brutos/revolico_crudos.json  (titulo, precio, moneda,
+municipio, enlace, sospechoso)
 """
 
 import json
@@ -29,18 +32,18 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
-# URL objetivo
+# URL objetivo (ya filtra por municipio diez-de-octubre)
 URL = (
     "https://www.revolico.com/search"
-    "?category=inmobiliaria&province=la-habana&municipality=diez-de-octubre"
+    "?category=inmobiliaria&province=la-habana&municipio=diez-de-octubre"
 )
 
 # Patrones de href que identifican un anuncio. Revolico usa /item/<slug>-<id>;
 # se mantienen /anuncio/ y /ad/ por si el sitio los usa en otras secciones.
 ANUNCIO_HREF_PATTERNS = ("/item/", "/anuncio/", "/ad/")
 
-# Carpeta y archivo de salida
-OUTPUT_DIR = "datos_brutos"
+# Carpeta y archivo de salida (coincide con el resto del repositorio)
+OUTPUT_DIR = "datos/brutos"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "revolico_crudos.json")
 SIN_MUNICIPIO_FILE = os.path.join(OUTPUT_DIR, "revolico_sin_municipio.json")
 
@@ -55,24 +58,9 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 
-# Patrón para teléfonos cubanos
-TELEFONO_PATTERN = re.compile(r'(?:\+53\s*)?[567]\d{7}', re.IGNORECASE)
-
-
-def extraer_telefono(url):
-    """Extrae el número de teléfono desde la ficha del anuncio."""
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=15)
-        if resp.status_code != 200:
-            return "NO DISPONIBLE"
-        texto = resp.text
-        matches = TELEFONO_PATTERN.findall(texto)
-        if matches:
-            tel = matches[0].strip().replace(' ', '')
-            return tel
-        return "NO DISPONIBLE"
-    except Exception:
-        return "NO DISPONIBLE"
+# Umbrales para marcar precios como sospechosos (outliers obvios)
+PRECIO_MINIMO_SOSPECHOSO = 100
+PRECIO_MAXIMO_SOSPECHOSO = 1_000_000
 
 
 def _sin_tildes(texto):
@@ -81,12 +69,12 @@ def _sin_tildes(texto):
         return ""
     texto = texto.lower()
     texto = unicodedata.normalize("NFD", texto)
-    texto = "".join(c for c in texto if unicodedata.category(c) != "Mn")
-    return texto
+    return "".join(c for c in texto if unicodedata.category(c) != "Mn")
 
 
 # Municipios de La Habana con sus variantes de escritura.
-# El orden importa: primero los más específicos (ej. "nuevo vedado" antes que "vedado").
+# Se mantiene por compatibilidad, aunque el scraper ahora fuerza el municipio
+# desde la URL de búsqueda.
 MUNICIPIOS = [
     ("Diez de Octubre", ["diez de octubre", "10 de octubre", "diez-de-octubre", "10-de-octubre"]),
     ("La Víbora", ["la vibora", "la víbora", "la-vibora", "vibora", "víbora"]),
@@ -99,7 +87,7 @@ MUNICIPIOS = [
     ("Playa", ["playa"]),
     ("Cerro", ["cerro"]),
     ("Mantilla", ["mantilla"]),
-    ("Guanabo", ["guanabo", "guanabo", "guanabo"]),
+    ("Guanabo", ["guanabo"]),
     ("Centro Habana", ["centro habana", "centro-habana"]),
     ("Habana Vieja", ["habana vieja", "habana-vieja"]),
     ("Plaza de la Revolución", ["plaza de la revolucion", "plaza de la revolución", "plaza-de-la-revolucion"]),
@@ -122,7 +110,7 @@ def detectar_municipio(titulo, enlace):
     y en el slug del enlace. Devuelve el nombre del municipio o
     "no especificado" si no se encuentra.
     """
-    texto = _sin_titulos(titulo) + " " + _sin_titulos(enlace)
+    texto = _sin_tildes(titulo) + " " + _sin_tildes(enlace)
 
     for nombre, variantes in MUNICIPIOS:
         for variante in variantes:
@@ -130,11 +118,6 @@ def detectar_municipio(titulo, enlace):
                 return nombre
 
     return "no especificado"
-
-
-def _sin_titulos(texto):
-    """Alias corto para _sin_tildes (mantenido por claridad)."""
-    return _sin_tildes(texto)
 
 
 def _texto_precio(nodo):
@@ -163,6 +146,11 @@ def parse_precio(texto):
     (numero, moneda). Detecta cualquier código de moneda de 3 letras (ISO 4217)
     o símbolo ($, €, £, ¥) solo cuando esté adyacente al número.
     Devuelve (None, "") si no se puede parsear.
+
+    CORREGIDO: ya no elimina todos los puntos/comas indiscriminadamente.
+    - Las comas se tratan como separadores de miles y se quitan.
+    - Un punto con 1-2 decimales se conserva como decimal.
+    - Un punto con 3 decimales se trata como separador de miles.
     """
     if not texto:
         return None, ""
@@ -198,15 +186,31 @@ def parse_precio(texto):
     else:
         moneda = moneda_raw.upper()
 
-    num_str = num_str.replace(",", "").replace(".", "")
+    # Limpiar número: quitar comas de miles
+    num_str = num_str.replace(",", "")
+
+    # Manejo de punto: decimal vs separador de miles
+    if "." in num_str:
+        partes = num_str.split(".")
+        if len(partes) > 2:
+            # Varios puntos -> quitar todos (formato raro de miles)
+            num_str = "".join(partes)
+        else:
+            entero, decimal = partes
+            if len(decimal) == 3:
+                # Probable separador de miles (1.250)
+                num_str = entero + decimal
+            else:
+                # Probable decimal (50.50)
+                num_str = entero + "." + decimal
 
     try:
-        valor = int(num_str)
-    except ValueError:
-        try:
+        if "." in num_str:
             valor = float(num_str)
-        except ValueError:
-            valor = None
+        else:
+            valor = int(num_str)
+    except ValueError:
+        return None, ""
 
     return valor, moneda
 
@@ -237,6 +241,26 @@ def _titulo_del_anuncio(enlace, precio_texto):
     if precio_texto:
         texto_completo = texto_completo.replace(precio_texto, " ").strip()
     return " ".join(texto_completo.split())
+
+
+def es_boton_publicar(titulo, enlace):
+    """Detecta el botón 'Publicar anuncio' que no es un anuncio real."""
+    if not titulo:
+        return False
+    if "publicar anuncio" in _sin_tildes(titulo).strip():
+        return True
+    if enlace and "/item/publish" in enlace:
+        return True
+    return False
+
+
+def es_titulo_solo_precio(titulo):
+    """Detecta títulos que son solo un precio sin descripción."""
+    if not titulo:
+        return False
+    t = _sin_tildes(titulo).strip()
+    # Si solo contiene número, moneda y símbolos, es solo precio
+    return bool(re.fullmatch(r"[\d.,\s\$€£¥usdcup]+", t)) and len(t) <= 12
 
 
 def extraer_precio(enlace):
@@ -275,10 +299,21 @@ def href_es_anuncio(href):
     return any(p in href for p in ANUNCIO_HREF_PATTERNS)
 
 
+def precio_es_sospechoso(numero, moneda):
+    """Marca como sospechoso precios fuera de rango realista para la zona."""
+    if numero is None:
+        return False
+    if numero < PRECIO_MINIMO_SOSPECHOSO:
+        return True
+    if numero > PRECIO_MAXIMO_SOSPECHOSO:
+        return True
+    return False
+
+
 def extraer_anuncios(html, base_url):
     """
     Parsea el HTML y devuelve una lista de diccionarios con
-    titulo, precio (numero), moneda, municipio y enlace.
+    titulo, precio (numero), moneda, municipio, enlace y sospechoso.
     """
     soup = BeautifulSoup(html, "html.parser")
     anuncios = []
@@ -294,19 +329,30 @@ def extraer_anuncios(html, base_url):
             continue
         enlaces_vistos.add(enlace_absoluto)
 
+        # Extraer título y precio
         precio_info = extraer_precio(a)
         titulo = _titulo_del_anuncio(a, precio_info["texto"])
-        municipio = detectar_municipio(titulo, enlace_absoluto)
-        telefono = extraer_telefono(enlace_absoluto)
-        time.sleep(1)
+
+        # Descartar botón de publicar y basura obvia
+        if es_boton_publicar(titulo, enlace_absoluto):
+            continue
+
+        # Municipio: forzar "Diez de Octubre" porque la URL ya filtra por ese
+        # municipio. Se conserva la detección por palabras clave como referencia
+        # pero no se usa para reasignar a otros municipios.
+        municipio = "Diez de Octubre"
+
+        # Detectar si el precio es sospechoso (outlier)
+        sospechoso = precio_es_sospechoso(precio_info["numero"], precio_info["moneda"]) \
+            or es_titulo_solo_precio(titulo)
 
         anuncios.append({
             "titulo": titulo,
             "precio": precio_info["numero"],
             "moneda": precio_info["moneda"],
             "municipio": municipio,
-            "telefono": telefono,
             "enlace": enlace_absoluto,
+            "sospechoso": sospechoso,
         })
 
     return anuncios
@@ -337,6 +383,7 @@ def main():
     print(f"Resultados guardados en: {OUTPUT_FILE}")
 
     # Archivo aparte con los anuncios que no tienen municipio especificado
+    # (conservado por compatibilidad, aunque ahora el municipio se fuerza)
     sin_municipio = [a for a in anuncios if a["municipio"] == "no especificado"]
     guardar_json(sin_municipio, SIN_MUNICIPIO_FILE)
     print(f"Anuncios sin municipio guardados en: {SIN_MUNICIPIO_FILE} ({len(sin_municipio)} anuncios)")

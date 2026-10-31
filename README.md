@@ -31,16 +31,20 @@ El objetivo es ofrecer una guía clara, sin tecnicismos, para cualquier persona 
 ## Estructura del repositorio
 
 ```
-proyecto-mercado-10-octubre/
-├── README.md                      # Historia, objetivos, fuentes y estructura
+mercado-digital-cubano-en-10-de-octubre/
+├── README.md                                      # Historia, objetivos, fuentes y estructura
 ├── datos/brutos/revolico_crudos.json       # Anuncios originales de Revolico
 ├── datos/brutos/revolico_sin_municipio.json # Anuncios sin municipio detectado
-├── datos/limpios/.gitkeep               # Espacio para datos limpios
-├── notebooks/.gitkeep                   # Espacio para Jupyter Notebooks
-├── src/scrape_revolico.py             # Script de descarga de anuncios
-├── analisis/informe_final.md          # 30 preguntas + respuestas + conclusiones
-├── presentacion/.gitkeep              # Espacio para diapositivas de exposición
-└── fuentes/anuario_estadistico_notas.md # Notas de fuentes oficiales consultadas
+├── datos/brutos/elcaiman_crudos.json       # Anuncios originales de El Caimán
+├── src/scrape_revolico.py             # Script de descarga de anuncios (Revolico)
+├── src/scrape_elcaiman.py             # Script de descarga de anuncios (El Caimán)
+├── scripts/agregar_permuta.py         # Detección de permutas en títulos
+├── analisis/generar_informe_bloque1.py # Informe real del Bloque 1 (Precios)
+├── analisis/informe_final.md          # 30 preguntas (pendiente de completar)
+├── analisis/bloque1/Bloque_1_Precios_del_mercado.txt  # Resultados Bloque 1
+├── fuentes/anuario_estadistico_notas.md # Notas de fuentes oficiales consultadas
+├── requirements.txt                   # Dependencias de Python
+└── LICENSE                            # Licencia MIT
 ```
 
 ## Las 30 preguntas de investigación
@@ -92,18 +96,34 @@ Todas apuntan al mismo objetivo: entender el mercado inmobiliario digital de Die
 Desde la carpeta raíz del proyecto:
 
 ```bash
+# Requerimientos
+pip install -r requirements.txt
+
+# Descargar anuncios de Revolico (guardado en datos/brutos/)
 python3 src/scrape_revolico.py
+
+# Descargar anuncios de El Caimán (guardado en datos/brutos/)
+python3 src/scrape_elcaiman.py
+
+# Marcar permutas en los archivos brutos
+python3 scripts/agregar_permuta.py
+
+# Generar el informe del Bloque 1 (Precios del mercado)
+python3 analisis/generar_informe_bloque1.py
 ```
 
-Esto descargará los anuncios de inmobiliaria de Diez de Octubre desde Revolico y guardará los resultados en:
+Los resultados se guardan en:
 - `datos/brutos/revolico_crudos.json`
 - `datos/brutos/revolico_sin_municipio.json`
+- `datos/brutos/elcaiman_crudos.json`
+- `analisis/bloque1/Bloque_1_Precios_del_mercado.txt`
 
 ## Herramientas utilizadas
 
 - **Python** con `requests` y `BeautifulSoup` para el scraping.
-- **Pandas** y **Matplotlib/Seaborn** para el análisis y visualizaciones (en los notebooks).
+- **Pandas** y **Matplotlib/Seaborn** para el análisis y visualizaciones.
 - No se usan Excel, SQL ni Power BI.
+- Todas las dependencias están en `requirements.txt`.
 
 ## Limitaciones
 

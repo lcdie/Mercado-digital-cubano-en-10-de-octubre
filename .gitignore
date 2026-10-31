@@ -1,0 +1,12 @@
+__pycache__/
+*.py[c]
+*.pyo
+*.env
+.venv/
+venv/
+.env
+.DS_Store
+
+# Datos brutos generados (no versionar resultados del scraping)
+datos/brutos/*.json
+!datos/brutos/.gitkeep
