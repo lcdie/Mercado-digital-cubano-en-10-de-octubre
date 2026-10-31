@@ -35,7 +35,6 @@ mercado-digital-cubano-en-10-de-octubre/
 ├── README.md                                      # Historia, objetivos, fuentes y estructura
 ├── datos/brutos/revolico_crudos.json       # Anuncios originales de Revolico
 ├── src/scrape_revolico.py             # Script de descarga de anuncios (Revolico)
-├── src/scrape_elcaiman.py             # Script de descarga de anuncios (El Caimán) - datos no incluidos por problemas de municipio
 ├── scripts/agregar_permuta.py         # Detección de permutas en títulos
 ├── analisis/generar_informe_bloque1.py # Script para generar informe del Bloque 1
 ├── analisis/informe_final.md          # 30 preguntas (pendiente de completar)
