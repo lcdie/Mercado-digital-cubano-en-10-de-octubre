@@ -322,7 +322,8 @@
       "Tanque de agua de 55 litros"
     ],
     "precio": {
-      "monto": "No especificado"
+      "monto": null,
+      "nota": "No especificado"
     },
     "contacto": {
       "metodo": "WhatsApp",
@@ -767,54 +768,6 @@
   {
     "id_publicacion": 22,
     "publicacion": {
-      "grupo": "Casas en 10 de octubre"
-    },
-    "detalles_propiedad": {
-      "tipo": "Propiedad independiente",
-      "ubicacion": "Municipio Diez de octubre, Víbora",
-      "distribucion": [
-        "Sala",
-        "Comedor",
-        "Cocinita",
-        "1 dormitorio",
-        "Baño",
-        "Patio pequeño"
-      ],
-      "condicion": "Necesita algunos arreglos (oportunidad para adaptarla al gusto)"
-    },
-    "servicios_y_caracteristicas": {
-      "agua": "Sube por gravedad",
-      "tanques": [
-        "1 de 750 litros",
-        "1 en el patio de 300 litros"
-      ],
-      "otros": [
-        "Nauta Hogar (con equipo incluido)",
-        "Gas de la calle",
-        "Teléfono fijo",
-        "Placa libre de vigas y losa"
-      ]
-    },
-    "equipamiento_incluido": [
-      "Un split",
-      "Un juego de comedor y vitrina",
-      "Una litera",
-      "Una cocina de dos fogones"
-    ],
-    "precio": {
-      "monto": 8500,
-      "moneda": "USD",
-      "negociable": true,
-      "nota": "Me ajusto con dinero en mano"
-    },
-    "contacto": {
-      "metodo": "Teléfono",
-      "telefono": "56385735"
-    }
-  },
-  {
-    "id_publicacion": 23,
-    "publicacion": {
       "grupo": "Casas en 10 de octubre",
       "autor": "ConectaHabana",
       "fecha": "Oct 18",
@@ -847,7 +800,7 @@
     }
   },
   {
-    "id_publicacion": 24,
+    "id_publicacion": 23,
     "publicacion": {
       "grupo": "Casas en 10 de octubre / Venta de Casas baratas",
       "autor": "Yeison PA Q Sepa"
@@ -866,7 +819,7 @@
     }
   },
   {
-    "id_publicacion": 25,
+    "id_publicacion": 24,
     "publicacion": {
       "grupo": "Casas en 10 de octubre",
       "autor": "Ela SG"
@@ -927,7 +880,7 @@
     }
   },
   {
-    "id_publicacion": 26,
+    "id_publicacion": 25,
     "publicacion": {
       "grupo": "Casas en 10 de octubre",
       "autor": "La Isla Casas",
@@ -990,7 +943,7 @@
     }
   },
   {
-    "id_publicacion": 27,
+    "id_publicacion": 26,
     "publicacion": {
       "grupo": "Casas en 10 de octubre",
       "autor": "La Isla Casas",
@@ -1041,6 +994,493 @@
         }
       ],
       "oficina_comercial": "Zapata y 24 en el Vedado - 78325955"
+    }
+  },
+  {
+    "id_publicacion": 27,
+    "publicacion": {
+      "grupo": "✅Venta de casas🍀La Haba...",
+      "autor": "Abdiel Núñez",
+      "fecha": "Hace 4 días",
+      "titulo": "SE VENDE AMPLIA CASA DE DOS PLANTAS EN SANTA AMALIA, LA HABANA, CUBA"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa de dos plantas",
+      "ubicacion": "Santa Amalia, a solo 3 cuadras de la Calzada de 10 de Octubre",
+      "area_m2": 700,
+      "distribucion": [
+        "8 habitaciones",
+        "6 baños",
+        "Garaje de dos niveles con apartamento en la planta superior",
+        "Cocina y comedor amplio",
+        "2 salones espaciosos",
+        "Sala de juegos",
+        "2 terrazas grandes en la planta alta"
+      ],
+      "condicion": "Amplios espacios interiores y exteriores, ideal para una familia grande o para adaptación a diferentes proyectos"
+    },
+    "equipamiento_incluido": [
+      "Algunos muebles",
+      "5 camas"
+    ],
+    "precio": {
+      "monto": 130000,
+      "moneda": "USD"
+    },
+    "contacto": {
+      "metodo": "Mensaje privado",
+      "telefono": "51279170"
+    }
+  },
+  {
+    "id_publicacion": 28,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "May Rivas Lopez",
+      "fecha": "Hace 2 días"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa",
+      "ubicacion": "Lawton, 10 de Octubre (zona tranquila, ideal para niños, no pasan autos)",
+      "condicion": "Grande, no hay que hacerle nada",
+      "distribucion": [
+        "Portal enrejado (con posibilidad de garaje)",
+        "Patio",
+        "Dos pasillos laterales"
+      ],
+      "caracteristicas_estructurales": "Placa libre con posibilidad de ampliar"
+    },
+    "servicios_y_extras": [
+      "Agua un día sí y otro no (pero no falta)",
+      "Teléfono fijo",
+      "Dos tanques elevados"
+    ],
+    "precio": {
+      "monto": 19000,
+      "moneda": "USD",
+      "negociable": true,
+      "nota": "Me ajusto con dinero en mano. Urge vender."
+    },
+    "contacto": {
+      "metodo": "WhatsApp",
+      "telefono": "53878399",
+      "nota": "Verdaderos interesados, no llamar por gusto."
+    }
+  },
+  {
+    "id_publicacion": 29,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "No especificado",
+      "titulo": "EN VENTA – CASA INDEPENDIENTE EN SANTO SUÁREZ (10 DE OCTUBRE)"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa independiente",
+      "ubicacion": "Santo Suárez, 10 de Octubre, céntrica, cerca de Ave. Lacret. Zona con transporte y servicios.",
+      "distribucion": {
+        "planta_baja": [
+          "Portal",
+          "Patio lateral con espacio para garaje",
+          "Sala",
+          "Comedor",
+          "Cocina"
+        ],
+        "segundo_nivel": [
+          "Sala de estar",
+          "1er cuarto",
+          "Baño"
+        ],
+        "tercer_nivel": [
+          "3 cuartos (2do, 3ro y 4to)",
+          "Baño",
+          "Patio de lavado"
+        ],
+        "cuarto_nivel": [
+          "Terraza amplia cercada sin techar con placa libre (posibilidad de construir)"
+        ]
+      }
+    },
+    "servicios_y_caracteristicas": [
+      "Corriente 110 y 220",
+      "Agua en días alternos con cisterna propia amplia y tanque elevado grande",
+      "Gas de la calle"
+    ],
+    "estado_legal": {
+      "documentacion_en_regla": true
+    },
+    "precio": {
+      "monto": 22500,
+      "moneda": "USD",
+      "negociable": true
+    },
+    "contacto": {
+      "metodo": "Llamadas / SMS / WhatsApp",
+      "telefono": "53383889"
+    }
+  },
+  {
+    "id_publicacion": 30,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "Ileana Lara Borrego",
+      "fecha": "Hace 1 día"
+    },
+    "detalles_propiedad": {
+      "tipo": "Apartamento",
+      "piso": "Primer piso (con puntal alto)",
+      "ubicacion": "Calzada de 10 de Octubre entre Princesa y Madrid, reparto Santo Suárez",
+      "condicion": "Perfecto estado estructural y constructivo. Mucha luz natural y ventilación.",
+      "distribucion": [
+        "Sala-comedor amplios",
+        "Cocina",
+        "Patio interior",
+        "Balcón (con amplia vista hacia la calzada)",
+        "2 habitaciones (una de ellas con closet)",
+        "Baño amplio"
+      ]
+    },
+    "servicios_y_caracteristicas": [
+      "Gas de la calle",
+      "2 tanques de almacenamiento interno independientes con sus instalaciones",
+      "Edificio con cisterna, motor y tanques en azotea",
+      "Agua en días alternos",
+      "Ventanas con reja en todos sus espacios"
+    ],
+    "precio": {
+      "monto": null,
+      "moneda": null,
+      "nota": "No especificado en la publicación"
+    },
+    "contacto": {
+      "metodo": null,
+      "telefono": null,
+      "nota": "No especificado en la publicación"
+    }
+  },
+  {
+    "id_publicacion": 31,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "Ángel Febles",
+      "fecha": "Hace 4 días"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa independiente",
+      "ubicacion": "El Sevillano, Diez de Octubre",
+      "distribucion": [
+        "3 habitaciones súper cómodas",
+        "Baño",
+        "Cocina",
+        "Sala",
+        "Portal",
+        "Comedor",
+        "Terraza de cemento atrás"
+      ],
+      "caracteristicas_estructurales": [
+        "Placa libre"
+      ]
+    },
+    "estado_legal": {
+      "papeles_en_regla": true
+    },
+    "precio": {
+      "monto": null,
+      "moneda": null,
+      "nota": "No especificado en la publicación"
+    },
+    "contacto": {
+      "metodo": "Teléfono",
+      "telefono": "59696273"
+    }
+  },
+  {
+    "id_publicacion": 32,
+    "publicacion": {
+      "grupo": "Casas en 10 de octubre",
+      "autor": "Participante Anónimo",
+      "fecha": "Hace 7 horas"
+    },
+    "detalles_propiedad": {
+      "tipo": "Apartamento interior",
+      "ubicacion": "Calzada de 10 de Octubre",
+      "distribucion": [
+        "Sala corrida con cuarto",
+        "Baño",
+        "Cocina",
+        "Segunda planta: terraza cercada hasta la altura de las tejas con lavadero"
+      ],
+      "condicion": "Falta la escalera para subir a la segunda planta"
+    },
+    "servicios_y_caracteristicas": [
+      "Gas de la calle",
+      "Corriente 110 y 220",
+      "Agua cada 4 días"
+    ],
+    "precio": {
+      "monto": null,
+      "moneda": null,
+      "nota": "No especificado en la publicación"
+    },
+    "contacto": {
+      "metodo": "Teléfono",
+      "telefono": "53309701"
+    }
+  },
+  {
+    "id_publicacion": 33,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "No especificado (Menciona ser la dueña, no gestora)",
+      "titulo": "SE VENDE CASA INDEPENDIENTE EN VISTA ALEGRE RESIDENCIAL - 10 DE OCTUBRE"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa independiente",
+      "ubicacion": "Vista Alegre Residencial - 10 de Octubre",
+      "area_m2": 279,
+      "distribucion": [
+        "Jardín",
+        "Portal",
+        "Sala",
+        "Comedor",
+        "Cocina con clóset empotrado",
+        "2 habitaciones (solo una climatizada, ambas con clóset empotrado)",
+        "Patio con matas de plátano",
+        "Pasillos de servicio que bordean toda la casa",
+        "Garaje con capacidad para 2 carros (con posibilidad de ampliación)"
+      ],
+      "caracteristicas_estructurales": [
+        "Placa totalmente libre ideal para poner paneles solares"
+      ]
+    },
+    "servicios_y_caracteristicas": {
+      "agua": "Cisterna y dos tanques elevados de 1000 y 1500 lt respectivamente + Motor de Agua",
+      "electricidad": "110v-220v",
+      "otros": [
+        "Agua caliente y fría",
+        "Calentador",
+        "Presurizador",
+        "Marquetería de los bajos de encimera son de cedro",
+        "Todas las ventanas y puertas de cristal (excepto las del último cuarto)",
+        "Gas de balita con contrato"
+      ]
+    },
+    "precio": {
+      "monto": 22000,
+      "moneda": "USD",
+      "negociable": true,
+      "nota": "En efectivo. Me ajusto si es necesario. Solo personas con el dinero en la mano."
+    },
+    "contacto": {
+      "metodo": "WhatsApp",
+      "telefono": "52009570"
+    }
+  },
+  {
+    "id_publicacion": 34,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "El dueño",
+      "fecha": "No especificada"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa (Parte de arriba de una biplanta / altos)",
+      "area_m2": 66.53,
+      "ubicacion": "10 de Octubre, en la misma calzada, a dos cuadras del semáforo de 10 de Octubre y Lacret. Súper céntrica.",
+      "entorno": "Cerca de agros, mypimes, cafetería, policlínico (todo a metros)",
+      "distribucion": [
+        "2 cuartos grandes",
+        "Cocina nueva",
+        "Comedor",
+        "Sala grande",
+        "Baño grande",
+        "Patio"
+      ],
+      "detalles_construccion": [
+        "Techos de placa",
+        "Placa libre",
+        "No hay colindancia de pared con pared ni por los lados ni por atrás",
+        "Súper clara y ventilada"
+      ],
+      "estacionamiento": "No tiene garaje ni posibilidad de hacerlo"
+    },
+    "servicios_y_caracteristicas": {
+      "electricidad": "Corriente 110 y 220",
+      "agua": "Comitiva independiente con tanque cisterna, su motor y tanque de 1000 litros",
+      "gas": "De la calle",
+      "telefono": "No tiene teléfono fijo, pero está la pared lista para ponerlo"
+    },
+    "equipamiento_incluido": [
+      "Lavadora automática",
+      "Microondas (Microwey)",
+      "Juego de mueble de sala (sofá de 3 plazas y dos butacones)",
+      "Televisor de 32 pulgadas",
+      "1 Nevera",
+      "Entre otras cosas más"
+    ],
+    "precio": {
+      "monto": 10000,
+      "moneda": "USD"
+    },
+    "contacto": {
+      "metodo": "Teléfono",
+      "telefono": "55386517"
+    }
+  },
+  {
+    "id_publicacion": 35,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "No especificado",
+      "titulo": "VENTA DE CASA – REPARTO RESIDENCIAL ASUNCIÓN, 10 DE OCTUBRE"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa puerta calle independiente + Apartamento arriba con entrada independiente",
+      "ubicacion": "#245 Ref. Hospital Miguel Enriquez. Materno Hijas de Galicia. Reparto Residencial Asunción, 10 de Octubre",
+      "estado": "TODO NUEVO, MODERNO Y REMODELADO (Placa nueva, pisos nuevos, cocina renovada, baño renovado)",
+      "distribucion": {
+        "planta_baja": [
+          "4 habitaciones",
+          "Sala-comedor",
+          "Cocina amplia y bonita",
+          "Baño",
+          "Garaje (cabe un Changan)",
+          "Patio"
+        ],
+        "planta_alta": [
+          "Entrada independiente",
+          "Sala",
+          "Cocina",
+          "Baño",
+          "Cuarto",
+          "Posibilidad de seguir ampliando"
+        ]
+      },
+      "caracteristicas_adicionales": [
+        "Pasillos laterales",
+        "Vivienda completamente climatizada (Split en cada habitación)",
+        "Entradas independientes",
+        "Garaje eléctrico"
+      ]
+    },
+    "servicios_y_caracteristicas": {
+      "gas": "De la calle",
+      "agua": "Cisterna propia, 3 tanques elevados, Sistema Kiwan para presión de agua",
+      "telecomunicaciones": [
+        "Teléfono fijo",
+        "Nauta Hogar instalado"
+      ]
+    },
+    "precio": {
+      "monto": 70000,
+      "moneda": "USD"
+    },
+    "contacto": {
+      "metodo": "Mensaje Privado (PV) / WhatsApp",
+      "telefono": "50305901",
+      "nota": "Visitas cualquier día avisando con tiempo. Verdaderos interesados."
+    }
+  },
+  {
+    "id_publicacion": 36,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "No especificado",
+      "titulo": "SE VENDEN 2 CASAS JUNTAS EN LAWTON"
+    },
+    "detalles_propiedad": {
+      "ubicacion": "Lawton (Calzada de Porvenir y Aguilera)",
+      "caracteristicas_generales": "Propiedades y libretas independientes, comunicadas entre sí por una puerta interior. Ambas con placa libre y gran seguridad (callejón cerrado con portón). Ideal para familias que buscan vivir cerca con total privacidad.",
+      "casa_1": {
+        "tipo": "Puerta de calle",
+        "area_total_m2": 69.61,
+        "area_ocupada_m2": 48,
+        "distribucion": [
+          "Sala",
+          "Comedor",
+          "2 cuartos (con puertas de madera)",
+          "Baño",
+          "Cocina amplia",
+          "Patio techado con acceso al callejón"
+        ],
+        "detalles": [
+          "Marquetería de hierro y cristal",
+          "2 tanques de agua (1,000 L c/u)",
+          "Motor de agua compartido"
+        ]
+      },
+      "casa_2": {
+        "tipo": "Entrada por callejón amplio",
+        "area_m2": 46.99,
+        "distribucion": [
+          "Sala",
+          "1 cuarto",
+          "Baño",
+          "Cocina-comedor",
+          "Patio trasero techado",
+          "Portal amplio (caben varias motos o espacio para garaje)"
+        ],
+        "detalles": [
+          "Marquetería de aluminio",
+          "A remodelar cocina y detalles de baño y exterior",
+          "Tanque de 1,300 L"
+        ]
+      }
+    },
+    "servicios_y_caracteristicas": [
+      "Ambas con gas de la calle"
+    ],
+    "precio": {
+      "monto": 23000,
+      "moneda": "USD"
+    },
+    "contacto": {
+      "metodo": "Mensaje privado",
+      "nota": "Más fotos y detalles al privado (no especifica número)"
+    }
+  },
+  {
+    "id_publicacion": 37,
+    "publicacion": {
+      "grupo": "Casas y Apartamentos...",
+      "autor": "No especificado",
+      "titulo": "¡SE VENDE CASA PUERTA CALLE EN 10 DE OCTUBRE!"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa independiente (Puerta calle)",
+      "ubicacion": "Municipio Diez de octubre, Víbora",
+      "distribucion": [
+        "Sala",
+        "Comedor",
+        "Cocinita",
+        "1 dormitorio",
+        "Baño",
+        "Patio pequeño"
+      ],
+      "condicion": "La propiedad necesita algunos arreglos, una oportunidad para adaptarla a tu gusto y necesidades."
+    },
+    "servicios_y_caracteristicas": {
+      "agua": "Sube por gravedad. Tanques: 1 de 750 litros y uno en el patio de 300 litros.",
+      "otros": [
+        "Nauta Hogar (con equipo incluido)",
+        "Gas de la calle",
+        "Teléfono fijo",
+        "Placa libre de Vigas y Losa"
+      ]
+    },
+    "equipamiento_incluido": [
+      "Un split",
+      "Un juego de comedor y la vitrina",
+      "Una litera",
+      "Una cocina de dos fogones"
+    ],
+    "precio": {
+      "monto": null,
+      "moneda": null,
+      "nota": "No especificado en las imágenes"
+    },
+    "contacto": {
+      "metodo": "Teléfono",
+      "telefono": "53707674"
     }
   },
   {
