@@ -1,0 +1,125 @@
+================================================================================
+REPORTE TÉCNICO DE DATOS LIMPIOS - MERCADO INMOBILIARIO DIEZ DE OCTUBRE
+================================================================================
+
+Fecha de generación: 03/11/2026 20:21:54
+Archivo fuente: datos/brutos/revolico_crudos_limpio.json
+
+--------------------------------------------------------------------------------
+RESUMEN EJECUTIVO
+--------------------------------------------------------------------------------
+
+Total de anuncios limpios:           270
+Anuncios con precio declarado:       205
+Anuncios sin precio declarado:       65
+Anuncios con permuta:                5
+Anuncios en Diez de Octubre:         270
+
+--------------------------------------------------------------------------------
+DISTRIBUCIÓN POR MONEDA
+--------------------------------------------------------------------------------
+
+USD:  202 anuncios
+CUP:  3 anuncios
+Sin declarar: 65 anuncios
+
+--------------------------------------------------------------------------------
+ESTADÍSTICAS DE PRECIOS (USD)
+--------------------------------------------------------------------------------
+
+Cantidad de anuncios con precio en USD: 202
+Promedio: $40,573.27
+Mediana:  $23,000.00
+Mínimo:   $200
+Máximo:   $600,000
+
+--------------------------------------------------------------------------------
+ESTADÍSTICAS DE PRECIOS (CUP)
+--------------------------------------------------------------------------------
+
+Cantidad de anuncios con precio en CUP: 3
+Promedio: 17,667.00 CUP
+Mediana:  3,000.00 CUP
+Mínimo:   1 CUP
+Máximo:   50,000 CUP
+
+--------------------------------------------------------------------------------
+DISTRIBUCIÓN POR MUNICIPIO
+--------------------------------------------------------------------------------
+
+  Diez de Octubre: 212 anuncios
+  10 de Octubre: 58 anuncios
+
+--------------------------------------------------------------------------------
+ANUNCIOS SIN PRECIO DECLARADO
+--------------------------------------------------------------------------------
+
+  - Apartamento + 2cuartos+Vedado+Privacidad Total+ Apartamento VedadoLujo | https://www.revolico.com/item/apartamento2cuartosvedadoprivacidad-totallujo-38820042
+  - Apartamento de Lujo+2cuartos+Vedado+Privacidad Total+ Apartamento Vedado | https://www.revolico.com/item/apartamento-de-lujo2cuartosvedadoprivacidad-total-apartamento-vedado-44694567
+  - Apartamento en Alamar | https://www.revolico.com/item/apartamento-en-alamar-58131958
+  - Apartamento+4cuartos+Vista al Mar+Vedado+Privacidad Total+Cabinas de Hidromasaje | https://www.revolico.com/item/apartamento4cuartosvista-al-marvedadoprivacidad-totalcabinas-de-hidromasaje-apartamento-vedado-53135690
+  - Casa Angela en Boca Ciega | https://www.revolico.com/item/casa-angela-en-boca-ciega-57676803
+  - Casa Isel en Santa Fé, Playa | https://www.revolico.com/item/casa-isel-en-santa-fe-playa-58098581
+  - J  Apartamento amplio de renta lineal en Diez de Octubre 3 habitaciones 5 person | https://www.revolico.com/item/j-apartamento-amplio-de-renta-lineal-en-diez-de-octubre-3-habitaciones-5-personas-oct-002-58275856
+  - J  Apartamento de renta independiente en municipio Playa. Excelente ubicacion PL | https://www.revolico.com/item/j-apartamento-de-renta-independiente-en-municipio-playa-excelente-ubicacion-pla-002-58275758
+  - J  Apartamento de renta lineal de 2 habitaciones en Vedado. Alquiler corta estan | https://www.revolico.com/item/j-apartamento-de-renta-lineal-de-2-habitaciones-en-vedado-alquiler-corta-estancia-en-vedado-ved-016-58276058
+  - J  Casa de renta con respaldo energetico y servicios gastronomicos en Centro Hab | https://www.revolico.com/item/j-casa-de-renta-con-respaldo-energetico-y-servicios-gastronomicos-en-centro-habana-corta-estancia-ch-002-58047760
+  - J  Renta de casa SANTA FE DREAMS: TU ESCAPADA PERFECTA CERCA DEL MAR 🌊☀️ SF-005 | https://www.revolico.com/item/j-renta-de-casa-santa-fe-dreams-tu-escapada-perfecta-cerca-del-mar-sf-005-58002493
+  - J  ¡Escápate a Guanabo y disfruta de Villa Díaz! 🏖️ GUA-007 | https://www.revolico.com/item/j-escapate-a-guanabo-y-disfruta-de-villa-diaz-gua-007-57780283
+  - J Alquiler de casa en Miramar con terraza bellas vistas 4 habitaciones 8 persona | https://www.revolico.com/item/j-alquiler-de-casa-en-miramar-con-terraza-bellas-vistas-4-habitaciones-8-personas-renta-de-casa-miramar-mir-001-57779413
+  - J Apartamento de renta a dos cuadras de la Plaza Vieja en el corazón de La Haban | https://www.revolico.com/item/j-apartamento-de-renta-a-dos-cuadras-de-la-plaza-vieja-en-el-corazon-de-la-habana-hav-001-58275990
+  - J Apartamento de renta con perfectas vistas VIVE EL VEDADO DESDE LAS ALTURAS VED | https://www.revolico.com/item/j-apartamento-de-renta-con-perfectas-vistas-vive-el-vedado-desde-las-alturas-ved-006-58274261
+  - J Apartamento de renta de lujo bellas vistas en Vedado VED-004C | https://www.revolico.com/item/j-apartamento-de-renta-de-lujo-bellas-vistas-en-vedado-ved-004c-58276845
+  - J Apartamento de renta frente al malecón habanero con bellas vistas electricidad | https://www.revolico.com/item/j-apartamento-de-renta-frente-al-malecon-habanero-con-bellas-vistas-electricidad-permanente-3-habitaciones-ch-005-58298543
+  - J Apartamento de renta para cortas estancias en Miramar. Alquiler tiempo indefin | https://www.revolico.com/item/j-apartamento-de-renta-para-cortas-estancias-en-miramar-alquiler-tiempo-indefinido-miramar-mir-009-58298107
+  - J Apartamento de renta por dias en Habana Vieja. Alquiler de apartamento tiempo  | https://www.revolico.com/item/j-apartamento-de-renta-por-dias-en-habana-vieja-alquiler-de-apartamento-tiempo-indefinido-hav-006a-58276550
+  - J APARTAMENTO EN ALQUILER EN MIRAMAR! 🌴MIR-006B | https://www.revolico.com/item/j-apartamento-en-alquiler-en-miramar-mir-006b-58274683
+  - J Apartamento en alquiler en una excelente ubicación del Vedado! VED-014B | https://www.revolico.com/item/j-apartamento-en-alquiler-en-una-excelente-ubicacion-del-vedado-ved-014b-58274759
+  - J Apartamento penthouse de renta de lujo en el Vedado. VED-004A | https://www.revolico.com/item/j-apartamento-penthouse-de-renta-de-lujo-en-el-vedado-ved-004a-58276720
+  - J Apartamentos de renta de lujo con respaldo energia La Habana Vedado / Alquiler | https://www.revolico.com/item/j-apartamentos-de-renta-de-lujo-con-respaldo-energia-la-habana-vedado-alquiler-de-apartamentos-de-lujo-ved-012-58274816
+  - J Casa de renta amplia por tiempo indefinido de 4 habitaciones en Casino Deporti | https://www.revolico.com/item/j-casa-de-renta-amplia-por-tiempo-indefinido-de-4-habitaciones-en-casino-deportivo-cerro-ce-002-58298445
+  - J Casa de renta amplio para tiempo indefinido en La Habana (Vedado) VED-022 | https://www.revolico.com/item/j-casa-de-renta-amplio-para-tiempo-indefinido-en-la-habana-vedado-ved-022-58298327
+  - J Casa de renta con respaldo energetico y jaccuzzi en Boyeros (5 habitaciones)/H | https://www.revolico.com/item/j-casa-de-renta-con-respaldo-energetico-y-jaccuzzi-en-boyeros-5-habitacioneshostal-el-roble-en-mulgoba-boy-001-58274408
+  - J Casa de renta con soporte energético en Miramar. Alquiler corta estancia en Mi | https://www.revolico.com/item/j-casa-de-renta-con-soporte-energetico-en-miramar-alquiler-corta-estancia-en-miramar-mir-008-58276212
+  - J Casa de renta de lujo en La Habana con servicio gastronómico (Miramar) (munici | https://www.revolico.com/item/j-casa-de-renta-de-lujo-en-la-habana-con-servicio-gastronomico-miramar-municipio-playaalquiler-de-hab-mir-003-58273941
+  - J Casa de renta en el corazón del Vedado! ✨🏡 VED-005 | https://www.revolico.com/item/j-casa-de-renta-en-el-corazon-del-vedado-ved-005-58274173
+  - J Casa de renta en Río Cristal, Boyeros Un espacio ideal para disfrutar, relajar | https://www.revolico.com/item/casa-de-renta-en-rio-cristal-boyeros-un-espacio-ideal-para-disfrutar-relajarte-boy-002-58274960
+  - J Casa de renta para parejas o grupos en Reparto Sevillano municipio Diez de Oct | https://www.revolico.com/item/j-casa-de-renta-para-parejas-o-grupos-en-reparto-sevillano-municipio-diez-de-octubre-oct-003-58276593
+  - J Casa de renta por tiempo indefinido con respaldo energético en zona céntrica d | https://www.revolico.com/item/j-casa-de-renta-por-tiempo-indefinido-con-respaldo-energetico-en-zona-centrica-de-habana-vieja-hav-009-58298489
+  - J Casa de renta por tiempo indefinido en Miramar. MIR-007 | https://www.revolico.com/item/j-casa-de-renta-por-tiempo-indefinido-en-miramar-mir-007-58276182
+  - J Casa de renta tiempo indefinido en la Habana Vieja. Renta por noches HAV-006B | https://www.revolico.com/item/j-casa-de-renta-tiempo-indefinido-en-la-habana-vieja-renta-por-noches-hav-006b-58047318
+  - J casa de renta Villa José — Exclusividad y confort en Siboney ✨🌴 SIB-001 | https://www.revolico.com/item/j-casa-de-renta-villa-jose-exclusividad-y-confort-en-siboney-sib-001-58275653
+  - J CASA DE RENTA — Exclusividad y confort en Siboney ✨🌴 SIB-001 | https://www.revolico.com/item/j-casa-de-renta-exclusividad-y-confort-en-siboney-sib-001-58047713
+  - J CASA EN ALQUILER EN LA HABANA VIEJA – EXCELENTE UBICACIÓN HAV-003 | https://www.revolico.com/item/j-casa-en-alquiler-en-la-habana-vieja-excelente-ubicacion-hav-003-58274295
+  - J Renta de habitaciones suite y standar en el Vedado. Alquiler por noche . VED-0 | https://www.revolico.com/item/j-renta-de-habitaciones-suite-y-standar-en-el-vedado-alquiler-por-noche-ved-021-58273066
+  - J Tu escape privado con vista al mar en Guanabo ✨🌊GUA-003 | https://www.revolico.com/item/j-tu-escape-privado-con-vista-al-mar-en-guanabo-gua-003-57780302
+  - J ¡TU ESCAPADA PERFECTA EN SANTA FE! / SF-001 | https://www.revolico.com/item/j-tu-escapada-perfecta-en-santa-fe-sf-001-57779590
+  - JCasa de renta /PIMIENTA | BOCA CIEGA 🌊BC-002 | https://www.revolico.com/item/jcasa-de-renta-pimienta-boca-ciega-bc-002-58274792
+  - JCasa de renta en La Habana cerca de Ciudad Deportiva (Cerro). House for rent. 2 | https://www.revolico.com/item/jcasa-de-renta-en-la-habana-cerca-de-ciudad-deportiva-cerro-house-for-rent-2-habitaciones-2-banos-ce-001-58276163
+  - PERMUTA APTO BAJOS 2HAB.NVOVEDADO.CON VUELTO ARRIBA PARA MI.57 M2.ES INTERIOR.ZO | https://www.revolico.com/item/permuta-apto-bajos-2habnvovedadocon-vuelto-arriba-para-mi57-m2es-interiorzona-centrica-av-26-y-51fotos-x-whasap-57933568
+  - Permuto (1 x 2).. apto bajos 2 hab.nvo vedado.x por 2 aptos..es interior de solo | https://www.revolico.com/item/permuto-1-x-2-apto-bajos-2-habnvo-vedadox-por-2-aptoses-interior-de-solo-4aptosfotos-x-whasapp-57487002
+  - Permuto 1x2 | https://www.revolico.com/item/permuto-1x2-57895191
+  - Renta de apartamentos en la Haban Vieja.En oferta.  No hay problemas eléctricos. | https://www.revolico.com/item/renta-de-apartamentos-en-la-haban-vieja-53-58239474-unico-dueno-la-atencion-nos-hace-unicos-50092611
+  - Renta de apartamentos en la habana Vieja. No hay problemas eléctricos. | https://www.revolico.com/item/renta-de-apartamentos-en-la-habana-vieja-no-hay-problemas-electricos-51578088
+  - Renta de apartamentos totalmente independientes. | https://www.revolico.com/item/renta-de-apartamentos-totalmente-independientes-55279906
+  - Renta Lineal en el Vedado 179 | https://www.revolico.com/item/renta-lineal-en-el-vedado-179-57508781
+  - Rento local en la habana vieja | https://www.revolico.com/item/rento-local-en-la-habana-vieja-56301721
+  - Se busca alquiler | https://www.revolico.com/item/se-busca-alquiler-56579365
+  - Se vende apartamento en Santo Suárez | https://www.revolico.com/item/se-vende-apartamento-en-santo-suarez-58494730
+  - Vendo casa grande totalmente independientes en reparto Santos Suárez | https://www.revolico.com/item/vendo-casa-grande-totalmente-independientes-en-reparto-santos-suarez-56360375
+  - Venta de apart o cambio con un vuelto $ por algo más grande | https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
+  - VENTA DE APARTAMENTO DEL VEDADO | https://www.revolico.com/item/venta-de-apartamento-del-vedado-52140256
+  - Venta de casa y apartamento. | https://www.revolico.com/item/venta-de-casa-y-apartamento-58189135
+  - Villa César Palace en Boca Ciega | https://www.revolico.com/item/villa-cesar-palace-en-boca-ciega-57676658
+  - ☀️ ¡EL PLAN PERFECTO EN LAWTON! ☀️ | https://www.revolico.com/item/el-plan-perfecto-en-lawton-56219131
+  - 🌊 Casa de Renta en Santa Fe – Con Vistas al Mar 🌴 | https://www.revolico.com/item/casa-de-renta-en-santa-fe-con-vistas-al-mar-58492640
+  - 🌴 ¡Bienvenido a tu escape perfecto en Santa Fe! 🌴  🏠 Casa de Renta Exclusiva | https://www.revolico.com/item/bienvenido-a-tu-escape-perfecto-en-santa-fe-casa-de-renta-exclusiva-58492725
+  - 🌴🏖️ ¡TU ESCAPADA PERFECTA EN GUANABO! 🏖️🌴 | https://www.revolico.com/item/tu-escapada-perfecta-en-guanabo-58492556
+  - 🏠 Casa de Renta en Habana Vieja, Cuba. Alquiler Para Estudiantes Extranjeros en  | https://www.revolico.com/item/casa-de-renta-en-habana-vieja-cuba-alquiler-para-extranjeros-en-cuba-54196182
+  - 🏠RENTA DE HABITACIÓN POR 24 HORAS PARA PAREJAS 👥 | https://www.revolico.com/item/renta-de-habitacion-por-24-horas-para-parejas-57104450
+  - 🏡Casa de Renta en la playa de Boca Ciega | https://www.revolico.com/item/casa-de-renta-en-la-playa-de-boca-ciega-58492461
+  - 🚨 Se Vende propiedad independiente | https://www.revolico.com/item/se-vende-propiedad-independiente-57323098
+
+================================================================================
+FIN DEL REPORTE TÉCNICO
+================================================================================
