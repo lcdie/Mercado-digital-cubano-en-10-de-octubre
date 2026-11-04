@@ -69,6 +69,7 @@ OUT_CSV = "datos/limpios/verificacion_municipal.csv"
 OUT_REV_CONFIRMADOS = "datos/limpios/revolico_confirmados_diez_octubre.json"
 OUT_FB_CONFIRMADOS = "datos/limpios/facebook_confirmados_diez_octubre.json"
 OUT_UNI_CONFIRMADOS = "datos/limpios/unificado_confirmados_diez_octubre.json"
+BASE_UNIFICADA = "datos/limpios/datos_unificados_facebook_revolico.json"
 OUT_REPORTE = "analisis/verificacion_municipal_geojson_20261104.md"
 
 MUNICIPIOS_LHA = {
@@ -595,12 +596,29 @@ def main():
             "motivo": r["motivo"],
         }} for r in confirmados_fb
     ])
-    escribir_json(OUT_UNI_CONFIRMADOS, [
-        {**r["registro_original"], "verificacion_municipal": {
-            "resultado": r["resultado"], "confianza": r["confianza"],
-            "ficha": r["ficha"], "motivo": r["motivo"],
-        }} for r in confirmados_uni
-    ])
+    # Base final de confirmados: se conservan los registros completos de la
+    # base unificada (con `fuente`, `publicacion`, `detalles_propiedad`, etc.)
+    # para que el informe A-F pueda cargarla directamente sin perder campos.
+    verif_por_id = {r["id_unico"]: r for r in confirmados_uni}
+    try:
+        base_unificada = cargar_json(BASE_UNIFICADA)
+        por_id = {r.get("id_unico"): r for r in base_unificada}
+    except FileNotFoundError:
+        por_id = {}
+
+    confirmados_salida = []
+    for id_unico, verificacion in verif_por_id.items():
+        registro = por_id.get(id_unico) or verificacion["registro_original"]
+        confirmados_salida.append({
+            **registro,
+            "verificacion_municipal": {
+                "resultado": verificacion["resultado"],
+                "confianza": verificacion["confianza"],
+                "ficha": verificacion["ficha"],
+                "motivo": verificacion["motivo"],
+            },
+        })
+    escribir_json(OUT_UNI_CONFIRMADOS, confirmados_salida)
 
     with open(OUT_CSV, "w", encoding="utf-8", newline="") as f:
         escritor = csv.writer(f)
@@ -634,7 +652,11 @@ def main():
     lineas.append("# Verificación de pertenencia al municipio Diez de Octubre")
     lineas.append("")
     lineas.append(f"**Fecha:** {datetime.now().strftime('%d/%m/%Y')}  ")
-    lineas.append(f"**Fuente geoespacial:** `{GEOJSON}`  ")
+    lineas.append(
+        f"**Fuente geoespacial:** `{GEOJSON}`, copia versionada de "
+        f"`/home/luis/Downloads/lha.geojson` (mismo archivo; SHA-256 "
+        f"`b9bbcce811d9bbfcee15f5e904d97dc24cf044cabcf17a870487ad361bb7c9e6`)."
+    )
     lineas.append("**Método:** polígono municipal + ubicación de la ficha + geocodificación de topónimos.")
     lineas.append("")
     lineas.append("## 1. Análisis del GeoJSON")
@@ -802,22 +824,25 @@ def main():
     lineas.append("## 6. Impacto en el informe A-F")
     lineas.append("")
     lineas.append(
-        f"El informe A-F usa los **134 anuncios de Revolico**. Esta verificación "
-        f"encuentra que solo **{resumen_rev.get('SÍ', 0)}** están confirmados dentro "
-        f"de Diez de Octubre; **{resumen_rev.get('NO', 0)}** pertenecen a otros "
-        f"municipios, **{resumen_rev.get('CONTRADICTORIO', 0)}** son contradictorios y "
-        f"**{resumen_rev.get('INDETERMINADO', 0)}** no son verificables. Por tanto, "
-        f"las cifras del informe deben interpretarse como una muestra de anuncios "
-        f"etiquetados como Diez de Octubre por el scraper, no como una muestra "
-        f"estrictamente municipal."
+        f"El informe A-F ya fue recalculado con la base verificada de "
+        f"**{len(confirmados_uni)} publicaciones confirmadas** "
+        f"({len(confirmados_rev)} de Revolico + {len(confirmados_fb)} de "
+        f"Facebook). Las {resumen_uni.get('NO', 0)} de otro municipio, las "
+        f"{resumen_uni.get('CONTRADICTORIO', 0)} contradictorias y las "
+        f"{resumen_uni.get('INDETERMINADO', 0)} indeterminadas quedan fuera del "
+        f"universo. La base canónica de 134 y la versión revisada del "
+        f"cuestionario original se conservan como referencia histórica, pero no "
+        f"son comparables con el informe A-F actual."
     )
     lineas.append("")
     lineas.append(
-        "La base depurada de confirmados queda en "
+        "La base depurada de confirmados está en "
         f"**{len(confirmados_uni)} registros** ({len(confirmados_rev)} de Revolico + "
-        f"{len(confirmados_fb)} de Facebook). No se sobrescribió la base canónica "
-        "de 134 ni el informe A-F: la decisión de recalcular el informe queda "
-        "pendiente."
+        f"{len(confirmados_fb)} de Facebook), en "
+        "`datos/limpios/unificado_confirmados_diez_octubre.json`, con los campos "
+        "completos de la base unificada y la verificación municipal incorporada. "
+        "El generador `scripts/analisis_final_30_preguntas.py` carga esa base y "
+        "produce `analisis/informe_final.md`."
     )
     lineas.append("")
     lineas.append("## 7. Archivos generados")

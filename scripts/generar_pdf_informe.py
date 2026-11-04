@@ -35,15 +35,19 @@ DEFAULT_SUBTITLE = "Informe final — 30 preguntas de investigación"
 
 
 def extraer_metadatos(texto):
-    """Extrae fecha, fuente y universo de las líneas iniciales del informe."""
+    """Extrae fecha, fuente, universo y corte de las líneas iniciales."""
     fecha = re.search(r"\*\*Fecha de generación:\*\*\s*(.+)", texto)
     fuente = re.search(r"\*\*Fuente:\*\*\s*(.+)", texto)
-    universo = re.search(r"\*\*Universo estricto:\*\*\s*(.+)", texto)
+    if not fuente:
+        fuente = re.search(r"\*\*Base de datos:\*\*\s*(.+)", texto)
+    universo = re.search(r"\*\*Universo(?: estricto)?:\*\*\s*(.+)", texto)
+    corte = re.search(r"\*\*Corte de los datos:\*\*\s*(.+)", texto)
     usd = re.search(r"\*\*Anuncios con precio en USD:\*\*\s*(.+)", texto)
     return {
         "fecha": fecha.group(1).strip() if fecha else "",
-        "fuente": fuente.group(1).strip() if fuente else "",
+        "fuente": fuente.group(1).strip().replace("`", "") if fuente else "",
         "universo": universo.group(1).strip() if universo else "",
+        "corte": corte.group(1).strip() if corte else "",
         "usd": usd.group(1).strip() if usd else "",
     }
 
@@ -55,7 +59,9 @@ def preparar_cuerpo(texto):
         r"^\*\*Fecha de generación:\*\*.*\n?",
         r"^\*\*Corte de los datos:\*\*.*\n?",
         r"^\*\*Fuente:\*\*.*\n?",
-        r"^\*\*Universo estricto:\*\*.*\n?",
+        r"^\*\*Universo(?: estricto)?:\*\*.*\n?",
+        r"^\*\*Verificación espacial:\*\*.*\n?",
+        r"^\*\*Base de datos:\*\*.*\n?",
         r"^\*\*Anuncios con precio en USD:\*\*.*\n?",
     ):
         cuerpo = re.sub(patron, "", cuerpo, count=1, flags=re.MULTILINE)
@@ -230,6 +236,18 @@ hr {
 
 
 def construir_html(cuerpo_html, meta, subtitle=DEFAULT_SUBTITLE):
+    campos_portada = [
+        ("Fuente / base de datos", meta.get("fuente")),
+        ("Universo", meta.get("universo")),
+        ("Corte de los datos", meta.get("corte")),
+        ("Anuncios con precio en USD", meta.get("usd")),
+        ("Fecha de generación", meta.get("fecha")),
+    ]
+    meta_html = "\n        ".join(
+        f"<p><strong>{etiqueta}:</strong> {valor}</p>"
+        for etiqueta, valor in campos_portada
+        if valor
+    )
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -252,10 +270,7 @@ def construir_html(cuerpo_html, meta, subtitle=DEFAULT_SUBTITLE):
     </div>
     <div class="cover-meta">
         <p><strong>Profesor:</strong> Yudivian Almeida Cruz</p>
-        <p><strong>Fuente:</strong> {meta['fuente']}</p>
-        <p><strong>Universo estricto:</strong> {meta['universo']}</p>
-        <p><strong>Anuncios con precio en USD:</strong> {meta['usd']}</p>
-        <p><strong>Fecha de generación:</strong> {meta['fecha']}</p>
+        {meta_html}
     </div>
 </section>
 <main>

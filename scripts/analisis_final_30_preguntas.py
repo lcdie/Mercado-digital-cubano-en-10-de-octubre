@@ -1,24 +1,31 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Genera el informe final del mercado inmobiliario digital de Diez de Octubre.
+Genera el informe final A-F del mercado inmobiliario digital de Diez de Octubre.
 
 Base de datos:
-    datos/brutos/revolico_crudos_limpio_final.json
-    134 anuncios estrictos (solo Diez de Octubre, precio >= 1,000 USD cuando
-    existe precio). La base anterior de 171 anuncios incluía 37 anuncios de
-    otros municipios y queda superseded.
+    datos/limpios/unificado_confirmados_diez_octubre.json
+    114 publicaciones confirmadas dentro del municipio por la verificación
+    espacial con el polígono DPA 23.09 de datos/geo/lha.geojson:
+    75 de Revolico + 39 de Facebook.
 
-Estructura del informe:
-    - Problema social: opacidad, dolarización, desigualdad territorial e
-      informalidad.
+    La base de 134 anuncios de Revolico era una muestra *etiquetada* como
+    Diez de Octubre, no verificada: 46 fichas declaraban otro municipio, 8
+    eran contradictorias y 5 no eran verificables. Este informe sustituye
+    aquel universo por el de 114 publicaciones confirmadas.
+
+Entrada auxiliar:
+    datos/limpios/verificacion_municipal_unificado.json
+
+Salida:
+    analisis/informe_final.md
+
+Estructura:
+    - Verificación municipal y cambio de universo.
     - 30 preguntas en seis bloques: A precios, B territorio, C dolarización,
       D opacidad, E informalidad, F tipos de inmueble.
     - La ausencia de información se reporta como hallazgo, no solo como
       limitación.
-
-Salida:
-    analisis/informe_final.md
 """
 
 import json
@@ -28,26 +35,64 @@ import statistics
 from collections import Counter, defaultdict
 from datetime import datetime
 
-INPUT_FILE = "datos/brutos/revolico_crudos_limpio_final.json"
-REJECTED_FILE = "datos/limpios/anuncios_eliminados_por_filtro_final.json"
-OUTPUT_FILE = "analisis/informe_final.md"
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+INPUT_CONFIRMADOS = os.path.join(
+    RAIZ, "datos", "limpios", "unificado_confirmados_diez_octubre.json"
+)
+INPUT_VERIFICACION = os.path.join(
+    RAIZ, "datos", "limpios", "verificacion_municipal_unificado.json"
+)
+INPUT_VERIF_REVOLICO = os.path.join(
+    RAIZ, "datos", "limpios", "verificacion_municipal_revolico.json"
+)
+INPUT_VERIF_FACEBOOK = os.path.join(
+    RAIZ, "datos", "limpios", "verificacion_municipal_facebook.json"
+)
+OUTPUT_FILE = os.path.join(RAIZ, "analisis", "informe_final.md")
+REPORTE_VERIFICACION = "analisis/verificacion_municipal_geojson_20261104.md"
 
 FEATURES = [
     "garaje", "garage", "patio", "azotea", "terraza",
     "balcón", "balcon", "baño", "bano", "cuarto", "habitación", "habitacion",
 ]
 
-PALABRAS_INFORMALES = ["oportunidad", "ganga", "permuta", "intercambio", "cambio"]
+PALABRAS_INFORMALES = [
+    "oportunidad", "ganga", "permuta", "intercambio", "cambio",
+]
+
+# Barrios y repartos usados como respaldo cuando el campo normalizado `zona`
+# viene vacío pero el texto declarado del anuncio sí los menciona. El orden
+# importa: los nombres más específicos van primero.
+ZONAS = [
+    ("Santos Suárez", ["santos suárez", "santos suarez", "santo suárez", "santo suarez"]),
+    ("La Víbora", ["la víbora", "la vibora", "víbora", "vibora"]),
+    ("Lawton", ["lawton"]),
+    ("Luyano", ["luyano", "luyanó"]),
+    ("El Sevillano", ["el sevillano", "sevillano"]),
+    ("El Mónaco", ["el mónaco", "el monaco", "mónaco", "monaco"]),
+    ("Santa Catalina", ["santa catalina"]),
+    ("Vista Alegre", ["vista alegre"]),
+    ("La Asunción", ["la asunción", "la asuncion"]),
+    ("Vía Blanca", ["vía blanca", "via blanca"]),
+    ("Calzada 10 de Octubre", ["calzada 10 de octubre", "calzada diez de octubre"]),
+]
 
 
 # ---------------------------------------------------------------------------
-# Utilidades de clasificación
+# Carga y normalización
 # ---------------------------------------------------------------------------
 
 def cargar_json(ruta):
     with open(ruta, encoding="utf-8") as f:
         return json.load(f)
 
+
+# ---------------------------------------------------------------------------
+# Clasificadores reutilizados por limpiar_facebook.py y
+# mezclar_facebook_revolico.py. Se conservan con la misma lógica de la base
+# unificada para que regenerar el pipeline no cambie los registros.
+# ---------------------------------------------------------------------------
 
 def clasificar_tipo(titulo):
     t = (titulo or "").lower()
@@ -96,12 +141,78 @@ def clasificar_operacion(titulo):
     return "Sin clasificar"
 
 
+def texto_anuncio(anuncio):
+    """Todo el texto declarado, en minúsculas, para buscar señales."""
+    detalles = anuncio.get("detalles_propiedad") or {}
+    publicacion = anuncio.get("publicacion") or {}
+    partes = [
+        publicacion.get("titulo", ""),
+        publicacion.get("enlace", ""),
+        publicacion.get("grupo", ""),
+        detalles.get("ubicacion", ""),
+        detalles.get("zona", ""),
+    ]
+    for clave in ("distribucion", "detalles_estructura"):
+        partes += detalles.get(clave) or []
+    partes += anuncio.get("servicios_y_caracteristicas") or []
+    partes += anuncio.get("equipamiento_incluido") or []
+    return " ".join(str(p) for p in partes if p).lower()
+
+
+def zona_normalizada(anuncio, texto):
+    detalles = anuncio.get("detalles_propiedad") or {}
+    zona = (detalles.get("zona") or "").strip()
+    if zona and zona.lower() not in ("no especificado", "sin especificar"):
+        return zona
+    for nombre, variantes in ZONAS:
+        if any(v in texto for v in variantes):
+            return nombre
+    return "No especificado"
+
+
+def monto_de_precio(precio):
+    """Usa `monto` y, si falta, `monto_actual` (caso Facebook con rebaja)."""
+    if not isinstance(precio, dict):
+        return None
+    if precio.get("monto") is not None:
+        return precio["monto"]
+    return precio.get("monto_actual")
+
+
+def cargar_anuncios_confirmados():
+    anuncios = cargar_json(INPUT_CONFIRMADOS)
+    verificacion = cargar_json(INPUT_VERIFICACION)
+
+    # Defensivo: la base de confirmados ya viene filtrada, pero se comprueba
+    # el resultado para que el informe no incluya un registro no confirmado.
+    anuncios = [
+        a for a in anuncios
+        if (a.get("verificacion_municipal") or {}).get("resultado") == "SÍ"
+    ]
+
+    for a in anuncios:
+        detalles = a.get("detalles_propiedad") or {}
+        precio = a.get("precio") or {}
+        publicacion = a.get("publicacion") or {}
+        texto = texto_anuncio(a)
+
+        a["_fuente"] = a.get("fuente") or "desconocida"
+        a["_tipo"] = detalles.get("tipo") or "Inmueble"
+        a["_zona"] = zona_normalizada(a, texto)
+        a["_op"] = a.get("operacion") or "Sin clasificar"
+        a["_precio"] = monto_de_precio(precio)
+        a["_moneda"] = (precio.get("moneda") or "").upper()
+        a["_texto"] = texto
+        a["_titulo"] = publicacion.get("titulo") or ""
+
+    return anuncios, verificacion
+
+
 # ---------------------------------------------------------------------------
 # Utilidades estadísticas
 # ---------------------------------------------------------------------------
 
 def percentil(valores_ordenados, p):
-    """Percentil con interpolación lineal."""
     n = len(valores_ordenados)
     if n == 0:
         return 0.0
@@ -134,6 +245,10 @@ def fmt(valor):
     return f"{valor:,.2f}"
 
 
+def f0(valor):
+    return f"{valor:,.0f}"
+
+
 def pct(n, d):
     return 100.0 * n / d if d else 0.0
 
@@ -142,9 +257,14 @@ def unidad(n):
     return "anuncio" if n == 1 else "anuncios"
 
 
-def tiene_feature(titulo):
-    t = (titulo or "").lower()
-    return any(f in t for f in FEATURES)
+def tiene_feature(texto):
+    return any(f in (texto or "").lower() for f in FEATURES)
+
+
+def contar_resultados(registros, solo_base_limpia=False):
+    if solo_base_limpia:
+        registros = [r for r in registros if r.get("en_base_limpia", True)]
+    return Counter(r.get("resultado") for r in registros)
 
 
 # ---------------------------------------------------------------------------
@@ -152,61 +272,41 @@ def tiene_feature(titulo):
 # ---------------------------------------------------------------------------
 
 def main():
-    anuncios = cargar_json(INPUT_FILE)
+    anuncios, verificacion = cargar_anuncios_confirmados()
     total = len(anuncios)
 
-    # Clasificación de cada anuncio
-    for a in anuncios:
-        a["_tipo"] = clasificar_tipo(a.get("titulo"))
-        a["_zona"] = clasificar_zona(a.get("titulo"), a.get("enlace"))
-        a["_op"] = clasificar_operacion(a.get("titulo"))
-
     # Subconjuntos principales
-    con_precio = [a for a in anuncios if a.get("precio") is not None]
-    sin_precio = [a for a in anuncios if a.get("precio") is None]
-    usd = [a for a in anuncios if a.get("precio") is not None
-           and str(a.get("moneda", "")).upper() == "USD"]
-    cup = [a for a in anuncios if str(a.get("moneda", "")).upper() == "CUP"]
-    con_moneda = [a for a in anuncios
-                  if str(a.get("moneda", "")).upper() in ("USD", "CUP")]
+    con_precio = [a for a in anuncios if a["_precio"] is not None]
+    sin_precio = [a for a in anuncios if a["_precio"] is None]
+    usd = [a for a in anuncios if a["_precio"] is not None and a["_moneda"] == "USD"]
+    cup = [a for a in anuncios if a["_precio"] is not None and a["_moneda"] == "CUP"]
+    con_moneda = [a for a in anuncios if a["_moneda"] in ("USD", "CUP")]
 
     ventas = [a for a in anuncios if a["_op"] == "Venta"]
     alquileres = [a for a in anuncios if a["_op"] == "Alquiler"]
     sin_clasificar = [a for a in anuncios if a["_op"] == "Sin clasificar"]
 
-    ventas_con_precio = [a for a in ventas if a.get("precio") is not None]
-    ventas_usd = [a for a in ventas if a.get("precio") is not None
-                  and str(a.get("moneda", "")).upper() == "USD"]
-    alquileres_con_precio = [a for a in alquileres if a.get("precio") is not None]
-    alquileres_usd = [a for a in alquileres if a.get("precio") is not None
-                      and str(a.get("moneda", "")).upper() == "USD"]
-    alquileres_cup = [a for a in alquileres
-                      if a.get("precio") is not None
-                      and str(a.get("moneda", "")).upper() == "CUP"]
+    ventas_con_precio = [a for a in ventas if a["_precio"] is not None]
+    ventas_usd = [a for a in ventas if a["_precio"] is not None and a["_moneda"] == "USD"]
+    alquileres_con_precio = [a for a in alquileres if a["_precio"] is not None]
+    alquileres_usd = [a for a in alquileres if a["_precio"] is not None and a["_moneda"] == "USD"]
 
-    stats_usd = stats([a["precio"] for a in usd])
-    stats_venta = stats([a["precio"] for a in ventas_usd])
+    stats_usd = stats([a["_precio"] for a in usd])
+    stats_venta = stats([a["_precio"] for a in ventas_usd])
 
     # Zonas
     zonas = Counter(a["_zona"] for a in anuncios if a["_zona"] != "No especificado")
     total_con_zona = sum(zonas.values())
-    sin_zona_total = total - total_con_zona
+    sin_zona_n = sum(1 for a in anuncios if a["_zona"] == "No especificado")
 
     precios_zona = defaultdict(list)
     for a in usd:
         if a["_zona"] != "No especificado":
-            precios_zona[a["_zona"]].append(a["precio"])
-
-    zonas_5 = {z: v for z, v in precios_zona.items() if len(v) >= 5}
-    zonas_10 = {z: v for z, v in precios_zona.items() if len(v) >= 10}
+            precios_zona[a["_zona"]].append(a["_precio"])
 
     stats_zona = {z: stats(v) for z, v in precios_zona.items()}
-    stats_zona_5 = {z: stats(v) for z, v in zonas_5.items()}
-
-    zona_cara = max(zonas_5, key=lambda z: stats_zona_5[z]["mean"])
-    zona_barata = min(zonas_5, key=lambda z: stats_zona_5[z]["mean"])
-    zona_mediana_alta = max(zonas_5, key=lambda z: stats_zona_5[z]["median"])
-    zona_cara_10 = max(zonas_10, key=lambda z: stats_zona[z]["mean"])
+    zonas_5 = {z: s for z, s in stats_zona.items() if s["n"] >= 5}
+    zonas_10 = {z: s for z, s in stats_zona.items() if s["n"] >= 10}
 
     top4 = zonas.most_common(4)
     top4_total = sum(c for _, c in top4)
@@ -215,38 +315,39 @@ def main():
     tipos = Counter(a["_tipo"] for a in anuncios)
     precios_tipo = defaultdict(list)
     for a in usd:
-        precios_tipo[a["_tipo"]].append(a["precio"])
+        precios_tipo[a["_tipo"]].append(a["_precio"])
     stats_tipo = {t: stats(v) for t, v in precios_tipo.items()}
     tipos_comparables = [t for t in stats_tipo if stats_tipo[t]["n"] >= 10]
 
     # Opacidad
     sin_precio_n = len(sin_precio)
-    sin_zona_n = sum(1 for a in anuncios if a["_zona"] == "No especificado")
-    ambos_n = sum(1 for a in anuncios
-                  if a.get("precio") is None and a["_zona"] == "No especificado")
-    completo_n = sum(1 for a in anuncios
-                     if a.get("precio") is not None and a["_zona"] != "No especificado")
-
-    sin_feature = [a for a in anuncios if not tiene_feature(a.get("titulo"))]
+    ambos_n = sum(
+        1 for a in anuncios
+        if a["_precio"] is None and a["_zona"] == "No especificado"
+    )
+    completo_n = sum(
+        1 for a in anuncios
+        if a["_precio"] is not None and a["_zona"] != "No especificado"
+    )
+    sin_feature = [a for a in anuncios if not tiene_feature(a["_texto"])]
     totalmente_opacos = [
         a for a in anuncios
-        if a.get("precio") is None
+        if a["_precio"] is None
         and a["_zona"] == "No especificado"
-        and not tiene_feature(a.get("titulo"))
+        and not tiene_feature(a["_texto"])
     ]
 
     # Informalidad
     informal = [
         a for a in anuncios
-        if any(p in (a.get("titulo") or "").lower() for p in PALABRAS_INFORMALES)
+        if any(p in a["_texto"] for p in PALABRAS_INFORMALES)
     ]
     neutros = [a for a in anuncios if a not in informal]
-    informal_con_precio = sum(1 for a in informal if a.get("precio") is not None)
-    neutros_con_precio = sum(1 for a in neutros if a.get("precio") is not None)
+    informal_con_precio = sum(1 for a in informal if a["_precio"] is not None)
+    neutros_con_precio = sum(1 for a in neutros if a["_precio"] is not None)
     informal_por_op = Counter(a["_op"] for a in informal)
     palabras_inf = Counter(
-        p for a in anuncios for p in PALABRAS_INFORMALES
-        if p in (a.get("titulo") or "").lower()
+        p for a in anuncios for p in PALABRAS_INFORMALES if p in a["_texto"]
     )
 
     # Dolarización
@@ -256,22 +357,33 @@ def main():
     usd_min = pct(usd_declarada, total)
     usd_max = pct(usd_declarada + sin_precio_n, total)
 
-    # Anuncios rechazados por el filtro (para trazabilidad)
-    rechazados = []
-    if os.path.exists(REJECTED_FILE):
-        rechazados = cargar_json(REJECTED_FILE)
-    motivos_rechazo = Counter(r.get("motivo_eliminacion") for r in rechazados)
-    rechazados_municipio = motivos_rechazo.get(
-        "MUNICIPIO_DISTINTO_A_DIEZ_DE_OCTUBRE", 0
-    )
-    rechazados_precio = len(rechazados) - rechazados_municipio
+    # Opacidad por operación y por tipo
+    def sin_zona(grupo):
+        return sum(1 for a in grupo if a["_zona"] == "No especificado")
 
-    # Fecha de corte
+    def sin_precio_grupo(grupo):
+        return sum(1 for a in grupo if a["_precio"] is None)
+
+    # Fecha de corte: la más frecuente entre las fechas no vacías.
     fechas = Counter(
         (a.get("fecha_verificacion") or "")[:10] for a in anuncios
         if a.get("fecha_verificacion")
     )
     fecha_corte = fechas.most_common(1)[0][0] if fechas else "no disponible"
+
+    # Conteos de la verificación municipal
+    conteo_rev = contar_resultados(cargar_json(INPUT_VERIF_REVOLICO))
+    conteo_fb = contar_resultados(
+        cargar_json(INPUT_VERIF_FACEBOOK), solo_base_limpia=True
+    )
+    conteo_uni = contar_resultados(verificacion)
+    n_revolico = sum(1 for a in anuncios if a["_fuente"] == "revolico")
+    n_facebook = sum(1 for a in anuncios if a["_fuente"] == "facebook")
+
+    # Duplicado entre fuentes documentado en la base unificada
+    duplicados = [
+        a for a in anuncios if a.get("posibles_duplicados")
+    ]
 
     L = []
 
@@ -282,33 +394,40 @@ def main():
     L.append("## Opacidad, dolarización, desigualdad territorial e informalidad")
     L.append("")
     L.append(f"**Fecha de generación:** {datetime.now().strftime('%d/%m/%Y %H:%M')}")
-    L.append(f"**Corte de los datos:** {fecha_corte}")
-    L.append(f"**Fuente:** Revolico (anuncios activos)")
-    L.append(f"**Universo estricto:** {total} anuncios de Diez de Octubre")
-    L.append(f"**Anuncios con precio en USD:** {len(usd)}")
+    L.append(f"**Corte de los datos:** {fecha_corte} (Revolico); Facebook sin fecha homogénea")
+    L.append(
+        f"**Universo:** {total} publicaciones confirmadas dentro del municipio "
+        f"({n_revolico} de Revolico + {n_facebook} de Facebook)"
+    )
+    L.append("**Verificación espacial:** polígono municipal DPA `23.09` de `datos/geo/lha.geojson`")
+    L.append("**Base de datos:** `datos/limpios/unificado_confirmados_diez_octubre.json`")
     L.append("")
     L.append("## Resumen ejecutivo")
     L.append("")
     L.append(
-        f"La base final contiene **{total} anuncios** estrictamente de Diez de "
-        f"Octubre. Respecto a los 171 anuncios del informe anterior, se retiraron "
-        f"**37** que mencionaban otros municipios. Sobre la fuente completa de 270 "
-        f"anuncios, el filtro descartó además {rechazados_precio} con precio "
-        f"inferior a 1,000 USD (que no formaban parte de los 171). La base "
-        f"corregida es la que se usa en todas las respuestas de este informe."
+        f"Esta versión no usa los 134 anuncios que el scraper *etiquetaba* como "
+        f"Diez de Octubre. Usa las **{total} publicaciones que la verificación "
+        f"espacial confirmó dentro del municipio**: {n_revolico} de Revolico y "
+        f"{n_facebook} de Facebook. De las 176 publicaciones unificadas, "
+        f"{conteo_uni.get('NO', 0)} pertenecen a otro municipio, "
+        f"{conteo_uni.get('CONTRADICTORIO', 0)} son contradictorias y "
+        f"{conteo_uni.get('INDETERMINADO', 0)} no son verificables; todas quedan "
+        f"fuera. El detalle está en `{REPORTE_VERIFICACION}`."
     )
     L.append("")
     L.append("Los hallazgos principales son:")
     L.append("")
     L.append(
-        f"- **Dolarización:** {usd_declarada} de {len(con_moneda)} anuncios con "
-        f"moneda declarada están en USD (**{pct_usd_declarada:.1f}%**), y "
-        f"{usd_declarada} de {total} del total (**{pct_usd_total:.1f}%**)."
+        f"- **Dolarización:** {usd_declarada} de {len(con_moneda)} publicaciones "
+        f"con moneda declarada están en USD (**{pct_usd_declarada:.1f}%**), y "
+        f"{usd_declarada} de {total} del total (**{pct_usd_total:.1f}%**). El "
+        f"único precio declarado en CUP es un alquiler."
     )
     L.append(
         f"- **Precios de compra:** mediana **${fmt(stats_venta['median'])} USD**; "
         f"P10–P90 **${fmt(stats_venta['p10'])}–${fmt(stats_venta['p90'])} USD**; "
-        f"media **${fmt(stats_venta['mean'])} USD** (n = {stats_venta['n']} ventas con precio USD)."
+        f"media **${fmt(stats_venta['mean'])} USD** "
+        f"(n = {stats_venta['n']} ventas explícitas con precio en USD)."
     )
     L.append(
         f"- **Alquiler:** {len(alquileres_con_precio)} de {len(alquileres)} "
@@ -316,38 +435,39 @@ def main():
         f"alquiler no es estimable con esta base."
     )
     L.append(
-        f"- **Opacidad:** {sin_precio_n} de {total} anuncios ({pct(sin_precio_n, total):.1f}%) "
-        f"no declaran precio; {sin_zona_n} ({pct(sin_zona_n, total):.1f}%) no "
-        f"especifican zona; solo {completo_n} ({pct(completo_n, total):.1f}%) "
-        f"permiten cruzar precio y zona."
+        f"- **Opacidad:** {sin_precio_n} de {total} publicaciones "
+        f"({pct(sin_precio_n, total):.1f}%) no declaran precio; {sin_zona_n} "
+        f"({pct(sin_zona_n, total):.1f}%) no especifican zona; solo {completo_n} "
+        f"({pct(completo_n, total):.1f}%) permiten cruzar precio y zona."
     )
     L.append(
         f"- **Desigualdad territorial:** las cuatro zonas principales concentran "
-        f"{top4_total} de {total_con_zona} anuncios con zona identificada "
-        f"({pct(top4_total, total_con_zona):.1f}%). La Víbora tiene la media más "
-        f"alta (${fmt(stats_zona_5[zona_cara]['mean'])} USD, n = "
-        f"{stats_zona_5[zona_cara]['n']}), pero su mediana es "
-        f"${fmt(stats_zona_5[zona_cara]['median'])} USD."
+        f"{top4_total} de {total_con_zona} publicaciones con zona identificada "
+        f"({pct(top4_total, total_con_zona):.1f}%). Entre las zonas con n ≥ 10, "
+        f"La Víbora tiene la media y la mediana más altas; entre las de n ≥ 5, "
+        f"El Mónaco las supera, pero con solo 5 casos."
     )
     L.append(
-        f"- **Informalidad:** {len(informal)} de {total} anuncios "
+        f"- **Informalidad:** {len(informal)} de {total} publicaciones "
         f"({pct(len(informal), total):.1f}%) usan lenguaje de oportunidad, "
-        f"permuta o cambio. No aparecen en alquiler: se concentran en venta y "
-        f"en anuncios sin operación declarada."
+        f"permuta o cambio. Todas son de Revolico: Facebook no aporta texto "
+        f"suficiente para medir esta dimensión, así que el dato es una cota "
+        f"inferior."
     )
     L.append(
         f"- **Tipo de inmueble:** el apartamento es la opción más accesible: "
         f"media **${fmt(stats_tipo['Apartamento']['mean'])} USD** y mediana "
-        f"**${fmt(stats_tipo['Apartamento']['median'])} USD** (n = "
-        f"{stats_tipo['Apartamento']['n']}), frente a la casa con media "
+        f"**${fmt(stats_tipo['Apartamento']['median'])} USD** "
+        f"(n = {stats_tipo['Apartamento']['n']}), frente a la casa con media "
         f"**${fmt(stats_tipo['Casa']['mean'])} USD** y mediana "
-        f"**${fmt(stats_tipo['Casa']['median'])} USD** (n = {stats_tipo['Casa']['n']})."
+        f"**${fmt(stats_tipo['Casa']['median'])} USD** "
+        f"(n = {stats_tipo['Casa']['n']})."
     )
     L.append("")
     L.append(
         "La ausencia de datos no se trata como un simple defecto: se mide y se "
-        "reporta como un rasgo del mercado. Un anuncio sin precio, sin zona o "
-        "sin operación limita la capacidad de comparar y de verificar, y esa "
+        "reporta como un rasgo del mercado. Una publicación sin precio, sin zona "
+        "o sin operación limita la capacidad de comparar y de verificar, y esa "
         "limitación es parte del problema social que el estudio documenta."
     )
     L.append("")
@@ -360,7 +480,7 @@ def main():
     L.append(
         "El acceso a la vivienda en La Habana no depende solo de la oferta y la "
         "demanda. En un mercado digital con precios en divisas, ubicaciones "
-        "incompletas y anuncios que no declaran si se vende o se alquila, la "
+        "incompletas y publicaciones que no declaran si se vende o se alquila, la "
         "información se convierte en un recurso desigual. Quien tiene acceso a "
         "divisas, a contactos y a tiempo para verificar puede comparar; quien no "
         "lo tiene queda expuesto a la opacidad y a la intermediación informal."
@@ -382,119 +502,131 @@ def main():
     )
     L.append(
         "4. **Opacidad e informalidad:** ¿cuánta información falta y qué "
-        "prácticas (lenguaje de oportunidad, permuta, anuncios sin operación) "
+        "prácticas (lenguaje de oportunidad, permuta, publicaciones sin operación) "
         "aparecen en los anuncios?"
     )
     L.append("")
     L.append(
-        "El municipio Diez de Octubre es un caso relevante porque combina una "
-        "alta densidad de vivienda, barrios con identidad propia (Santos Suárez, "
-        "Lawton, La Víbora, Luyano, El Sevillano) y una presencia importante de "
-        "anuncios digitales. La comparación entre barrios permite observar si el "
-        "mercado reproduce o atenúa las desigualdades territoriales."
+        "Diez de Octubre es un caso relevante porque combina alta densidad de "
+        "vivienda, barrios con identidad propia (Santos Suárez, Lawton, La "
+        "Víbora, Luyano, El Sevillano) y una presencia importante de anuncios "
+        "digitales. La comparación entre barrios permite observar si el mercado "
+        "reproduce o atenúa las desigualdades territoriales."
     )
     L.append("")
 
     # ------------------------------------------------------------------
     # Metodología
     # ------------------------------------------------------------------
-    L.append("## Metodología y corrección de la base")
+    L.append("## Metodología y verificación municipal")
     L.append("")
-    L.append("### Fuente y universo")
+    L.append("### Por qué el universo es 114 y no 134")
     L.append("")
     L.append(
-        "- **Revolico:** única fuente usada en los cálculos. Se analizan los "
-        f"anuncios activos del municipio Diez de Octubre con corte al {fecha_corte}."
-    )
-    L.append(
-        "- **Anuario Estadístico de Cuba (ONEI):** se consulta como contexto "
-        "general del municipio; no se usa para calcular precios ni proporciones "
-        "de la muestra digital."
-    )
-    L.append(
-        "- **Facebook (fuente explorada, no integrada):** se revisaron 43 "
-        "publicaciones de grupos de compraventa; 42 se conservan tras aplicar "
-        "el mismo filtro municipal y de precio que a Revolico. No se incorporan "
-        "al análisis cuantitativo porque no comparten el esquema de campos de "
-        "Revolico (precio anidado, ubicación en texto libre y sin municipio "
-        "normalizado) y no permiten aplicar el mismo filtro municipal. "
-        "Mezclarlas sin normalizar habría introducido un sesgo difícil de medir."
+        "El campo `municipio` del scraper no es fiable: asigna «Diez de Octubre» "
+        "a anuncios que en su ficha declaran otro municipio. Para corregirlo se "
+        "usó el polígono municipal de `datos/geo/lha.geojson` y tres evidencias "
+        "por publicación: la ubicación declarada por la ficha de Revolico, los "
+        "topónimos del texto y la geocodificación de esos topónimos con "
+        "comprobación punto-en-polígono."
     )
     L.append("")
-    L.append("### Filtro estricto y contaminación de la base anterior")
-    L.append("")
+    L.append("| Resultado | Revolico (n=134) | Facebook (n=42) | Unificado (n=176) |")
+    L.append("|---|---:|---:|---:|")
     L.append(
-        "El campo `municipio` del scraper **no es fiable**: todos los anuncios "
-        "aparecen como «Diez de Octubre», incluso cuando el título dice «Habana "
-        "Vieja», «Boyeros», «Arroyo Naranjo» o «Santa Fe». Por eso el filtro "
-        "revisa el título y el enlace, y la exclusión municipal tiene prioridad "
-        "sobre el campo `municipio`."
+        f"| SÍ, dentro de Diez de Octubre | {conteo_rev.get('SÍ', 0)} | "
+        f"{conteo_fb.get('SÍ', 0)} | {conteo_uni.get('SÍ', 0)} |"
+    )
+    L.append(
+        f"| NO, otro municipio | {conteo_rev.get('NO', 0)} | "
+        f"{conteo_fb.get('NO', 0)} | {conteo_uni.get('NO', 0)} |"
+    )
+    L.append(
+        f"| CONTRADICTORIO | {conteo_rev.get('CONTRADICTORIO', 0)} | "
+        f"{conteo_fb.get('CONTRADICTORIO', 0)} | {conteo_uni.get('CONTRADICTORIO', 0)} |"
+    )
+    L.append(
+        f"| INDETERMINADO | {conteo_rev.get('INDETERMINADO', 0)} | "
+        f"{conteo_fb.get('INDETERMINADO', 0)} | {conteo_uni.get('INDETERMINADO', 0)} |"
     )
     L.append("")
     L.append(
-        f"De la fuente inicial de 270 anuncios, el filtro conserva **{total}** y "
-        f"descarta **{len(rechazados)}**: {rechazados_municipio} por mencionar "
-        f"otro municipio o localidad y {rechazados_precio} por precio inferior a "
-        f"1,000 USD. La versión anterior del informe usaba 171 anuncios; de ellos, "
-        f"**37 mencionaban otros municipios** y fueron retirados. La base de 134 "
-        f"es la base estrictamente municipal que se usa en esta versión."
+        f"La base final son las **{conteo_uni.get('SÍ', 0)} publicaciones con "
+        f"resultado SÍ**. Las 46 de otro municipio, las 8 contradictorias y las 8 "
+        f"indeterminadas se excluyen. Esa exclusión es una decisión metodológica: "
+        f"reduce el tamaño de la muestra, pero evita atribuir a Diez de Octubre "
+        f"precios y zonas que pertenecen a otros municipios."
     )
     L.append("")
-    L.append("Ejemplos de anuncios retirados por pertenecer a otro municipio:")
-    L.append("")
-    L.append("| Anuncio (extracto) | Municipio o zona detectada |")
-    L.append("|---|---|")
-    L.append("| «Casa en cojímar» | Cojímar (Habana del Este) |")
-    L.append("| «8,000 USD Casa 2do piso Poey Arroyo Naranjo» | Arroyo Naranjo |")
-    L.append("| «20,000 USD Casa en Boyeros cerca del aeropuerto» | Boyeros |")
-    L.append("| «56,000 USD CASA EN SANTA FE PRECIO 56MIL USD» | Santa Fe |")
-    L.append("| «33,000 USD MUNICIPIO PLAZA» | Plaza de la Revolución |")
-    L.append("| «45,000 USD Casa Independiente con patio en altahabana» | Altahabana |")
-    L.append("| «Casa de renta en Río Cristal, Boyeros» | Boyeros |")
-    L.append("| «CASA EN VENTA EN LA HABANA, PÁRRAGA (ARROYO NARANJO)» | Arroyo Naranjo |")
-    L.append("| «Casa en Marianao» | Marianao |")
-    L.append("")
     L.append(
-        "La distinción es importante: estos 37 anuncios **no son ausencia de "
-        "información**, son contaminación de la base. Una vez corregida, la "
-        "ausencia se mide sobre los 134 anuncios que sí pertenecen al municipio."
+        "La verificación tiene un límite explícito: el polígono es una "
+        "simplificación de 11 vértices y no resuelve casos catastrales a pocos "
+        "metros del borde. Además, se apoya en la ubicación que declara el "
+        "anunciante, no en la dirección exacta de la propiedad. Los casos "
+        "contradictorios e indeterminados son, precisamente, aquellos en los que "
+        "la evidencia no alcanza para decidir."
     )
     L.append("")
-    L.append("### Reglas de análisis")
+    L.append("### Fuentes y normalización")
     L.append("")
     L.append(
-        f"- **Precios:** se analizan solo los {len(usd)} anuncios con precio "
-        f"declarado en USD. Se excluye 1 anuncio en CUP y {sin_precio_n} sin "
-        f"precio. Para reducir el efecto de valores extremos se reportan media, "
-        f"mediana y rango P10–P90, siempre con el tamaño de muestra (n)."
+        f"- **Revolico:** {n_revolico} publicaciones confirmadas. Aportan título, "
+        f"enlace, fecha de verificación y, en la mayoría de los casos, precio "
+        f"anidado en `precio.monto`."
+    )
+    L.append(
+        f"- **Facebook:** {n_facebook} publicaciones confirmadas. Aportan precio "
+        f"y descripción, pero muchas no tienen título ni texto crudo "
+        f"homogéneo. Por eso la operación queda «sin clasificar» con más "
+        f"frecuencia y la medición de lenguaje informal solo es posible en "
+        f"Revolico."
+    )
+    L.append(
+        "- **Precio:** se usa `precio.monto` y, cuando falta, `precio.monto_actual` "
+        "(un caso de Facebook con rebaja: 15,000 USD). Los precios en CUP no se "
+        "convierten a USD porque no hay un tipo de cambio único y defendible para "
+        "el corte."
+    )
+    L.append(
+        "- **Zona:** se usa el campo normalizado `detalles_propiedad.zona`. Si "
+        "viene vacío o «No especificado», se busca el nombre del barrio o reparto "
+        "en el texto declarado. No se infiere una zona que el anuncio no mencione."
+    )
+    L.append(
+        "- **Tipo y operación:** se usan los campos normalizados "
+        "`detalles_propiedad.tipo` y `operacion`. No se reclasifica la operación "
+        "por el precio ni por el título: si el anuncio no la declara, queda "
+        "«sin clasificar». Es una regla conservadora y reproducible."
     )
     L.append(
         "- **Subgrupos pequeños:** los grupos con n < 10 se presentan como "
-        "evidencia descriptiva, no como conclusión firme. Las zonas con n < 5 "
-        "no se usan para comparar promedios."
+        "evidencia descriptiva, no como conclusión firme. Las zonas con n < 5 no "
+        "se usan para comparar promedios."
     )
     L.append(
-        "- **Clasificación:** el tipo de inmueble, la zona y la operación se "
-        "infieren de palabras clave del título y del enlace. Es una "
-        "clasificación reproducible, pero puede contener errores de asignación."
-    )
-    L.append(
-        "- **Ausencia:** un anuncio sin precio, sin zona o sin operación no se "
-        "elimina del universo. Se conserva y se contabiliza como indicador de "
+        "- **Ausencia:** una publicación sin precio, sin zona o sin operación no "
+        "se elimina del universo. Se conserva y se contabiliza como indicador de "
         "opacidad, porque su ausencia también describe el mercado."
     )
     L.append("")
-    L.append("### Trazabilidad del cambio respecto a la versión anterior")
+    L.append("### Trazabilidad del cambio respecto al informe anterior")
     L.append("")
     L.append(
-        "La versión anterior respondía 30 preguntas sobre 171 anuncios. Esa base "
-        "incluía 37 anuncios de otros municipios, por lo que sus cifras no eran "
-        "estrictamente de Diez de Octubre y quedan supersedidas. Además, cinco "
-        "preguntas originales no eran estimables con los datos disponibles "
-        "(mediana del alquiler, comparación compra–alquiler, precio por metro "
-        "cuadrado, zonas por operación y precio promedio en CUP). En esta versión "
-        "esas preguntas se reemplazan por preguntas que sí pueden responderse, "
-        "incluyendo varias que miden la ausencia de información."
+        "El informe anterior respondía 30 preguntas sobre 134 anuncios de "
+        "Revolico etiquetados como Diez de Octubre. La verificación muestra que "
+        "solo 75 de esos 134 estaban confirmados en el municipio. Esta versión "
+        "recalcula el informe con las 114 publicaciones confirmadas e incorpora "
+        "39 de Facebook. No es una actualización de cifras: es un cambio de "
+        "universo. Las cifras anteriores no deben compararse directamente con "
+        "las de este informe."
+    )
+    L.append("")
+    L.append(
+        "Las 30 preguntas A1–F5 se conservan. Cinco preguntas originales del "
+        "cuestionario base siguen sin ser estimables con estos datos (mediana del "
+        "alquiler, comparación compra–alquiler, precio por metro cuadrado, zonas "
+        "por operación y precio promedio en CUP); en su lugar se mantienen "
+        "preguntas que miden la ausencia de información."
     )
     L.append("")
 
@@ -520,13 +652,13 @@ def main():
     L.append("")
     L.append(
         f"> **${fmt(stats_venta['mean'])} USD** entre las {stats_venta['n']} "
-        f"ventas explícitas con precio en USD. Si se incluyen todos los anuncios "
-        f"con precio USD (ventas y anuncios sin operación declarada; no hay "
-        f"alquileres en USD), la media sube a "
-        f"**${fmt(stats_usd['mean'])} USD** (n = {stats_usd['n']}), porque los "
-        f"anuncios sin operación declarada incluyen inmuebles de mayor precio. "
-        f"La media de compra es una referencia, no el precio típico: la mediana "
-        f"es bastante menor (A2)."
+        f"ventas explícitas con precio en USD. Si se incluyen todas las "
+        f"publicaciones con precio USD (ventas y publicaciones sin operación "
+        f"declarada; no hay alquileres en USD), la media sube a "
+        f"**${fmt(stats_usd['mean'])} USD** (n = {stats_usd['n']}), porque las "
+        f"publicaciones sin operación declarada incluyen inmuebles de mayor "
+        f"precio. La media de compra es una referencia, no el precio típico: la "
+        f"mediana es bastante menor (A2)."
     )
     L.append("")
     L.append(
@@ -541,7 +673,7 @@ def main():
         f"**${fmt(stats_venta['min'])} USD** y el máximo "
         f"**${fmt(stats_venta['max'])} USD**. La mediana es menor que la media "
         f"(${fmt(stats_venta['mean'])}), señal de una distribución sesgada a la "
-        f"derecha: unos pocos anuncios muy caros elevan el promedio."
+        f"derecha: unas pocas publicaciones muy caras elevan el promedio."
     )
     L.append("")
     L.append(
@@ -550,10 +682,11 @@ def main():
     )
     L.append("")
     L.append(
-        f"> **No estimable.** Hay {len(alquileres)} anuncios de alquiler: "
+        f"> **No estimable.** Hay {len(alquileres)} publicaciones de alquiler: "
         f"{len(alquileres_con_precio)} declara precio (uno solo, en CUP: "
-        f"50,000 CUP) y {len(alquileres) - len(alquileres_con_precio)} no lo "
-        f"declaran ({pct(len(alquileres) - len(alquileres_con_precio), len(alquileres)):.1f}%). "
+        f"50,000 CUP) y "
+        f"{len(alquileres) - len(alquileres_con_precio)} no lo declaran "
+        f"({pct(len(alquileres) - len(alquileres_con_precio), len(alquileres)):.1f}%). "
         f"Ningún alquiler tiene precio en USD. No se puede calcular una media ni "
         f"una mediana en USD, y el único precio en CUP no es comparable sin un "
         f"tipo de cambio explícito. La ausencia de precio de alquiler es el "
@@ -571,7 +704,8 @@ def main():
         f"precio. Ese único anuncio está en **CUP** (50,000 CUP); "
         f"**0 de {len(alquileres)}** lo declaran en USD. Los otros "
         f"{len(alquileres) - len(alquileres_con_precio)} alquileres no permiten "
-        f"conocer ni siquiera el orden de magnitud del precio."
+        f"conocer ni siquiera el orden de magnitud del precio. Con solo 3 casos, "
+        f"la proporción es un censo del subgrupo, no una estimación del mercado."
     )
     L.append("")
     L.append(
@@ -586,7 +720,8 @@ def main():
         f"({pct(len(alquileres_con_precio), len(alquileres)):.1f}%)**. La brecha "
         f"es de **{pct(len(ventas_con_precio), len(ventas)) - pct(len(alquileres_con_precio), len(alquileres)):.1f} puntos porcentuales**. "
         f"El mercado de compra es mucho más transparente en precio que el de "
-        f"alquiler, que funciona casi por contacto directo."
+        f"alquiler, que funciona casi por contacto directo. La conclusión es "
+        f"descriptiva: el alquiler tiene solo {len(alquileres)} casos."
     )
     L.append("")
 
@@ -595,95 +730,130 @@ def main():
     L.append("")
     L.append(
         f"**B1. ¿Qué zonas concentran la mayor oferta?** ✅ "
-        f"({total_con_zona} anuncios con zona identificada)"
+        f"({total_con_zona} publicaciones con zona identificada)"
     )
     L.append("")
     for z, c in zonas.most_common():
-        L.append(f"> - {z}: **{c} {unidad(c)}** ({pct(c, total_con_zona):.1f}% de los anuncios con zona)")
+        L.append(
+            f"> - {z}: **{c} {unidad(c)}** "
+            f"({pct(c, total_con_zona):.1f}% de las publicaciones con zona)"
+        )
     L.append(">")
     L.append(
-        f"> **{total_con_zona} de {total} anuncios ({pct(total_con_zona, total):.1f}%)** "
-        f"especifican zona; **{sin_zona_n} ({pct(sin_zona_n, total):.1f}%)** no lo "
-        f"hacen. Las cuatro zonas principales —{', '.join(z for z, _ in top4)}— "
-        f"reúnen **{top4_total} de {total_con_zona} ({pct(top4_total, total_con_zona):.1f}%)** "
-        f"de la oferta con zona identificada: la información territorial está muy "
-        f"concentrada en pocos barrios."
+        f"> **{total_con_zona} de {total} publicaciones "
+        f"({pct(total_con_zona, total):.1f}%)** especifican zona; "
+        f"**{sin_zona_n} ({pct(sin_zona_n, total):.1f}%)** no lo hacen. Las "
+        f"cuatro zonas principales —{', '.join(z for z, _ in top4)}— reúnen "
+        f"**{top4_total} de {total_con_zona} "
+        f"({pct(top4_total, total_con_zona):.1f}%)** de la oferta con zona "
+        f"identificada: la información territorial está concentrada en pocos "
+        f"barrios."
     )
     L.append("")
+    zona_cara_5 = max(zonas_5, key=lambda z: zonas_5[z]["mean"])
+    zona_cara_10 = max(zonas_10, key=lambda z: zonas_10[z]["mean"])
     L.append(
         f"**B2. ¿Qué zona tiene el precio promedio más alto?** 🟡 "
-        f"(n = {stats_zona_5[zona_cara]['n']} en La Víbora)"
+        f"(n = {zonas_5[zona_cara_5]['n']} en {zona_cara_5})"
     )
     L.append("")
     L.append(
-        f"> **{zona_cara}**, con una media de "
-        f"**${fmt(stats_zona_5[zona_cara]['mean'])} USD** (n = "
-        f"{stats_zona_5[zona_cara]['n']}). Es un resultado descriptivo: el grupo "
-        f"tiene menos de 10 anuncios y su media está influida por un anuncio de "
-        f"$180,000 USD. Si se exige n ≥ 10, la zona con media más alta es "
-        f"**{zona_cara_10}** (${fmt(stats_zona[zona_cara_10]['mean'])} USD, "
-        f"n = {stats_zona[zona_cara_10]['n']})."
+        f"> **{zona_cara_5}**, con una media de "
+        f"**${fmt(zonas_5[zona_cara_5]['mean'])} USD** "
+        f"(n = {zonas_5[zona_cara_5]['n']}). Es un resultado descriptivo: el "
+        f"grupo tiene menos de 10 publicaciones y su media puede estar influida "
+        f"por valores extremos. Si se exige n ≥ 10, la zona con media más alta "
+        f"es **{zona_cara_10}** (${fmt(zonas_10[zona_cara_10]['mean'])} USD, "
+        f"n = {zonas_10[zona_cara_10]['n']})."
     )
     L.append("")
+    L.append("> Orden por media entre las zonas con n ≥ 5:")
+    L.append(">")
+    for z in sorted(zonas_5, key=lambda x: zonas_5[x]["mean"], reverse=True):
+        s = zonas_5[z]
+        L.append(
+            f"> - {z}: media **${fmt(s['mean'])} USD**, mediana "
+            f"**${fmt(s['median'])} USD** (n = {s['n']})"
+        )
+    L.append("")
+    zona_mediana_5 = max(zonas_5, key=lambda z: zonas_5[z]["median"])
+    zona_mediana_10 = max(zonas_10, key=lambda z: zonas_10[z]["median"])
     L.append(
         f"**B3. ¿Qué zona tiene la mediana más alta?** 🟡 "
-        f"(n = {stats_zona_5[zona_mediana_alta]['n']} en La Víbora)"
+        f"(n = {zonas_5[zona_mediana_5]['n']} en {zona_mediana_5})"
     )
     L.append("")
     L.append(
-        f"> **{zona_mediana_alta}**, con una mediana de "
-        f"**${fmt(stats_zona_5[zona_mediana_alta]['median'])} USD** (n = "
-        f"{stats_zona_5[zona_mediana_alta]['n']}). El orden completo de las "
-        f"zonas con n ≥ 5 es:"
+        f"> **{zona_mediana_5}**, con una mediana de "
+        f"**${fmt(zonas_5[zona_mediana_5]['median'])} USD** "
+        f"(n = {zonas_5[zona_mediana_5]['n']}). Si se exige n ≥ 10, la mediana "
+        f"más alta corresponde a **{zona_mediana_10}** "
+        f"(${fmt(zonas_10[zona_mediana_10]['median'])} USD, "
+        f"n = {zonas_10[zona_mediana_10]['n']})."
     )
+    L.append("")
+    L.append("> Orden por mediana entre las zonas con n ≥ 5:")
     L.append(">")
-    for z in sorted(zonas_5, key=lambda x: stats_zona_5[x]["median"], reverse=True):
-        s = stats_zona_5[z]
-        L.append(f"> - {z}: mediana **${fmt(s['median'])} USD** (n = {s['n']})")
-    L.append(">")
-    L.append(
-        "> La mediana ordena las zonas de forma distinta a la media: La Víbora "
-        "sigue primera, pero su ventaja se reduce mucho porque la mediana no se "
-        "deja arrastrar por el anuncio de $180,000."
-    )
+    for z in sorted(zonas_5, key=lambda x: zonas_5[x]["median"], reverse=True):
+        s = zonas_5[z]
+        L.append(
+            f"> - {z}: mediana **${fmt(s['median'])} USD** (n = {s['n']})"
+        )
     L.append("")
-    L.append(
-        f"**B4. ¿La brecha La Víbora–Lawton se mantiene al usar medianas?** 🟡 "
-        f"(n = {stats_zona_5['La Víbora']['n']} y {stats_zona_5['Lawton']['n']})"
-    )
-    L.append("")
-    L.append(
-        f"> **No se mantiene con la misma magnitud.** Por media, La Víbora "
-        f"(${fmt(stats_zona_5['La Víbora']['mean'])} USD) supera a Lawton "
-        f"(${fmt(stats_zona_5['Lawton']['mean'])} USD) en "
-        f"**${fmt(stats_zona_5['La Víbora']['mean'] - stats_zona_5['Lawton']['mean'])} USD**. "
-        f"Por mediana, la diferencia es de solo "
-        f"**${fmt(stats_zona_5['La Víbora']['median'] - stats_zona_5['Lawton']['median'])} USD** "
-        f"(${fmt(stats_zona_5['La Víbora']['median'])} frente a "
-        f"${fmt(stats_zona_5['Lawton']['median'])}). La brecha por media es unas "
-        f"{(stats_zona_5['La Víbora']['mean'] - stats_zona_5['Lawton']['mean']) / (stats_zona_5['La Víbora']['median'] - stats_zona_5['Lawton']['median']):.1f} veces "
-        f"mayor que la brecha por mediana. El anuncio de $180,000 USD en La Víbora "
-        f"(y su P90 de ${fmt(stats_zona_5['La Víbora']['p90'])} USD) explica gran "
-        f"parte de la diferencia: la media describe el extremo alto, no el precio "
-        f"típico. Para comparar barrios conviene usar la mediana."
-    )
-    L.append("")
+
+    zona_a = "La Víbora"
+    zona_b = "Lawton"
+    if zona_a in stats_zona and zona_b in stats_zona:
+        sa = stats_zona[zona_a]
+        sb = stats_zona[zona_b]
+        brecha_media = sa["mean"] - sb["mean"]
+        brecha_mediana = sa["median"] - sb["median"]
+        if brecha_mediana:
+            veces = brecha_media / brecha_mediana
+            comparacion = (
+                f"La brecha por media es **{veces:.1f} veces** la brecha por "
+                f"mediana."
+            )
+        else:
+            comparacion = (
+                "La brecha por mediana es cero o casi cero, mientras que la "
+                "brecha por media es amplia."
+            )
+        L.append(
+            f"**B4. ¿La brecha {zona_a}–{zona_b} se mantiene al usar medianas?** "
+            f"🟡 (n = {sa['n']} y {sb['n']})"
+        )
+        L.append("")
+        L.append(
+            f"> **No se mantiene con la misma magnitud.** Por media, {zona_a} "
+            f"(${fmt(sa['mean'])} USD) supera a {zona_b} "
+            f"(${fmt(sb['mean'])} USD) en **${fmt(brecha_media)} USD**. Por "
+            f"mediana, la diferencia es de solo **${fmt(brecha_mediana)} USD** "
+            f"(${fmt(sa['median'])} frente a ${fmt(sb['median'])}). "
+            f"{comparacion} El máximo de {zona_a} "
+            f"(${fmt(sa['max'])} USD) y su P90 (${fmt(sa['p90'])} USD) explican "
+            f"buena parte de la diferencia: la media describe el extremo alto, "
+            f"no el precio típico. Para comparar barrios conviene usar la "
+            f"mediana."
+        )
+        L.append("")
+
     L.append(
         f"**B5. ¿La falta de zona afecta igual a compra y alquiler?** ✅ "
         f"(censo de operaciones)"
     )
     L.append("")
     L.append(
-        f"> No. La falta de zona es más grave en alquiler: "
-        f"**{len(alquileres) - sum(1 for a in alquileres if a['_zona'] != 'No especificado')} de {len(alquileres)} "
-        f"({pct(len(alquileres) - sum(1 for a in alquileres if a['_zona'] != 'No especificado'), len(alquileres)):.1f}%)** "
-        f"alquileres no especifican zona, frente a "
-        f"**{len(ventas) - sum(1 for a in ventas if a['_zona'] != 'No especificado')} de {len(ventas)} "
-        f"({pct(len(ventas) - sum(1 for a in ventas if a['_zona'] != 'No especificado'), len(ventas)):.1f}%)** "
-        f"ventas y **{len(sin_clasificar) - sum(1 for a in sin_clasificar if a['_zona'] != 'No especificado')} de {len(sin_clasificar)} "
-        f"({pct(len(sin_clasificar) - sum(1 for a in sin_clasificar if a['_zona'] != 'No especificado'), len(sin_clasificar)):.1f}%)** "
-        f"anuncios sin operación declarada. El alquiler combina las dos opacidades: "
-        f"casi nunca declara precio y casi nunca declara zona."
+        f"> No. La falta de zona es más frecuente en alquiler: "
+        f"**{sin_zona(alquileres)} de {len(alquileres)} "
+        f"({pct(sin_zona(alquileres), len(alquileres)):.1f}%)** alquileres no "
+        f"especifican zona, frente a **{sin_zona(ventas)} de {len(ventas)} "
+        f"({pct(sin_zona(ventas), len(ventas)):.1f}%)** ventas y "
+        f"**{sin_zona(sin_clasificar)} de {len(sin_clasificar)} "
+        f"({pct(sin_zona(sin_clasificar), len(sin_clasificar)):.1f}%)** "
+        f"publicaciones sin operación declarada. El alquiler combina las dos "
+        f"opacidades: casi nunca declara precio y casi nunca declara zona. Con "
+        f"solo {len(alquileres)} alquileres, la evidencia es descriptiva."
     )
     L.append("")
 
@@ -691,15 +861,16 @@ def main():
     L.append("### Bloque C: Dolarización")
     L.append("")
     L.append(
-        f"**C1. ¿Qué porcentaje de anuncios con moneda declarada está en USD?** ✅ "
-        f"(n = {len(con_moneda)})"
+        f"**C1. ¿Qué porcentaje de publicaciones con moneda declarada está en USD?** "
+        f"✅ (n = {len(con_moneda)})"
     )
     L.append("")
     L.append(
-        f"> **{usd_declarada} de {len(con_moneda)} ({pct_usd_declarada:.1f}%)**. "
-        f"El único anuncio con moneda declarada que no está en USD es un "
-        f"alquiler en CUP (50,000 CUP). Los {sin_precio_n} anuncios sin precio no "
-        f"declaran moneda y quedan fuera de este denominador."
+        f"> **{usd_declarada} de {len(con_moneda)} "
+        f"({pct_usd_declarada:.1f}%)**. El único anuncio con moneda declarada "
+        f"que no está en USD es un alquiler en CUP (50,000 CUP). Las "
+        f"{sin_precio_n} publicaciones sin precio no declaran moneda y quedan "
+        f"fuera de este denominador."
     )
     L.append("")
     L.append(
@@ -708,19 +879,20 @@ def main():
     L.append("")
     L.append(
         f"> **{usd_declarada} de {total} ({pct_usd_total:.1f}%)**. El resto se "
-        f"reparte entre {sin_precio_n} anuncios sin precio ({pct(sin_precio_n, total):.1f}%) "
-        f"y 1 anuncio en CUP ({pct(1, total):.1f}%). La dolarización es alta "
-        f"incluso cuando se cuenta a los anuncios que no declaran precio."
+        f"reparte entre {sin_precio_n} publicaciones sin precio "
+        f"({pct(sin_precio_n, total):.1f}%) y 1 anuncio en CUP "
+        f"({pct(1, total):.1f}%). La dolarización es alta incluso cuando se "
+        f"cuenta a las publicaciones que no declaran precio."
     )
     L.append("")
     L.append(
         f"**C3. ¿La dolarización varía por tipo de inmueble?** ✅ "
-        f"(anuncios con precio)"
+        f"(publicaciones con precio)"
     )
     L.append("")
     for t in ["Casa", "Apartamento", "Inmueble", "Cuarto"]:
-        grupo = [a for a in anuncios if a["_tipo"] == t and a.get("precio") is not None]
-        usd_grupo = [a for a in grupo if str(a.get("moneda", "")).upper() == "USD"]
+        grupo = [a for a in anuncios if a["_tipo"] == t and a["_precio"] is not None]
+        usd_grupo = [a for a in grupo if a["_moneda"] == "USD"]
         if grupo:
             L.append(
                 f"> - {t}: **{len(usd_grupo)} de {len(grupo)} "
@@ -729,36 +901,36 @@ def main():
     L.append(">")
     L.append(
         "> La dolarización es prácticamente total en todos los tipos con precio. "
-        "El único anuncio en CUP es un inmueble sin tipo específico (clasificado "
-        "como «Inmueble») y de alquiler. No hay un tipo de inmueble que funcione "
-        "principalmente en CUP."
+        "El único anuncio en CUP es un alquiler clasificado como «Inmueble». No "
+        "hay un tipo de inmueble que funcione principalmente en CUP."
     )
     L.append("")
+    usd_con_zona = [a for a in usd if a["_zona"] != "No especificado"]
     L.append(
         f"**C4. ¿La dolarización varía por zona?** ✅ "
-        f"({sum(1 for a in usd if a['_zona'] != 'No especificado')} anuncios con precio y zona)"
+        f"({len(usd_con_zona)} publicaciones USD con zona)"
     )
     L.append("")
     L.append(
-        f"> **No se puede medir variación territorial:** los "
-        f"**{sum(1 for a in usd if a['_zona'] != 'No especificado')} anuncios** "
-        f"con precio y zona identificada están **todos en USD (100%)**. El único "
-        f"anuncio en CUP no especifica zona. La conclusión no es que todas las "
-        f"zonas estén dolarizadas por igual, sino que la base no permite "
-        f"compararlas: la ausencia de zona en el anuncio en CUP impide saber si "
-        f"hay barrios con precios en CUP."
+        f"> **No se puede medir variación territorial:** las "
+        f"**{len(usd_con_zona)} publicaciones** con precio USD y zona "
+        f"identificada están **todas en USD (100%)**. El único anuncio en CUP no "
+        f"especifica zona. La conclusión no es que todas las zonas estén "
+        f"dolarizadas por igual, sino que la base no permite compararlas: la "
+        f"ausencia de zona en el anuncio en CUP impide saber si hay barrios con "
+        f"precios en CUP."
     )
     L.append("")
     L.append(
-        f"**C5. ¿Cuánto podría variar la dolarización si los anuncios sin precio "
-        f"fueran CUP o USD?** ✅ (cota inferior y superior)"
+        f"**C5. ¿Cuánto podría variar la dolarización si las publicaciones sin "
+        f"precio fueran CUP o USD?** ✅ (cota inferior y superior)"
     )
     L.append("")
     L.append(
         f"> La proporción de USD en el total está acotada entre "
         f"**{usd_min:.1f}%** y **{usd_max:.1f}%**. El límite inferior supone que "
-        f"los {sin_precio_n} anuncios sin precio están en CUP; el superior, que "
-        f"están en USD. La diferencia entre ambos escenarios es de "
+        f"las {sin_precio_n} publicaciones sin precio están en CUP; el superior, "
+        f"que están en USD. La diferencia entre ambos escenarios es de "
         f"**{usd_max - usd_min:.1f} puntos porcentuales**. La ausencia de precio "
         f"y moneda impide conocer el valor exacto, pero permite afirmar que, en "
         f"cualquier escenario, más de cuatro quintas partes del mercado está en "
@@ -775,7 +947,7 @@ def main():
     L.append("")
     L.append(
         f"> **{sin_precio_n} de {total} ({pct(sin_precio_n, total):.1f}%)**. "
-        f"Son anuncios que no permiten comparar precios sin contactar al "
+        f"Son publicaciones que no permiten comparar precios sin contactar al "
         f"vendedor. La ausencia es especialmente alta en alquiler (A4)."
     )
     L.append("")
@@ -785,33 +957,34 @@ def main():
     L.append("")
     L.append(
         f"> **{sin_zona_n} de {total} ({pct(sin_zona_n, total):.1f}%)**. "
-        f"Sin zona no se puede verificar la ubicación ni comparar barrios. Es la "
-        f"dimensión más opaca del mercado: casi tres de cada cinco anuncios "
-        f"omiten este dato."
+        f"Sin zona no se puede verificar la ubicación ni comparar barrios. La "
+        f"cifra es menor que la del informe anterior porque esta base trae un "
+        f"campo de zona normalizado y se completó con el texto declarado; no "
+        f"porque el mercado se haya vuelto más transparente."
     )
     L.append("")
     L.append(
-        f"**D3. ¿Cuántos anuncios carecen de precio y zona a la vez?** ✅ "
+        f"**D3. ¿Cuántas publicaciones carecen de precio y zona a la vez?** ✅ "
         f"(n = {total})"
     )
     L.append("")
     L.append(
-        f"> **{ambos_n} de {total} ({pct(ambos_n, total):.1f}%)**. En estos "
-        f"anuncios no se puede saber ni cuánto cuesta ni dónde está. Son el "
+        f"> **{ambos_n} de {total} ({pct(ambos_n, total):.1f}%)**. En estas "
+        f"publicaciones no se puede saber ni cuánto cuesta ni dónde está. Son el "
         f"núcleo más opaco del mercado digital."
     )
     L.append("")
     L.append(
-        f"**D4. ¿Qué porcentaje tiene información mínima completa (precio + zona)?** "
-        f"✅ (n = {total})"
+        f"**D4. ¿Qué porcentaje tiene información mínima completa "
+        f"(precio + zona)?** ✅ (n = {total})"
     )
     L.append("")
     L.append(
-        f"> **{completo_n} de {total} ({pct(completo_n, total):.1f}%)**. Solo "
-        f"algo más de un tercio de los anuncios permite cruzar precio y zona. "
-        f"Ese es el subconjunto sobre el que se pueden hacer comparaciones "
-        f"territoriales relativamente sólidas; el resto queda fuera por falta de "
-        f"un dato básico."
+        f"> **{completo_n} de {total} ({pct(completo_n, total):.1f}%)**. Dos "
+        f"tercios de las publicaciones permiten cruzar precio y zona. Ese es el "
+        f"subconjunto sobre el que se pueden hacer comparaciones territoriales "
+        f"relativamente sólidas; el resto queda fuera por falta de un dato "
+        f"básico."
     )
     L.append("")
     L.append(
@@ -823,17 +996,14 @@ def main():
         f"> Sí, sobre todo en precio. En **alquiler**, "
         f"**{len(alquileres) - len(alquileres_con_precio)} de {len(alquileres)} "
         f"({pct(len(alquileres) - len(alquileres_con_precio), len(alquileres)):.1f}%)** "
-        f"no declaran precio y "
-        f"**{len(alquileres) - sum(1 for a in alquileres if a['_zona'] != 'No especificado')} de {len(alquileres)} "
-        f"({pct(len(alquileres) - sum(1 for a in alquileres if a['_zona'] != 'No especificado'), len(alquileres)):.1f}%)** "
-        f"no declaran zona. En **venta**, "
-        f"**{len(ventas) - len(ventas_con_precio)} de {len(ventas)} "
-        f"({pct(len(ventas) - len(ventas_con_precio), len(ventas)):.1f}%)** "
-        f"no declaran precio y "
-        f"**{len(ventas) - sum(1 for a in ventas if a['_zona'] != 'No especificado')} de {len(ventas)} "
-        f"({pct(len(ventas) - sum(1 for a in ventas if a['_zona'] != 'No especificado'), len(ventas)):.1f}%)** "
-        f"no declaran zona. El alquiler es el segmento más opaco en ambas "
-        f"dimensiones."
+        f"no declaran precio y **{sin_zona(alquileres)} de {len(alquileres)} "
+        f"({pct(sin_zona(alquileres), len(alquileres)):.1f}%)** no declaran zona. "
+        f"En **venta**, **{len(ventas) - len(ventas_con_precio)} de {len(ventas)} "
+        f"({pct(len(ventas) - len(ventas_con_precio), len(ventas)):.1f}%)** no "
+        f"declaran precio y **{sin_zona(ventas)} de {len(ventas)} "
+        f"({pct(sin_zona(ventas), len(ventas)):.1f}%)** no declaran zona. El "
+        f"alquiler es el segmento más opaco en ambas dimensiones, aunque el "
+        f"grupo es muy pequeño."
     )
     L.append("")
 
@@ -847,10 +1017,10 @@ def main():
     L.append("")
     L.append(
         f"> **{len(informal)} de {total} ({pct(len(informal), total):.1f}%)**. "
-        f"El lenguaje informal no es mayoritario, pero aparece en uno de cada "
-        f"nueve anuncios. Es una señal de prácticas de intermediación y de "
-        f"negociación que no se ajustan del todo al formato de una oferta "
-        f"inmobiliaria formal."
+        f"El lenguaje informal no es mayoritario, pero aparece en una de cada "
+        f"doce publicaciones. Las {len(informal)} son de Revolico: Facebook no "
+        f"aporta texto suficiente para medir esta dimensión, así que el dato es "
+        f"una **cota inferior** del mercado unificado."
     )
     L.append("")
     L.append(
@@ -862,22 +1032,23 @@ def main():
     L.append(">")
     L.append(
         "> «Oportunidad» es la palabra dominante; «permuta» y «cambio» aparecen "
-        "en pocos anuncios. Las palabras «ganga» e «intercambio» no aparecen en "
-        "la base. La informalidad se expresa más como reclamo comercial que como "
-        "trueque explícito."
+        "en pocas publicaciones. Las palabras «ganga» e «intercambio» no "
+        "aparecen en la base. La informalidad se expresa más como reclamo "
+        "comercial que como trueque explícito."
     )
     L.append("")
     L.append(
-        f"**E3. ¿Los anuncios informales declaran precio más que los neutros?** "
-        f"🟡 (n = {len(informal)} informales)"
+        f"**E3. ¿Las publicaciones informales declaran precio más que las "
+        f"neutras?** 🟡 (n = {len(informal)} informales)"
     )
     L.append("")
     L.append(
         f"> **{informal_con_precio} de {len(informal)} "
-        f"({pct(informal_con_precio, len(informal)):.1f}%)** de los informales "
+        f"({pct(informal_con_precio, len(informal)):.1f}%)** de las informales "
         f"declaran precio, frente a **{neutros_con_precio} de {len(neutros)} "
-        f"({pct(neutros_con_precio, len(neutros)):.1f}%)** de los neutros. La "
-        f"diferencia es de **{pct(informal_con_precio, len(informal)) - pct(neutros_con_precio, len(neutros)):.1f} puntos porcentuales**. "
+        f"({pct(neutros_con_precio, len(neutros)):.1f}%)** de las neutras. La "
+        f"diferencia es de "
+        f"**{pct(informal_con_precio, len(informal)) - pct(neutros_con_precio, len(neutros)):.1f} puntos porcentuales**. "
         f"El subgrupo informal es pequeño (n = {len(informal)}), así que la "
         f"diferencia es indicativa: no permite concluir que el lenguaje informal "
         f"implique mayor transparencia."
@@ -885,41 +1056,46 @@ def main():
     L.append("")
     L.append(
         f"**E4. ¿La informalidad se concentra en alguna operación?** ✅ "
-        f"(censo de {len(informal)} anuncios informales)"
+        f"(censo de {len(informal)} publicaciones informales)"
     )
     L.append("")
     for op in ["Venta", "Alquiler", "Sin clasificar"]:
         c = informal_por_op.get(op, 0)
-        L.append(f"> - {op}: **{c} de {len(informal)} ({pct(c, len(informal)):.1f}%)**")
+        L.append(
+            f"> - {op}: **{c} de {len(informal)} "
+            f"({pct(c, len(informal)):.1f}%)**"
+        )
     L.append(">")
     L.append(
-        "> La informalidad aparece en **venta** y en **anuncios sin operación "
-        "declarada**; **no aparece en alquiler**. Esto refuerza la lectura de "
-        "que el alquiler se gestiona por otros canales (contacto directo, redes "
-        "cerradas) y no necesita el reclamo de «oportunidad» en el título."
+        "> La informalidad aparece en **venta** y en **publicaciones sin "
+        "operación declarada**; **no aparece en alquiler**. Esto refuerza la "
+        "lectura de que el alquiler se gestiona por otros canales (contacto "
+        "directo, redes cerradas) y no necesita el reclamo de «oportunidad» en "
+        "el título."
     )
     L.append("")
     L.append(
-        f"**E5. ¿Los anuncios sin clasificar son más opacos que los clasificados?** "
-        f"✅ (censo de operaciones)"
+        f"**E5. ¿Las publicaciones sin clasificar son más opacas que las "
+        f"clasificadas?** ✅ (censo de operaciones)"
     )
     L.append("")
     L.append(
-        f"> **No.** Los anuncios sin operación declarada son, en esta base, más "
-        f"completos que las ventas explícitas: "
-        f"**{len(sin_clasificar) - sum(1 for a in sin_clasificar if a.get('precio') is None)} de {len(sin_clasificar)} "
-        f"({pct(len(sin_clasificar) - sum(1 for a in sin_clasificar if a.get('precio') is None), len(sin_clasificar)):.1f}%)** "
-        f"declaran precio y "
-        f"**{sum(1 for a in sin_clasificar if a['_zona'] != 'No especificado')} de {len(sin_clasificar)} "
-        f"({pct(sum(1 for a in sin_clasificar if a['_zona'] != 'No especificado'), len(sin_clasificar)):.1f}%)** "
+        f"> **No.** Las publicaciones sin operación declarada son, en esta base, "
+        f"más completas que las ventas explícitas: "
+        f"**{len(sin_clasificar) - sin_precio_grupo(sin_clasificar)} de "
+        f"{len(sin_clasificar)} "
+        f"({pct(len(sin_clasificar) - sin_precio_grupo(sin_clasificar), len(sin_clasificar)):.1f}%)** "
+        f"declaran precio y **{len(sin_clasificar) - sin_zona(sin_clasificar)} "
+        f"de {len(sin_clasificar)} "
+        f"({pct(len(sin_clasificar) - sin_zona(sin_clasificar), len(sin_clasificar)):.1f}%)** "
         f"declaran zona. En venta, esas proporciones son "
         f"**{pct(len(ventas_con_precio), len(ventas)):.1f}%** y "
-        f"**{pct(sum(1 for a in ventas if a['_zona'] != 'No especificado'), len(ventas)):.1f}%**; "
-        f"en alquiler, **{pct(len(alquileres_con_precio), len(alquileres)):.1f}%** y "
-        f"**{pct(sum(1 for a in alquileres if a['_zona'] != 'No especificado'), len(alquileres)):.1f}%**. "
-        f"El grupo realmente opaco es el alquiler, no el de los anuncios sin "
-        f"clasificar. La falta de etiqueta de operación no equivale a falta de "
-        f"información."
+        f"**{pct(len(ventas) - sin_zona(ventas), len(ventas)):.1f}%**; en "
+        f"alquiler, **{pct(len(alquileres_con_precio), len(alquileres)):.1f}%** "
+        f"y **{pct(len(alquileres) - sin_zona(alquileres), len(alquileres)):.1f}%**. "
+        f"El grupo realmente opaco es el alquiler, no el de las publicaciones "
+        f"sin clasificar. La falta de etiqueta de operación no equivale a falta "
+        f"de información."
     )
     L.append("")
 
@@ -948,16 +1124,17 @@ def main():
         s = stats_tipo[t]
         L.append(f"> - {t}: media **${fmt(s['mean'])} USD** (n = {s['n']})")
     L.append(">")
+    diferencia_media = stats_tipo["Casa"]["mean"] - stats_tipo["Apartamento"]["mean"]
     L.append(
         f"> El **apartamento** es la opción más accesible entre los tipos con "
         f"n ≥ 10: su media es **${fmt(stats_tipo['Apartamento']['mean'])} USD**, "
         f"frente a **${fmt(stats_tipo['Casa']['mean'])} USD** de la casa y "
         f"**${fmt(stats_tipo['Inmueble']['mean'])} USD** del inmueble sin tipo "
         f"específico. La diferencia entre apartamento y casa es de "
-        f"**${fmt(stats_tipo['Casa']['mean'] - stats_tipo['Apartamento']['mean'])} USD**: "
-        f"el apartamento cuesta aproximadamente "
-        f"**{100 * (stats_tipo['Casa']['mean'] - stats_tipo['Apartamento']['mean']) / stats_tipo['Casa']['mean']:.1f}% menos** "
-        f"que la casa en promedio. El cuarto tiene n = 1 y no se usa para comparar."
+        f"**${fmt(diferencia_media)} USD**: el apartamento cuesta aproximadamente "
+        f"**{100 * diferencia_media / stats_tipo['Casa']['mean']:.1f}% menos** "
+        f"que la casa en promedio. El cuarto tiene n = {stats_tipo.get('Cuarto', {}).get('n', 0)} "
+        f"y no se usa para comparar."
     )
     L.append("")
     L.append(
@@ -969,14 +1146,16 @@ def main():
         s = stats_tipo[t]
         L.append(f"> - {t}: mediana **${fmt(s['median'])} USD** (n = {s['n']})")
     L.append(">")
+    diferencia_mediana = stats_tipo["Casa"]["median"] - stats_tipo["Apartamento"]["median"]
     L.append(
         f"> El **apartamento** también tiene la mediana más baja: "
         f"**${fmt(stats_tipo['Apartamento']['median'])} USD**, frente a "
         f"**${fmt(stats_tipo['Casa']['median'])} USD** de la casa y "
         f"**${fmt(stats_tipo['Inmueble']['median'])} USD** del inmueble. La "
-        f"mediana del apartamento es la mitad de la mediana de la casa. La "
-        f"conclusión se mantiene al pasar de la media a la mediana, lo que la "
-        f"hace más robusta frente a valores extremos."
+        f"mediana del apartamento es un "
+        f"**{100 * diferencia_mediana / stats_tipo['Casa']['median']:.1f}% menor** "
+        f"que la de la casa. La conclusión se mantiene al pasar de la media a la "
+        f"mediana, lo que la hace más robusta frente a valores extremos."
     )
     L.append("")
     L.append(
@@ -989,7 +1168,8 @@ def main():
         s = stats_tipo[t]
         L.append(
             f"> - {t}: P10 **${fmt(s['p10'])} USD**, mediana "
-            f"**${fmt(s['median'])} USD**, P90 **${fmt(s['p90'])} USD** (n = {s['n']})"
+            f"**${fmt(s['median'])} USD**, P90 **${fmt(s['p90'])} USD** "
+            f"(n = {s['n']})"
         )
     L.append(">")
     L.append(
@@ -1000,11 +1180,8 @@ def main():
         f"(${fmt(stats_tipo['Apartamento']['p90'])}) también es menor que el de "
         f"la casa (${fmt(stats_tipo['Casa']['p90'])}) y el del inmueble "
         f"(${fmt(stats_tipo['Inmueble']['p90'])}). El rango del apartamento es "
-        f"más estrecho y desplazado hacia abajo. El P90 del apartamento "
-        f"(${fmt(stats_tipo['Apartamento']['p90'])}) supera la mediana de la "
-        f"casa (${fmt(stats_tipo['Casa']['median'])}), pero sigue muy por debajo "
-        f"del P90 de la casa: las distribuciones se solapan, aunque el "
-        f"apartamento es consistentemente más accesible."
+        f"más estrecho y desplazado hacia abajo. Las distribuciones se solapan, "
+        f"pero el apartamento es consistentemente más accesible."
     )
     L.append("")
     L.append(
@@ -1014,8 +1191,10 @@ def main():
     L.append("")
     for t in ["Inmueble", "Casa", "Apartamento", "Cuarto"]:
         grupo = [a for a in anuncios if a["_tipo"] == t]
-        sp = sum(1 for a in grupo if a.get("precio") is None)
-        sz = sum(1 for a in grupo if a["_zona"] == "No especificado")
+        if not grupo:
+            continue
+        sp = sin_precio_grupo(grupo)
+        sz = sin_zona(grupo)
         L.append(
             f"> - {t}: **{sp} de {len(grupo)} ({pct(sp, len(grupo)):.1f}%)** sin "
             f"precio; **{sz} de {len(grupo)} ({pct(sz, len(grupo)):.1f}%)** sin zona"
@@ -1023,12 +1202,13 @@ def main():
     L.append(">")
     L.append(
         "> El **Inmueble** (títulos que no especifican un tipo concreto) "
-        "concentra la mayor opacidad entre los tipos comparables: 22.2% sin "
-        "precio y 70.4% sin zona. La casa tiene la menor proporción sin precio "
-        "(6.5%), pero sigue teniendo 61.3% sin zona. El cuarto muestra 50% y "
-        "100%, pero solo son 2 anuncios: es evidencia descriptiva, no una "
-        "conclusión. La opacidad de zona afecta a todos los tipos; la de precio "
-        "se concentra en el Inmueble y el Apartamento."
+        "concentra la mayor opacidad entre los tipos con n ≥ 10: es el que tiene "
+        "la mayor proporción sin precio y sin zona. La casa tiene más casos "
+        "absolutos sin zona, pero en proporción el Inmueble la supera. El cuarto "
+        "muestra una proporción alta, pero solo son 2 publicaciones: es "
+        "evidencia descriptiva, no una conclusión. La opacidad de zona afecta a "
+        "todos los tipos; la de precio se concentra en el Inmueble y el "
+        "Apartamento."
     )
     L.append("")
 
@@ -1045,33 +1225,39 @@ def main():
     L.append("| Indicador | Resultado | Lectura social |")
     L.append("|---|---:|---|")
     L.append(
-        f"| Anuncios sin precio | **{sin_precio_n}/{total} ({pct(sin_precio_n, total):.1f}%)** | "
+        f"| Publicaciones sin precio | **{sin_precio_n}/{total} "
+        f"({pct(sin_precio_n, total):.1f}%)** | "
         f"No se puede comparar sin contactar al vendedor. |"
     )
     L.append(
-        f"| Anuncios sin zona | **{sin_zona_n}/{total} ({pct(sin_zona_n, total):.1f}%)** | "
+        f"| Publicaciones sin zona | **{sin_zona_n}/{total} "
+        f"({pct(sin_zona_n, total):.1f}%)** | "
         f"No se puede verificar la ubicación ni comparar barrios. |"
     )
     L.append(
-        f"| Sin precio y sin zona | **{ambos_n}/{total} ({pct(ambos_n, total):.1f}%)** | "
-        f"Anuncios completamente opacos en precio y ubicación. |"
+        f"| Sin precio y sin zona | **{ambos_n}/{total} "
+        f"({pct(ambos_n, total):.1f}%)** | "
+        f"Publicaciones completamente opacas en precio y ubicación. |"
     )
     L.append(
-        f"| Información completa (precio + zona) | **{completo_n}/{total} ({pct(completo_n, total):.1f}%)** | "
-        f"Solo un tercio permite un análisis mínimo. |"
+        f"| Información completa (precio + zona) | **{completo_n}/{total} "
+        f"({pct(completo_n, total):.1f}%)** | "
+        f"Dos tercios permiten un análisis mínimo. |"
     )
     L.append(
-        f"| Alquileres sin precio | **{len(alquileres) - len(alquileres_con_precio)}/{len(alquileres)} "
+        f"| Alquileres sin precio | "
+        f"**{len(alquileres) - len(alquileres_con_precio)}/{len(alquileres)} "
         f"({pct(len(alquileres) - len(alquileres_con_precio), len(alquileres)):.1f}%)** | "
         f"El mercado de alquiler es casi invisible en precios. |"
     )
     L.append(
-        f"| Alquileres sin zona | **{len(alquileres) - sum(1 for a in alquileres if a['_zona'] != 'No especificado')}/{len(alquileres)} "
-        f"({pct(len(alquileres) - sum(1 for a in alquileres if a['_zona'] != 'No especificado'), len(alquileres)):.1f}%)** | "
+        f"| Alquileres sin zona | **{sin_zona(alquileres)}/{len(alquileres)} "
+        f"({pct(sin_zona(alquileres), len(alquileres)):.1f}%)** | "
         f"Tampoco se puede ubicar la oferta de alquiler. |"
     )
     L.append(
-        f"| Anuncios sin operación declarada | **{len(sin_clasificar)}/{total} "
+        f"| Publicaciones sin operación declarada | "
+        f"**{len(sin_clasificar)}/{total} "
         f"({pct(len(sin_clasificar), total):.1f}%)** | "
         f"Más de la mitad no dice si se vende o se alquila. |"
     )
@@ -1081,8 +1267,9 @@ def main():
         f"La descripción del inmueble es mínima. |"
     )
     L.append(
-        f"| Totalmente opacos (sin precio, zona ni característica) | "
-        f"**{len(totalmente_opacos)}/{total} ({pct(len(totalmente_opacos), total):.1f}%)** | "
+        f"| Totalmente opacas (sin precio, zona ni característica) | "
+        f"**{len(totalmente_opacos)}/{total} "
+        f"({pct(len(totalmente_opacos), total):.1f}%)** | "
         f"No hay ningún dato útil para comparar. |"
     )
     L.append(
@@ -1090,16 +1277,32 @@ def main():
         f"({pct(sin_precio_n, total):.1f}%)** | "
         f"No se sabe si el precio, cuando exista, será en USD o CUP. |"
     )
+    if duplicados:
+        L.append(
+            f"| Duplicado entre fuentes | **{len(duplicados) // 2} par** | "
+            f"Misma propiedad publicada en Revolico y Facebook. |"
+        )
     L.append("")
     L.append(
         "La lectura social es directa: la opacidad no afecta a todos por igual. "
         "Quien puede llamar, visitar y verificar accede a la información que "
-        "falta; quien depende del anuncio para comparar queda en desventaja. "
-        "El alquiler, además, es el segmento con mayor ausencia de precio y zona, "
-        "lo que sugiere que una parte importante de ese mercado opera por canales "
+        "falta; quien depende del anuncio para comparar queda en desventaja. El "
+        "alquiler, además, es el segmento con mayor ausencia de precio y zona, lo "
+        "que sugiere que una parte importante de ese mercado opera por canales "
         "informales o de confianza previa."
     )
     L.append("")
+    if duplicados:
+        ids_dup = ", ".join(f"`{a['id_unico']}`" for a in duplicados)
+        L.append(
+            f"> **Nota de duplicidad:** la base contiene un par de publicaciones "
+            f"que describen la misma propiedad y el mismo precio en Revolico y "
+            f"Facebook ({ids_dup}). Se conserva para no alterar el universo "
+            f"acordado de 114, pero el n efectivo sería 113 si se eliminara. El "
+            f"par no cambia las conclusiones: ambos registros son ventas en USD "
+            f"y no modifican las medianas de forma apreciable."
+        )
+        L.append("")
 
     # ------------------------------------------------------------------
     # Conclusiones
@@ -1107,18 +1310,19 @@ def main():
     L.append("## Conclusiones")
     L.append("")
     L.append(
-        f"1. **La base corregida es de {total} anuncios.** La versión anterior "
-        f"(171) incluía 37 anuncios de otros municipios; sus cifras no eran "
-        f"estrictamente de Diez de Octubre y quedan supersedidas. El filtro "
-        f"estricto también descartó {rechazados_precio} anuncios con precio "
-        f"inferior a 1,000 USD."
+        f"1. **La base verificada es de {total} publicaciones.** La versión "
+        f"anterior usaba 134 anuncios etiquetados como Diez de Octubre, pero solo "
+        f"75 de ellos estaban confirmados en el municipio. Esta versión usa las "
+        f"114 publicaciones confirmadas ({n_revolico} de Revolico y "
+        f"{n_facebook} de Facebook) y excluye 46 de otros municipios, 8 "
+        f"contradictorias y 8 indeterminadas."
     )
     L.append(
-        f"2. **El mercado está dolarizado.** {usd_declarada} de {len(con_moneda)} "
-        f"anuncios con moneda declarada ({pct_usd_declarada:.1f}%) están en USD; "
-        f"en el total, la proporción es {pct_usd_total:.1f}% y la cota superior "
-        f"posible es {usd_max:.1f}%. Quien no tiene divisas enfrenta una barrera "
-        f"de acceso estructural."
+        f"2. **El mercado está dolarizado.** {usd_declarada} de "
+        f"{len(con_moneda)} publicaciones con moneda declarada "
+        f"({pct_usd_declarada:.1f}%) están en USD; en el total, la proporción es "
+        f"{pct_usd_total:.1f}% y la cota superior posible es {usd_max:.1f}%. "
+        f"Quien no tiene divisas enfrenta una barrera de acceso estructural."
     )
     L.append(
         f"3. **El precio de compra típico es mucho menor que el promedio.** La "
@@ -1138,18 +1342,19 @@ def main():
     L.append(
         f"5. **La desigualdad territorial existe, pero hay que medirla con "
         f"medianas.** Las cuatro zonas principales concentran "
-        f"{pct(top4_total, total_con_zona):.1f}% de los anuncios con zona. La "
-        f"Víbora tiene la media más alta (${fmt(stats_zona_5[zona_cara]['mean'])} "
-        f"USD, n = {stats_zona_5[zona_cara]['n']}), pero su mediana es "
-        f"${fmt(stats_zona_5[zona_cara]['median'])} USD; frente a Lawton, la "
-        f"brecha por media es ${fmt(stats_zona_5['La Víbora']['mean'] - stats_zona_5['Lawton']['mean'])} "
-        f"USD y por mediana solo ${fmt(stats_zona_5['La Víbora']['median'] - stats_zona_5['Lawton']['median'])} "
-        f"USD. El anuncio de $180,000 USD infla la media."
+        f"{pct(top4_total, total_con_zona):.1f}% de las publicaciones con zona. "
+        f"Entre las zonas con n ≥ 10, {zona_mediana_10} tiene la mediana más alta "
+        f"(${fmt(zonas_10[zona_mediana_10]['median'])} USD); entre las de n ≥ 5, "
+        f"{zona_mediana_5} la supera "
+        f"(${fmt(zonas_5[zona_mediana_5]['median'])} USD) pero con solo "
+        f"{zonas_5[zona_mediana_5]['n']} casos. La diferencia entre media y "
+        f"mediana en {zona_a} muestra que los valores extremos inflan el "
+        f"promedio."
     )
     L.append(
-        f"6. **La opacidad es masiva en zona y grave en precio.** "
+        f"6. **La opacidad es importante en zona y moderada en precio.** "
         f"{pct(sin_zona_n, total):.1f}% no especifica zona, "
-        f"{pct(sin_precio_n, total):.1f}% no declara precio y solo "
+        f"{pct(sin_precio_n, total):.1f}% no declara precio y "
         f"{pct(completo_n, total):.1f}% permite cruzar ambos datos. El "
         f"{pct(ambos_n, total):.1f}% no tiene ninguno de los dos. La ausencia de "
         f"información es un mecanismo de desigualdad: quien no puede verificar "
@@ -1158,33 +1363,35 @@ def main():
     L.append(
         f"7. **La informalidad es visible pero no domina.** "
         f"{pct(len(informal), total):.1f}% usa lenguaje de oportunidad, permuta "
-        f"o cambio. Se concentra en venta y en anuncios sin operación declarada; "
-        f"no aparece en alquiler. Los informales declaran precio algo más que los "
-        f"neutros ({pct(informal_con_precio, len(informal)):.1f}% frente a "
+        f"o cambio. Se concentra en venta y en publicaciones sin operación "
+        f"declarada; no aparece en alquiler. Las informales declaran precio algo "
+        f"más que las neutras "
+        f"({pct(informal_con_precio, len(informal)):.1f}% frente a "
         f"{pct(neutros_con_precio, len(neutros)):.1f}%), pero el subgrupo es "
-        f"pequeño y la diferencia no es concluyente."
+        f"pequeño y la diferencia no es concluyente. Además, el indicador solo "
+        f"cubre Revolico: es una cota inferior."
     )
     L.append(
         f"8. **El apartamento es la opción más accesible.** Su media es "
         f"${fmt(stats_tipo['Apartamento']['mean'])} USD y su mediana "
-        f"${fmt(stats_tipo['Apartamento']['median'])} USD (n = "
-        f"{stats_tipo['Apartamento']['n']}), frente a la casa "
+        f"${fmt(stats_tipo['Apartamento']['median'])} USD "
+        f"(n = {stats_tipo['Apartamento']['n']}), frente a la casa "
         f"(${fmt(stats_tipo['Casa']['mean'])} y "
-        f"${fmt(stats_tipo['Casa']['median'])} USD; n = "
-        f"{stats_tipo['Casa']['n']}). La diferencia se mantiene en P10–P90. "
+        f"${fmt(stats_tipo['Casa']['median'])} USD; "
+        f"n = {stats_tipo['Casa']['n']}). La diferencia se mantiene en P10–P90. "
         f"Entre los tipos con n ≥ 10, el Inmueble sin tipo específico es el más "
-        f"opaco y el más caro en media, lo que sugiere que la falta de información "
-        f"sobre el tipo se asocia con operaciones de mayor valor."
+        f"opaco y el más caro en media, lo que sugiere que la falta de "
+        f"información sobre el tipo se asocia con operaciones de mayor valor."
     )
     L.append("")
     L.append(
         "En conjunto, el mercado digital de Diez de Octubre no es un espacio "
         "transparente de precios y ubicaciones: es un mercado segmentado por "
-        "divisas, por acceso a información y por barrios. La base corregida "
+        "divisas, por acceso a información y por barrios. La base verificada "
         "permite afirmar esto con mayor rigor que la versión anterior, y también "
         "permite identificar qué no se puede saber: el precio del alquiler, la "
-        "zona de la mayoría de los anuncios y la operación de más de la mitad. "
-        "Ese límite es parte del resultado."
+        "zona de una cuarta parte de las publicaciones y la operación de más de "
+        "la mitad. Ese límite es parte del resultado."
     )
     L.append("")
 
@@ -1194,35 +1401,54 @@ def main():
     L.append("## Limitaciones")
     L.append("")
     L.append(
-        "- **Fuente única:** los datos del informe provienen solo de Revolico; "
-        "no representan todo el mercado inmobiliario de Diez de Octubre. Facebook "
-        "se exploró (43 publicaciones; 42 tras filtro), pero no se integró por "
-        "incompatibilidad de esquema y de normalización municipal."
+        f"- **Muestra no probabilística:** {total} publicaciones es una base "
+        f"pequeña y no necesariamente representativa del universo de viviendas "
+        f"del municipio. No hay serie temporal: el corte de Revolico es único "
+        f"({fecha_corte}) y Facebook no tiene fechas homogéneas."
     )
     L.append(
-        f"- **Muestra:** {total} anuncios es una base pequeña y no "
-        f"necesariamente representativa del universo de viviendas del municipio. "
-        f"No hay serie temporal: el corte es único ({fecha_corte})."
+        "- **Integración de fuentes heterogéneas:** Revolico y Facebook no "
+        "comparten esquema. Facebook aporta descripciones y precios, pero muchas "
+        "publicaciones no tienen título ni texto crudo, lo que eleva el «sin "
+        "clasificar» y reduce la medición de informalidad a Revolico. Las "
+        "comparaciones entre fuentes deben leerse como descriptivas."
     )
     L.append(
-        "- **Clasificación por palabras clave:** el tipo, la zona y la operación "
-        "se infieren del título y del enlace. Puede haber errores de asignación, "
-        "especialmente en títulos ambiguos o sin palabras clave."
+        "- **Duplicado entre fuentes:** se detectó un par Revolico–Facebook de la "
+        "misma propiedad y el mismo precio. Se conserva en la base de 114 para "
+        "no alterar el universo acordado; el n efectivo sería 113 si se "
+        "eliminara."
     )
     L.append(
-        "- **Campos ausentes:** no hay datos de metros cuadrados, estado legal, "
-        "número de baños, año de construcción, vendedor o agencia. No se puede "
-        "calcular precio por m² ni distinguir particulares de intermediarios."
+        "- **Verificación municipal:** el polígono es una simplificación de 11 "
+        "vértices y no resuelve casos catastrales a pocos metros del borde. Se "
+        "apoya en la ubicación declarada por el anunciante y en topónimos "
+        "geocodificados a un punto representativo, no en la dirección exacta de "
+        "la propiedad. Las 8 contradictorias y 8 indeterminadas se excluyen, lo "
+        "que puede introducir un sesgo de selección."
     )
     L.append(
-        f"- **Alquiler:** solo {len(alquileres)} anuncios, {len(alquileres_con_precio)} "
-        f"con precio y ninguno en USD. No se puede estimar un precio de alquiler "
-        f"ni comparar compra y alquiler."
+        "- **Clasificación:** el tipo y la operación se toman de los campos "
+        "normalizados; la zona se completa con el texto declarado. Puede haber "
+        "errores de asignación, especialmente en títulos ambiguos o sin palabras "
+        "clave."
     )
     L.append(
-        f"- **Zonas:** solo {total_con_zona} de {total} anuncios "
+        "- **Campos ausentes:** no hay datos homogéneos de metros cuadrados, "
+        "estado legal, número de baños, año de construcción, vendedor o agencia. "
+        "Solo 6 publicaciones de Facebook traen `area_m2`, y ninguna de Revolico: "
+        "no se puede calcular precio por m² ni distinguir particulares de "
+        "intermediarios."
+    )
+    L.append(
+        f"- **Alquiler:** solo {len(alquileres)} publicaciones, "
+        f"{len(alquileres_con_precio)} con precio y ninguno en USD. No se puede "
+        f"estimar un precio de alquiler ni comparar compra y alquiler."
+    )
+    L.append(
+        f"- **Zonas:** solo {total_con_zona} de {total} publicaciones "
         f"({pct(total_con_zona, total):.1f}%) especifican zona. Los promedios "
-        f"por barrio se basan en subgrupos pequeños (n = 5–14) y deben leerse "
+        f"por barrio se basan en subgrupos pequeños (n = 5–25) y deben leerse "
         f"como evidencia descriptiva."
     )
     L.append(
@@ -1231,7 +1457,12 @@ def main():
         "para el corte. Se reporta como hallazgo, no como precio comparable."
     )
     L.append(
-        "- **Sesgo de publicación:** los anuncios que no se publican, o que se "
+        "- **Precios de oferta:** los valores son precios publicados, no precios "
+        "de transacción. La diferencia entre lo que se pide y lo que se paga no "
+        "es observable con estos datos."
+    )
+    L.append(
+        "- **Sesgo de publicación:** las viviendas que no se publican, o que se "
         "publican en canales cerrados, no aparecen en la base. La opacidad "
         "medida es la del mercado digital visible, no la del mercado total."
     )
@@ -1256,11 +1487,16 @@ def main():
         f.write("\n".join(L) + "\n")
 
     print(f"Informe guardado en: {OUTPUT_FILE}")
-    print(f"Anuncios: {total} | USD: {len(usd)} | Sin precio: {sin_precio_n}")
-    print(f"Ventas USD: n={stats_venta['n']} | media={fmt(stats_venta['mean'])} | "
-          f"mediana={fmt(stats_venta['median'])} | "
-          f"P10-P90={fmt(stats_venta['p10'])}-{fmt(stats_venta['p90'])}")
-    print(f"Preguntas: 30 (A1-A5, B1-B5, C1-C5, D1-D5, E1-E5, F1-F5)")
+    print(
+        f"Publicaciones: {total} ({n_revolico} Revolico + {n_facebook} Facebook) | "
+        f"USD: {len(usd)} | Sin precio: {sin_precio_n}"
+    )
+    print(
+        f"Ventas USD: n={stats_venta['n']} | media={fmt(stats_venta['mean'])} | "
+        f"mediana={fmt(stats_venta['median'])} | "
+        f"P10-P90={fmt(stats_venta['p10'])}-{fmt(stats_venta['p90'])}"
+    )
+    print("Preguntas: 30 (A1-A5, B1-B5, C1-C5, D1-D5, E1-E5, F1-F5)")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 # Verificación de pertenencia al municipio Diez de Octubre
 
 **Fecha:** 04/11/2026  
-**Fuente geoespacial:** `/home/luis/proyecto-mercado-10-octubre/datos/geo/lha.geojson`  
+**Fuente geoespacial:** `/home/luis/proyecto-mercado-10-octubre/datos/geo/lha.geojson`, copia versionada de `/home/luis/Downloads/lha.geojson` (mismo archivo; SHA-256 `b9bbcce811d9bbfcee15f5e904d97dc24cf044cabcf17a870487ad361bb7c9e6`).
 **Método:** polígono municipal + ubicación de la ficha + geocodificación de topónimos.
 
 ## 1. Análisis del GeoJSON
@@ -131,9 +131,9 @@ La publicación rechazada previamente (id 27) queda clasificada como **NO**: men
 
 ## 6. Impacto en el informe A-F
 
-El informe A-F usa los **134 anuncios de Revolico**. Esta verificación encuentra que solo **75** están confirmados dentro de Diez de Octubre; **46** pertenecen a otros municipios, **8** son contradictorios y **5** no son verificables. Por tanto, las cifras del informe deben interpretarse como una muestra de anuncios etiquetados como Diez de Octubre por el scraper, no como una muestra estrictamente municipal.
+El informe A-F ya fue recalculado con la base verificada de **114 publicaciones confirmadas** (75 de Revolico + 39 de Facebook). Las 46 de otro municipio, las 8 contradictorias y las 8 indeterminadas quedan fuera del universo. La base canónica de 134 y la versión revisada del cuestionario original se conservan como referencia histórica, pero no son comparables con el informe A-F actual.
 
-La base depurada de confirmados queda en **114 registros** (75 de Revolico + 39 de Facebook). No se sobrescribió la base canónica de 134 ni el informe A-F: la decisión de recalcular el informe queda pendiente.
+La base depurada de confirmados está en **114 registros** (75 de Revolico + 39 de Facebook), en `datos/limpios/unificado_confirmados_diez_octubre.json`, con los campos completos de la base unificada y la verificación municipal incorporada. El generador `scripts/analisis_final_30_preguntas.py` carga esa base y produce `analisis/informe_final.md`.
 
 ## 7. Archivos generados
 
