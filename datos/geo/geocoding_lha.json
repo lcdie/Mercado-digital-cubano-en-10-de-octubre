@@ -1,0 +1,540 @@
+{
+  "diez de octubre, la habana, cuba": {
+    "consulta": "Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0906778,
+    "lon": -82.3654483,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Diez de Octubre",
+    "display_name": "Diez de Octubre, La Habana, Cuba"
+  },
+  "lawton, diez de octubre, la habana, cuba": {
+    "consulta": "Lawton, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.096077,
+    "lon": -82.3524781,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Lawton",
+    "display_name": "Lawton, Diez de Octubre, La Habana, Cuba"
+  },
+  "luyanó, diez de octubre, la habana, cuba": {
+    "consulta": "Luyanó, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.1077993,
+    "lon": -82.3599026,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Luyanó",
+    "display_name": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba"
+  },
+  "la víbora, diez de octubre, la habana, cuba": {
+    "consulta": "La Víbora, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0942844,
+    "lon": -82.3704078,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "funeral_directors",
+    "nombre_osm": "Funeraria La Víbora",
+    "display_name": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba"
+  },
+  "santos suárez, diez de octubre, la habana, cuba": {
+    "consulta": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0986461,
+    "lon": -82.3715339,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Santos Suárez",
+    "display_name": "Santos Suárez, Diez de Octubre, La Habana, Cuba"
+  },
+  "el sevillano, diez de octubre, la habana, cuba": {
+    "consulta": "El Sevillano, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0827312,
+    "lon": -82.3713079,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "park",
+    "nombre_osm": "El Sevillano",
+    "display_name": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba"
+  },
+  "santa catalina, diez de octubre, la habana, cuba": {
+    "consulta": "Santa Catalina, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0807911,
+    "lon": -82.3423123,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "residential",
+    "nombre_osm": "Santa Catalina",
+    "display_name": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba"
+  },
+  "vista alegre, diez de octubre, la habana, cuba": {
+    "consulta": "Vista Alegre, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.082259,
+    "lon": -82.3420059,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Vista Alegre",
+    "display_name": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba"
+  },
+  "el mónaco, diez de octubre, la habana, cuba": {
+    "consulta": "El Mónaco, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0894333,
+    "lon": -82.3778736,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "park",
+    "nombre_osm": "Parque El Mónaco",
+    "display_name": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba"
+  },
+  "la asunción, diez de octubre, la habana, cuba": {
+    "consulta": "La Asunción, Diez de Octubre, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "santa amalia, la habana, cuba": {
+    "consulta": "Santa Amalia, La Habana, Cuba",
+    "lat": 23.0755379,
+    "lon": -82.3647416,
+    "municipio_osm": "Arroyo Naranjo",
+    "tipo_osm": "neighbourhood",
+    "nombre_osm": "Santa Amalia",
+    "display_name": "Santa Amalia, Poey, Arroyo Naranjo, La Habana, 10055, Cuba"
+  },
+  "san leopoldo, la habana, cuba": {
+    "consulta": "San Leopoldo, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "plaza roja, la habana, cuba": {
+    "consulta": "Plaza Roja, La Habana, Cuba",
+    "lat": 23.0906083,
+    "lon": -82.3652249,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "square",
+    "nombre_osm": "Plaza Roja",
+    "display_name": "Plaza Roja, Víbora, Diez de Octubre, La Habana, Cuba"
+  },
+  "boca ciega, la habana, cuba": {
+    "consulta": "Boca Ciega, La Habana, Cuba",
+    "lat": 23.169519,
+    "lon": -82.1555893,
+    "municipio_osm": "Habana del Este",
+    "tipo_osm": "neighbourhood",
+    "nombre_osm": "Boca Ciega",
+    "display_name": "Boca Ciega, Guanabo, Habana del Este, La Habana, 20590, Cuba"
+  },
+  "atavey, la habana, cuba": {
+    "consulta": "Atavey, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "reparto flores, la habana, cuba": {
+    "consulta": "Reparto Flores, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "el chibás, la habana, cuba": {
+    "consulta": "El Chibás, La Habana, Cuba",
+    "lat": 23.1120206,
+    "lon": -82.3211529,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "post_office",
+    "nombre_osm": "Correos de Cuba",
+    "display_name": "Correos de Cuba, Calzada Vieja de Guanabacoa, Mañana, El Roble, Mañana, Guanabacoa, La Habana, 11100, Cuba"
+  },
+  "san agustín, la habana, cuba": {
+    "consulta": "San Agustín, La Habana, Cuba",
+    "lat": 23.0577074,
+    "lon": -82.4694797,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "administrative",
+    "nombre_osm": "San Agustín",
+    "display_name": "San Agustín, La Lisa, La Habana, Cuba"
+  },
+  "mantilla, la habana, cuba": {
+    "consulta": "Mantilla, La Habana, Cuba",
+    "lat": 23.0697208,
+    "lon": -82.342853,
+    "municipio_osm": "Arroyo Naranjo",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Mantilla",
+    "display_name": "Mantilla, Arroyo Naranjo, La Habana, Cuba"
+  },
+  "pimienta, la habana, cuba": {
+    "consulta": "PIMIENTA, La Habana, Cuba",
+    "lat": 23.135617,
+    "lon": -82.4072655,
+    "municipio_osm": "Plaza de la Revolución",
+    "tipo_osm": "restaurant",
+    "nombre_osm": "Sal & Pimienta",
+    "display_name": "Sal & Pimienta, Calle 12, Carmelo, Plaza de la Revolución, La Habana, 33100, Cuba"
+  },
+  "asunción, diez de octubre, la habana, cuba": {
+    "consulta": "Asunción, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.1032441,
+    "lon": -82.3524331,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "residential",
+    "nombre_osm": "Asunción",
+    "display_name": "Asunción, Jesús del Monte, Diez de Octubre, La Habana, 90700, Cuba"
+  },
+  "reparto asunción, la habana, cuba": {
+    "consulta": "Reparto Asunción, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "san leopoldo, diez de octubre, la habana, cuba": {
+    "consulta": "San Leopoldo, Diez de Octubre, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "chibás, diez de octubre, la habana, cuba": {
+    "consulta": "Chibás, Diez de Octubre, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "atabey, la habana, cuba": {
+    "consulta": "Atabey, La Habana, Cuba",
+    "lat": 23.0738902,
+    "lon": -82.4641194,
+    "municipio_osm": "Playa",
+    "tipo_osm": "neighbourhood",
+    "nombre_osm": "Atabey",
+    "display_name": "Atabey, Siboney, Playa, La Habana, 19340, Cuba"
+  },
+  "reparto flores, diez de octubre, la habana, cuba": {
+    "consulta": "Reparto Flores, Diez de Octubre, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "pimienta, diez de octubre, la habana, cuba": {
+    "consulta": "Pimienta, Diez de Octubre, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "boca ciega, san miguel del padrón, la habana, cuba": {
+    "consulta": "Boca Ciega, San Miguel del Padrón, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "casino deportivo, la habana, cuba": {
+    "consulta": "Casino Deportivo, La Habana, Cuba",
+    "lat": 23.0872921,
+    "lon": -82.3851764,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "suburb",
+    "nombre_osm": "Casino Deportivo",
+    "display_name": "Casino Deportivo, Armada, Cerro, La Habana, 13400, Cuba"
+  },
+  "reparto casino deportivo, marianao, la habana, cuba": {
+    "consulta": "Reparto Casino Deportivo, Marianao, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "náutico, playa, la habana, cuba": {
+    "consulta": "Náutico, Playa, La Habana, Cuba",
+    "lat": 23.0913995,
+    "lon": -82.4590488,
+    "municipio_osm": "Playa",
+    "tipo_osm": "mall",
+    "nombre_osm": "Náutico",
+    "display_name": "Náutico, 5ta Avenida, Reparto Náutico, Cubanacán, Playa, La Habana, 12100, Cuba"
+  },
+  "la habana vieja, cuba": {
+    "consulta": "La Habana Vieja, Cuba",
+    "lat": 23.1288321,
+    "lon": -82.3562859,
+    "municipio_osm": "La Habana Vieja",
+    "tipo_osm": "administrative",
+    "nombre_osm": "La Habana Vieja",
+    "display_name": "La Habana Vieja, La Habana, Cuba"
+  },
+  "centro habana, cuba": {
+    "consulta": "Centro Habana, Cuba",
+    "lat": 23.1347307,
+    "lon": -82.3693535,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Centro Habana",
+    "display_name": "Centro Habana, La Habana, Cuba"
+  },
+  "artemisa, cuba": {
+    "consulta": "Artemisa, Cuba",
+    "lat": 22.8227945,
+    "lon": -82.9280055,
+    "municipio_osm": null,
+    "tipo_osm": "administrative",
+    "nombre_osm": "Artemisa",
+    "display_name": "Artemisa, Cuba"
+  },
+  "consolación del sur, pinar del río, cuba": {
+    "consulta": "Consolación del Sur, Pinar del Río, Cuba",
+    "lat": 22.5040475,
+    "lon": -83.5154619,
+    "municipio_osm": "Consolación del Sur",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Consolación del Sur",
+    "display_name": "Consolación del Sur, Pinar del Río, Cuba"
+  },
+  "calzada de diez de octubre, la habana, cuba": {
+    "consulta": "Calzada de Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0878085,
+    "lon": -82.3663003,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "place_of_worship",
+    "nombre_osm": "Iglesia Bethel en Cuba",
+    "display_name": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba"
+  },
+  "dolores, diez de octubre, la habana, cuba": {
+    "consulta": "Dolores, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0898805,
+    "lon": -82.3491411,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "secondary",
+    "nombre_osm": "Dolores (Avenida Camilo Cienfuegos)",
+    "display_name": "Dolores (Avenida Camilo Cienfuegos), Lawton, Diez de Octubre, La Habana, 10722, Cuba"
+  },
+  "lacret, diez de octubre, la habana, cuba": {
+    "consulta": "Lacret, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.1008449,
+    "lon": -82.3718184,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "copyshop",
+    "nombre_osm": "Lacret",
+    "display_name": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba"
+  },
+  "porvenir, diez de octubre, la habana, cuba": {
+    "consulta": "Porvenir, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0932272,
+    "lon": -82.3560296,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "primary",
+    "nombre_osm": "Avenida Porvenir",
+    "display_name": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba"
+  },
+  "aguilera, diez de octubre, la habana, cuba": {
+    "consulta": "Aguilera, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.1023873,
+    "lon": -82.3486801,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "tertiary",
+    "nombre_osm": "Aguilera",
+    "display_name": "Aguilera, Lawton, Diez de Octubre, La Habana, 90700, Cuba"
+  },
+  "juan delgado, diez de octubre, la habana, cuba": {
+    "consulta": "Juan Delgado, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.0923691,
+    "lon": -82.3756184,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "tertiary",
+    "nombre_osm": "Juan Delgado",
+    "display_name": "Juan Delgado, Víbora, Diez de Octubre, La Habana, 10055, Cuba"
+  },
+  "santa ana, luyanó, la habana, cuba": {
+    "consulta": "Santa Ana, Luyanó, La Habana, Cuba",
+    "lat": 23.1085946,
+    "lon": -82.3599849,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "residential",
+    "nombre_osm": "Calle Santa Ana",
+    "display_name": "Calle Santa Ana, Luyanó, Diez de Octubre, La Habana, 90700, Cuba"
+  },
+  "vía blanca, la habana, cuba": {
+    "consulta": "Vía Blanca, La Habana, Cuba",
+    "lat": 23.1081597,
+    "lon": -82.3440953,
+    "municipio_osm": "San Miguel del Padrón",
+    "tipo_osm": "primary",
+    "nombre_osm": "Vía Blanca",
+    "display_name": "Vía Blanca, Virgen del Camino, Rocafort, San Miguel del Padrón, La Habana, 90700, Cuba"
+  },
+  "chibás, la habana, cuba": {
+    "consulta": "Chibás, La Habana, Cuba",
+    "lat": 23.1347602,
+    "lon": -82.3083861,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "suburb",
+    "nombre_osm": "Chibás",
+    "display_name": "Chibás, Chibás – Roble, Guanabacoa, La Habana, 11100, Cuba"
+  },
+  "san leopoldo, marianao, la habana, cuba": {
+    "consulta": "San Leopoldo, Marianao, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "san leopoldo, cerro, la habana, cuba": {
+    "consulta": "San Leopoldo, Cerro, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "san leopoldo, arroyo naranjo, la habana, cuba": {
+    "consulta": "San Leopoldo, Arroyo Naranjo, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "pimienta, centro habana, la habana, cuba": {
+    "consulta": "Pimienta, Centro Habana, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "boca ciega, san miguel del padrón, cuba": {
+    "consulta": "Boca Ciega, San Miguel del Padrón, Cuba",
+    "sin_resultado": true
+  },
+  "atabey, marianao, la habana, cuba": {
+    "consulta": "Atabey, Marianao, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "casino deportivo, cerro, la habana, cuba": {
+    "consulta": "Casino Deportivo, Cerro, La Habana, Cuba",
+    "lat": 23.0872921,
+    "lon": -82.3851764,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "suburb",
+    "nombre_osm": "Casino Deportivo",
+    "display_name": "Casino Deportivo, Armada, Cerro, La Habana, 13400, Cuba"
+  },
+  "san agustín, la lisa, la habana, cuba": {
+    "consulta": "San Agustín, La Lisa, La Habana, Cuba",
+    "lat": 23.0577074,
+    "lon": -82.4694797,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "administrative",
+    "nombre_osm": "San Agustín",
+    "display_name": "San Agustín, La Lisa, La Habana, Cuba"
+  },
+  "mantilla, arroyo naranjo, la habana, cuba": {
+    "consulta": "Mantilla, Arroyo Naranjo, La Habana, Cuba",
+    "lat": 23.0697208,
+    "lon": -82.342853,
+    "municipio_osm": "Arroyo Naranjo",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Mantilla",
+    "display_name": "Mantilla, Arroyo Naranjo, La Habana, Cuba"
+  },
+  "santa amalia, arroyo naranjo, la habana, cuba": {
+    "consulta": "Santa Amalia, Arroyo Naranjo, La Habana, Cuba",
+    "lat": 23.0755379,
+    "lon": -82.3647416,
+    "municipio_osm": "Arroyo Naranjo",
+    "tipo_osm": "neighbourhood",
+    "nombre_osm": "Santa Amalia",
+    "display_name": "Santa Amalia, Poey, Arroyo Naranjo, La Habana, 10055, Cuba"
+  },
+  "santa amalia, diez de octubre, la habana, cuba": {
+    "consulta": "Santa Amalia, Diez de Octubre, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "flores, diez de octubre, la habana, cuba": {
+    "consulta": "Flores, Diez de Octubre, La Habana, Cuba",
+    "lat": 23.1050805,
+    "lon": -82.3692872,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "residential",
+    "nombre_osm": "Flores",
+    "display_name": "Flores, Santos Suárez, Tamarindo, Diez de Octubre, La Habana, 12000, Cuba"
+  },
+  "san leopoldo, la habana": {
+    "consulta": "San Leopoldo, La Habana",
+    "sin_resultado": true
+  },
+  "pimienta, la habana": {
+    "consulta": "Pimienta, La Habana",
+    "lat": 23.135617,
+    "lon": -82.4072655,
+    "municipio_osm": "Plaza de la Revolución",
+    "tipo_osm": "restaurant",
+    "nombre_osm": "Sal & Pimienta",
+    "display_name": "Sal & Pimienta, Calle 12, Carmelo, Plaza de la Revolución, La Habana, 33100, Cuba"
+  },
+  "boca ciega, la habana": {
+    "consulta": "Boca Ciega, La Habana",
+    "lat": 23.169519,
+    "lon": -82.1555893,
+    "municipio_osm": "Habana del Este",
+    "tipo_osm": "neighbourhood",
+    "nombre_osm": "Boca Ciega",
+    "display_name": "Boca Ciega, Guanabo, Habana del Este, La Habana, 20590, Cuba"
+  },
+  "casino deportivo, la habana": {
+    "consulta": "Casino Deportivo, La Habana",
+    "lat": 23.0872921,
+    "lon": -82.3851764,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "suburb",
+    "nombre_osm": "Casino Deportivo",
+    "display_name": "Casino Deportivo, Armada, Cerro, La Habana, 13400, Cuba"
+  },
+  "san agustín, la habana": {
+    "consulta": "San Agustín, La Habana",
+    "lat": 23.0577074,
+    "lon": -82.4694797,
+    "municipio_osm": "La Habana",
+    "tipo_osm": "administrative",
+    "nombre_osm": "San Agustín",
+    "display_name": "San Agustín, La Lisa, La Habana, Cuba"
+  },
+  "víbora park, la habana, cuba": {
+    "consulta": "Víbora Park, La Habana, Cuba",
+    "lat": 23.0812256,
+    "lon": -82.3575757,
+    "municipio_osm": "Arroyo Naranjo",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Víbora Park",
+    "display_name": "Víbora Park, Arroyo Naranjo, La Habana, Cuba"
+  },
+  "ampliación del sevillano, la habana, cuba": {
+    "consulta": "Ampliación del Sevillano, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "ampliación de sevillano, la habana, cuba": {
+    "consulta": "Ampliación de Sevillano, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "reparto flores, playa, la habana, cuba": {
+    "consulta": "Reparto Flores, Playa, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "flores, playa, la habana, cuba": {
+    "consulta": "Flores, Playa, La Habana, Cuba",
+    "lat": 23.0905169,
+    "lon": -82.466144,
+    "municipio_osm": "Playa",
+    "tipo_osm": "residential",
+    "nombre_osm": "Flores",
+    "display_name": "Flores, Siboney, Playa, La Habana, Cuba"
+  },
+  "mónaco, cerro, la habana, cuba": {
+    "consulta": "Mónaco, Cerro, La Habana, Cuba",
+    "lat": 23.0847294,
+    "lon": -82.379402,
+    "municipio_osm": "Diez de Octubre",
+    "tipo_osm": "ngo",
+    "nombre_osm": "Iglesia Bautista del Mónaco",
+    "display_name": "Iglesia Bautista del Mónaco, San Miguel, La Floresta, Sevillano, Diez de Octubre, La Habana, 13400, Cuba"
+  },
+  "san leopoldo, lawton, la habana, cuba": {
+    "consulta": "San Leopoldo, Lawton, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "san leopoldo, luyanó, la habana, cuba": {
+    "consulta": "San Leopoldo, Luyanó, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "san leopoldo, santos suárez, la habana, cuba": {
+    "consulta": "San Leopoldo, Santos Suárez, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "calle san leopoldo, la habana, cuba": {
+    "consulta": "Calle San Leopoldo, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "san leopoldo, cuba": {
+    "consulta": "San Leopoldo, Cuba",
+    "sin_resultado": true
+  },
+  "víbora park, arroyo naranjo, la habana, cuba": {
+    "consulta": "Víbora Park, Arroyo Naranjo, La Habana, Cuba",
+    "lat": 23.0812256,
+    "lon": -82.3575757,
+    "municipio_osm": "Arroyo Naranjo",
+    "tipo_osm": "administrative",
+    "nombre_osm": "Víbora Park",
+    "display_name": "Víbora Park, Arroyo Naranjo, La Habana, Cuba"
+  },
+  "sevillano, arroyo naranjo, la habana, cuba": {
+    "consulta": "Sevillano, Arroyo Naranjo, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "santa amalia, cerro, la habana, cuba": {
+    "consulta": "Santa Amalia, Cerro, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "santa amalia, lawton, la habana, cuba": {
+    "consulta": "Santa Amalia, Lawton, La Habana, Cuba",
+    "sin_resultado": true
+  },
+  "hospital materno hijas de galicia, la habana, cuba": {
+    "consulta": "Hospital Materno Hijas de Galicia, La Habana, Cuba",
+    "sin_resultado": true
+  }
+}

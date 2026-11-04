@@ -1,0 +1,5226 @@
+[
+  {
+    "id_unico": "facebook-1",
+    "id_publicacion": 1,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "céntrica, a una cuadra de Plaza Roja",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Plaza Roja",
+          "tipo": "lugar",
+          "patron": "\\bplaza\\s*roja\\b",
+          "estado": "dentro",
+          "lat": 23.0906083,
+          "lon": -82.3652249,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Plaza Roja, Víbora, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.88,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.88 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Plaza Roja",
+          "tipo": "lugar",
+          "patron": "\\bplaza\\s*roja\\b",
+          "estado": "dentro",
+          "lat": 23.0906083,
+          "lon": -82.3652249,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Plaza Roja, Víbora, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.88,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.88 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 1,
+      "publicacion": {
+        "grupo": "Ventas de casas en La Habana",
+        "autor": "Maite Alvarez",
+        "fecha": "Jul 1"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "céntrica, a una cuadra de Plaza Roja",
+        "distribucion": [
+          "Amplio portal",
+          "4 cuartos espaciosos",
+          "Sala y saleta",
+          "2 cocinas",
+          "3 baños",
+          "Garaje amplio"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa",
+        "zona": "No especificado"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "Teléfono fijo",
+        "Corriente 110v y 220v"
+      ],
+      "equipamiento_incluido": [
+        "2 splits de 2 toneladas",
+        "Sistema de 8 cámaras",
+        "TV 55\"",
+        "Equipos del bar"
+      ],
+      "oportunidad_negocio": {
+        "ideal_para": "vivir y negocio",
+        "licencia_tcp": true,
+        "bar": "Remodelado y equipado"
+      },
+      "precio": {
+        "monto": 65000,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "Facilidades de pago desde USA o España"
+      },
+      "contacto": {
+        "telefono": "+5353332228"
+      },
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "ambigua",
+      "id_unico": "facebook-1",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-2",
+    "id_publicacion": 2,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "La Víbora, 10 de Octubre, Vista Alegre, cerca de la secundaria",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 2,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Marlon Luis Merodio",
+        "fecha": "Hace 54 minutos"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "ubicacion": "La Víbora, 10 de Octubre, Vista Alegre, cerca de la secundaria",
+        "piso": "4to piso",
+        "area_m2": 67.81,
+        "ano_construccion": 1950,
+        "distribucion": [
+          "Sala-comedor",
+          "2 cuartos",
+          "1 baño",
+          "Cocina"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "La Víbora"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "Tanque elevado grande"
+      ],
+      "estado_legal": {
+        "papeles_en_regla": true
+      },
+      "precio": {
+        "monto": 15000,
+        "moneda": "USD",
+        "negociable": true
+      },
+      "contacto": {
+        "metodo": "Solo WhatsApp",
+        "telefono": "53880823"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-2",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-3",
+    "id_publicacion": 3,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Avenida Acosta, El Mónaco",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Mónaco",
+          "tipo": "lugar",
+          "patron": "\\bmonaco\\b",
+          "estado": "dentro",
+          "lat": 23.0894333,
+          "lon": -82.3778736,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.35,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.35 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Mónaco",
+          "tipo": "lugar",
+          "patron": "\\bmonaco\\b",
+          "estado": "dentro",
+          "lat": 23.0894333,
+          "lon": -82.3778736,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.35,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.35 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 3,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "INMOBILIARIA WELCOME HOME"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Avenida Acosta, El Mónaco",
+        "distribucion": [
+          "Sala y comedor independientes",
+          "Cocina amplia",
+          "5 habitaciones",
+          "4 baños",
+          "Pasillos laterales",
+          "Patio amplio y cementado",
+          "Cocina auxiliar",
+          "Cuarto de desahogo",
+          "Garaje techado para 2 vehículos",
+          "Placa libre"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa + negocio rentable en venta",
+        "zona": "El Mónaco"
+      },
+      "servicios_y_caracteristicas": [
+        "Cisterna subterránea",
+        "2 tanques elevados de 3,000 litros cada uno",
+        "Calentador de agua",
+        "Presurizador para ducha",
+        "Buena disponibilidad de agua"
+      ],
+      "estado_legal": {
+        "sin_deudas_ni_problemas_legales": true
+      },
+      "negocio_incluido": {
+        "descripcion": "Negocio actualmente en funcionamiento",
+        "detalles": "Con clientela establecida y generación de ingresos mensuales"
+      },
+      "precio": {
+        "monto": 150000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "052451128"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-3",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-4",
+    "id_publicacion": 4,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Rpto Sevillano. 10 de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 4,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Inmobiliaria 'Welcome HOME'",
+        "fecha": "Oct 14"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Rpto Sevillano. 10 de Octubre",
+        "distribucion_y_caracteristicas": [
+          "Portal enrejado",
+          "Carposh",
+          "Sala",
+          "2 habitaciones amplias (una de ellas con closet bien grande y otro más pequeño)",
+          "1 baño (agua fría y caliente)",
+          "Comedor",
+          "Cocina (gas balita)",
+          "Terraza techada con lavaderos",
+          "Patio trasero con algunos árboles frutales",
+          "Cuarto de desahogo en el patio"
+        ],
+        "distribucion": [],
+        "detalles_estructura": [],
+        "tipo_original": "Casa independiente",
+        "zona": "El Sevillano"
+      },
+      "servicios_y_extras": [
+        "Teléfono fijo",
+        "Servicio de Nauta Hogar activo",
+        "Sistema de cámara de seguridad",
+        "Video portero digital"
+      ],
+      "estado_legal": {
+        "estatus": "Lista para Firmar"
+      },
+      "precio": {
+        "monto": 50000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "052451128"
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-4",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-5",
+    "id_publicacion": 5,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "El Sevillano, cerca del parque Córdoba",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 5,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Inmobiliaria 'Welcome HOME'",
+        "fecha": "Oct 12"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "El Sevillano, cerca del parque Córdoba",
+        "area_m2": 132,
+        "distribucion": [
+          "Portal",
+          "Sala comedor amplio",
+          "3 cuartos con closets",
+          "Cocina",
+          "Baño",
+          "Pequeño patio de servicio para lavar"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa biplanta (Parte de arriba)",
+        "zona": "El Sevillano"
+      },
+      "servicios_y_caracteristicas": [
+        "Teléfono fijo",
+        "Gas de la calle",
+        "Garaje con cámara y alarma",
+        "Azotea libre con cámaras y alarma",
+        "Corriente 110 y 220"
+      ],
+      "precio": {
+        "monto": 38000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "052451128"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-5",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-6",
+    "id_publicacion": 6,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Reparto Sevillano, Municipio 10 de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 6,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Reparto Sevillano, Municipio 10 de Octubre",
+        "distribucion_general": {
+          "planta_baja_vivienda_particular": [
+            "Sala amplia y acogedora",
+            "Cocina independiente",
+            "3 cuartos principales",
+            "1 cuarto pequeño adicional",
+            "2 baños completos"
+          ],
+          "planta_alta_negocio_bar": [
+            "Bar completamente equipado",
+            "2 baños independientes para clientes"
+          ]
+        },
+        "distribucion": [],
+        "detalles_estructura": [],
+        "tipo_original": "Casa con negocio (Bar)",
+        "zona": "El Sevillano"
+      },
+      "servicios_y_caracteristicas": [
+        "4 splits repartidos en la casa",
+        "3 splits potentes en el bar",
+        "Gas de calle conectado"
+      ],
+      "estacionamiento": {
+        "garaje_privado": false,
+        "nota": "Garaje particular en la esquina disponible para alquilar"
+      },
+      "precio": {
+        "monto": 95000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "52451128"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-6",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-7",
+    "id_publicacion": 7,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Zona Luyanó, a 3 cuadras del hospital Hijas de Galicia",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        },
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 7,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Erickson"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Zona Luyanó, a 3 cuadras del hospital Hijas de Galicia",
+        "estado": "Recién remodelada",
+        "distribucion": [
+          "2 habitaciones (cada una con desván)",
+          "1 baño",
+          "Recibidor",
+          "Sala",
+          "Pasillo interior",
+          "Cocina amplia",
+          "Patio (sin remodelar)",
+          "Segundo cuarto (sin remodelar)"
+        ],
+        "detalles_constructivos": [
+          "Cocina incrustada con fregadero semi inteligente",
+          "Puertas de acero con 7 yales",
+          "Portada enchapada completa",
+          "Piso de mármol"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Propiedad (Casa)",
+        "zona": "Luyano"
+      },
+      "servicios_y_caracteristicas": [
+        "electricidad: 110v / 220v (no se va la luz)",
+        "agua: Entra un día sí y uno no",
+        "gas: De la calle",
+        "Un split nuevo",
+        "Calentador de agua"
+      ],
+      "estado_legal": {
+        "papeles_en_orden": true
+      },
+      "precio": {
+        "monto": 38000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "WhatsApp / Llamada",
+        "telefono": "59169223"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-7",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-8",
+    "id_publicacion": 8,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "resultado": "INDETERMINADO",
+    "confianza": "baja",
+    "pertenece": null,
+    "motivo": "No hay ficha municipal ni topónimo verificable en el texto.",
+    "registro_original": {
+      "id_publicacion": 8,
+      "publicacion": {
+        "autor": "Raul Maso"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "distribucion": [
+          "Sala amplia",
+          "Baño",
+          "2 cuartos (con cama y closet)",
+          "Cocina",
+          "Comedor",
+          "Patio amplio"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "No especificado"
+      },
+      "equipamiento_y_electrodomesticos_incluidos": [
+        "Tv 32 pulgadas",
+        "Mesa de noche de 4 gavetas",
+        "Split 1T",
+        "Olla Reyna",
+        "Freidora de aire",
+        "Cocina de gas",
+        "Cocina eléctrica de 2 orillas",
+        "Ducha de agua fría y caliente"
+      ],
+      "servicios_y_caracteristicas": [
+        "Tanque de 1000 litros",
+        "Tanque de agua de 55 litros"
+      ],
+      "precio": {
+        "monto": null,
+        "nota": "No especificado",
+        "moneda": null
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "52956130"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "sin ubicación",
+      "id_unico": "facebook-8",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-9",
+    "id_publicacion": 9,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "A dos cuadras de la calzada de 10 de octubre y una cuadra de Santa Catalina",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 9,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre / Venta de Casas baratas",
+        "autor_original": "Taimi Centelles"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "uso_ideal": "Negocios o familia numerosa",
+        "ubicacion": "A dos cuadras de la calzada de 10 de octubre y una cuadra de Santa Catalina",
+        "distribucion": [
+          "6/4 (uno de los cuartos tiene baño y vestidor)",
+          "3 baños",
+          "Portal",
+          "Garage",
+          "Saleta",
+          "Hall",
+          "Jardín interior",
+          "Comedor amplio",
+          "Cocina",
+          "Mesanini",
+          "Patio de lavado",
+          "Cuarto de desahogo"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa planta baja",
+        "zona": "Santa Catalina"
+      },
+      "servicios_y_caracteristicas": [
+        "Corriente 110/220",
+        "Teléfono fijo",
+        "Nauta hogar",
+        "Cisterna",
+        "2 tanques elevados",
+        "Gas de la calle",
+        "Todo placa"
+      ],
+      "precio": {
+        "monto": 35000,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "Posibilidad de ajuste"
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "63773133"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-9",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-10",
+    "id_publicacion": 10,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Calzada de 10/10",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 10,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre / Venta de Casas baratas",
+        "autor_original": "Taimi Centelles"
+      },
+      "detalles_propiedad": {
+        "tipo": "Inmueble",
+        "ubicacion": "Calzada de 10/10",
+        "distribucion": [
+          "1 Cuarto Grande",
+          "Terracita"
+        ],
+        "condicion_estructura": [
+          "Viga y losa en perfecto estado",
+          "Sin filtraciones",
+          "Sin nadie encima",
+          "Acabada de pintar"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Propiedad (Interior)",
+        "zona": "No especificado"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle"
+      ],
+      "equipamiento_incluido": [
+        "2 Tanques Elevados grandes",
+        "Teléfono fijo",
+        "1 TV",
+        "2 refrigeradores",
+        "Motor de agua"
+      ],
+      "precio": {
+        "monto": 5500,
+        "moneda": "USD",
+        "nota": "Me urge vender. Solo personas con el dinero por favor."
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "63773133"
+      },
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-10",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-11",
+    "id_publicacion": 11,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "municipio 10 de octubre, reparto Lawton",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 11,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Melisa Rondon"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "municipio 10 de octubre, reparto Lawton",
+        "ano_construccion": 1950,
+        "distribucion": [
+          "3 cuartos y medio",
+          "2 baños",
+          "Sala",
+          "Comedor",
+          "Cocina",
+          "Patio",
+          "Terraza",
+          "Jardín",
+          "Garaje"
+        ],
+        "caracteristicas_fisicas": [
+          "Hace esquina",
+          "Techo libre"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Puerta de calle (casa independiente)",
+        "zona": "Lawton"
+      },
+      "servicios_y_extras": [
+        "Tanque elevado de 1000 litros",
+        "Teléfono fijo"
+      ],
+      "precio": {
+        "monto": null,
+        "nota": "No especificado",
+        "moneda": null
+      },
+      "contacto": {
+        "telefono": "51384080"
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-11",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-12",
+    "id_publicacion": 12,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Calle 23 entre San Francisco y Baragua, 10 de octubre, Lawton",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 12,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Alain Machu"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "ubicacion": "Calle 23 entre San Francisco y Baragua, 10 de octubre, Lawton",
+        "piso": "Tercer piso",
+        "distribucion": [
+          "Sala",
+          "Cocina comedor",
+          "Baño",
+          "Dos cuartos con closet",
+          "Balcón amplio",
+          "Patio de servicio"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "Lawton"
+      },
+      "servicios_y_caracteristicas": [
+        "Dos tanques elevados de agua",
+        "Cisterna amplia del edificio",
+        "Teléfono fijo",
+        "La casa está enrejada"
+      ],
+      "precio": {
+        "monto": null,
+        "nota": "No especificado",
+        "moneda": null
+      },
+      "contacto": {
+        "metodo": "Llamada o WhatsApp",
+        "telefonos": [
+          "54494713",
+          "52184049"
+        ]
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-12",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-13",
+    "id_publicacion": 13,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "10 de octubre, a dos cuadras de la Calzada Lacret",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 13,
+      "publicacion": {
+        "grupo": "Venta de casas en 10 de octubre",
+        "autor": "Magela Pérez"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "ubicacion": "10 de octubre, a dos cuadras de la Calzada Lacret",
+        "piso": "Bajos (final del pasillo)",
+        "tipo_edificio": "Edificio capitalista",
+        "distribucion": [
+          "Sala",
+          "Comedor",
+          "Cocina",
+          "Baño intercalado",
+          "2 habitaciones",
+          "Patio",
+          "Cuarto de lavado"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "No especificado"
+      },
+      "servicios_y_caracteristicas": [
+        "Tiene agua siempre",
+        "Gas de la calle"
+      ],
+      "estado_legal": {
+        "papeles_en_regla": true
+      },
+      "precio": {
+        "monto": 12000,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "Ajustable"
+      },
+      "contacto": {
+        "metodo": "Llamada",
+        "telefono": "55822131"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-13",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-14",
+    "id_publicacion": 14,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Lawton, cerca del parque B y el paradero",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 14,
+      "publicacion": {
+        "grupo": "Venta de casas en 10 d... / ✅Venta de casas🍀La...",
+        "autor": "No especificado"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Lawton, cerca del parque B y el paradero",
+        "distribucion": [
+          "Sala",
+          "Comedor",
+          "Cocina",
+          "2 cuartos amplios (con closet)",
+          "Baño",
+          "Terraza techada con lavadero"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa (Planta baja de una biplanta)",
+        "zona": "Lawton"
+      },
+      "servicios_y_caracteristicas": [
+        "agua: Suministro en días alternos",
+        "Motor de agua",
+        "Gas de Balita con contrato",
+        "Cisterna",
+        "Juego de sala",
+        "Cama con colchón",
+        "Split",
+        "Refrigerador",
+        "Televisor pantalla plana",
+        "Microwave",
+        "Equipo de música",
+        "Ventilador",
+        "Otros electrodomésticos"
+      ],
+      "precio": {
+        "monto": 8500,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "Me ajusto con dinero en mano"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "56385735"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-14",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-15",
+    "id_publicacion": 15,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Santo Suárez (interior de 6 apart)",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 15,
+      "publicacion": {
+        "grupo": "Venta de casas en 10 d...",
+        "autor": "Cecilia Rodrigues"
+      },
+      "detalles_propiedad": {
+        "tipo": "Cuarto",
+        "ubicacion": "Santo Suárez (interior de 6 apart)",
+        "distribucion": [
+          "Cuarto",
+          "Patio"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Cuarto",
+        "zona": "Santos Suárez"
+      },
+      "precio": {
+        "monto": 2500,
+        "moneda": "USD",
+        "negociable": true
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "55113969"
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-15",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-16",
+    "id_publicacion": 16,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "San Leopoldo (zona céntrica)",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "resultado": "INDETERMINADO",
+    "confianza": "baja",
+    "pertenece": null,
+    "motivo": "No hay ficha municipal ni topónimo verificable en el texto.",
+    "registro_original": {
+      "id_publicacion": 16,
+      "publicacion": {
+        "grupo": "Venta de casas en 10 d...",
+        "autor": "Yenisey Borrero Cuellar"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "ubicacion": "San Leopoldo (zona céntrica)",
+        "piso": "Primer piso",
+        "distribucion": [
+          "Recibidor",
+          "Sala",
+          "Cocina",
+          "Baño",
+          "2/4"
+        ],
+        "condicion": "Se deja con todo dentro",
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento puerta calle",
+        "zona": "No especificado"
+      },
+      "precio": {
+        "monto": 15000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "55838566"
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "ambigua",
+      "id_unico": "facebook-16",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-17",
+    "id_publicacion": 17,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "resultado": "INDETERMINADO",
+    "confianza": "baja",
+    "pertenece": null,
+    "motivo": "No hay ficha municipal ni topónimo verificable en el texto.",
+    "registro_original": {
+      "id_publicacion": 17,
+      "publicacion": {
+        "grupo": "Venta de casas en 10 d...",
+        "autor": "Yenisey Borrero Cuellar"
+      },
+      "detalles_propiedad": {
+        "tipo": "Inmueble",
+        "descripcion": "Cuarto básico con baño y muebles (según imágenes).",
+        "distribucion": [],
+        "detalles_estructura": [],
+        "tipo_original": "Propiedad/Espacio",
+        "zona": "No especificado"
+      },
+      "precio": {
+        "monto": 2000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "55838566"
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "sin ubicación",
+      "id_unico": "facebook-17",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-18",
+    "id_publicacion": 18,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Lawton, en la cuadra de la escuela primaria Jorge Agustín",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 18,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Luzmay Fernandez"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "ubicacion": "Lawton, en la cuadra de la escuela primaria Jorge Agustín",
+        "piso": "Segundo piso",
+        "distribucion": [
+          "Dos cuartos",
+          "Sala",
+          "Cocina",
+          "Portal cerrado",
+          "Baño",
+          "Patio de lavado"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "Lawton"
+      },
+      "equipamiento_incluido": [
+        "Gas de balita (con la balita)",
+        "Juego de mesa",
+        "Una cama"
+      ],
+      "precio": {
+        "monto": 4000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Llamada o WhatsApp",
+        "telefono": "51953497"
+      },
+      "servicios_y_caracteristicas": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-18",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-19",
+    "id_publicacion": 19,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Lawton, frente a la Iglesia de los Pasionistas",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 19,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Javier Enrique"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Lawton, frente a la Iglesia de los Pasionistas",
+        "distribucion": [
+          "2 cuartos arriba (1 con balcón)",
+          "Recibidor",
+          "Sala",
+          "Comedor",
+          "Cocina",
+          "Baño",
+          "Azotea libre"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa",
+        "zona": "Lawton"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "Teléfono fijo",
+        "Tanque abajo y arriba"
+      ],
+      "precio": {
+        "monto": 20000,
+        "moneda": "USD",
+        "negociable": true
+      },
+      "contacto": {
+        "metodo": "WhatsApp / Llamadas",
+        "whatsapp": [
+          "+5358879738"
+        ],
+        "telefono": "76905168"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-19",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-20",
+    "id_publicacion": 20,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Santo Suárez",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 20,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Yami Perez",
+        "fecha": "Oct 20"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "piso": "Tercer piso",
+        "tipo_edificio": "Edificio capitalista",
+        "ubicacion": "Santo Suárez",
+        "distribucion": [
+          "1 cuarto"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "Santos Suárez"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle"
+      ],
+      "condicion": "Llegar y vivir",
+      "precio": {
+        "monto": 10000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "telefono": "55584096"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-20",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-21",
+    "id_publicacion": 21,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Santo Suárez, zona alta, cerca de Santa Catalina",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 21,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Yami Perez",
+        "fecha": "Sep 20"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "ubicacion": "Santo Suárez, zona alta, cerca de Santa Catalina",
+        "distribucion": [
+          "2/4"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "Santa Catalina"
+      },
+      "precio": {
+        "monto": 13000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Llamada o WhatsApp",
+        "telefono": "55584096"
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-21",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-22",
+    "id_publicacion": 22,
+    "fuente": "facebook",
+    "titulo": "CASA EN VENTA COLONIAL DE 4 CUARTOS CON PATIO FRUTAL EN 10 DE OCTUBRE",
+    "ubicacion": "Cerca de Santa Catalina a pocas cuadras del banco de Lacret, 10 de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 22,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "ConectaHabana",
+        "fecha": "Oct 18",
+        "titulo": "CASA EN VENTA COLONIAL DE 4 CUARTOS CON PATIO FRUTAL EN 10 DE OCTUBRE"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Cerca de Santa Catalina a pocas cuadras del banco de Lacret, 10 de Octubre",
+        "distribucion": [
+          "4 habitaciones",
+          "2 baños",
+          "Portal colonial (opción a garaje)",
+          "Patio amplio con árboles frutales y pasillo lateral",
+          "Saleta",
+          "Hall"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa independiente colonial",
+        "zona": "Santa Catalina"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "Agua todo el día"
+      ],
+      "uso_ideal": "Residencia familiar de lujo o negocio (hostal, restaurante, eventos)",
+      "precio": {
+        "monto": 60000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "enlace": "https://iurl.tr/1SgrEu"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-22",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-23",
+    "id_publicacion": 23,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "A 2 cuadras de 10 de Octubre y Dolores",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Dolores",
+          "tipo": "lugar",
+          "patron": "\\bdolores\\b",
+          "estado": "dentro",
+          "lat": 23.0898805,
+          "lon": -82.3491411,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Dolores (Avenida Camilo Cienfuegos), Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.51,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.51 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Dolores",
+          "tipo": "lugar",
+          "patron": "\\bdolores\\b",
+          "estado": "dentro",
+          "lat": 23.0898805,
+          "lon": -82.3491411,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Dolores (Avenida Camilo Cienfuegos), Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.51,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.51 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 23,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre / Venta de Casas baratas",
+        "autor": "Yeison PA Q Sepa"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "A 2 cuadras de 10 de Octubre y Dolores",
+        "distribucion": [],
+        "detalles_estructura": [],
+        "tipo_original": "Casa",
+        "zona": "No especificado"
+      },
+      "precio": {
+        "monto": 4500,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "56230358"
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-23",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-24",
+    "id_publicacion": 24,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Reparto Luyano, a 3 cuadras de la Clzda de Luyano, cerca del Hospital Materno Hijas de Galicia",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        },
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 24,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Ela SG"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "estado": "Lista para vivir o invertir (se deja con todo dentro)",
+        "ubicacion": "Reparto Luyano, a 3 cuadras de la Clzda de Luyano, cerca del Hospital Materno Hijas de Galicia",
+        "distribucion": [
+          "3 habitaciones en planta alta",
+          "1 baño",
+          "Sala amplia",
+          "Saleta",
+          "Segundo recibidor",
+          "Comedor",
+          "Cocina",
+          "Portal",
+          "Patio lateral",
+          "Patio trasero"
+        ],
+        "detalles_construccion": [
+          "Techo libre con manta",
+          "Placa intermedia desde la mitad",
+          "Viga y losa en la parte delantera con puntal alto",
+          "Rejas y trancas en toda la casa"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa independiente",
+        "zona": "Luyano"
+      },
+      "servicios_y_caracteristicas": [
+        "2 tanques elevados con motor",
+        "220V",
+        "Gas de la calle"
+      ],
+      "equipamiento_incluido": [
+        "Planta eléctrica híbrida 3000W",
+        "2 refrigeradores",
+        "Nevera de 7.5 pies",
+        "Microondas",
+        "Freidora eléctrica",
+        "Cocina con horno",
+        "Lavadora semiautomática",
+        "3 split 1 ton c/u",
+        "2 PC (gamer con tarjeta de video)",
+        "TV 42\"",
+        "Mini Gym completo (caminadora, banco, polea, pesas, saco de boxeo, etc.)"
+      ],
+      "estado_legal": {
+        "papeles_listos_para_venta": true,
+        "posibilidad_telefono_fijo": true
+      },
+      "precio": {
+        "monto": 30000,
+        "moneda": "USD",
+        "negociable": true
+      },
+      "contacto": {
+        "metodo": "WhatsApp / Llamada",
+        "telefono": "53605462"
+      },
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-24",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-25",
+    "id_publicacion": 25,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "La Víbora, cercano al parque El Mónaco",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "El Mónaco",
+          "tipo": "lugar",
+          "patron": "\\bmonaco\\b",
+          "estado": "dentro",
+          "lat": 23.0894333,
+          "lon": -82.3778736,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.35,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.35 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "El Mónaco",
+          "tipo": "lugar",
+          "patron": "\\bmonaco\\b",
+          "estado": "dentro",
+          "lat": 23.0894333,
+          "lon": -82.3778736,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.35,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.35 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 25,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "La Isla Casas",
+        "codigo_referencia": "NV- 10280"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "La Víbora, cercano al parque El Mónaco",
+        "ano_construccion": 1956,
+        "area_m2": 217,
+        "materiales": [
+          "Hormigón armado",
+          "Pisos de granito",
+          "Mosaico"
+        ],
+        "estado": "Requiere restauración",
+        "distribucion": [
+          "Jardín",
+          "Portal",
+          "Garaje",
+          "Saleta",
+          "Sala",
+          "Cocina-comedor",
+          "2 habitaciones",
+          "1 servicio sanitario",
+          "Patio cementado",
+          "Sala",
+          "Cocina-comedor",
+          "2 terrazas",
+          "2 habitaciones",
+          "1 servicio sanitario"
+        ],
+        "distribucion_detallada": {
+          "planta_baja": [
+            "Jardín",
+            "Portal",
+            "Garaje",
+            "Saleta",
+            "Sala",
+            "Cocina-comedor",
+            "2 habitaciones",
+            "1 servicio sanitario",
+            "Patio cementado"
+          ],
+          "planta_alta": [
+            "Sala",
+            "Cocina-comedor",
+            "2 terrazas",
+            "2 habitaciones",
+            "1 servicio sanitario"
+          ]
+        },
+        "detalles_estructura": [],
+        "tipo_original": "Casa independiente de dos niveles",
+        "zona": "La Víbora"
+      },
+      "servicios_y_caracteristicas": [
+        "Teléfono fijo",
+        "Gas de la calle",
+        "Cisterna propia",
+        "Corriente 110/220"
+      ],
+      "precio": {
+        "monto": 60000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "comerciales": [
+          {
+            "nombre": "Aymara",
+            "telefono": "+53 5 2818020"
+          },
+          {
+            "nombre": "Valodia",
+            "telefono": "+53 5 2843728"
+          }
+        ],
+        "oficina_comercial": "Zapata y 24 en el Vedado - 78325955"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-25",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-26",
+    "id_publicacion": 26,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Santos Suárez, cercano a Juan Delgado y Lacret",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        },
+        {
+          "nombre": "Juan Delgado",
+          "tipo": "lugar",
+          "patron": "\\bjuan\\s*delgado\\b",
+          "estado": "dentro",
+          "lat": 23.0923691,
+          "lon": -82.3756184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Juan Delgado, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        },
+        {
+          "nombre": "Juan Delgado",
+          "tipo": "lugar",
+          "patron": "\\bjuan\\s*delgado\\b",
+          "estado": "dentro",
+          "lat": 23.0923691,
+          "lon": -82.3756184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Juan Delgado, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 26,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "La Isla Casas",
+        "codigo_referencia": "NV-10168"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "ubicacion": "Santos Suárez, cercano a Juan Delgado y Lacret",
+        "piso": "2do piso",
+        "ano_construccion": 1950,
+        "area_m2": 86,
+        "caracteristicas_edificacion": [
+          "Sólida edificación de 6 propiedades",
+          "Cubierta de hormigón armado",
+          "Pisos de mosaico",
+          "Buena ventilación y luz natural"
+        ],
+        "distribucion": [
+          "Sala-comedor",
+          "Terraza",
+          "Cocina",
+          "Patio techado",
+          "2 habitaciones",
+          "Habitación de usos múltiples",
+          "2 servicios sanitarios"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "Santos Suárez"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "Corriente 110/220",
+        "Tanque propio"
+      ],
+      "precio": {
+        "monto_actual": 15000,
+        "monto_anterior": 17000,
+        "moneda": "USD",
+        "nota": "Súper rebaja",
+        "monto": null
+      },
+      "contacto": {
+        "comerciales": [
+          {
+            "nombre": "Deborah",
+            "telefono": "+53 5 2973952"
+          },
+          {
+            "nombre": "Beatriz",
+            "telefono": "+53 5 2501330"
+          }
+        ],
+        "oficina_comercial": "Zapata y 24 en el Vedado - 78325955"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-26",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-28",
+    "id_publicacion": 28,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Lawton, 10 de Octubre (zona tranquila, ideal para niños, no pasan autos)",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 28,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "May Rivas Lopez",
+        "fecha": "Hace 2 días"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Lawton, 10 de Octubre (zona tranquila, ideal para niños, no pasan autos)",
+        "condicion": "Grande, no hay que hacerle nada",
+        "distribucion": [
+          "Portal enrejado (con posibilidad de garaje)",
+          "Patio",
+          "Dos pasillos laterales"
+        ],
+        "caracteristicas_estructurales": "Placa libre con posibilidad de ampliar",
+        "detalles_estructura": [],
+        "tipo_original": "Casa",
+        "zona": "Lawton"
+      },
+      "servicios_y_extras": [
+        "Agua un día sí y otro no (pero no falta)",
+        "Teléfono fijo",
+        "Dos tanques elevados"
+      ],
+      "precio": {
+        "monto": 19000,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "Me ajusto con dinero en mano. Urge vender."
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "53878399",
+        "nota": "Verdaderos interesados, no llamar por gusto."
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-28",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-29",
+    "id_publicacion": 29,
+    "fuente": "facebook",
+    "titulo": "EN VENTA – CASA INDEPENDIENTE EN SANTO SUÁREZ (10 DE OCTUBRE)",
+    "ubicacion": "Santo Suárez, 10 de Octubre, céntrica, cerca de Ave. Lacret. Zona con transporte y servicios.",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 29,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "No especificado",
+        "titulo": "EN VENTA – CASA INDEPENDIENTE EN SANTO SUÁREZ (10 DE OCTUBRE)"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Santo Suárez, 10 de Octubre, céntrica, cerca de Ave. Lacret. Zona con transporte y servicios.",
+        "distribucion": [
+          "Portal",
+          "Patio lateral con espacio para garaje",
+          "Sala",
+          "Comedor",
+          "Cocina",
+          "Sala de estar",
+          "1er cuarto",
+          "Baño",
+          "3 cuartos (2do, 3ro y 4to)",
+          "Baño",
+          "Patio de lavado",
+          "Terraza amplia cercada sin techar con placa libre (posibilidad de construir)"
+        ],
+        "distribucion_detallada": {
+          "planta_baja": [
+            "Portal",
+            "Patio lateral con espacio para garaje",
+            "Sala",
+            "Comedor",
+            "Cocina"
+          ],
+          "segundo_nivel": [
+            "Sala de estar",
+            "1er cuarto",
+            "Baño"
+          ],
+          "tercer_nivel": [
+            "3 cuartos (2do, 3ro y 4to)",
+            "Baño",
+            "Patio de lavado"
+          ],
+          "cuarto_nivel": [
+            "Terraza amplia cercada sin techar con placa libre (posibilidad de construir)"
+          ]
+        },
+        "detalles_estructura": [],
+        "tipo_original": "Casa independiente",
+        "zona": "Santos Suárez"
+      },
+      "servicios_y_caracteristicas": [
+        "Corriente 110 y 220",
+        "Agua en días alternos con cisterna propia amplia y tanque elevado grande",
+        "Gas de la calle"
+      ],
+      "estado_legal": {
+        "documentacion_en_regla": true
+      },
+      "precio": {
+        "monto": 22500,
+        "moneda": "USD",
+        "negociable": true
+      },
+      "contacto": {
+        "metodo": "Llamadas / SMS / WhatsApp",
+        "telefono": "53383889"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-29",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-30",
+    "id_publicacion": 30,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Calzada de 10 de Octubre entre Princesa y Madrid, reparto Santo Suárez",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 30,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "Ileana Lara Borrego",
+        "fecha": "Hace 1 día"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "piso": "Primer piso (con puntal alto)",
+        "ubicacion": "Calzada de 10 de Octubre entre Princesa y Madrid, reparto Santo Suárez",
+        "condicion": "Perfecto estado estructural y constructivo. Mucha luz natural y ventilación.",
+        "distribucion": [
+          "Sala-comedor amplios",
+          "Cocina",
+          "Patio interior",
+          "Balcón (con amplia vista hacia la calzada)",
+          "2 habitaciones (una de ellas con closet)",
+          "Baño amplio"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento",
+        "zona": "Santos Suárez"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "2 tanques de almacenamiento interno independientes con sus instalaciones",
+        "Edificio con cisterna, motor y tanques en azotea",
+        "Agua en días alternos",
+        "Ventanas con reja en todos sus espacios"
+      ],
+      "precio": {
+        "monto": null,
+        "moneda": null,
+        "nota": "No especificado en la publicación"
+      },
+      "contacto": {
+        "metodo": null,
+        "telefono": null,
+        "nota": "No especificado en la publicación"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-30",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-31",
+    "id_publicacion": 31,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "El Sevillano, Diez de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 31,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "Ángel Febles",
+        "fecha": "Hace 4 días"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "El Sevillano, Diez de Octubre",
+        "distribucion": [
+          "3 habitaciones súper cómodas",
+          "Baño",
+          "Cocina",
+          "Sala",
+          "Portal",
+          "Comedor",
+          "Terraza de cemento atrás"
+        ],
+        "caracteristicas_estructurales": [
+          "Placa libre"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa independiente",
+        "zona": "El Sevillano"
+      },
+      "estado_legal": {
+        "papeles_en_regla": true
+      },
+      "precio": {
+        "monto": null,
+        "moneda": null,
+        "nota": "No especificado en la publicación"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "59696273"
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-31",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-32",
+    "id_publicacion": 32,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Calzada de 10 de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 32,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Participante Anónimo",
+        "fecha": "Hace 7 horas"
+      },
+      "detalles_propiedad": {
+        "tipo": "Apartamento",
+        "ubicacion": "Calzada de 10 de Octubre",
+        "distribucion": [
+          "Sala corrida con cuarto",
+          "Baño",
+          "Cocina",
+          "Segunda planta: terraza cercada hasta la altura de las tejas con lavadero"
+        ],
+        "condicion": "Falta la escalera para subir a la segunda planta",
+        "detalles_estructura": [],
+        "tipo_original": "Apartamento interior",
+        "zona": "No especificado"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "Corriente 110 y 220",
+        "Agua cada 4 días"
+      ],
+      "precio": {
+        "monto": null,
+        "moneda": null,
+        "nota": "No especificado en la publicación"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "53309701"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-32",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-33",
+    "id_publicacion": 33,
+    "fuente": "facebook",
+    "titulo": "SE VENDE CASA INDEPENDIENTE EN VISTA ALEGRE RESIDENCIAL - 10 DE OCTUBRE",
+    "ubicacion": "Vista Alegre Residencial - 10 de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 33,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "No especificado (Menciona ser la dueña, no gestora)",
+        "titulo": "SE VENDE CASA INDEPENDIENTE EN VISTA ALEGRE RESIDENCIAL - 10 DE OCTUBRE"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Vista Alegre Residencial - 10 de Octubre",
+        "area_m2": 279,
+        "distribucion": [
+          "Jardín",
+          "Portal",
+          "Sala",
+          "Comedor",
+          "Cocina con clóset empotrado",
+          "2 habitaciones (solo una climatizada, ambas con clóset empotrado)",
+          "Patio con matas de plátano",
+          "Pasillos de servicio que bordean toda la casa",
+          "Garaje con capacidad para 2 carros (con posibilidad de ampliación)"
+        ],
+        "caracteristicas_estructurales": [
+          "Placa totalmente libre ideal para poner paneles solares"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa independiente",
+        "zona": "Vista Alegre"
+      },
+      "servicios_y_caracteristicas": [
+        "agua: Cisterna y dos tanques elevados de 1000 y 1500 lt respectivamente + Motor de Agua",
+        "electricidad: 110v-220v",
+        "Agua caliente y fría",
+        "Calentador",
+        "Presurizador",
+        "Marquetería de los bajos de encimera son de cedro",
+        "Todas las ventanas y puertas de cristal (excepto las del último cuarto)",
+        "Gas de balita con contrato"
+      ],
+      "precio": {
+        "monto": 22000,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "En efectivo. Me ajusto si es necesario. Solo personas con el dinero en la mano."
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "52009570"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-33",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-34",
+    "id_publicacion": 34,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "10 de Octubre, en la misma calzada, a dos cuadras del semáforo de 10 de Octubre y Lacret. Súper céntrica.",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 34,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "El dueño",
+        "fecha": "No especificada"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "area_m2": 66.53,
+        "ubicacion": "10 de Octubre, en la misma calzada, a dos cuadras del semáforo de 10 de Octubre y Lacret. Súper céntrica.",
+        "entorno": "Cerca de agros, mypimes, cafetería, policlínico (todo a metros)",
+        "distribucion": [
+          "2 cuartos grandes",
+          "Cocina nueva",
+          "Comedor",
+          "Sala grande",
+          "Baño grande",
+          "Patio"
+        ],
+        "detalles_construccion": [
+          "Techos de placa",
+          "Placa libre",
+          "No hay colindancia de pared con pared ni por los lados ni por atrás",
+          "Súper clara y ventilada"
+        ],
+        "estacionamiento": "No tiene garaje ni posibilidad de hacerlo",
+        "detalles_estructura": [],
+        "tipo_original": "Casa (Parte de arriba de una biplanta / altos)",
+        "zona": "No especificado"
+      },
+      "servicios_y_caracteristicas": [
+        "electricidad: Corriente 110 y 220",
+        "agua: Comitiva independiente con tanque cisterna, su motor y tanque de 1000 litros",
+        "gas: De la calle",
+        "telefono: No tiene teléfono fijo, pero está la pared lista para ponerlo"
+      ],
+      "equipamiento_incluido": [
+        "Lavadora automática",
+        "Microondas (Microwey)",
+        "Juego de mueble de sala (sofá de 3 plazas y dos butacones)",
+        "Televisor de 32 pulgadas",
+        "1 Nevera",
+        "Entre otras cosas más"
+      ],
+      "precio": {
+        "monto": 10000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "55386517"
+      },
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-34",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-35",
+    "id_publicacion": 35,
+    "fuente": "facebook",
+    "titulo": "VENTA DE CASA – REPARTO RESIDENCIAL ASUNCIÓN, 10 DE OCTUBRE",
+    "ubicacion": "#245 Ref. Hospital Miguel Enriquez. Materno Hijas de Galicia. Reparto Residencial Asunción, 10 de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Asunción",
+          "tipo": "lugar",
+          "patron": "\\basuncion\\b",
+          "estado": "dentro",
+          "lat": 23.1032441,
+          "lon": -82.3524331,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Asunción, Jesús del Monte, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.79,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.79 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Asunción",
+          "tipo": "lugar",
+          "patron": "\\basuncion\\b",
+          "estado": "dentro",
+          "lat": 23.1032441,
+          "lon": -82.3524331,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Asunción, Jesús del Monte, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.79,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.79 km del borde"
+        },
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 35,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "No especificado",
+        "titulo": "VENTA DE CASA – REPARTO RESIDENCIAL ASUNCIÓN, 10 DE OCTUBRE"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "#245 Ref. Hospital Miguel Enriquez. Materno Hijas de Galicia. Reparto Residencial Asunción, 10 de Octubre",
+        "estado": "TODO NUEVO, MODERNO Y REMODELADO (Placa nueva, pisos nuevos, cocina renovada, baño renovado)",
+        "distribucion": [
+          "4 habitaciones",
+          "Sala-comedor",
+          "Cocina amplia y bonita",
+          "Baño",
+          "Garaje (cabe un Changan)",
+          "Patio",
+          "Entrada independiente",
+          "Sala",
+          "Cocina",
+          "Baño",
+          "Cuarto",
+          "Posibilidad de seguir ampliando"
+        ],
+        "caracteristicas_adicionales": [
+          "Pasillos laterales",
+          "Vivienda completamente climatizada (Split en cada habitación)",
+          "Entradas independientes",
+          "Garaje eléctrico"
+        ],
+        "distribucion_detallada": {
+          "planta_baja": [
+            "4 habitaciones",
+            "Sala-comedor",
+            "Cocina amplia y bonita",
+            "Baño",
+            "Garaje (cabe un Changan)",
+            "Patio"
+          ],
+          "planta_alta": [
+            "Entrada independiente",
+            "Sala",
+            "Cocina",
+            "Baño",
+            "Cuarto",
+            "Posibilidad de seguir ampliando"
+          ]
+        },
+        "detalles_estructura": [],
+        "tipo_original": "Casa puerta calle independiente + Apartamento arriba con entrada independiente",
+        "zona": "No especificado"
+      },
+      "servicios_y_caracteristicas": [
+        "gas: De la calle",
+        "agua: Cisterna propia, 3 tanques elevados, Sistema Kiwan para presión de agua",
+        "Teléfono fijo",
+        "Nauta Hogar instalado"
+      ],
+      "precio": {
+        "monto": 70000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Mensaje Privado (PV) / WhatsApp",
+        "telefono": "50305901",
+        "nota": "Visitas cualquier día avisando con tiempo. Verdaderos interesados."
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-35",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-36",
+    "id_publicacion": 36,
+    "fuente": "facebook",
+    "titulo": "SE VENDEN 2 CASAS JUNTAS EN LAWTON",
+    "ubicacion": "Lawton (Calzada de Porvenir y Aguilera)",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Porvenir",
+          "tipo": "lugar",
+          "patron": "\\bporvenir\\b",
+          "estado": "dentro",
+          "lat": 23.0932272,
+          "lon": -82.3560296,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.0,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.0 km del borde"
+        },
+        {
+          "nombre": "Aguilera",
+          "tipo": "lugar",
+          "patron": "\\baguilera\\b",
+          "estado": "dentro",
+          "lat": 23.1023873,
+          "lon": -82.3486801,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Aguilera, Lawton, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.57,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.57 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Porvenir",
+          "tipo": "lugar",
+          "patron": "\\bporvenir\\b",
+          "estado": "dentro",
+          "lat": 23.0932272,
+          "lon": -82.3560296,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.0,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.0 km del borde"
+        },
+        {
+          "nombre": "Aguilera",
+          "tipo": "lugar",
+          "patron": "\\baguilera\\b",
+          "estado": "dentro",
+          "lat": 23.1023873,
+          "lon": -82.3486801,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Aguilera, Lawton, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.57,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.57 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 36,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "No especificado",
+        "titulo": "SE VENDEN 2 CASAS JUNTAS EN LAWTON"
+      },
+      "detalles_propiedad": {
+        "ubicacion": "Lawton (Calzada de Porvenir y Aguilera)",
+        "caracteristicas_generales": "Propiedades y libretas independientes, comunicadas entre sí por una puerta interior. Ambas con placa libre y gran seguridad (callejón cerrado con portón). Ideal para familias que buscan vivir cerca con total privacidad.",
+        "casa_1": {
+          "tipo": "Puerta de calle",
+          "area_total_m2": 69.61,
+          "area_ocupada_m2": 48,
+          "distribucion": [
+            "Sala",
+            "Comedor",
+            "2 cuartos (con puertas de madera)",
+            "Baño",
+            "Cocina amplia",
+            "Patio techado con acceso al callejón"
+          ],
+          "detalles": [
+            "Marquetería de hierro y cristal",
+            "2 tanques de agua (1,000 L c/u)",
+            "Motor de agua compartido"
+          ]
+        },
+        "casa_2": {
+          "tipo": "Entrada por callejón amplio",
+          "area_m2": 46.99,
+          "distribucion": [
+            "Sala",
+            "1 cuarto",
+            "Baño",
+            "Cocina-comedor",
+            "Patio trasero techado",
+            "Portal amplio (caben varias motos o espacio para garaje)"
+          ],
+          "detalles": [
+            "Marquetería de aluminio",
+            "A remodelar cocina y detalles de baño y exterior",
+            "Tanque de 1,300 L"
+          ]
+        },
+        "distribucion": [],
+        "detalles_estructura": [],
+        "tipo_original": "No especificado",
+        "tipo": "Inmueble",
+        "zona": "Lawton"
+      },
+      "servicios_y_caracteristicas": [
+        "Ambas con gas de la calle"
+      ],
+      "precio": {
+        "monto": 23000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Mensaje privado",
+        "nota": "Más fotos y detalles al privado (no especifica número)"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-36",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-37",
+    "id_publicacion": 37,
+    "fuente": "facebook",
+    "titulo": "¡SE VENDE CASA PUERTA CALLE EN 10 DE OCTUBRE!",
+    "ubicacion": "Municipio Diez de octubre, Víbora",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 37,
+      "publicacion": {
+        "grupo": "Casas y Apartamentos...",
+        "autor": "No especificado",
+        "titulo": "¡SE VENDE CASA PUERTA CALLE EN 10 DE OCTUBRE!"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Municipio Diez de octubre, Víbora",
+        "distribucion": [
+          "Sala",
+          "Comedor",
+          "Cocinita",
+          "1 dormitorio",
+          "Baño",
+          "Patio pequeño"
+        ],
+        "condicion": "La propiedad necesita algunos arreglos, una oportunidad para adaptarla a tu gusto y necesidades.",
+        "detalles_estructura": [],
+        "tipo_original": "Casa independiente (Puerta calle)",
+        "zona": "No especificado"
+      },
+      "servicios_y_caracteristicas": [
+        "agua: Sube por gravedad. Tanques: 1 de 750 litros y uno en el patio de 300 litros.",
+        "Nauta Hogar (con equipo incluido)",
+        "Gas de la calle",
+        "Teléfono fijo",
+        "Placa libre de Vigas y Losa"
+      ],
+      "equipamiento_incluido": [
+        "Un split",
+        "Un juego de comedor y la vitrina",
+        "Una litera",
+        "Una cocina de dos fogones"
+      ],
+      "precio": {
+        "monto": null,
+        "moneda": null,
+        "nota": "No especificado en las imágenes"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "53707674"
+      },
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-37",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-38",
+    "id_publicacion": 38,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Luyano, Santa Ana 64",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        },
+        {
+          "nombre": "Santa Ana",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*ana\\b",
+          "estado": "dentro",
+          "lat": 23.1085946,
+          "lon": -82.3599849,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Calle Santa Ana, Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.53,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.53 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        },
+        {
+          "nombre": "Santa Ana",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*ana\\b",
+          "estado": "dentro",
+          "lat": 23.1085946,
+          "lon": -82.3599849,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Calle Santa Ana, Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.53,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.53 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 38,
+      "publicacion": {
+        "grupo": "✅Venta de casas🍀La Haba...",
+        "autor": "Mirurgia Junco",
+        "fecha": "Hace 6 horas"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Luyano, Santa Ana 64",
+        "distribucion": [
+          "Sala",
+          "Comedor/Cocina",
+          "3 cuartos",
+          "2 baños",
+          "Patio",
+          "Pasillo lateral",
+          "Sala",
+          "Cocina",
+          "2 cuartos",
+          "1 baño",
+          "Lavadero con terraza amplia",
+          "Escalera independiente para el 2do piso"
+        ],
+        "detalles_estructura": [
+          "Portal enrejado en el frente"
+        ],
+        "distribucion_detallada": {
+          "planta_baja": [
+            "Sala",
+            "Comedor/Cocina",
+            "3 cuartos",
+            "2 baños",
+            "Patio",
+            "Pasillo lateral"
+          ],
+          "planta_alta": [
+            "Sala",
+            "Cocina",
+            "2 cuartos",
+            "1 baño",
+            "Lavadero con terraza amplia",
+            "Escalera independiente para el 2do piso"
+          ]
+        },
+        "tipo_original": "Dos casas en una (Biplanta)",
+        "zona": "Luyano"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "Cisterna con turbina",
+        "Dos tanques grandes elevados"
+      ],
+      "precio": {
+        "monto": 25000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "No especificado en el texto"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-38",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-39",
+    "id_publicacion": 39,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "10 de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 39,
+      "publicacion": {
+        "grupo": "Compra venta de casas en 10 d...",
+        "autor": "Indira Sanchez",
+        "fecha": "Jul 28"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "10 de Octubre",
+        "condicion": "Llegar y vivir",
+        "distribucion": [
+          "3 cuartos",
+          "Garaje",
+          "Jardín",
+          "Patio con varias plantas frutales"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa (construcción capitalista)",
+        "zona": "No especificado"
+      },
+      "precio": {
+        "monto": null,
+        "moneda": null,
+        "nota": "No especificado en la publicación"
+      },
+      "contacto": {
+        "metodo": "Llamada",
+        "telefonos": [
+          "58021945",
+          "56595619",
+          "53611666"
+        ]
+      },
+      "servicios_y_caracteristicas": [],
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-39",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-40",
+    "id_publicacion": 40,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "A 1 cuadra de la calzada 10 de Octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 40,
+      "publicacion": {
+        "grupo": "1 Compra de casas en La Habana...",
+        "autor": "Rossy Rodriguez",
+        "fecha": "Oct 13"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "A 1 cuadra de la calzada 10 de Octubre",
+        "distribucion": [
+          "Sala",
+          "Saleta",
+          "Hall",
+          "Comedor",
+          "Cocina",
+          "Baño amplio",
+          "4 cuartos",
+          "Terraza grande con tendederas",
+          "Pasillo independiente"
+        ],
+        "detalles_estructura": [
+          "De placa",
+          "Placa libre"
+        ],
+        "tipo_original": "Casa grande en 1er piso",
+        "zona": "Calzada 10 de Octubre"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "Teléfono fijo",
+        "Motor de agua",
+        "Tanques"
+      ],
+      "equipamiento_incluido": [
+        "Se dejan algunas cosas",
+        "Aire acondicionado"
+      ],
+      "precio": {
+        "monto": 16000,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "Con dinero en mano ajustable"
+      },
+      "contacto": {
+        "metodo": "Teléfono",
+        "telefono": "53825128"
+      },
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-40",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-41",
+    "id_publicacion": 41,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "A dos cuadras de la calzada de 10 de octubre y una cuadra de Santa Catalina, municipio 10 de octubre",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 41,
+      "publicacion": {
+        "grupo": "Compra venta de casas en 10 d...",
+        "autor": "Pity Nemer",
+        "fecha": "Hace 4 días"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "condicion_venta": "Vendo o permuto por dos, o una y vuelto",
+        "ubicacion": "A dos cuadras de la calzada de 10 de octubre y una cuadra de Santa Catalina, municipio 10 de octubre",
+        "uso_ideal": "Negocios o familia numerosa",
+        "distribucion": [
+          "6/4 (uno de los cuartos tiene baño dentro con su vestidor)",
+          "3 baños",
+          "Portal",
+          "Garage",
+          "Saleta",
+          "Hall",
+          "Jardín interior",
+          "Comedor amplio",
+          "Cocina",
+          "Mesanini",
+          "Patio de lavado",
+          "Cuarto de desahogo"
+        ],
+        "detalles_estructura": [
+          "Todo placa"
+        ],
+        "tipo_original": "Casa planta baja",
+        "zona": "Santa Catalina"
+      },
+      "servicios_y_caracteristicas": [
+        "110/220",
+        "Teléfono fijo",
+        "Nauta hogar",
+        "Cisterna",
+        "2 tanques elevados",
+        "Gas de la calle"
+      ],
+      "precio": {
+        "monto": 33000,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "Ajustable con dinero en mano"
+      },
+      "contacto": {
+        "metodo": "WhatsApp / Teléfono fijo",
+        "whatsapp": [
+          "52843434",
+          "54318940"
+        ],
+        "telefono_fijo": "76903063",
+        "nota": "Preguntar por Teresita o Pity si hay problema de conexión"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-41",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-42",
+    "id_publicacion": 42,
+    "fuente": "facebook",
+    "titulo": "",
+    "ubicacion": "Lawton municipio 10 de octubre a una cuadra de la Avenida Porvenir",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Porvenir",
+          "tipo": "lugar",
+          "patron": "\\bporvenir\\b",
+          "estado": "dentro",
+          "lat": 23.0932272,
+          "lon": -82.3560296,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.0,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.0 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Porvenir",
+          "tipo": "lugar",
+          "patron": "\\bporvenir\\b",
+          "estado": "dentro",
+          "lat": 23.0932272,
+          "lon": -82.3560296,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.0,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.0 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 42,
+      "publicacion": {
+        "grupo": "Compra y venta de casas en 10 de...",
+        "autor": "Claudia Isaac",
+        "fecha": "Oct 18"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Lawton municipio 10 de octubre a una cuadra de la Avenida Porvenir",
+        "distribucion": [
+          "Dos cuartos",
+          "Portal",
+          "Sala",
+          "Comedor",
+          "Cocina",
+          "Baño",
+          "Patio de lavado",
+          "Azotea libre",
+          "Pasillo lateral"
+        ],
+        "detalles_estructura": [],
+        "tipo_original": "Casa puerta a la calle (Construcción capitalista)",
+        "zona": "Lawton"
+      },
+      "servicios_y_caracteristicas": [
+        "Cisterna y motor propio",
+        "Agua fría y caliente en toda la casa",
+        "Gas de la calle"
+      ],
+      "precio": {
+        "monto": 20000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "enlace": "https://wa.me/5353252795"
+      },
+      "equipamiento_incluido": [],
+      "operacion": "Venta",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "explícita",
+      "id_unico": "facebook-42",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-43",
+    "id_publicacion": 43,
+    "fuente": "facebook",
+    "titulo": "Casa Espectacular en Santos Suarez! Cuba. La habana!",
+    "ubicacion": "Santos Suárez, a una cuadra de Santa Catalina",
+    "en_base_limpia": true,
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        }
+      ]
+    },
+    "resultado": "SÍ",
+    "confianza": "media",
+    "pertenece": true,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "registro_original": {
+      "id_publicacion": 43,
+      "publicacion": {
+        "grupo": "Casas en 10 de octubre",
+        "autor": "Habanaluxe - Bienes Raíces en La Habana",
+        "titulo": "Casa Espectacular en Santos Suarez! Cuba. La habana!"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa",
+        "ubicacion": "Santos Suárez, a una cuadra de Santa Catalina",
+        "estado": "Remodelada. Para llegar y vivir",
+        "distribucion": [
+          "Garage para dos autos",
+          "Jardín",
+          "Portal",
+          "Sala",
+          "Comedor",
+          "Cocina",
+          "2 cuartos",
+          "Baño principal",
+          "Baño de servicio",
+          "Pasillos laterales",
+          "Pasillo trasero",
+          "Portal",
+          "Recibidor",
+          "Sala",
+          "2 habitaciones (cada una con su baño)",
+          "Cocina (tiene instalación de gas pero no está hecha, se usaba como estudio de fotografía)",
+          "Terraza delantera"
+        ],
+        "distribucion_detallada": {
+          "planta_baja": [
+            "Garage para dos autos",
+            "Jardín",
+            "Portal",
+            "Sala",
+            "Comedor",
+            "Cocina",
+            "2 cuartos",
+            "Baño principal",
+            "Baño de servicio",
+            "Pasillos laterales",
+            "Pasillo trasero"
+          ],
+          "planta_alta": [
+            "Portal",
+            "Recibidor",
+            "Sala",
+            "2 habitaciones (cada una con su baño)",
+            "Cocina (tiene instalación de gas pero no está hecha, se usaba como estudio de fotografía)",
+            "Terraza delantera"
+          ]
+        },
+        "detalles_estructura": [],
+        "tipo_original": "Casa de dos niveles",
+        "zona": "Santos Suárez"
+      },
+      "servicios_y_caracteristicas": [
+        "Gas de la calle",
+        "2 líneas de teléfono",
+        "Nauta hogar"
+      ],
+      "equipamiento_incluido": [
+        "9 splits",
+        "Otros muebles"
+      ],
+      "precio": {
+        "monto": 95000,
+        "moneda": "USD",
+        "negociable": true,
+        "nota": "Ajustables con dinero en mano. Solo verdaderos interesados."
+      },
+      "contacto": {
+        "metodo": "WhatsApp",
+        "telefono": "+535 2412147"
+      },
+      "operacion": "Sin clasificar",
+      "municipio": "Diez de Octubre",
+      "municipio_evidencia": "por reparto",
+      "id_unico": "facebook-43",
+      "fuente": "facebook",
+      "estado": "capturado"
+    }
+  },
+  {
+    "id_unico": "facebook-27",
+    "id_publicacion": 27,
+    "fuente": "facebook",
+    "titulo": "SE VENDE AMPLIA CASA DE DOS PLANTAS EN SANTA AMALIA, LA HABANA, CUBA",
+    "ubicacion": "Santa Amalia, a solo 3 cuadras de la Calzada de 10 de Octubre",
+    "en_base_limpia": false,
+    "motivo_rechazo_previo": "MUNICIPIO_DISTINTO_A_DIEZ_DE_OCTUBRE",
+    "patron_rechazo_previo": "santa amalia",
+    "ficha": {
+      "ubicacion_pagina": null,
+      "municipio": null,
+      "estado": "no_aplica"
+    },
+    "senales_texto": {
+      "dentro": [],
+      "fuera": [
+        {
+          "nombre": "Santa Amalia",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*amalia\\b",
+          "estado": "fuera",
+          "lat": 23.0755379,
+          "lon": -82.3647416,
+          "municipio_osm": "Arroyo Naranjo",
+          "display_name_osm": "Santa Amalia, Poey, Arroyo Naranjo, La Habana, 10055, Cuba",
+          "dentro_poligono": false,
+          "distancia_borde_km": 0.77,
+          "detalle": "OSM: Arroyo Naranjo; fuera del polígono; 0.77 km del borde"
+        }
+      ],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Santa Amalia",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*amalia\\b",
+          "estado": "fuera",
+          "lat": 23.0755379,
+          "lon": -82.3647416,
+          "municipio_osm": "Arroyo Naranjo",
+          "display_name_osm": "Santa Amalia, Poey, Arroyo Naranjo, La Habana, 10055, Cuba",
+          "dentro_poligono": false,
+          "distancia_borde_km": 0.77,
+          "detalle": "OSM: Arroyo Naranjo; fuera del polígono; 0.77 km del borde"
+        }
+      ]
+    },
+    "resultado": "NO",
+    "confianza": "media",
+    "pertenece": false,
+    "motivo": "Sin ubicación en la ficha, pero el texto menciona un lugar fuera del municipio.",
+    "registro_original": {
+      "id_publicacion": 27,
+      "publicacion": {
+        "grupo": "✅Venta de casas🍀La Haba...",
+        "autor": "Abdiel Núñez",
+        "fecha": "Hace 4 días",
+        "titulo": "SE VENDE AMPLIA CASA DE DOS PLANTAS EN SANTA AMALIA, LA HABANA, CUBA"
+      },
+      "detalles_propiedad": {
+        "tipo": "Casa de dos plantas",
+        "ubicacion": "Santa Amalia, a solo 3 cuadras de la Calzada de 10 de Octubre",
+        "area_m2": 700,
+        "distribucion": [
+          "8 habitaciones",
+          "6 baños",
+          "Garaje de dos niveles con apartamento en la planta superior",
+          "Cocina y comedor amplio",
+          "2 salones espaciosos",
+          "Sala de juegos",
+          "2 terrazas grandes en la planta alta"
+        ],
+        "condicion": "Amplios espacios interiores y exteriores, ideal para una familia grande o para adaptación a diferentes proyectos"
+      },
+      "equipamiento_incluido": [
+        "Algunos muebles",
+        "5 camas"
+      ],
+      "precio": {
+        "monto": 130000,
+        "moneda": "USD"
+      },
+      "contacto": {
+        "metodo": "Mensaje privado",
+        "telefono": "51279170"
+      },
+      "motivo_eliminacion": "MUNICIPIO_DISTINTO_A_DIEZ_DE_OCTUBRE",
+      "patron_detectado": "santa amalia"
+    }
+  }
+]
