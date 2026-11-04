@@ -1,6 +1,6 @@
 # Informe Final: Mercado Inmobiliario Digital en Diez de Octubre
 
-Fecha de generación: 04/11/2026 06:58:11
+Fecha de generación: 04/11/2026 07:23:06
 Total de anuncios analizados: 171
 
 ## Introducción
@@ -11,7 +11,7 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
 
 - Los datos provienen de anuncios publicados en Revolico, portal de clasificados en línea de Cuba.
 - Se ha realizado un proceso de limpieza para eliminar anuncios con precios imposibles, municipios incorrectos, títulos sin información y anuncios no inmobiliarios.
-- Se han aplicado filtros de percentiles (P10-P90) para excluir outliers en el análisis de precios.
+- Se han aplicado filtros de percentiles (P10-P90) para excluir valores atípicos en el análisis de precios.
 - La clasificación de tipos de inmueble, zonas y características físicas se ha realizado mediante análisis de texto en los títulos de los anuncios.
 
 ## Las 30 preguntas y sus respuestas
@@ -19,23 +19,23 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
 ### Bloque A: Precios del mercado
 
 1. ¿Cuál es el precio promedio de venta en USD en Diez de Octubre?
-   > Respuesta: $23,326.53 USD (basado en 49 anuncios de venta con precio declarado)
+   > Respuesta: $22,880.00 USD (basado en 50 anuncios de venta con precio declarado)
 
 2. ¿Cuál es el precio mediano de alquiler en USD?
-   > Respuesta: $30,000.00 USD (basado en 1 anuncios de alquiler)
+   > Respuesta: No hay datos suficientes (solo hay 1 anuncio de alquiler con precio en USD).
 
 3. ¿Cuál es el rango de precios que cubre el 80% de los anuncios de venta?
    > Respuesta: Entre $7,000.00 y $45,000.00 USD (percentiles 10 y 90)
 
 4. ¿Cuál es el anuncio de venta más caro y el más barato publicado?
    > Anuncio más caro: $70,000 USD
-   > Anuncio más barato: $3,000 USD
+   > Anuncio más barato: $1,000 USD
 
 5. ¿Qué proporción de anuncios no declara precio?
    > Respuesta: 19.88% (34 de 171 anuncios)
 
 6. ¿Existe diferencia significativa entre el precio promedio de venta y el de alquiler?
-   > Respuesta: Sí. Precio promedio de venta: $23,326.53 USD vs. Precio mediano de alquiler: $30,000.00 USD. Diferencia: $-6,673.47 USD.
+   > Respuesta: No hay datos suficientes para comparar (solo hay 1 anuncio de alquiler con precio en USD).
 
 ### Bloque B: Tipos de inmueble
 
@@ -47,12 +47,11 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
    > Local: 2 anuncios
 
 8. ¿Qué porcentaje son casas independientes frente a apartamentos?
-   > Casas independientes: 1 (50.0%)
-   > Apartamentos: 1 (50.0%)
+   > Respuesta: No hay datos suficientes (menos de 10 anuncios con tipo claro).
 
 9. ¿Cuál es el precio promedio de venta por tipo de inmueble?
-   > Cuarto: $80,000.00 USD (n=1)
-   > Local: $45,000.00 USD (n=1)
+   > Cuarto: datos insuficientes (n=1)
+   > Local: datos insuficientes (n=1)
    > Inmueble: $40,500.00 USD (n=26)
    > Casa: $36,626.47 USD (n=68)
    > Apartamento: $19,425.00 USD (n=40)
@@ -61,11 +60,11 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
    > Respuesta: Inmueble con $180,000 USD
 
 11. ¿Cuántos anuncios son de venta frente a cuántos son de alquiler?
-   > Venta: 54 anuncios
+   > Venta: 56 anuncios
    > Alquiler: 22 anuncios
 
 12. ¿Qué tipo de inmueble domina en las zonas con precios más altos?
-   > Zona con precio promedio más alto: Calzada 10 de Octubre ($75,000.00 USD)
+   > Zona con precio promedio más alto: Calzada 10 de Octubre ($75,000.00 USD, 1 anuncios)
    > Tipo de inmueble dominante en esa zona: Inmueble
 
 ### Bloque C: Características físicas
@@ -74,15 +73,11 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
    > Respuesta: 3 cuartos (8 anuncios)
 
 14. ¿Cómo varía el precio según el número de cuartos?
-   > 1 cuarto(s): $10,000.00 USD (n=1)
    > 2 cuarto(s): $22,400.00 USD (n=5)
    > 3 cuarto(s): $37,166.67 USD (n=6)
-   > 4 cuarto(s): $65,500.00 USD (n=2)
-   > 5 cuarto(s): $120,000.00 USD (n=1)
-   > 7 cuarto(s): $65,000.00 USD (n=1)
 
 15. ¿Qué porcentaje de anuncios menciona garaje y cómo afecta al precio?
-   > [{'titulo': 'Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños', 'precio': 48000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362', 'permuta': False, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:51:58'}, {'titulo': 'Casa independiente en Santo Suárez con garaje', 'precio': 64000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/casa-independiente-en-santo-suarez-con-garaje-58176457', 'permuta': False, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:52:10'}, {'titulo': 'Vendo apartamento capitalista garaje último piso con balcón semi interior en la Víbora cerca del Tribunal provincial', 'precio': 15000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/vendo-apartamento-capitalista-garaje-ultimo-piso-con-balcon-semi-interior-en-la-vibora-cerca-del-tribunal-provincial-58325597', 'permuta': False, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:56:47'}, {'titulo': '11,000 USD Casa Colonial En Espada y Anima:Esquinas e/ Cine Pionero y Callejón de Hamel,Posib.d Garaje (114m)..,2 Cuadras d Infanta', 'precio': 11000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/espada-y-animacerca-del-cine-pionero-y-del-callejon-de-hamela-2-cuadras-d-infantaapto-colonial-puerta-y-ventanales-a-54609932', 'permuta': False, 'id_anuncio': 54609932, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '120,000 USD 🏡 ¡LA CASA DE TUS SUEÑOS! 😎 CASA INDEPENDIENTE CON JARDÍN, GARAJE Y 5 HABITACIONES', 'precio': 120000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/la-casa-de-tus-suenos-casa-independiente-con-jardin-garaje-y-5-habitaciones-57842493', 'permuta': False, 'id_anuncio': 57842493, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '34,000 USD 🏡 CASA INDEPENDIENTE CON GARAJE – EL SEVILLANO, 10 DE OCTUBRE 🏡', 'precio': 34000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/casa-independiente-con-garaje-el-sevillano-10-de-octubre-58361247', 'permuta': False, 'id_anuncio': 58361247, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '35,000 USD En venta biplanta en bajos con 4 cuartos y garaje en Casino Deportivo !!!', 'precio': 35000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/en-venta-biplanta-en-bajos-con-4-cuartos-y-garaje-en-casino-deportivo-57728706', 'permuta': False, 'id_anuncio': 57728706, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:46'}, {'titulo': '20,000 USD Casa en Arroyo Naranjo con garaje', 'precio': 20000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/casa-en-arroyo-naranjo-con-garaje-57564809', 'permuta': False, 'id_anuncio': 57564809, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:46'}] de 171 anuncios (4.7%) mencionan garaje.
+   > 8 de 171 anuncios (4.7%) mencionan garaje.
    > Precio promedio con garaje: $43,375.00 USD
    > Precio promedio sin garaje: $32,020.31 USD
    > Diferencia: $11,354.69 USD (las casas con garaje valen más en promedio)
@@ -112,6 +107,7 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
    > Lawton: 11 anuncios
    > La Víbora: 9 anuncios
    > El Sevillano: 8 anuncios
+   > Diez de Octubre: 6 anuncios
    > El Mónaco: 5 anuncios
    > Luyano: 4 anuncios
    > Santa Catalina: 1 anuncios
@@ -119,21 +115,21 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
    > Calzada 10 de Octubre: 1 anuncios
 
 20. ¿Qué zona tiene el precio promedio de venta más alto?
-   > Respuesta: Calzada 10 de Octubre con un precio promedio de $75,000.00 USD (1 anuncios)
+   > Respuesta: La Víbora con $52,277.78 USD promedio (9 anuncios)
 
 21. ¿Qué zona tiene la mayor cantidad de anuncios publicados?
    > Respuesta: Santos Suárez con 14 anuncios
 
 22. ¿Hay diferencia de precios entre zonas dentro del mismo municipio?
-   > Respuesta: Sí. La zona más cara es Calzada 10 de Octubre ($75,000.00 USD) y la más barata es Vía Blanca ($7,000.00 USD). Diferencia: $68,000.00 USD.
+   > Respuesta: Sí. La zona más cara es La Víbora ($52,277.78 USD) y la más barata es Luyano ($22,125.00 USD). Diferencia: $30,152.78 USD.
 
 23. ¿Qué zonas aparecen solo en venta o solo en alquiler?
    > Zonas solo en venta (6): El Mónaco, La Víbora, Lawton, Luyano, Santos Suárez, Vía Blanca
    > Zonas solo en alquiler (0): Ninguna
-   > Zonas en ambas categorías (1): El Sevillano
+   > Zonas en ambas categorías (2): Diez de Octubre, El Sevillano
 
 24. ¿Cuántos anuncios no especifican zona dentro del municipio?
-   > Respuesta: 117 de 171 anuncios (68.4%) no especifican zona dentro de Diez de Octubre.
+   > Respuesta: 111 de 171 anuncios (64.9%) no especifican zona dentro de Diez de Octubre.
 
 ### Bloque E: Moneda y mercado informal
 
@@ -142,7 +138,7 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
    > CUP: 1 anuncios (0.7%)
 
 26. ¿Cuál es el precio promedio de los anuncios declarados en CUP?
-   > Respuesta: 50,000.00 CUP (basado en 1 anuncios)
+   > Respuesta: No hay datos suficientes (solo 1 anuncio con precio en CUP).
 
 27. ¿Qué porcentaje de anuncios incluye palabras como 'oportunidad', 'ganga' o 'permuta'?
    > 15 de 171 anuncios (8.8%) incluyen palabras de mercado informal.
@@ -151,23 +147,22 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
       - Cambio: 1 menciones
 
 28. ¿Qué rango de precios es más frecuente para ventas en USD?
-   > Respuesta: El rango 10,000 - 20,000 es el más frecuente con 21 anuncios (42.9% de los anuncios de venta con precio USD).
+   > Respuesta: El rango 10,000 - 20,000 es el más frecuente con 21 anuncios (42.0% de los anuncios de venta con precio USD).
 
    Distribución completa:
-      10,000 - 20,000: 21 anuncios (42.9%)
-      30,000 - 40,000: 7 anuncios (14.3%)
-      0 - 10,000: 7 anuncios (14.3%)
-      20,000 - 30,000: 6 anuncios (12.2%)
-      40,000 - 50,000: 4 anuncios (8.2%)
-      60,000 - 70,000: 2 anuncios (4.1%)
-      70,000 - 80,000: 2 anuncios (4.1%)
+      10,000 - 20,000: 21 anuncios (42.0%)
+      0 - 10,000: 8 anuncios (16.0%)
+      30,000 - 40,000: 7 anuncios (14.0%)
+      20,000 - 30,000: 6 anuncios (12.0%)
+      40,000 - 50,000: 4 anuncios (8.0%)
+      60,000 - 70,000: 2 anuncios (4.0%)
+      70,000 - 80,000: 2 anuncios (4.0%)
 
 29. ¿Cuántos anuncios parecen ser de particulares frente a posibles anuncios repetidos o agencias (por lenguaje o título)?
    > Total de títulos únicos: 171
    > Anuncios con título único (probables particulares): 171
    > Anuncios con título repetido (posibles agencias o anuncios duplicados): 0 anuncios en 0 títulos repetidos
 
-   > Títulos repetidos (posibles agencias o anuncios duplicados):
 
 30. ¿Qué recomendación práctica se puede hacer a alguien que quiera comprar o alquilar en Diez de Octubre según estos datos?
 
@@ -210,7 +205,7 @@ Este informe presenta el análisis del mercado inmobiliario digital en el munici
 - Los datos provienen únicamente de anuncios publicados en un portal digital (Revolico), no representan la totalidad del mercado físico.
 - Muchos anuncios no declaran precio ni ubicación específica dentro del municipio.
 - La detección de municipio y zona se basa en palabras clave presentes en el título y el enlace del anuncio, lo que puede generar falsos positivos.
-- La muestra es limitada (270 anuncios limpios) y puede no ser representativa del mercado completo.
+- La muestra es limitada (171 anuncios limpios) y puede no ser representativa del mercado completo.
 
 ---
 Informe generado automáticamente por el Proyecto de Ciencia de Datos - Universidad de La Habana
