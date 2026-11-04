@@ -49,8 +49,10 @@ La pregunta inicial —**¿cuánto cuesta realmente vivir en Diez de Octubre?**�
 proyecto-mercado-10-octubre/
 ├── README.md
 ├── analisis/
-│   ├── informe_final.md                 # Informe final con las 30 preguntas
+│   ├── informe_final.md                 # Informe final A-F con las 30 preguntas
 │   ├── informe_final.pdf                # Entrega académica en PDF
+│   ├── informe_30_preguntas_originales_reemplazadas.md   # Versión revisada: 20 preguntas originales + 10 reemplazos
+│   ├── informe_30_preguntas_originales_reemplazadas.pdf  # PDF de la versión revisada
 │   ├── telefonos_y_enlaces.txt          # Teléfonos y enlaces de anuncios
 │   └── limpieza/                        # Material histórico de limpieza manual
 ├── datos/
@@ -61,9 +63,10 @@ proyecto-mercado-10-octubre/
 │       ├── datos_unificados_facebook_revolico.json   # Facebook + Revolico (410 registros, no usado en el informe)
 │       └── reporte_analisis_precios_rango_p10_p90.txt
 ├── scripts/
-│   ├── analisis_final_30_preguntas.py   # Generador canónico del informe
+│   ├── analisis_final_30_preguntas.py   # Generador canónico del informe A-F
+│   ├── analisis_30_preguntas_originales_reemplazadas.py  # Generador de la versión revisada
 │   ├── analisis_precios_rango_p10_p90.py
-│   ├── generar_pdf_informe.py           # Conversión Markdown -> PDF
+│   ├── generar_pdf_informe.py           # Conversión Markdown -> PDF (acepta --input/--output)
 │   ├── limpieza_final_municipio.py
 │   ├── verificar_y_actualizar_anuncios.py
 │   ├── limpiar_datos_brutos.py
@@ -134,11 +137,32 @@ Las preguntas se organizan en seis bloques sociales. Cada respuesta del informe 
 - **F4.** ¿La diferencia se mantiene en el rango P10–P90?
 - **F5.** ¿Qué tipo concentra más opacidad de precio y zona?
 
+## Versión revisada del cuestionario original
+
+Además del informe A-F, el repositorio incluye una segunda versión que parte del **cuestionario original de 30 preguntas** y conserva su numeración. Se mantienen **20 preguntas** y se reemplazan **10** que no tenían respaldo suficiente en la base de 134 anuncios:
+
+| # | Pregunta original | Motivo | Reemplazo |
+|---|---|---|---|
+| 10 | ¿Qué tipo de inmueble concentra el precio máximo declarado? | Depende de un solo anuncio (n = 1). | ¿Cuál es la mediana del precio en USD por tipo de inmueble? |
+| 12 | ¿Qué tipo de inmueble domina en la zona con el precio promedio más alto? | La Víbora solo tiene 9 anuncios con precio (n = 9). | ¿La declaración de precio depende de que el anuncio identifique zona? |
+| 13 | ¿Cuál es la cantidad más común de cuartos/habitaciones? | Solo 14 anuncios permiten extraer un número explícito de cuartos. | ¿Qué proporción de anuncios es totalmente opaca? |
+| 14 | ¿Cómo varía el precio según el número de cuartos? | Solo 12 anuncios combinan cuartos y precio en USD. | ¿Qué proporción de anuncios ofrece información completa (precio y zona)? |
+| 15 | ¿Qué porcentaje menciona garaje y cómo se relaciona con el precio? | Solo 7 anuncios mencionan garaje. | ¿La opacidad de precio y zona es mayor en alquiler o en venta? |
+| 16 | ¿Cuántos anuncios especifican 'planta baja' y cuál es su precio promedio? | Solo 8 anuncios mencionan planta baja o bajos. | ¿Qué tipo de inmueble presenta mayor opacidad? |
+| 20 | ¿Qué zona tiene el precio promedio más alto? | La Víbora tiene 9 anuncios y un valor extremo de $180,000. | ¿Qué porcentaje de anuncios queda dentro del tramo P10–P90? |
+| 22 | ¿Hay diferencia de precios entre zonas? | Se apoya en grupos de 9 y 10 anuncios y en medias sensibles a extremos. | ¿Cuánto cambia el precio promedio al recortar 10% de cada cola? |
+| 26 | ¿Los anuncios informales declaran precio más que los neutros? | Solo 15 anuncios usan lenguaje informal. | ¿Cómo se distribuye la informalidad según la operación? |
+| 29 | ¿Cuántos anuncios parecen de particulares frente a agencias? | La base no tiene campo de vendedor ni de agencia. | ¿Qué proporción no declara operación y cómo se distribuye por tipo? |
+
+El informe completo está en `analisis/informe_30_preguntas_originales_reemplazadas.md` y su PDF en `analisis/informe_30_preguntas_originales_reemplazadas.pdf`. Todas las respuestas usan la base corregida de 134 anuncios, indican `n` y nivel de evidencia, y tratan la ausencia de datos como hallazgo.
+
 ## Trazabilidad del cambio respecto a la versión anterior
 
 La versión anterior respondía 30 preguntas sobre 171 anuncios, pero 37 de ellos mencionaban otros municipios y contaminaban la base. Esas cifras quedan supersedidas por la base estricta de 134 anuncios.
 
 Además, cinco preguntas originales no eran estimables con los datos disponibles: mediana del alquiler, comparación de precios compra–alquiler, precio por metro cuadrado, zonas por operación y precio promedio en CUP. En esta versión se reemplazan por preguntas que sí pueden responderse, incluyendo varias que miden la ausencia de información. El detalle completo está en `analisis/informe_final.md`.
+
+Esta trazabilidad corresponde al informe A-F. La versión revisada del cuestionario original, con sus 10 reemplazos, se documenta en la sección anterior y en `analisis/informe_30_preguntas_originales_reemplazadas.md`.
 
 ## Cómo regenerar el informe
 
@@ -147,10 +171,11 @@ Desde la raíz del proyecto:
 ```bash
 python3 scripts/limpieza_final_municipio.py
 python3 scripts/analisis_final_30_preguntas.py
+python3 scripts/analisis_30_preguntas_originales_reemplazadas.py
 python3 scripts/analisis_precios_rango_p10_p90.py
 ```
 
-El primer script lee `datos/brutos/revolico_crudos_limpio.json` (270 anuncios), aplica el filtro estricto y escribe `datos/brutos/revolico_crudos_limpio_final.json` (134 anuncios) y `datos/limpios/anuncios_eliminados_por_filtro_final.json` (136 rechazados). El segundo lee la base de 134 y escribe `analisis/informe_final.md`. La fecha de generación cambia en cada ejecución, aunque las cifras se mantengan.
+El primer script lee `datos/brutos/revolico_crudos_limpio.json` (270 anuncios), aplica el filtro estricto y escribe `datos/brutos/revolico_crudos_limpio_final.json` (134 anuncios) y `datos/limpios/anuncios_eliminados_por_filtro_final.json` (136 rechazados). El segundo lee la base de 134 y escribe `analisis/informe_final.md`. El tercero lee la misma base y escribe la versión revisada del cuestionario original. La fecha de generación cambia en cada ejecución, aunque las cifras se mantengan.
 
 ## Cómo generar la entrega en PDF
 
@@ -159,9 +184,13 @@ python3 -m venv .venv-docs
 source .venv-docs/bin/activate
 pip install -r requirements-docs.txt
 python3 scripts/generar_pdf_informe.py
+python3 scripts/generar_pdf_informe.py \
+    --input analisis/informe_30_preguntas_originales_reemplazadas.md \
+    --output analisis/informe_30_preguntas_originales_reemplazadas.pdf \
+    --subtitle "Versión revisada — 20 preguntas originales y 10 reemplazos"
 ```
 
-El PDF se guarda en `analisis/informe_final.pdf` e incluye portada, tablas, numeración de páginas y los datos académicos (MATCOM y profesor).
+El PDF se guarda en `analisis/informe_final.pdf` (o en la ruta indicada con `--output`) e incluye portada, tablas, numeración de páginas y los datos académicos (MATCOM y profesor).
 
 ## Pipeline de datos (resumen)
 
@@ -170,7 +199,8 @@ El PDF se guarda en `analisis/informe_final.pdf` e incluye portada, tablas, nume
 3. `scripts/limpiar_datos_brutos.py`: elimina anomalías graves.
 4. `scripts/limpieza_final_municipio.py`: aplica el filtro estricto de Diez de Octubre y precio mínimo; produce la base de 134 anuncios.
 5. `scripts/analisis_final_30_preguntas.py`: genera el informe final con las 30 preguntas A1–F5.
-6. `scripts/analisis_precios_rango_p10_p90.py`: genera el reporte de P10–P90.
+6. `scripts/analisis_30_preguntas_originales_reemplazadas.py`: genera la versión revisada del cuestionario original (20 preguntas conservadas + 10 reemplazos).
+7. `scripts/analisis_precios_rango_p10_p90.py`: genera el reporte de P10–P90.
 
 > Los scripts `mezclar_facebook_revolico*.py` requieren exportaciones locales de Facebook y no forman parte de la generación del informe final; se conservan como material de exploración.
 

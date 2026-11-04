@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Convierte el informe final de Markdown a PDF con portada académica.
+Convierte un informe de Markdown a PDF con portada académica.
 
-Lee:  analisis/informe_final.md
-Escribe: analisis/informe_final.pdf
+Uso:
+    python3 scripts/generar_pdf_informe.py
+    python3 scripts/generar_pdf_informe.py \
+        --input analisis/informe_30_preguntas_originales_reemplazadas.md \
+        --output analisis/informe_30_preguntas_originales_reemplazadas.pdf \
+        --subtitle "Versión revisada — 20 preguntas originales y 10 reemplazos"
 
 Requiere las dependencias de requirements-docs.txt:
     pip install -r requirements-docs.txt
 """
 
+import argparse
 import re
 from pathlib import Path
 
@@ -24,8 +29,9 @@ except ImportError as exc:  # pragma: no cover - mensaje de ayuda
     )
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-INPUT_FILE = BASE_DIR / "analisis" / "informe_final.md"
-OUTPUT_FILE = BASE_DIR / "analisis" / "informe_final.pdf"
+DEFAULT_INPUT = BASE_DIR / "analisis" / "informe_final.md"
+DEFAULT_OUTPUT = BASE_DIR / "analisis" / "informe_final.pdf"
+DEFAULT_SUBTITLE = "Informe final — 30 preguntas de investigación"
 
 
 def extraer_metadatos(texto):
@@ -223,7 +229,7 @@ hr {
 """
 
 
-def construir_html(cuerpo_html, meta):
+def construir_html(cuerpo_html, meta, subtitle=DEFAULT_SUBTITLE):
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -241,7 +247,7 @@ def construir_html(cuerpo_html, meta):
     </div>
     <div class="cover-title">
         <h1>Mercado Inmobiliario Digital en Diez de Octubre</h1>
-        <p class="subtitle">Informe final — 30 preguntas de investigación</p>
+        <p class="subtitle">{subtitle}</p>
         <p class="place">La Habana, Cuba</p>
     </div>
     <div class="cover-meta">
@@ -261,25 +267,48 @@ def construir_html(cuerpo_html, meta):
 
 
 def main():
-    if not INPUT_FILE.exists():
+    parser = argparse.ArgumentParser(
+        description="Convierte un informe Markdown en PDF con portada académica."
+    )
+    parser.add_argument(
+        "--input",
+        default=str(DEFAULT_INPUT),
+        help="Ruta del informe Markdown de entrada.",
+    )
+    parser.add_argument(
+        "--output",
+        default=str(DEFAULT_OUTPUT),
+        help="Ruta del PDF de salida.",
+    )
+    parser.add_argument(
+        "--subtitle",
+        default=DEFAULT_SUBTITLE,
+        help="Subtítulo que aparece en la portada.",
+    )
+    args = parser.parse_args()
+
+    input_file = Path(args.input)
+    output_file = Path(args.output)
+
+    if not input_file.exists():
         raise SystemExit(
-            f"No se encontró {INPUT_FILE}. Ejecuta primero "
-            "scripts/analisis_final_30_preguntas.py"
+            f"No se encontró {input_file}. Ejecuta primero el generador del informe."
         )
 
-    texto = INPUT_FILE.read_text(encoding="utf-8")
+    texto = input_file.read_text(encoding="utf-8")
     meta = extraer_metadatos(texto)
     cuerpo_md = preparar_cuerpo(texto)
     cuerpo_html = markdown.markdown(
         cuerpo_md,
         extensions=["tables", "sane_lists", "fenced_code"],
     )
-    html = construir_html(cuerpo_html, meta)
+    html = construir_html(cuerpo_html, meta, args.subtitle)
 
     documento = HTML(string=html, base_url=str(BASE_DIR)).render()
-    documento.write_pdf(str(OUTPUT_FILE))
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    documento.write_pdf(str(output_file))
 
-    print(f"PDF guardado en: {OUTPUT_FILE}")
+    print(f"PDF guardado en: {output_file}")
     print(f"Páginas: {len(documento.pages)}")
 
 
