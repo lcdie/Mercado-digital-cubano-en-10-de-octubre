@@ -92,8 +92,6 @@ def main():
     ventas_usd = [a for a in ventas if a.get("precio") is not None
                   and str(a.get("moneda", "")).upper() == "USD"]
     alquileres_con_precio = [a for a in alquileres if a.get("precio") is not None]
-    alquileres_usd = [a for a in alquileres if a.get("precio") is not None
-                      and str(a.get("moneda", "")).upper() == "USD"]
 
     stats_usd = base.stats([a["precio"] for a in usd])
     stats_venta = base.stats([a["precio"] for a in ventas_usd])
@@ -109,15 +107,9 @@ def main():
     for a in usd:
         if a["_zona"] != "No especificado":
             precios_zona[a["_zona"]].append(a["precio"])
-    stats_zona = {z: base.stats(v) for z, v in precios_zona.items()}
     zonas_5 = {z: v for z, v in precios_zona.items() if len(v) >= 5}
-    stats_zona_5 = {z: stats_zona[z] for z in zonas_5}
+    stats_zona_5 = {z: base.stats(v) for z, v in zonas_5.items()}
     zona_cara_5 = max(zonas_5, key=lambda z: stats_zona_5[z]["mean"])
-    zona_cara_10 = None
-    zonas_10 = {z: v for z, v in precios_zona.items() if len(v) >= 10}
-    if zonas_10:
-        zona_cara_10 = max(zonas_10, key=lambda z: stats_zona[z]["mean"])
-    zona_mediana_alta_5 = max(zonas_5, key=lambda z: stats_zona_5[z]["median"])
 
     # Tipos
     tipos = Counter(a["_tipo"] for a in anuncios)

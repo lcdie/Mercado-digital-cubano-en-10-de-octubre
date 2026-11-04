@@ -1,7 +1,7 @@
 # Mercado inmobiliario digital en Diez de Octubre
 ## Versión revisada: 30 preguntas originales con 10 reemplazos
 
-**Fecha de generación:** 04/11/2026 08:58
+**Fecha de generación:** 04/11/2026 09:59
 **Corte de los datos:** 2026-10-31
 **Fuente:** Revolico (anuncios activos)
 **Universo estricto:** 134 anuncios de Diez de Octubre

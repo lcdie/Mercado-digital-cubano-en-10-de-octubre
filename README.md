@@ -229,7 +229,7 @@ El PDF se guarda en `analisis/informe_final.pdf` (o en la ruta indicada con `--o
 El proyecto incluye materiales para una exposición de aproximadamente 5–10 minutos, pensada para personas sin conocimientos técnicos ni del tema inmobiliario. Se recomienda presentar:
 
 1. El problema social: opacidad, dolarización, desigualdad territorial e informalidad en el mercado inmobiliario digital.
-2. La fuente y la corrección de la base: 134 anuncios estrictos de Diez de Octubre (37 anuncios contaminados retirados).
+2. La fuente y la corrección de la base: 134 anuncios estrictos de Diez de Octubre (136 anuncios descartados: 133 por otro municipio o localidad y 3 por precio inferior a 1,000 USD).
 3. Los hallazgos principales: precio mediano de compra, brecha territorial medida con medianas, dolarización y opacidad.
 4. Qué significa esto para una persona común: no solo cuánto cuesta, sino qué información falta y quién puede acceder a ella.
 5. Limitaciones y ausencia de datos como parte del resultado.
