@@ -1,6 +1,6 @@
 # Informe Final: Mercado Inmobiliario Digital en Diez de Octubre
 
-**Fecha de generación:** 04/11/2026 08:22
+**Fecha de generación:** 04/11/2026 08:23
 **Universo analizado:** 171 anuncios limpios de Revolico
 **Anuncios con precio en USD:** 136
 
@@ -34,7 +34,7 @@ Cinco preguntas del cuestionario original no podían responderse con una base m�
 | 23 | ¿Qué zonas concentran más anuncios de venta y de alquiler? | Solo una zona tiene algún anuncio de alquiler. | ¿Qué proporción de los anuncios con zona identificada se concentra en las cuatro zonas principales? |
 | 26 | ¿Cuál es el precio promedio en CUP? | Solo 1 anuncio declara precio en CUP. | ¿Los anuncios con lenguaje informal declaran precio con más frecuencia que los neutros? |
 
-Además de esas cinco sustituciones, la **Q1** se reformuló de «precio promedio de venta» a «precio promedio de los anuncios con precio declarado en USD», porque solo 50 anuncios se identifican explícitamente como venta. Por la misma razón, **Q20** y **Q28** se expresan sobre anuncios con precio en USD. Cuando aporta información, se reporta por separado el subconjunto de ventas explícitas (Q1, Q2 y Q11).
+Además de esas cinco sustituciones, la **Q1** se reformuló de «precio promedio de venta» a «precio promedio de los anuncios con precio declarado en USD», porque solo 50 anuncios de venta explícita declaran precio en USD. Por la misma razón, **Q20** y **Q28** se expresan sobre anuncios con precio en USD. Cuando aporta información, se reporta por separado el subconjunto de ventas explícitas con precio en USD (Q1, Q2 y Q11).
 
 ## Las 30 preguntas y sus respuestas
 
@@ -42,11 +42,11 @@ Además de esas cinco sustituciones, la **Q1** se reformuló de «precio promedi
 
 **1. ¿Cuál es el precio promedio de los anuncios con precio declarado en USD en Diez de Octubre?**
 
-> **$32,688.24 USD** (n = 136). Si se excluyen los valores extremos y se calcula sobre el tramo P10–P90, el promedio baja a **$28,131.82 USD** (n = 110). Si se restringe a los 50 anuncios que se identifican explícitamente como venta, el promedio es **$22,880.00 USD**.
+> **$32,688.24 USD** (n = 136). Si se excluyen los valores extremos y se calcula sobre el tramo P10–P90, el promedio baja a **$28,131.82 USD** (n = 110). Si se restringe a los 50 anuncios de venta explícita que declaran precio en USD, el promedio es **$22,880.00 USD**.
 
 **2. ¿Cuál es el precio mediano de los anuncios con precio declarado en USD?**
 
-> **$24,000.00 USD** (n = 136). La mediana es menor que la media porque unos pocos anuncios muy caros elevan el promedio. En el subconjunto de ventas explícitas, la mediana es **$17,000.00 USD** (n = 50).
+> **$24,000.00 USD** (n = 136). La mediana es menor que la media porque unos pocos anuncios muy caros elevan el promedio. En el subconjunto de ventas explícitas con precio en USD, la mediana es **$17,000.00 USD** (n = 50).
 
 **3. ¿Cuál es el rango de precios que cubre el 80% central de los anuncios?**
 
@@ -206,7 +206,7 @@ Además de esas cinco sustituciones, la **Q1** se reformuló de «precio promedi
 
 **30. ¿Qué recomendación práctica se puede hacer a alguien que quiera comprar o alquilar en Diez de Octubre?**
 
-> 1. **Presupuesto:** la mediana de los anuncios con precio en USD es **$24,000.00 USD** (en ventas explícitas, **$17,000.00 USD**) y el 80% central de los precios está entre **$8,000.00 y $70,000.00 USD**. El tramo más frecuente es **10,000 - 20,000 USD** (34 anuncios, 25.0%).
+> 1. **Presupuesto:** la mediana de los anuncios con precio en USD es **$24,000.00 USD** (en ventas explícitas con precio en USD, **$17,000.00 USD**) y el 80% central de los precios está entre **$8,000.00 y $70,000.00 USD**. El tramo más frecuente es **10,000 - 20,000 USD** (34 anuncios, 25.0%).
 > 2. **Tipo de inmueble:** un apartamento promedia **$19,425.00 USD** (n = 40) y una casa **$36,626.47 USD** (n = 68); el apartamento es la opción más económica.
 > 3. **Zonas:** Santos Suárez concentra la mayor oferta (14 anuncios), seguida por Lawton (11) y La Víbora (9). El promedio más alto entre zonas con al menos 5 anuncios con precio es La Víbora (**$52,277.78 USD**, n = 9), mientras que Lawton (**$23,600.00 USD**, n = 10) es la alternativa más económica de ese grupo.
 > 4. **Moneda:** el mercado está dolarizado: **136 de 137 anuncios con moneda declarada (99.3%)** usan USD. Hay que contar con divisas o verificar el tipo de cambio si se paga en CUP.

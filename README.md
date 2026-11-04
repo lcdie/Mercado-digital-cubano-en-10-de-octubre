@@ -141,7 +141,7 @@ Cinco preguntas del cuestionario original no tenían base suficiente y se sustit
 | 23 | Zonas con más venta y alquiler | Solo una zona tiene algún alquiler | Concentración en las cuatro zonas principales |
 | 26 | Precio promedio en CUP | Solo 1 anuncio declara precio en CUP | Lenguaje informal y declaración de precio |
 
-Además, **Q1** se reformuló de «precio de venta» a «anuncios con precio declarado en USD», porque solo 50 anuncios se identifican explícitamente como venta. Por la misma razón, **Q20** y **Q28** se expresan sobre anuncios con precio en USD. El subconjunto de ventas explícitas se reporta por separado (media $22,880, mediana $17,000, n = 50).
+Además, **Q1** se reformuló de «precio de venta» a «anuncios con precio declarado en USD», porque solo 50 anuncios de venta explícita declaran precio en USD. Por la misma razón, **Q20** y **Q28** se expresan sobre anuncios con precio en USD. El subconjunto de ventas explícitas con precio en USD se reporta por separado (media $22,880, mediana $17,000, n = 50).
 
 ## Cómo regenerar el informe
 
@@ -173,6 +173,8 @@ El PDF se guarda en `analisis/informe_final.pdf` e incluye portada, tablas, nume
 4. `scripts/limpieza_final_municipio.py`: aplica el filtro estricto de Diez de Octubre y precio mínimo.
 5. `scripts/analisis_final_30_preguntas.py`: genera el informe final.
 6. `scripts/analisis_precios_rango_p10_p90.py`: genera el reporte de P10–P90.
+
+> Los scripts `mezclar_facebook_revolico*.py` requieren exportaciones locales de Facebook y no forman parte de la generación del informe final; se conservan como material de exploración.
 
 ## Herramientas utilizadas
 
