@@ -24,6 +24,7 @@ La pregunta inicial —**¿cuánto cuesta realmente vivir en Diez de Octubre?**�
 | **Revolico** (scraping propio) | Fuente principal y única usada en los cálculos: **134 anuncios estrictos** de Diez de Octubre, con precios, tipos, zonas y moneda cuando están disponibles. |
 | **Anuario Estadístico de Cuba (ONEI)** | Contexto oficial del municipio (población, vivienda y tenencia); no se usa para calcular precios ni proporciones de la muestra digital. |
 | **Facebook** (grupos de compraventa) | Fuente explorada: **43 publicaciones capturadas**, **42 conservadas** tras aplicar el mismo filtro municipal y de precio que a Revolico. Se integran en una base unificada separada (176 registros: 134 de Revolico + 42 de Facebook), no usada en el informe A-F. |
+| **GeoJSON provincial de La Habana** | `datos/geo/lha.geojson`: 15 municipios. Se usa para verificar la pertenencia real de cada publicación al municipio Diez de Octubre mediante el polígono municipal (`DPA 23.09`). |
 
 > **El Caimán fue descartado:** sus datos no correspondían al municipio Diez de Octubre. No se usa en ninguna cifra del informe.
 
@@ -43,6 +44,25 @@ La pregunta inicial —**¿cuánto cuesta realmente vivir en Diez de Octubre?**�
 - **Facebook:** 43 publicaciones capturadas; 42 conservadas y 1 rechazada por mencionar Santa Amalia, fuera del filtro estricto. Se normalizaron tipo, zona, operación, distribución y contacto. La base unificada limpia queda en 176 registros (134 Revolico + 42 Facebook) y no se usa para las cifras del informe A-F, porque su esquema original no comparte el municipio normalizado de Revolico.
 - **Campo `municipio`:** no es fiable. Todos los anuncios aparecen como «Diez de Octubre», incluso los de otros municipios. Por eso el filtro revisa título y enlace, y la exclusión municipal tiene prioridad sobre ese campo.
 
+## Verificación real de pertenencia municipal
+
+La etiqueta «Diez de Octubre» de la base de 134 no equivale a pertenencia verificada. Para comprobarlo se usó el polígono del municipio en `datos/geo/lha.geojson` y tres evidencias por publicación:
+
+1. la ubicación declarada por la propia ficha de Revolico (`data-cy="adLocation"`);
+2. los topónimos del título, la zona y la ubicación del anuncio;
+3. la geocodificación de esos topónimos con Nominatim y su comprobación punto-en-polígono.
+
+| Resultado | Revolico (n=134) | Facebook (n=42) | Unificado (n=176) |
+|---|---:|---:|---:|
+| SÍ, dentro de Diez de Octubre | 75 | 39 | 114 |
+| NO, otro municipio | 46 | 0 | 46 |
+| CONTRADICTORIO | 8 | 0 | 8 |
+| INDETERMINADO | 5 | 3 | 8 |
+
+**Hallazgo:** de los 134 anuncios llamados «estrictos», solo **75** están confirmados en Diez de Octubre (73 fichas que declaran el municipio + 2 anuncios sin ficha recuperable pero con el municipio explícito en el título). **54 fichas declaran otro municipio** y 5 no son verificables. La base depurada de confirmados queda en **114 registros** (75 Revolico + 39 Facebook) en `datos/limpios/unificado_confirmados_diez_octubre.json`. No se sobrescribió la base canónica de 134 ni el informe A-F: la decisión de recalcular el informe con la base depurada sigue pendiente.
+
+El detalle publicación por publicación está en `analisis/verificacion_municipal_geojson_20261104.md`.
+
 ## Estructura del repositorio
 
 ```text
@@ -54,18 +74,28 @@ proyecto-mercado-10-octubre/
 │   ├── informe_30_preguntas_originales_reemplazadas.md   # Versión revisada: 20 preguntas originales + 10 reemplazos
 │   ├── informe_30_preguntas_originales_reemplazadas.pdf  # PDF de la versión revisada
 │   ├── reporte_limpieza_facebook_20261104.md              # Limpieza y unificación de Facebook
+│   ├── verificacion_municipal_geojson_20261104.md         # Verificación publicación por publicación contra el polígono
 │   ├── telefonos_y_enlaces.txt          # Teléfonos y enlaces de anuncios
 │   └── limpieza/                        # Material histórico de limpieza manual
 ├── datos/
 │   ├── brutos/
 │   │   ├── facebook_crudos_20261104.json       # Captura original de Facebook (43 publicaciones)
-│   │   └── revolico_crudos_limpio_final.json    # Base de análisis (134 anuncios)
+│   │   ├── revolico_crudos_limpio_final.json    # Base de análisis (134 anuncios)
+│   │   └── revolico_ubicaciones_pagina.json     # Ubicación declarada por cada ficha de Revolico
+│   ├── geo/
+│   │   ├── lha.geojson                          # 15 municipios de La Habana
+│   │   └── geocoding_lha.json                   # Caché de geocodificación de topónimos
 │   └── limpios/
 │       ├── anuncios_eliminados_por_filtro_final.json  # 136 rechazados y su motivo
 │       ├── facebook_publicaciones_limpias.json  # Facebook tras filtro y normalización (42)
 │       ├── facebook_eliminados_por_filtro.json  # Publicación de Facebook rechazada y motivo
 │       ├── datos_unificados_facebook_revolico.json   # Base unificada limpia (176: 134 Revolico + 42 Facebook)
-│       └── reporte_analisis_precios_rango_p10_p90.txt
+│       ├── reporte_analisis_precios_rango_p10_p90.txt
+│       ├── verificacion_municipal_revolico.json      # Verificación municipal de los 134 anuncios
+│       ├── verificacion_municipal_facebook.json      # Verificación municipal de Facebook (42 + 1 rechazada)
+│       ├── verificacion_municipal_unificado.json     # Verificación municipal de los 176 registros
+│       ├── verificacion_municipal.csv                # Resumen tabular de la verificación
+│       └── unificado_confirmados_diez_octubre.json   # Base depurada: 114 registros confirmados
 ├── scripts/
 │   ├── analisis_final_30_preguntas.py   # Generador canónico del informe A-F
 │   ├── analisis_30_preguntas_originales_reemplazadas.py  # Generador de la versión revisada
@@ -74,6 +104,9 @@ proyecto-mercado-10-octubre/
 │   ├── limpieza_final_municipio.py
 │   ├── limpiar_facebook.py              # Limpieza y normalización de Facebook
 │   ├── mezclar_facebook_revolico.py     # Unificación de las bases limpias
+│   ├── geo_municipio.py                 # Polígono municipal, point-in-polygon y geocodificación
+│   ├── verificar_ubicaciones_revolico.py        # Extrae la ubicación de cada ficha de Revolico
+│   ├── verificar_municipio_publicaciones.py     # Verificación municipal y reporte
 │   ├── verificar_y_actualizar_anuncios.py
 │   ├── limpiar_datos_brutos.py
 │   ├── generar_lista_limpia.py
@@ -180,9 +213,14 @@ python3 scripts/analisis_30_preguntas_originales_reemplazadas.py
 python3 scripts/analisis_precios_rango_p10_p90.py
 python3 scripts/limpiar_facebook.py
 python3 scripts/mezclar_facebook_revolico.py
+# Verificación municipal con el GeoJSON (no sobrescribe el informe A-F)
+python3 scripts/verificar_ubicaciones_revolico.py
+python3 scripts/verificar_municipio_publicaciones.py
 ```
 
 El primer script lee `datos/brutos/revolico_crudos_limpio.json` (270 anuncios), aplica el filtro estricto y escribe `datos/brutos/revolico_crudos_limpio_final.json` (134 anuncios) y `datos/limpios/anuncios_eliminados_por_filtro_final.json` (136 rechazados). El segundo lee la base de 134 y escribe `analisis/informe_final.md`. El tercero lee la misma base y escribe la versión revisada del cuestionario original. `limpiar_facebook.py` lee la captura `facebook_crudos_20261104.json`, aplica el mismo filtro municipal y de precio, y escribe la base limpia de Facebook y sus rechazos. `mezclar_facebook_revolico.py` une las dos bases limpias en `datos_unificados_facebook_revolico.json`. La fecha de generación cambia en cada ejecución, aunque las cifras se mantengan.
+
+Los dos últimos scripts son independientes del informe: `verificar_ubicaciones_revolico.py` descarga y guarda la ubicación que declara cada ficha de Revolico; `verificar_municipio_publicaciones.py` combina esa ubicación con el polígono de `datos/geo/lha.geojson`, geocodifica los topónimos y escribe la verificación municipal y la base depurada de 114 confirmados. La geocodificación usa la caché `datos/geo/geocoding_lha.json`, por lo que solo consulta Nominatim para topónimos nuevos.
 
 ## Cómo generar la entrega en PDF
 
@@ -210,6 +248,8 @@ El PDF se guarda en `analisis/informe_final.pdf` (o en la ruta indicada con `--o
 7. `scripts/analisis_final_30_preguntas.py`: genera el informe final con las 30 preguntas A1–F5.
 8. `scripts/analisis_30_preguntas_originales_reemplazadas.py`: genera la versión revisada del cuestionario original (20 preguntas conservadas + 10 reemplazos).
 9. `scripts/analisis_precios_rango_p10_p90.py`: genera el reporte de P10–P90.
+10. `scripts/verificar_ubicaciones_revolico.py`: extrae la ubicación declarada por cada ficha de Revolico.
+11. `scripts/verificar_municipio_publicaciones.py`: verifica publicación por publicación contra el polígono de Diez de Octubre y produce el reporte y la base depurada de 114 confirmados.
 
 > La base unificada de 176 registros es material de exploración y no alimenta las cifras del informe A-F. El informe sigue usando solo los 134 anuncios estrictos de Revolico.
 
@@ -224,6 +264,8 @@ El PDF se guarda en `analisis/informe_final.pdf` (o en la ruta indicada con `--o
 ## Limitaciones
 
 - Los datos del informe provienen únicamente de Revolico; no representan la totalidad del mercado físico. La base unificada añade 42 publicaciones de Facebook con fines exploratorios, pero no se usa en las cifras del informe.
+- **La base de 134 es una muestra etiquetada, no verificada:** la comprobación con el GeoJSON confirma solo 75 anuncios dentro de Diez de Octubre; 54 fichas declaran otro municipio. Las cifras del informe A-F deben leerse con esa salvedad hasta que se decida recalcularlas con la base depurada de 114.
+- La verificación municipal depende de la ubicación que declara el anunciante y de topónimos geocodificados a un punto representativo, no de la dirección exacta de la propiedad.
 - Facebook se exploró (43 publicaciones; 42 tras el filtro municipal y de precio) y se normalizó, pero no se integró al análisis cuantitativo porque su esquema original no comparte el municipio normalizado de Revolico.
 - **17 de 134 anuncios (12.7%)** no declaran precio y **80 (59.7%)** no especifican zona. No se imputan valores ni ubicaciones: la ausencia se reporta como hallazgo.
 - **Solo 51 de 134 (38.1%)** permiten cruzar precio y zona; **14 (10.4%)** carecen de ambos datos.
