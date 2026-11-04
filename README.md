@@ -23,7 +23,7 @@ La pregunta inicial —**¿cuánto cuesta realmente vivir en Diez de Octubre?**�
 |--------|--------------------|
 | **Revolico** (scraping propio) | Fuente principal y única usada en los cálculos: **134 anuncios estrictos** de Diez de Octubre, con precios, tipos, zonas y moneda cuando están disponibles. |
 | **Anuario Estadístico de Cuba (ONEI)** | Contexto oficial del municipio (población, vivienda y tenencia); no se usa para calcular precios ni proporciones de la muestra digital. |
-| **Facebook** (grupos de compraventa) | Fuente explorada: 37 publicaciones revisadas, excluidas del análisis cuantitativo por falta de un esquema homogéneo y de municipio normalizado. Se conservan para una ampliación futura. |
+| **Facebook** (grupos de compraventa) | Fuente explorada: **43 publicaciones capturadas**, **42 conservadas** tras aplicar el mismo filtro municipal y de precio que a Revolico. Se integran en una base unificada separada (176 registros: 134 de Revolico + 42 de Facebook), no usada en el informe A-F. |
 
 > **El Caimán fue descartado:** sus datos no correspondían al municipio Diez de Octubre. No se usa en ninguna cifra del informe.
 
@@ -40,7 +40,7 @@ La pregunta inicial —**¿cuánto cuesta realmente vivir en Diez de Octubre?**�
 - **Tamaño de muestra:** cada respuesta indica su `n`. Los subgrupos con `n < 10` se presentan como evidencia descriptiva, no como conclusión firme.
 - **Clasificación:** tipo, zona y operación se infieren de palabras clave del título y del enlace. Puede contener errores.
 - **Recencia:** Revolico no expone la fecha de publicación; el ID numérico del enlace se usa como proxy.
-- **Facebook:** no se integra en las cifras. Sus registros usan otro esquema (precio anidado, ubicación en texto libre, sin municipio normalizado), por lo que mezclarlos sin normalizar habría contaminado el universo limpio de Revolico.
+- **Facebook:** 43 publicaciones capturadas; 42 conservadas y 1 rechazada por mencionar Santa Amalia, fuera del filtro estricto. Se normalizaron tipo, zona, operación, distribución y contacto. La base unificada limpia queda en 176 registros (134 Revolico + 42 Facebook) y no se usa para las cifras del informe A-F, porque su esquema original no comparte el municipio normalizado de Revolico.
 - **Campo `municipio`:** no es fiable. Todos los anuncios aparecen como «Diez de Octubre», incluso los de otros municipios. Por eso el filtro revisa título y enlace, y la exclusión municipal tiene prioridad sobre ese campo.
 
 ## Estructura del repositorio
@@ -53,14 +53,18 @@ proyecto-mercado-10-octubre/
 │   ├── informe_final.pdf                # Entrega académica en PDF
 │   ├── informe_30_preguntas_originales_reemplazadas.md   # Versión revisada: 20 preguntas originales + 10 reemplazos
 │   ├── informe_30_preguntas_originales_reemplazadas.pdf  # PDF de la versión revisada
+│   ├── reporte_limpieza_facebook_20261104.md              # Limpieza y unificación de Facebook
 │   ├── telefonos_y_enlaces.txt          # Teléfonos y enlaces de anuncios
 │   └── limpieza/                        # Material histórico de limpieza manual
 ├── datos/
 │   ├── brutos/
+│   │   ├── facebook_crudos_20261104.json       # Captura original de Facebook (43 publicaciones)
 │   │   └── revolico_crudos_limpio_final.json    # Base de análisis (134 anuncios)
 │   └── limpios/
 │       ├── anuncios_eliminados_por_filtro_final.json  # 136 rechazados y su motivo
-│       ├── datos_unificados_facebook_revolico.json   # Facebook + Revolico (410 registros, no usado en el informe)
+│       ├── facebook_publicaciones_limpias.json  # Facebook tras filtro y normalización (42)
+│       ├── facebook_eliminados_por_filtro.json  # Publicación de Facebook rechazada y motivo
+│       ├── datos_unificados_facebook_revolico.json   # Base unificada limpia (176: 134 Revolico + 42 Facebook)
 │       └── reporte_analisis_precios_rango_p10_p90.txt
 ├── scripts/
 │   ├── analisis_final_30_preguntas.py   # Generador canónico del informe A-F
@@ -68,12 +72,13 @@ proyecto-mercado-10-octubre/
 │   ├── analisis_precios_rango_p10_p90.py
 │   ├── generar_pdf_informe.py           # Conversión Markdown -> PDF (acepta --input/--output)
 │   ├── limpieza_final_municipio.py
+│   ├── limpiar_facebook.py              # Limpieza y normalización de Facebook
+│   ├── mezclar_facebook_revolico.py     # Unificación de las bases limpias
 │   ├── verificar_y_actualizar_anuncios.py
 │   ├── limpiar_datos_brutos.py
 │   ├── generar_lista_limpia.py
 │   ├── agregar_permuta.py
-│   ├── extraer_fechas_publicacion.py
-│   └── mezclar_facebook_revolico*.py
+│   └── extraer_fechas_publicacion.py
 ├── src/
 │   └── scrape_revolico.py               # Descarga de anuncios de Revolico
 ├── fuentes/
@@ -83,7 +88,7 @@ proyecto-mercado-10-octubre/
 └── LICENSE                              # Licencia MIT
 ```
 
-> `datos/brutos/*.json` está en `.gitignore`; la base final se versionó con `git add -f`. Si se regenera, hay que repetir ese paso.
+> `datos/brutos/*.json` está en `.gitignore`; la base final de Revolico y la captura de Facebook se versionaron con `git add -f`. Si se regeneran, hay que repetir ese paso.
 
 ## Las 30 preguntas de investigación
 
@@ -173,9 +178,11 @@ python3 scripts/limpieza_final_municipio.py
 python3 scripts/analisis_final_30_preguntas.py
 python3 scripts/analisis_30_preguntas_originales_reemplazadas.py
 python3 scripts/analisis_precios_rango_p10_p90.py
+python3 scripts/limpiar_facebook.py
+python3 scripts/mezclar_facebook_revolico.py
 ```
 
-El primer script lee `datos/brutos/revolico_crudos_limpio.json` (270 anuncios), aplica el filtro estricto y escribe `datos/brutos/revolico_crudos_limpio_final.json` (134 anuncios) y `datos/limpios/anuncios_eliminados_por_filtro_final.json` (136 rechazados). El segundo lee la base de 134 y escribe `analisis/informe_final.md`. El tercero lee la misma base y escribe la versión revisada del cuestionario original. La fecha de generación cambia en cada ejecución, aunque las cifras se mantengan.
+El primer script lee `datos/brutos/revolico_crudos_limpio.json` (270 anuncios), aplica el filtro estricto y escribe `datos/brutos/revolico_crudos_limpio_final.json` (134 anuncios) y `datos/limpios/anuncios_eliminados_por_filtro_final.json` (136 rechazados). El segundo lee la base de 134 y escribe `analisis/informe_final.md`. El tercero lee la misma base y escribe la versión revisada del cuestionario original. `limpiar_facebook.py` lee la captura `facebook_crudos_20261104.json`, aplica el mismo filtro municipal y de precio, y escribe la base limpia de Facebook y sus rechazos. `mezclar_facebook_revolico.py` une las dos bases limpias en `datos_unificados_facebook_revolico.json`. La fecha de generación cambia en cada ejecución, aunque las cifras se mantengan.
 
 ## Cómo generar la entrega en PDF
 
@@ -198,11 +205,13 @@ El PDF se guarda en `analisis/informe_final.pdf` (o en la ruta indicada con `--o
 2. `scripts/verificar_y_actualizar_anuncios.py`: verifica anuncios activos y agrega nuevos.
 3. `scripts/limpiar_datos_brutos.py`: elimina anomalías graves.
 4. `scripts/limpieza_final_municipio.py`: aplica el filtro estricto de Diez de Octubre y precio mínimo; produce la base de 134 anuncios.
-5. `scripts/analisis_final_30_preguntas.py`: genera el informe final con las 30 preguntas A1–F5.
-6. `scripts/analisis_30_preguntas_originales_reemplazadas.py`: genera la versión revisada del cuestionario original (20 preguntas conservadas + 10 reemplazos).
-7. `scripts/analisis_precios_rango_p10_p90.py`: genera el reporte de P10–P90.
+5. `scripts/limpiar_facebook.py`: aplica el mismo filtro municipal y de precio a las 43 publicaciones de Facebook, normaliza sus campos y produce 42 registros limpios y 1 rechazo documentado.
+6. `scripts/mezclar_facebook_revolico.py`: unifica las bases limpias de Revolico y Facebook; produce 176 registros con fuente, tipo, zona y operación normalizados.
+7. `scripts/analisis_final_30_preguntas.py`: genera el informe final con las 30 preguntas A1–F5.
+8. `scripts/analisis_30_preguntas_originales_reemplazadas.py`: genera la versión revisada del cuestionario original (20 preguntas conservadas + 10 reemplazos).
+9. `scripts/analisis_precios_rango_p10_p90.py`: genera el reporte de P10–P90.
 
-> Los scripts `mezclar_facebook_revolico*.py` requieren exportaciones locales de Facebook y no forman parte de la generación del informe final; se conservan como material de exploración.
+> La base unificada de 176 registros es material de exploración y no alimenta las cifras del informe A-F. El informe sigue usando solo los 134 anuncios estrictos de Revolico.
 
 ## Herramientas utilizadas
 
@@ -214,8 +223,8 @@ El PDF se guarda en `analisis/informe_final.pdf` (o en la ruta indicada con `--o
 
 ## Limitaciones
 
-- Los datos provienen únicamente de Revolico; no representan la totalidad del mercado físico.
-- Facebook se exploró (37 publicaciones), pero se excluyó del análisis cuantitativo por falta de un esquema homogéneo y de municipio normalizado.
+- Los datos del informe provienen únicamente de Revolico; no representan la totalidad del mercado físico. La base unificada añade 42 publicaciones de Facebook con fines exploratorios, pero no se usa en las cifras del informe.
+- Facebook se exploró (43 publicaciones; 42 tras el filtro municipal y de precio) y se normalizó, pero no se integró al análisis cuantitativo porque su esquema original no comparte el municipio normalizado de Revolico.
 - **17 de 134 anuncios (12.7%)** no declaran precio y **80 (59.7%)** no especifican zona. No se imputan valores ni ubicaciones: la ausencia se reporta como hallazgo.
 - **Solo 51 de 134 (38.1%)** permiten cruzar precio y zona; **14 (10.4%)** carecen de ambos datos.
 - La clasificación de tipo, zona y operación se basa en palabras clave y puede contener errores.

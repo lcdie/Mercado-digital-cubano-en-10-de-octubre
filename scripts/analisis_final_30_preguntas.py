@@ -412,12 +412,13 @@ def main():
         "de la muestra digital."
     )
     L.append(
-        "- **Facebook (fuente explorada, no integrada):** se revisaron 37 "
-        "publicaciones de grupos de compraventa. No se incorporan al análisis "
-        "cuantitativo porque no comparten el esquema de campos de Revolico "
-        "(precio anidado, ubicación en texto libre y sin municipio normalizado) "
-        "y no permiten aplicar el mismo filtro municipal. Mezclarlas sin "
-        "normalizar habría introducido un sesgo difícil de medir."
+        "- **Facebook (fuente explorada, no integrada):** se revisaron 43 "
+        "publicaciones de grupos de compraventa; 42 se conservan tras aplicar "
+        "el mismo filtro municipal y de precio que a Revolico. No se incorporan "
+        "al análisis cuantitativo porque no comparten el esquema de campos de "
+        "Revolico (precio anidado, ubicación en texto libre y sin municipio "
+        "normalizado) y no permiten aplicar el mismo filtro municipal. "
+        "Mezclarlas sin normalizar habría introducido un sesgo difícil de medir."
     )
     L.append("")
     L.append("### Filtro estricto y contaminación de la base anterior")
@@ -1193,10 +1194,10 @@ def main():
     L.append("## Limitaciones")
     L.append("")
     L.append(
-        "- **Fuente única:** los datos provienen solo de Revolico; no "
-        "representan todo el mercado inmobiliario de Diez de Octubre. Facebook "
-        "se exploró (37 publicaciones), pero no se integró por incompatibilidad "
-        "de esquema y de normalización municipal."
+        "- **Fuente única:** los datos del informe provienen solo de Revolico; "
+        "no representan todo el mercado inmobiliario de Diez de Octubre. Facebook "
+        "se exploró (43 publicaciones; 42 tras filtro), pero no se integró por "
+        "incompatibilidad de esquema y de normalización municipal."
     )
     L.append(
         f"- **Muestra:** {total} anuncios es una base pequeña y no "

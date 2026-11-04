@@ -1286,9 +1286,9 @@ def main():
         "inmobiliario de Diez de Octubre."
     )
     L.append(
-        "- Se exploró Facebook (37 publicaciones), pero se excluyó del análisis "
-        "cuantitativo porque no comparte el esquema de campos de Revolico ni un "
-        "municipio normalizado."
+        "- Se exploró Facebook (43 publicaciones; 42 tras filtro), pero se "
+        "excluyó del análisis cuantitativo porque no comparte el esquema de "
+        "campos de Revolico ni un municipio normalizado."
     )
     L.append(
         f"- La muestra es de {total} anuncios y puede no ser representativa del "

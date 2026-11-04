@@ -1,7 +1,7 @@
 # Mercado inmobiliario digital en Diez de Octubre
 ## Opacidad, dolarización, desigualdad territorial e informalidad
 
-**Fecha de generación:** 04/11/2026 08:42
+**Fecha de generación:** 04/11/2026 17:16
 **Corte de los datos:** 2026-10-31
 **Fuente:** Revolico (anuncios activos)
 **Universo estricto:** 134 anuncios de Diez de Octubre
@@ -42,7 +42,7 @@ El municipio Diez de Octubre es un caso relevante porque combina una alta densid
 
 - **Revolico:** única fuente usada en los cálculos. Se analizan los anuncios activos del municipio Diez de Octubre con corte al 2026-10-31.
 - **Anuario Estadístico de Cuba (ONEI):** se consulta como contexto general del municipio; no se usa para calcular precios ni proporciones de la muestra digital.
-- **Facebook (fuente explorada, no integrada):** se revisaron 37 publicaciones de grupos de compraventa. No se incorporan al análisis cuantitativo porque no comparten el esquema de campos de Revolico (precio anidado, ubicación en texto libre y sin municipio normalizado) y no permiten aplicar el mismo filtro municipal. Mezclarlas sin normalizar habría introducido un sesgo difícil de medir.
+- **Facebook (fuente explorada, no integrada):** se revisaron 43 publicaciones de grupos de compraventa; 42 se conservan tras aplicar el mismo filtro municipal y de precio que a Revolico. No se incorporan al análisis cuantitativo porque no comparten el esquema de campos de Revolico (precio anidado, ubicación en texto libre y sin municipio normalizado) y no permiten aplicar el mismo filtro municipal. Mezclarlas sin normalizar habría introducido un sesgo difícil de medir.
 
 ### Filtro estricto y contaminación de la base anterior
 
@@ -300,7 +300,7 @@ En conjunto, el mercado digital de Diez de Octubre no es un espacio transparente
 
 ## Limitaciones
 
-- **Fuente única:** los datos provienen solo de Revolico; no representan todo el mercado inmobiliario de Diez de Octubre. Facebook se exploró (37 publicaciones), pero no se integró por incompatibilidad de esquema y de normalización municipal.
+- **Fuente única:** los datos del informe provienen solo de Revolico; no representan todo el mercado inmobiliario de Diez de Octubre. Facebook se exploró (43 publicaciones; 42 tras filtro), pero no se integró por incompatibilidad de esquema y de normalización municipal.
 - **Muestra:** 134 anuncios es una base pequeña y no necesariamente representativa del universo de viviendas del municipio. No hay serie temporal: el corte es único (2026-10-31).
 - **Clasificación por palabras clave:** el tipo, la zona y la operación se infieren del título y del enlace. Puede haber errores de asignación, especialmente en títulos ambiguos o sin palabras clave.
 - **Campos ausentes:** no hay datos de metros cuadrados, estado legal, número de baños, año de construcción, vendedor o agencia. No se puede calcular precio por m² ni distinguir particulares de intermediarios.

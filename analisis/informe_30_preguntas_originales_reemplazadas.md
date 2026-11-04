@@ -1,7 +1,7 @@
 # Mercado inmobiliario digital en Diez de Octubre
 ## Versión revisada: 30 preguntas originales con 10 reemplazos
 
-**Fecha de generación:** 04/11/2026 09:59
+**Fecha de generación:** 04/11/2026 17:16
 **Corte de los datos:** 2026-10-31
 **Fuente:** Revolico (anuncios activos)
 **Universo estricto:** 134 anuncios de Diez de Octubre
@@ -366,7 +366,7 @@ Las 20 preguntas conservadas son: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q11, Q17, 
 ## Limitaciones
 
 - Los datos provienen solo de Revolico; no representan todo el mercado inmobiliario de Diez de Octubre.
-- Se exploró Facebook (37 publicaciones), pero se excluyó del análisis cuantitativo porque no comparte el esquema de campos de Revolico ni un municipio normalizado.
+- Se exploró Facebook (43 publicaciones; 42 tras filtro), pero se excluyó del análisis cuantitativo porque no comparte el esquema de campos de Revolico ni un municipio normalizado.
 - La muestra es de 134 anuncios y puede no ser representativa del mercado completo.
 - La clasificación de tipo, zona y operación depende de palabras clave y puede contener errores.
 - Los subgrupos por zona (n = 5–14), alquiler (n = 9) y Cuarto (n = 2) son pequeños; sus resultados son descriptivos.

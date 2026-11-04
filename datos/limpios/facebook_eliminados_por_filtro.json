@@ -1,0 +1,40 @@
+[
+  {
+    "id_publicacion": 27,
+    "publicacion": {
+      "grupo": "✅Venta de casas🍀La Haba...",
+      "autor": "Abdiel Núñez",
+      "fecha": "Hace 4 días",
+      "titulo": "SE VENDE AMPLIA CASA DE DOS PLANTAS EN SANTA AMALIA, LA HABANA, CUBA"
+    },
+    "detalles_propiedad": {
+      "tipo": "Casa de dos plantas",
+      "ubicacion": "Santa Amalia, a solo 3 cuadras de la Calzada de 10 de Octubre",
+      "area_m2": 700,
+      "distribucion": [
+        "8 habitaciones",
+        "6 baños",
+        "Garaje de dos niveles con apartamento en la planta superior",
+        "Cocina y comedor amplio",
+        "2 salones espaciosos",
+        "Sala de juegos",
+        "2 terrazas grandes en la planta alta"
+      ],
+      "condicion": "Amplios espacios interiores y exteriores, ideal para una familia grande o para adaptación a diferentes proyectos"
+    },
+    "equipamiento_incluido": [
+      "Algunos muebles",
+      "5 camas"
+    ],
+    "precio": {
+      "monto": 130000,
+      "moneda": "USD"
+    },
+    "contacto": {
+      "metodo": "Mensaje privado",
+      "telefono": "51279170"
+    },
+    "motivo_eliminacion": "MUNICIPIO_DISTINTO_A_DIEZ_DE_OCTUBRE",
+    "patron_detectado": "santa amalia"
+  }
+]
