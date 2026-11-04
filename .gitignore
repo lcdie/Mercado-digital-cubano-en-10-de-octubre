@@ -3,6 +3,7 @@ __pycache__/
 *.pyo
 *.env
 .venv/
+.venv-docs/
 venv/
 .env
 .DS_Store

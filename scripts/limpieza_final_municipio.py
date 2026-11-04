@@ -1,213 +1,192 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Limpieza FINAL de datos del mercado inmobiliario de Diez de Octubre.
+Limpieza FINAL de los anuncios del mercado inmobiliario de Diez de Octubre.
 
-Criterios de FILTRADO ESTRICTO:
-1. PRECIO MÍNIMO 1000 USD: Se eliminan anuncios con precio < 1000 USD (o equivalente).
-   - Anuncios sin precio declarado se mantienen solo si no tienen moneda especificada
-     (para revisión manual), pero los que tienen precio < 1000 USD se eliminan.
-2. MUNICIPIO: Solo se mantienen anuncios de Diez de Octubre y sus repartos.
-   Se ELIMINAN anuncios que mencionen en título o enlace:
-   Centro Habana, Playa, Vedado, Habana del Este, Guanabacoa, San Miguel, Alamar,
-   el Cerro, La Lisa, Cotorro, Regla, Nuevo Vedado, La Víbora (si es como zona aparte),
-   etc.
-3. Solo municipios de Diez de Octubre y sus repartos (Santos Suárez, La Víbora, Lawton,
-   Luyano, El Sevillano, El Mónaco, Santa Catalina, Vista Alegre, Reparto Asunción,
-   Reparto Lawton, Reparto Sevillano, Calzada 10 de Octubre, etc.)
+Problema que corrige este script
+--------------------------------
+El campo ``municipio`` que devuelve el scraper no es fiable: todos los anuncios
+estudiados aparecen como "Diez de Octubre", incluso cuando el título dice
+"Habana Vieja", "Boyeros", "Arroyo Naranjo", "Santa Fe", etc. Por eso el filtro
+NO puede confiar en ``municipio``: debe mirar el título y el enlace.
 
-Lee:  datos/brutos/revolico_crudos_limpio.json
-Escribe: datos/brutos/revolico_crudos_limpio_final.json
-Escribe: datos/limpios/anuncios_eliminados_por_filtro_final.json
+Criterios de filtrado estricto
+------------------------------
+1. MUNICIPIO: se elimina todo anuncio cuyo título o enlace mencione un
+   municipio, reparto o localidad que no pertenezca a Diez de Octubre.
+   La exclusión se evalúa ANTES que cualquier otra regla y tiene prioridad
+   sobre el campo ``municipio``.
+2. PRECIO MÍNIMO: se eliminan anuncios con precio declarado inferior a
+   1,000 USD (o su equivalente de 24,000 CUP). Los anuncios sin precio se
+   conservan, porque la ausencia de precio es un hallazgo del estudio.
+
+Entrada:
+    datos/brutos/revolico_crudos_limpio.json       (270 anuncios)
+Salidas:
+    datos/brutos/revolico_crudos_limpio_final.json (134 anuncios estrictos)
+    datos/limpios/anuncios_eliminados_por_filtro_final.json
 """
 
 import json
+import os
 import re
-from datetime import datetime
 from collections import Counter
 
 INPUT_FILE = "datos/brutos/revolico_crudos_limpio.json"
 OUTPUT_FILE = "datos/brutos/revolico_crudos_limpio_final.json"
 REJECTED_FILE = "datos/limpios/anuncios_eliminados_por_filtro_final.json"
 
-# Municipios y zonas de La Habana QUE NO SON Diez de Octubre - EXCLUIR completamente
-MUNICIPIOS_EXCLUIDOS = [
+# Municipios, repartos y localidades que NO pertenecen a Diez de Octubre.
+# Se comparan en minúsculas contra la suma de título + enlace.
+PATRONES_EXCLUIR = [
     # Municipios completos de La Habana
-    "centro habana", "centro habana", "playa", "vedado", "nuevo vedado",
-    "habana del este", "guanabacoa", "san miguel", "alamar", "el cerro",
-    "cerro", "la lisa", "cotorro", "regla", "marianao", "arroyo naranjo",
-    "boyeros", "guanabo", "guanabacoa", "san miguel del padrón",
-    # Barrios específicos de otros municipios
-    "santa amalia", "siboney", "miramar", "buena vista", "atares",
-    "cayo santa maría", "varadero", "jibacoa", "cayo guano", "cayo levisa",
-    # Otras zonas no de 10 de Octubre
-    "cotorro", "regla", "casablanca", "guanabo",
+    r"habana vieja",
+    r"centro habana",
+    r"vedado",
+    r"nuevo vedado",
+    r"playa\b",
+    r"marianao",
+    r"boyeros",
+    r"arroyo naranjo",
+    r"santa fe",
+    r"guanabacoa",
+    r"san miguel",
+    r"alamar",
+    r"habana del este",
+    r"cotorro",
+    r"regla\b",
+    r"la lisa",
+    r"el cerro",
+    r"cerro\b",
+    # Repartos y localidades de otros municipios
+    r"guanabo",
+    r"miramar",
+    r"coj[ií]mar",
+    r"bauta",
+    r"altahabana",
+    r"casco hist[oó]rico",
+    r"plaza vieja",
+    r"municipio plaza",
+    r"plaza de la revoluci[oó]n",
+    r"jes[uú]s mar[ií]a",
+    r"p[aá]rraga",
+    r"poey",
+    r"r[ií]o cristal",
+    r"mulgoba",
+    r"santa mar[ií]a del rosario",
+    # Balnearios y zonas fuera de La Habana
+    r"cayo santa mar",
+    r"cayo jibacoa",
+    r"cayo guano",
+    r"cayo levisa",
+    r"varadero",
+    r"siboney",
+    r"buena vista",
+    r"santa amalia",
 ]
 
-# Zonas VÁLIDAS de Diez de Octubre (para validar que sí pertenece)
+# Zonas válidas de Diez de Octubre. Se usan solo para el diagnóstico del
+# filtro, no para decidir la inclusión: un anuncio sin zona explícita sigue
+# siendo válido si no menciona otro municipio.
 ZONAS_DIEZ_DE_OCTUBRE = [
     "diez de octubre", "10 de octubre", "santos suárez", "santos suarez",
     "la víbora", "la vibora", "lawton", "luyano", "luyanó", "el sevillano",
-    "sevillano", "mónaco", "monaco", "asunción", "asuncion",
-    "santa catalina", "vista alegre", "reparto asunción", "reparto lawton",
-    "reparto sevillano", "vía blanca", "via blanca",
-    "calzada 10 de octubre", "calzada diez de octubre",
-    "diez de octubre y", "10 de octubre y",
-    "reparto diezmero", "diezmero",
-]
-
-# Patrones de excluir en título/enlaces
-PATRONES_EXCLUIR = [
-    r"centro habana", r"playa\b", r"vedado", r"nuevo vedado",
-    r"habana del este", r"guanabacoa", r"san miguel", r"alamar",
-    r"el cerro", r"cerro\b", r"la lisa", r"cotorro", r"regla\b",
-    r"santa amalia", r"siboney", r"miramar", "buena vista",
-    "cayo santa mar", "cayo jibacoa", "cayo guano", "cayo levisa",
+    "sevillano", "el mónaco", "el monaco", "asunción", "asuncion",
+    "santa catalina", "vista alegre", "vía blanca", "via blanca",
+    "calzada 10 de octubre", "calzada diez de octubre", "barbacoa",
 ]
 
 
-def contiene_municipio_excluido(titulo, enlace):
-    """Detecta si el anuncio menciona municipios que NO son Diez de Octubre."""
-    texto = (titulo + " " + (enlace or "")).lower()
+def municipio_excluido(titulo, enlace):
+    """Devuelve el patrón que delata otro municipio, o None si no hay match."""
+    texto = ((titulo or "") + " " + (enlace or "")).lower()
     for patron in PATRONES_EXCLUIR:
         if re.search(patron, texto, re.IGNORECASE):
-            return True
-    return False
+            return patron
+    return None
 
 
-def es_de_diez_de_octubre(titulo, enlace, municipio):
-    """Determina si el anuncio pertenece a Diez de Octubre."""
-    texto = (titulo + " " + (enlace or " ") + " " + (municipio or "")).lower()
-
-    # Primero verificar si contiene zonas de Diez de Octubre
-    for zona in ZONAS_DIEZ_DE_OCTUBRE:
-        if zona in texto:
-            return True
-
-    # Si no menciona zona de Diez de Octubre, pero el municipio dice Diez de Octubre
-    if "diez de octubre" in municipio.lower() or "10 de octubre" in municipio.lower():
-        return True
-
-    return False
-
-
-def es_precio_valido(precio, moneda):
-    """Verifica si el precio cumple el mínimo de 1000 USD."""
+def validar_precio(precio, moneda):
+    """Devuelve (es_valido, motivo). Los anuncios sin precio son válidos."""
     if precio is None:
-        # Sin precio declarado - se mantiene para revisión manual, pero marcado
-        return True, "sin_precio"
-
-    if moneda == "USD":
-        if precio < 1000:
-            return False, "precio_muy_bajo_usd"
-        return True, "valido"
-
-    if moneda == "CUP":
-        # Para CUP, usar tasa aproximada 1 USD = 24 CUP (mercado informal)
-        # 1000 USD = 24,000 CUP aproximadamente
-        if precio < 24000:
-            return False, "precio_muy_bajo_cup"
-        return True, "valido"
-
-    # Moneda desconocida o vacía
-    return True, "moneda_desconocida"
+        return True, None
+    moneda = (moneda or "").upper()
+    if moneda == "USD" and precio < 1000:
+        return False, "PRECIO_USD_MENOR_A_1000"
+    if moneda == "CUP" and precio < 24000:
+        return False, "PRECIO_CUP_MENOR_A_1000_USD_EQUIVALENTE"
+    return True, None
 
 
 def main():
     with open(INPUT_FILE, encoding="utf-8") as f:
         anuncios = json.load(f)
 
-    print(f"Total anuncios iniciales: {len(anuncios)}")
+    print(f"Total anuncios en la fuente: {len(anuncios)}")
 
-    anuncios_limpios = []
-    anuncios_eliminados = []
+    conservados = []
+    eliminados = []
 
     for a in anuncios:
         titulo = a.get("titulo", "") or ""
         enlace = a.get("enlace", "") or ""
         precio = a.get("precio")
         moneda = (a.get("moneda") or "").upper()
-        municipio = a.get("municipio", "") or ""
 
-        motivo_eliminacion = None
-
-        # 1. Verificar si es de Diez de Octubre (municipio y zonas)
-        if not es_de_diez_de_octubre(titulo, enlace, municipio):
-            motivo_eliminacion = "MUNICIPIO_NO_ES_10_DE_OCTUBRE"
-
-        # 2. Verificar si contiene municipios excluidos en título/enlace
-        elif contiene_municipio_excluido(titulo, enlace):
-            motivo_eliminacion = "MUNICIPIO_EXCLUIDO_EN_TITULO_ENLACE"
-
-        # 3. Verificar precio mínimo
-        elif precio is not None:
-            valido, motivo = es_precio_valido(precio, moneda)
-            if not valido:
-                motivo_eliminacion = motivo
-
-        # 4. Si tiene moneda vacía pero tiene precio numérico muy bajo, también sospechoso
-        elif precio is not None and moneda == "":
-            if precio < 1000:
-                motivo_eliminacion = "PRECIO_SIN_MONEDA_PERO_BAJO"
-
-        if motivo_eliminacion:
-            anuncios_eliminados.append({
-                "titulo": titulo,
-                "precio": precio,
-                "moneda": moneda,
-                "municipio": municipio,
-                "enlace": enlace,
-                "motivo": motivo_eliminacion
+        # 1) La exclusión municipal manda sobre el campo "municipio".
+        patron = municipio_excluido(titulo, enlace)
+        if patron:
+            eliminados.append({
+                **a,
+                "motivo_eliminacion": "MUNICIPIO_DISTINTO_A_DIEZ_DE_OCTUBRE",
+                "patron_detectado": patron,
             })
-        else:
-            anuncios_limpios.append(a)
+            continue
 
-    print(f"\n=== RESULTADOS DE LIMPIEZA ===")
-    print(f"Total inicial: {len(anuncios)}")
-    print(f"Anuncios eliminados: {len(anuncios_eliminados)}")
-    print(f"Anuncios limpios finales: {len(anuncios_limpios)}")
-    print()
+        # 2) Precio mínimo cuando hay precio declarado.
+        valido, motivo = validar_precio(precio, moneda)
+        if not valido:
+            eliminados.append({
+                **a,
+                "motivo_eliminacion": motivo,
+                "patron_detectado": None,
+            })
+            continue
 
-    # Contar motivos de eliminación
-    motivos_counter = Counter(e["motivo"] for e in anuncios_eliminados)
-    print("Motivos de eliminación:")
-    for motivo, count in motivos_counter.most_common():
+        conservados.append(a)
+
+    # Diagnóstico
+    motivos = Counter(e["motivo_eliminacion"] for e in eliminados)
+    con_precio = [a for a in conservados if a.get("precio") is not None]
+    sin_precio = [a for a in conservados if a.get("precio") is None]
+    usd = [a for a in conservados if str(a.get("moneda", "")).upper() == "USD"]
+    cup = [a for a in conservados if str(a.get("moneda", "")).upper() == "CUP"]
+
+    print("\n=== RESULTADO DEL FILTRO ESTRICTO ===")
+    print(f"Total fuente:              {len(anuncios)}")
+    print(f"Anuncios eliminados:       {len(eliminados)}")
+    print(f"Anuncios conservados:      {len(conservados)}")
+    print("\nMotivos de eliminación:")
+    for motivo, count in motivos.most_common():
         print(f"  {motivo}: {count}")
-    print()
-
-    # Estadísticas de los limpios
-    con_precio = [a for a in anuncios_limpios if a.get("precio") is not None]
-    sin_precio = [a for a in anuncios_limpios if not a.get("precio")]
-    usd = [a for a in anuncios_limpios if a.get("moneda") == "USD"]
-    cup = [a for a in anuncios_limpios if a.get("moneda") == "CUP"]
-
+    print("\nComposición de la base estricta:")
     print(f"  Con precio: {len(con_precio)}")
     print(f"  Sin precio: {len(sin_precio)}")
-    print(f"  USD: {len(usd)}")
-    print(f"  CUP: {len(cup)}")
+    print(f"  USD:        {len(usd)}")
+    print(f"  CUP:        {len(cup)}")
 
-    if usd:
-        precios_usd = [a["precio"] for a in usd]
-        print(f"  Precio USD - Min: {min(precios_usd):,}, Max: {max(precios_usd):,}")
-        print(f"  Promedio USD: {sum(precios_usd)/len(precios_usd):,.2f}")
+    # Guardar resultados
+    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+    os.makedirs(os.path.dirname(REJECTED_FILE), exist_ok=True)
 
-    if cup:
-        precios_cup = [a["precio"] for a in cup]
-        print(f"  Precio CUP - Min: {min(precios_cup):,}, Max: {max(precios_cup):,}")
-
-    # Guardar archivo limpio
-    import os
-    os.makedirs("datos/brutos", exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(anuncios_limpios, f, ensure_ascii=False, indent=2)
+        json.dump(conservados, f, ensure_ascii=False, indent=2)
 
-    # Guardar eliminados
-    os.makedirs("datos/limpios", exist_ok=True)
     with open(REJECTED_FILE, "w", encoding="utf-8") as f:
-        json.dump(anuncios_eliminados, f, ensure_ascii=False, indent=2)
+        json.dump(eliminados, f, ensure_ascii=False, indent=2)
 
-    print(f"\nArchivo limpio guardado: {OUTPUT_FILE}")
-    print(f"Archivo de eliminados guardado: {REJECTED_FILE}")
+    print(f"\nBase estricta guardada en:  {OUTPUT_FILE}")
+    print(f"Eliminados guardados en:    {REJECTED_FILE}")
 
 
 if __name__ == "__main__":

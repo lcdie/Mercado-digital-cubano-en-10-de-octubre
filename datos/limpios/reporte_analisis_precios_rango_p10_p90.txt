@@ -2,14 +2,14 @@
 REPORTE DE ANÁLISIS DE PRECIOS - RANGO P10-P90 (PERCENTIL 10-90)
 ================================================================================
 
-Fecha de generación: 03/11/2026 20:47:32
+Fecha de generación: 04/11/2026 08:41:15
 Archivo fuente: datos/brutos/revolico_crudos_limpio_final.json
 
 --------------------------------------------------------------------------------
 PASO 1: DATOS ORIGINALES
 --------------------------------------------------------------------------------
 
-Total anuncios con precio en USD: 136
+Total anuncios con precio en USD: 116
 Precio mínimo original: $1,000
 Precio máximo original: $180,000
 
@@ -18,58 +18,58 @@ PASO 2: ELIMINACIÓN DE PRECIOS > 100,000,000 USD
 --------------------------------------------------------------------------------
 
 Anuncios eliminados por precio > 100,000,000 USD: 0
-Anuncios restantes: 136
+Anuncios restantes: 116
 
 --------------------------------------------------------------------------------
 PASO 3: CÁLCULO DE PERCENTILES P10 Y P90
 --------------------------------------------------------------------------------
 
-Percentil 10 (P10): $8,000.00
-Percentil 90 (P90): $70,000.00
+Percentil 10 (P10): $7,750.00
+Percentil 90 (P90): $75,000.00
 
 --------------------------------------------------------------------------------
 PASO 4: FILTRADO POR RANGO P10-P90
 --------------------------------------------------------------------------------
 
-Anuncios eliminados por debajo de P10 ($8,000.00): 13
-Anuncios eliminados por encima de P90 ($70,000.00): 13
-Anuncios retenidos en rango P10-P90: 110
+Anuncios eliminados por debajo de P10 ($7,750.00): 12
+Anuncios eliminados por encima de P90 ($75,000.00): 10
+Anuncios retenidos en rango P10-P90: 94
 
 --------------------------------------------------------------------------------
 PASO 5: ESTADÍSTICAS DEL RANGO P10-P90
 --------------------------------------------------------------------------------
 
-Promedio en rango P10-P90: $28,131.82
-Mediana en rango P10-P90: $24,000.00
-Desviación estándar: $16,318.46
-Mínimo en rango: $8,000
-Máximo en rango: $70,000
+Promedio en rango P10-P90: $30,218.09
+Mediana en rango P10-P90: $25,000.00
+Desviación estándar: $18,482.42
+Mínimo en rango: $8,500
+Máximo en rango: $75,000
 
 ================================================================================
 RESUMEN EJECUTIVO
 ================================================================================
 
-Total anuncios con precio USD original: 136
+Total anuncios con precio USD original: 116
 Anuncios eliminados por precio > 100,000,000 USD: 0
-Anuncios eliminados por debajo de P10: 13
-Anuncios eliminados por encima de P90: 13
-Anuncios utilizados para el promedio final: 110
+Anuncios eliminados por debajo de P10: 12
+Anuncios eliminados por encima de P90: 10
+Anuncios utilizados para el promedio final: 94
 
-PRECIO PROMEDIO EN RANGO P10-P90: $28,131.82
-PRECIO MEDIANA EN RANGO P10-P90: $24,000.00
+PRECIO PROMEDIO EN RANGO P10-P90: $30,218.09
+PRECIO MEDIANA EN RANGO P10-P90: $25,000.00
 
 ================================================================================
 DISTRIBUCIÓN DE PRECIOS EN EL RANGO P10-P90
 ================================================================================
 
-  0 - 10,000     :   9 anuncios (  8.2%) ████
-  10,000 - 20,000:  34 anuncios ( 30.9%) ███████████████
-  20,000 - 30,000:  22 anuncios ( 20.0%) ██████████
-  30,000 - 40,000:  18 anuncios ( 16.4%) ████████
-  40,000 - 50,000:  14 anuncios ( 12.7%) ██████
-  50,000 - 60,000:   5 anuncios (  4.5%) ██
-  60,000 - 70,000:   5 anuncios (  4.5%) ██
-  70,000 - 80,000:   3 anuncios (  2.7%) █
+  0 - 10,000     :   5 anuncios (  5.3%) ██
+  10,000 - 20,000:  32 anuncios ( 34.0%) █████████████████
+  20,000 - 30,000:  17 anuncios ( 18.1%) █████████
+  30,000 - 40,000:  13 anuncios ( 13.8%) ██████
+  40,000 - 50,000:  12 anuncios ( 12.8%) ██████
+  50,000 - 60,000:   4 anuncios (  4.3%) ██
+  60,000 - 70,000:   5 anuncios (  5.3%) ██
+  70,000 - 80,000:   6 anuncios (  6.4%) ███
   80,000 - 90,000:   0 anuncios (  0.0%) 
   90,000+        :   0 anuncios (  0.0%) 
 
@@ -79,8 +79,8 @@ NOTAS Y LIMITACIONES
 
 1. Se eliminaron anuncios con precio > 100,000,000 USD como valores atípicos extremos.
 2. Se calcularon percentiles P10 y P90 sobre los datos restantes.
-3. Se eliminaron 13 anuncios por debajo de P10 ($8,000.00).
-4. Se eliminaron 13 anuncios por encima de P90 ($70,000.00).
+3. Se eliminaron 12 anuncios por debajo de P10 ($7,750.00).
+4. Se eliminaron 10 anuncios por encima de P90 ($75,000.00).
 5. El promedio se calculó únicamente sobre los anuncios dentro del rango P10-P90.
 6. Este enfoque reduce el impacto de valores atípicos tanto bajos como altos.
 

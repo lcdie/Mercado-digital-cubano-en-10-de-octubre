@@ -29,12 +29,14 @@ OUTPUT_FILE = BASE_DIR / "analisis" / "informe_final.pdf"
 
 
 def extraer_metadatos(texto):
-    """Extrae fecha y universo de las líneas iniciales del informe."""
+    """Extrae fecha, fuente y universo de las líneas iniciales del informe."""
     fecha = re.search(r"\*\*Fecha de generación:\*\*\s*(.+)", texto)
-    universo = re.search(r"\*\*Universo analizado:\*\*\s*(.+)", texto)
+    fuente = re.search(r"\*\*Fuente:\*\*\s*(.+)", texto)
+    universo = re.search(r"\*\*Universo estricto:\*\*\s*(.+)", texto)
     usd = re.search(r"\*\*Anuncios con precio en USD:\*\*\s*(.+)", texto)
     return {
         "fecha": fecha.group(1).strip() if fecha else "",
+        "fuente": fuente.group(1).strip() if fuente else "",
         "universo": universo.group(1).strip() if universo else "",
         "usd": usd.group(1).strip() if usd else "",
     }
@@ -45,7 +47,9 @@ def preparar_cuerpo(texto):
     cuerpo = re.sub(r"^# .+\n", "", texto, count=1)
     for patron in (
         r"^\*\*Fecha de generación:\*\*.*\n?",
-        r"^\*\*Universo analizado:\*\*.*\n?",
+        r"^\*\*Corte de los datos:\*\*.*\n?",
+        r"^\*\*Fuente:\*\*.*\n?",
+        r"^\*\*Universo estricto:\*\*.*\n?",
         r"^\*\*Anuncios con precio en USD:\*\*.*\n?",
     ):
         cuerpo = re.sub(patron, "", cuerpo, count=1, flags=re.MULTILINE)
@@ -242,7 +246,8 @@ def construir_html(cuerpo_html, meta):
     </div>
     <div class="cover-meta">
         <p><strong>Profesor:</strong> Yudivian Almeida Cruz</p>
-        <p><strong>Universo analizado:</strong> {meta['universo']}</p>
+        <p><strong>Fuente:</strong> {meta['fuente']}</p>
+        <p><strong>Universo estricto:</strong> {meta['universo']}</p>
         <p><strong>Anuncios con precio en USD:</strong> {meta['usd']}</p>
         <p><strong>Fecha de generación:</strong> {meta['fecha']}</p>
     </div>
