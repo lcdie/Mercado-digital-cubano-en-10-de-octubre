@@ -1,6 +1,6 @@
 # Informe Final: Mercado Inmobiliario Digital en Diez de Octubre
 
-**Fecha de generación:** 04/11/2026 08:12
+**Fecha de generación:** 04/11/2026 08:22
 **Universo analizado:** 171 anuncios limpios de Revolico
 **Anuncios con precio en USD:** 136
 
@@ -16,6 +16,12 @@ Este informe analiza el mercado inmobiliario digital del municipio Diez de Octub
 - Cada respuesta indica su tamaño de muestra (n). Los subgrupos con n < 10 se presentan como evidencia descriptiva, no como conclusión firme.
 - La clasificación de tipo, zona y características se infiere de palabras clave del título y del enlace.
 
+## Fuente y universo de datos
+
+- **Revolico (fuente principal):** 171 anuncios limpios del municipio Diez de Octubre. Es la única fuente usada en los cálculos de este informe.
+- **Anuario Estadístico de Cuba (ONEI):** se consulta como contexto general del municipio; no se usa para calcular precios ni proporciones de la muestra digital.
+- **Facebook (fuente explorada, no integrada):** se revisaron 37 publicaciones de grupos de compraventa. Se excluyeron del análisis cuantitativo porque no comparten el esquema de campos de Revolico (precio anidado, ubicación en texto libre y sin municipio normalizado) y no permiten aplicar el mismo filtro municipal y de limpieza. Incorporarlas sin normalizar habría mezclado universos distintos. Se conservan en `datos/limpios/datos_unificados_facebook_revolico.json` para una ampliación futura.
+
 ## Preguntas sustituidas
 
 Cinco preguntas del cuestionario original no podían responderse con una base mínima de datos. Se sustituyeron por preguntas equivalentes y respondibles:
@@ -27,6 +33,8 @@ Cinco preguntas del cuestionario original no podían responderse con una base m�
 | 17 | ¿Cuál es el precio promedio por metro cuadrado? | Solo 3 anuncios mencionan metraje. | ¿Qué proporción de anuncios incluye al menos una característica física explícita? |
 | 23 | ¿Qué zonas concentran más anuncios de venta y de alquiler? | Solo una zona tiene algún anuncio de alquiler. | ¿Qué proporción de los anuncios con zona identificada se concentra en las cuatro zonas principales? |
 | 26 | ¿Cuál es el precio promedio en CUP? | Solo 1 anuncio declara precio en CUP. | ¿Los anuncios con lenguaje informal declaran precio con más frecuencia que los neutros? |
+
+Además de esas cinco sustituciones, la **Q1** se reformuló de «precio promedio de venta» a «precio promedio de los anuncios con precio declarado en USD», porque solo 50 anuncios se identifican explícitamente como venta. Por la misma razón, **Q20** y **Q28** se expresan sobre anuncios con precio en USD. Cuando aporta información, se reporta por separado el subconjunto de ventas explícitas (Q1, Q2 y Q11).
 
 ## Las 30 preguntas y sus respuestas
 
@@ -76,7 +84,7 @@ Cinco preguntas del cuestionario original no podían responderse con una base m�
 > - Casa: **$36,626.47 USD** (n = 68)
 > - Apartamento: **$19,425.00 USD** (n = 40)
 > 
-> Los tipos Cuarto y Local se excluyen porque solo tienen 1 anuncio con precio cada uno.
+> Se excluyen los tipos con menos de 5 anuncios con precio: Cuarto (1), Local (1).
 
 **10. ¿Qué tipo de inmueble concentra el precio máximo declarado?**
 
@@ -142,7 +150,7 @@ Cinco preguntas del cuestionario original no podían responderse con una base m�
 > 
 > **117 de 171 anuncios (68.4%)** no especifican zona en el título.
 
-**20. ¿Qué zona tiene el precio promedio de venta más alto?**
+**20. ¿Qué zona tiene el precio promedio más alto entre los anuncios con precio en USD?**
 
 > Entre las zonas con al menos 5 anuncios con precio, **La Víbora** tiene el promedio más alto: **$52,277.78 USD** (n = 9). Si se exige n ≥ 10, la más cara es **Santos Suárez** ($25,923.08 USD, n = 13).
 
@@ -176,7 +184,7 @@ Cinco preguntas del cuestionario original no podían responderse con una base m�
 
 > **15 de 171 anuncios (8.8%)**. Distribución: oportunidad (12), permuta (2), cambio (1).
 
-**28. ¿Qué rango de precios es más frecuente para ventas en USD?**
+**28. ¿Qué rango de precios es más frecuente entre los anuncios con precio en USD?**
 
 > El rango **10,000 - 20,000 USD** es el más frecuente, con **34 anuncios (25.0% de los 136 con precio en USD)**.
 
@@ -194,11 +202,11 @@ Cinco preguntas del cuestionario original no podían responderse con una base m�
 
 **29. ¿Cuántos anuncios parecen de particulares frente a posibles anuncios repetidos o agencias?**
 
-> La base no incluye un campo de vendedor que permita distinguir particulares de agencias. Como aproximación, **171 de 171 títulos son únicos** y **0 están repetidos**. La ausencia de duplicados exactos no muestra indicios de publicación masiva, pero tampoco descarta que una misma agencia use títulos distintos.
+> La base no incluye un campo de vendedor que permita distinguir particulares de agencias. Como aproximación, **171 de 171 títulos son únicos** y no hay títulos duplicados. La ausencia de duplicados exactos no muestra indicios de publicación masiva, pero tampoco descarta que una misma agencia use títulos distintos.
 
 **30. ¿Qué recomendación práctica se puede hacer a alguien que quiera comprar o alquilar en Diez de Octubre?**
 
-> 1. **Presupuesto:** la mediana de los anuncios con precio en USD es **$24,000.00 USD** (en ventas explícitas, **$17,000.00 USD**) y el 80% central de los precios está entre **$8,000.00 y $70,000.00 USD**. El tramo más frecuente es **$10,000–$20,000 USD** (34 anuncios, 25.0%).
+> 1. **Presupuesto:** la mediana de los anuncios con precio en USD es **$24,000.00 USD** (en ventas explícitas, **$17,000.00 USD**) y el 80% central de los precios está entre **$8,000.00 y $70,000.00 USD**. El tramo más frecuente es **10,000 - 20,000 USD** (34 anuncios, 25.0%).
 > 2. **Tipo de inmueble:** un apartamento promedia **$19,425.00 USD** (n = 40) y una casa **$36,626.47 USD** (n = 68); el apartamento es la opción más económica.
 > 3. **Zonas:** Santos Suárez concentra la mayor oferta (14 anuncios), seguida por Lawton (11) y La Víbora (9). El promedio más alto entre zonas con al menos 5 anuncios con precio es La Víbora (**$52,277.78 USD**, n = 9), mientras que Lawton (**$23,600.00 USD**, n = 10) es la alternativa más económica de ese grupo.
 > 4. **Moneda:** el mercado está dolarizado: **136 de 137 anuncios con moneda declarada (99.3%)** usan USD. Hay que contar con divisas o verificar el tipo de cambio si se paga en CUP.
@@ -217,13 +225,17 @@ Cinco preguntas del cuestionario original no podían responderse con una base m�
 ## Limitaciones
 
 - Los datos provienen solo de Revolico; no representan todo el mercado inmobiliario de Diez de Octubre.
+- Se exploró Facebook (37 publicaciones), pero se excluyó del análisis cuantitativo porque no comparte el esquema de campos de Revolico ni un municipio normalizado; integrarla exigiría una normalización y un filtro municipal adicionales.
 - La muestra es de 171 anuncios y puede no ser representativa del mercado completo.
 - La clasificación de tipo, zona y características depende de palabras clave y puede contener errores.
 - Los precios de alquiler no se pudieron analizar: solo 1 anuncio de alquiler declara precio en USD y 1 en CUP.
 - Los subgrupos por zona, garaje, planta baja y número de cuartos tienen tamaños pequeños; sus promedios son descriptivos.
 
 ---
+
 Informe generado por el Proyecto de Ciencia de Datos — Universidad de La Habana
+
 Facultad de Matemática y Computación (MATCOM)
+
 Profesor: Yudivian Almeida Cruz
 

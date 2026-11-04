@@ -167,6 +167,11 @@ def main():
     for a in usd:
         precios_tipo[a["_tipo"]].append(a["precio"])
 
+    tipos_excluidos = sorted(
+        ((t, len(v)) for t, v in precios_tipo.items() if len(v) < 5),
+        key=lambda x: x[1],
+    )
+
     # Zonas
     zonas = Counter(a["_zona"] for a in anuncios if a["_zona"] != "No especificado")
     total_con_zona = sum(zonas.values())
@@ -181,6 +186,12 @@ def main():
     ventas = [a for a in anuncios if es_venta(a.get("titulo"))]
     alquileres = [a for a in anuncios if es_alquiler(a.get("titulo"))]
     sin_clasificar = total - len(ventas) - len(alquileres)
+    alquileres_usd = [a for a in alquileres if precio_usd(a)]
+    alquileres_cup = [
+        a for a in alquileres
+        if a.get("precio") is not None
+        and str(a.get("moneda", "")).upper() == "CUP"
+    ]
 
     # Subconjunto de ventas explícitas con precio en USD (para contrastar)
     ventas_usd = [a for a in ventas if precio_usd(a)]
@@ -339,6 +350,12 @@ def main():
     L.append("- Cada respuesta indica su tamaño de muestra (n). Los subgrupos con n < 10 se presentan como evidencia descriptiva, no como conclusión firme.")
     L.append("- La clasificación de tipo, zona y características se infiere de palabras clave del título y del enlace.")
     L.append("")
+    L.append("## Fuente y universo de datos")
+    L.append("")
+    L.append("- **Revolico (fuente principal):** 171 anuncios limpios del municipio Diez de Octubre. Es la única fuente usada en los cálculos de este informe.")
+    L.append("- **Anuario Estadístico de Cuba (ONEI):** se consulta como contexto general del municipio; no se usa para calcular precios ni proporciones de la muestra digital.")
+    L.append("- **Facebook (fuente explorada, no integrada):** se revisaron 37 publicaciones de grupos de compraventa. Se excluyeron del análisis cuantitativo porque no comparten el esquema de campos de Revolico (precio anidado, ubicación en texto libre y sin municipio normalizado) y no permiten aplicar el mismo filtro municipal y de limpieza. Incorporarlas sin normalizar habría mezclado universos distintos. Se conservan en `datos/limpios/datos_unificados_facebook_revolico.json` para una ampliación futura.")
+    L.append("")
     L.append("## Preguntas sustituidas")
     L.append("")
     L.append("Cinco preguntas del cuestionario original no podían responderse con una base mínima de datos. Se sustituyeron por preguntas equivalentes y respondibles:")
@@ -350,6 +367,8 @@ def main():
     L.append("| 17 | ¿Cuál es el precio promedio por metro cuadrado? | Solo 3 anuncios mencionan metraje. | ¿Qué proporción de anuncios incluye al menos una característica física explícita? |")
     L.append("| 23 | ¿Qué zonas concentran más anuncios de venta y de alquiler? | Solo una zona tiene algún anuncio de alquiler. | ¿Qué proporción de los anuncios con zona identificada se concentra en las cuatro zonas principales? |")
     L.append("| 26 | ¿Cuál es el precio promedio en CUP? | Solo 1 anuncio declara precio en CUP. | ¿Los anuncios con lenguaje informal declaran precio con más frecuencia que los neutros? |")
+    L.append("")
+    L.append("Además de esas cinco sustituciones, la **Q1** se reformuló de «precio promedio de venta» a «precio promedio de los anuncios con precio declarado en USD», porque solo 50 anuncios se identifican explícitamente como venta. Por la misma razón, **Q20** y **Q28** se expresan sobre anuncios con precio en USD. Cuando aporta información, se reporta por separado el subconjunto de ventas explícitas (Q1, Q2 y Q11).")
     L.append("")
     L.append("## Las 30 preguntas y sus respuestas")
     L.append("")
@@ -403,7 +422,9 @@ def main():
         if len(vals) >= 5:
             L.append(f"> - {tipo}: **${fmt(sum(vals)/len(vals))} USD** (n = {len(vals)})")
     L.append("> ")
-    L.append("> Los tipos Cuarto y Local se excluyen porque solo tienen 1 anuncio con precio cada uno.")
+    if tipos_excluidos:
+        detalle_excluidos = ", ".join(f"{t} ({n})" for t, n in tipos_excluidos)
+        L.append(f"> Se excluyen los tipos con menos de 5 anuncios con precio: {detalle_excluidos}.")
     L.append("")
     L.append("**10. ¿Qué tipo de inmueble concentra el precio máximo declarado?**")
     L.append("")
@@ -414,7 +435,7 @@ def main():
     L.append("")
     L.append("**11. ¿Cuántos anuncios se identifican como venta, alquiler o sin clasificar?**")
     L.append("")
-    L.append(f"> Venta: **{len(ventas)} anuncios ({100*len(ventas)/total:.1f}%)**. Alquiler: **{len(alquileres)} ({100*len(alquileres)/total:.1f}%)**. Sin clasificar por título: **{sin_clasificar} ({100*sin_clasificar/total:.1f}%)**. De los 22 alquileres, solo 1 declara precio en USD y 1 en CUP; por eso no se puede comparar estadísticamente el precio de alquiler con el de venta.")
+    L.append(f"> Venta: **{len(ventas)} anuncios ({100*len(ventas)/total:.1f}%)**. Alquiler: **{len(alquileres)} ({100*len(alquileres)/total:.1f}%)**. Sin clasificar por título: **{sin_clasificar} ({100*sin_clasificar/total:.1f}%)**. De los {len(alquileres)} alquileres, solo {len(alquileres_usd)} declara precio en USD y {len(alquileres_cup)} en CUP; por eso no se puede comparar estadísticamente el precio de alquiler con el de venta.")
     L.append("")
     L.append("**12. ¿Qué tipo de inmueble domina en la zona con el precio promedio más alto?**")
     L.append("")
@@ -469,7 +490,7 @@ def main():
     L.append(f"> ")
     L.append(f"> **{sin_zona} de {total} anuncios ({100*sin_zona/total:.1f}%)** no especifican zona en el título.")
     L.append("")
-    L.append("**20. ¿Qué zona tiene el precio promedio de venta más alto?**")
+    L.append("**20. ¿Qué zona tiene el precio promedio más alto entre los anuncios con precio en USD?**")
     L.append("")
     L.append(f"> Entre las zonas con al menos 5 anuncios con precio, **{zona_cara}** tiene el promedio más alto: **${fmt(prom_zona_cara)} USD** (n = {len(zonas_5[zona_cara])}). Si se exige n ≥ 10, la más cara es **{zona_10_cara}** (${fmt(prom_10_cara)} USD, n = {len(zonas_10[zona_10_cara])}).")
     L.append("")
@@ -506,7 +527,7 @@ def main():
     L.append("")
     L.append(f"> **{len(con_informal)} de {total} anuncios ({100*len(con_informal)/total:.1f}%)**. Distribución: " + ", ".join(f"{p} ({c})" for p, c in informal_contador.most_common()) + ".")
     L.append("")
-    L.append("**28. ¿Qué rango de precios es más frecuente para ventas en USD?**")
+    L.append("**28. ¿Qué rango de precios es más frecuente entre los anuncios con precio en USD?**")
     L.append("")
     L.append(f"> El rango **{rango_top[0]} USD** es el más frecuente, con **{rango_top[1]} anuncios ({100*rango_top[1]/n_usd:.1f}% de los {n_usd} con precio en USD)**.")
     L.append("")
@@ -519,11 +540,11 @@ def main():
     L.append("")
     L.append("**29. ¿Cuántos anuncios parecen de particulares frente a posibles anuncios repetidos o agencias?**")
     L.append("")
-    L.append(f"> La base no incluye un campo de vendedor que permita distinguir particulares de agencias. Como aproximación, **{titulos_unicos} de {total} títulos son únicos** y **{titulos_repetidos} están repetidos**. La ausencia de duplicados exactos no muestra indicios de publicación masiva, pero tampoco descarta que una misma agencia use títulos distintos.")
+    L.append(f"> La base no incluye un campo de vendedor que permita distinguir particulares de agencias. Como aproximación, **{titulos_unicos} de {total} títulos son únicos** y no hay títulos duplicados. La ausencia de duplicados exactos no muestra indicios de publicación masiva, pero tampoco descarta que una misma agencia use títulos distintos.")
     L.append("")
     L.append("**30. ¿Qué recomendación práctica se puede hacer a alguien que quiera comprar o alquilar en Diez de Octubre?**")
     L.append("")
-    L.append(f"> 1. **Presupuesto:** la mediana de los anuncios con precio en USD es **${fmt(mediana)} USD** (en ventas explícitas, **${fmt(mediana_ventas)} USD**) y el 80% central de los precios está entre **${fmt(p10)} y ${fmt(p90)} USD**. El tramo más frecuente es **$10,000–$20,000 USD** (34 anuncios, 25.0%).")
+    L.append(f"> 1. **Presupuesto:** la mediana de los anuncios con precio en USD es **${fmt(mediana)} USD** (en ventas explícitas, **${fmt(mediana_ventas)} USD**) y el 80% central de los precios está entre **${fmt(p10)} y ${fmt(p90)} USD**. El tramo más frecuente es **{rango_top[0]} USD** ({rango_top[1]} anuncios, {100*rango_top[1]/n_usd:.1f}%).")
     L.append(f"> 2. **Tipo de inmueble:** un apartamento promedia **${fmt(sum(precios_tipo['Apartamento'])/len(precios_tipo['Apartamento']))} USD** (n = {len(precios_tipo['Apartamento'])}) y una casa **${fmt(sum(precios_tipo['Casa'])/len(precios_tipo['Casa']))} USD** (n = {len(precios_tipo['Casa'])}); el apartamento es la opción más económica.")
     top3 = zonas.most_common(3)
     L.append(f"> 3. **Zonas:** {top3[0][0]} concentra la mayor oferta ({top3[0][1]} anuncios), seguida por {top3[1][0]} ({top3[1][1]}) y {top3[2][0]} ({top3[2][1]}). El promedio más alto entre zonas con al menos 5 anuncios con precio es {zona_cara} (**${fmt(prom_zona_cara)} USD**, n = {len(zonas_5[zona_cara])}), mientras que {zona_barata} (**${fmt(prom_zona_barata)} USD**, n = {len(zonas_5[zona_barata])}) es la alternativa más económica de ese grupo.")
@@ -545,14 +566,18 @@ def main():
     L.append("## Limitaciones")
     L.append("")
     L.append("- Los datos provienen solo de Revolico; no representan todo el mercado inmobiliario de Diez de Octubre.")
+    L.append("- Se exploró Facebook (37 publicaciones), pero se excluyó del análisis cuantitativo porque no comparte el esquema de campos de Revolico ni un municipio normalizado; integrarla exigiría una normalización y un filtro municipal adicionales.")
     L.append("- La muestra es de 171 anuncios y puede no ser representativa del mercado completo.")
     L.append("- La clasificación de tipo, zona y características depende de palabras clave y puede contener errores.")
     L.append("- Los precios de alquiler no se pudieron analizar: solo 1 anuncio de alquiler declara precio en USD y 1 en CUP.")
     L.append("- Los subgrupos por zona, garaje, planta baja y número de cuartos tienen tamaños pequeños; sus promedios son descriptivos.")
     L.append("")
     L.append("---")
+    L.append("")
     L.append("Informe generado por el Proyecto de Ciencia de Datos — Universidad de La Habana")
+    L.append("")
     L.append("Facultad de Matemática y Computación (MATCOM)")
+    L.append("")
     L.append("Profesor: Yudivian Almeida Cruz")
     L.append("")
 
