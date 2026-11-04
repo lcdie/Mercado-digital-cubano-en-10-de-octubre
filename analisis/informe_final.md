@@ -1,212 +1,229 @@
 # Informe Final: Mercado Inmobiliario Digital en Diez de Octubre
 
-Fecha de generación: 04/11/2026 07:51:22
-Total de anuncios analizados: 171
+**Fecha de generación:** 04/11/2026 08:12
+**Universo analizado:** 171 anuncios limpios de Revolico
+**Anuncios con precio en USD:** 136
 
 ## Introducción
 
-Este informe presenta el análisis del mercado inmobiliario digital en el municipio Diez de Octubre, La Habana, basado en anuncios publicados en la plataforma digital Revolico. Los datos han sido recopilados, limpiados y analizados para responder a 30 preguntas de investigación organizadas en 6 bloques temáticos.
+Este informe analiza el mercado inmobiliario digital del municipio Diez de Octubre, La Habana, a partir de anuncios publicados en Revolico. Se responden 30 preguntas de investigación organizadas en cinco bloques temáticos (A–E). Las preguntas cuyas respuestas no alcanzaban una base mínima de datos fueron sustituidas por preguntas alternativas respondibles con la información disponible.
 
 ## Metodología
 
-- Los datos provienen de anuncios publicados en Revolico.
-- Se han filtrado anuncios con precios imposibles, municipios incorrectos, títulos sin información y anuncios no inmobiliarios.
-- Solo se presentan preguntas con al menos 10 anuncios de base.
-- Las preguntas con menos de 10 anuncios han sido sustituidas por preguntas con datos suficientes.
+- Se trabajó con 171 anuncios previamente limpiados: solo Diez de Octubre y precio mínimo de 1,000 USD cuando existe precio.
+- Los análisis de precio usan los 136 anuncios con precio declarado en USD; se excluye 1 anuncio en CUP y 34 sin precio.
+- Para reducir el efecto de valores extremos se reporta el rango P10–P90 y la mediana junto a la media.
+- Cada respuesta indica su tamaño de muestra (n). Los subgrupos con n < 10 se presentan como evidencia descriptiva, no como conclusión firme.
+- La clasificación de tipo, zona y características se infiere de palabras clave del título y del enlace.
+
+## Preguntas sustituidas
+
+Cinco preguntas del cuestionario original no podían responderse con una base mínima de datos. Se sustituyeron por preguntas equivalentes y respondibles:
+
+| # | Pregunta original | Motivo de la sustitución | Pregunta nueva |
+|---|---|---|---|
+| 2 | ¿Cuál es la mediana del precio de alquiler? | Solo 2 anuncios de alquiler declaran precio (1 USD y 1 CUP). | ¿Cuál es el precio mediano de los anuncios con precio en USD? |
+| 6 | ¿Es más caro comprar que alquilar? | Solo 1 alquiler tiene precio en USD; no hay base para comparar. | ¿Qué tan dispersos son los precios respecto a la media? |
+| 17 | ¿Cuál es el precio promedio por metro cuadrado? | Solo 3 anuncios mencionan metraje. | ¿Qué proporción de anuncios incluye al menos una característica física explícita? |
+| 23 | ¿Qué zonas concentran más anuncios de venta y de alquiler? | Solo una zona tiene algún anuncio de alquiler. | ¿Qué proporción de los anuncios con zona identificada se concentra en las cuatro zonas principales? |
+| 26 | ¿Cuál es el precio promedio en CUP? | Solo 1 anuncio declara precio en CUP. | ¿Los anuncios con lenguaje informal declaran precio con más frecuencia que los neutros? |
 
 ## Las 30 preguntas y sus respuestas
 
 ### Bloque A: Precios del mercado
 
-1. ¿Cuál es el precio promedio de venta en USD en Diez de Octubre?
-   > Respuesta: $22,880.00 USD (basado en 50 anuncios de venta con precio declarado)
+**1. ¿Cuál es el precio promedio de los anuncios con precio declarado en USD en Diez de Octubre?**
 
-2. ¿Cuál es el precio mediano de alquiler en USD?
-   > Respuesta: No hay datos suficientes.
+> **$32,688.24 USD** (n = 136). Si se excluyen los valores extremos y se calcula sobre el tramo P10–P90, el promedio baja a **$28,131.82 USD** (n = 110). Si se restringe a los 50 anuncios que se identifican explícitamente como venta, el promedio es **$22,880.00 USD**.
 
-3. ¿Cuál es el rango de precios que cubre el 80% de los anuncios de venta?
-   > Respuesta: Entre $7,000.00 y $45,000.00 USD (percentiles 10 y 90)
+**2. ¿Cuál es el precio mediano de los anuncios con precio declarado en USD?**
 
-4. ¿Cuál es el anuncio de venta más caro y el más barato publicado?
-   > Más caro: $70,000 USD
-   > Más barato: $1,000 USD
+> **$24,000.00 USD** (n = 136). La mediana es menor que la media porque unos pocos anuncios muy caros elevan el promedio. En el subconjunto de ventas explícitas, la mediana es **$17,000.00 USD** (n = 50).
 
-5. ¿Qué proporción de anuncios no declara precio?
-   > Respuesta: 19.88% (34 de 171 anuncios)
+**3. ¿Cuál es el rango de precios que cubre el 80% central de los anuncios?**
 
-6. ¿Existe diferencia significativa entre el precio promedio de venta y el de alquiler?
-   > Respuesta: No hay datos suficientes para comparar.
+> Entre **$8,000.00 USD** (P10) y **$70,000.00 USD** (P90). Dentro de ese tramo se concentran **110 de 136 anuncios (80.9%)**.
+
+**4. ¿Cuáles son el anuncio más caro y el más barato publicados?**
+
+> Más caro: **$180,000.00 USD**. Más barato: **$1,000.00 USD**.
+
+**5. ¿Qué proporción de anuncios no declara precio?**
+
+> **34 de 171 anuncios (19.88%)** no declaran precio. Esto obliga a contactar al vendedor para conocerlo.
+
+**6. ¿Qué tan dispersos son los precios respecto a la media?**
+
+> La media ($32,688.24) supera a la mediana ($24,000.00) en **$8,688.24**, un 36.2% de la mediana. Además, **26 anuncios (19.1%)** quedan fuera del tramo P10–P90. La distribución está sesgada a la derecha: hay una minoría de inmuebles de lujo que infla el promedio.
 
 ### Bloque B: Tipos de inmueble
 
-7. ¿Cuáles son los tipos de inmueble más publicados?
-   > Casa: 81 anuncios
-   > Apartamento: 49 anuncios
-   > Inmueble: 37 anuncios
-   > Cuarto: 2 anuncios
-   > Local: 2 anuncios
+**7. ¿Cuáles son los tipos de inmueble más publicados?**
 
-8. ¿Qué porcentaje son casas independientes frente a apartamentos?
-   > Casas independientes: 81 (62.3%)
-   > Apartamentos: 49 (37.7%)
+> - Casa: **81 anuncios** (47.4%)
+> - Apartamento: **49 anuncios** (28.7%)
+> - Inmueble: **37 anuncios** (21.6%)
+> - Cuarto: **2 anuncios** (1.2%)
+> - Local: **2 anuncios** (1.2%)
 
-9. ¿Cuál es el precio promedio de venta por tipo de inmueble?
-   > Cuarto: datos insuficientes (n=1)
-   > Local: datos insuficientes (n=1)
-   > Inmueble: $40,500.00 USD (n=26)
-   > Casa: $36,626.47 USD (n=68)
-   > Apartamento: $19,425.00 USD (n=40)
+**8. ¿Qué porcentaje son casas independientes frente a apartamentos?**
 
-10. ¿Qué tipo de inmueble concentra el precio máximo declarado?
-   > Respuesta: Inmueble con $180,000 USD
+> Casas: **81 (62.3%)**. Apartamentos: **49 (37.7%)** (n = 130 anuncios con tipo identificable entre ambos).
 
-11. ¿Cuántos anuncios son de venta frente a cuántos son de alquiler?
-   > Venta: 50 anuncios
-   > Alquiler: 1 anuncios
+**9. ¿Cuál es el precio promedio por tipo de inmueble (anuncios con precio en USD)?**
 
-12. ¿Qué tipo de inmueble domina en las zonas con precios más altos?
-   > Respuesta: La Víbora con $52,277.78 USD promedio (9 anuncios). Tipo dominante: Apartamento
+> - Inmueble: **$40,500.00 USD** (n = 26)
+> - Casa: **$36,626.47 USD** (n = 68)
+> - Apartamento: **$19,425.00 USD** (n = 40)
+> 
+> Los tipos Cuarto y Local se excluyen porque solo tienen 1 anuncio con precio cada uno.
+
+**10. ¿Qué tipo de inmueble concentra el precio máximo declarado?**
+
+> **Inmueble**, la categoría que agrupa los títulos que no especifican un tipo, con el anuncio «180,000 USD Cada en la víbora 10 octubre» a **$180,000.00 USD**. Es un valor atípico: el segundo precio más alto es **$120,000.00 USD**.
+
+**11. ¿Cuántos anuncios se identifican como venta, alquiler o sin clasificar?**
+
+> Venta: **56 anuncios (32.7%)**. Alquiler: **22 (12.9%)**. Sin clasificar por título: **93 (54.4%)**. De los 22 alquileres, solo 1 declara precio en USD y 1 en CUP; por eso no se puede comparar estadísticamente el precio de alquiler con el de venta.
+
+**12. ¿Qué tipo de inmueble domina en la zona con el precio promedio más alto?**
+
+> Entre las zonas con al menos 5 anuncios con precio, **La Víbora** tiene el promedio más alto: **$52,277.78 USD** (n = 9). El tipo dominante es **Apartamento** (6 de 9 anuncios con precio).
 
 ### Bloque C: Características físicas
 
-13. ¿Cuál es la cantidad más común de cuartos/habitaciones?
-   > Respuesta: 3 cuartos (8 anuncios)
+**13. ¿Cuál es la cantidad más común de cuartos/habitaciones?**
 
-14. ¿Cómo varía el precio según el número de cuartos?
-   > 2 cuarto(s): $22,400.00 USD (n=5)
-   > 3 cuarto(s): $37,166.67 USD (n=6)
+> **3 cuartos**, presente en **8 de 19 anuncios** que especifican el dato (42.1%).
 
-15. ¿Qué porcentaje de anuncios menciona garaje y cómo afecta al precio?
-   > [{'titulo': 'Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños', 'precio': 48000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362', 'permuta': False, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:51:58'}, {'titulo': 'Casa independiente en Santo Suárez con garaje', 'precio': 64000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/casa-independiente-en-santo-suarez-con-garaje-58176457', 'permuta': False, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:52:10'}, {'titulo': 'Vendo apartamento capitalista garaje último piso con balcón semi interior en la Víbora cerca del Tribunal provincial', 'precio': 15000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/vendo-apartamento-capitalista-garaje-ultimo-piso-con-balcon-semi-interior-en-la-vibora-cerca-del-tribunal-provincial-58325597', 'permuta': False, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:56:47'}, {'titulo': '11,000 USD Casa Colonial En Espada y Anima:Esquinas e/ Cine Pionero y Callejón de Hamel,Posib.d Garaje (114m)..,2 Cuadras d Infanta', 'precio': 11000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/espada-y-animacerca-del-cine-pionero-y-del-callejon-de-hamela-2-cuadras-d-infantaapto-colonial-puerta-y-ventanales-a-54609932', 'permuta': False, 'id_anuncio': 54609932, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '120,000 USD 🏡 ¡LA CASA DE TUS SUEÑOS! 😎 CASA INDEPENDIENTE CON JARDÍN, GARAJE Y 5 HABITACIONES', 'precio': 120000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/la-casa-de-tus-suenos-casa-independiente-con-jardin-garaje-y-5-habitaciones-57842493', 'permuta': False, 'id_anuncio': 57842493, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '34,000 USD 🏡 CASA INDEPENDIENTE CON GARAJE – EL SEVILLANO, 10 DE OCTUBRE 🏡', 'precio': 34000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/casa-independiente-con-garaje-el-sevillano-10-de-octubre-58361247', 'permuta': False, 'id_anuncio': 58361247, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '35,000 USD En venta biplanta en bajos con 4 cuartos y garaje en Casino Deportivo !!!', 'precio': 35000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/en-venta-biplanta-en-bajos-con-4-cuartos-y-garaje-en-casino-deportivo-57728706', 'permuta': False, 'id_anuncio': 57728706, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:46'}, {'titulo': '20,000 USD Casa en Arroyo Naranjo con garaje', 'precio': 20000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/casa-en-arroyo-naranjo-con-garaje-57564809', 'permuta': False, 'id_anuncio': 57564809, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:46'}] de 171 anuncios (4.7%) mencionan garaje.
-   > Precio promedio con garaje: $43,375.00 USD
-   > Precio promedio sin garaje: $32,020.31 USD
-   > Diferencia: $11,354.69 USD
+**14. ¿Cómo varía el precio según el número de cuartos?**
 
-16. ¿Cuántos anuncios especifican 'planta baja' y cuál es su precio promedio?
-   > [{'titulo': '🏡 SE VENDE O SE PERMUTA APARTAMENTO EN PLANTA BAJA, SEVILLANO, 10 DE OCTUBRE.', 'precio': 12000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/se-vende-o-se-permuta-apartamento-en-planta-baja-sevillano-10-de-octubre-55911834', 'permuta': True, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:56:58'}, {'titulo': '70,000 USD Económica  Casa en bajos de Biplanta en Zona Residencial de Atavey', 'precio': 70000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/economica-casa-en-zona-residencial-de-atavey-57459566', 'permuta': False, 'id_anuncio': 57459566, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '35,000 USD 🏡 ¡FRENTE AL MAR EN EL NÁUTICO! Casa en Bajos (2 Hab) 🌊', 'precio': 35000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/frente-al-mar-en-el-nautico-casa-en-bajos-2-hab-listo-para-vivir-confort-y-autonomia-total-55991777', 'permuta': False, 'id_anuncio': 55991777, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '19,500 USD 🏢 APARTAMENTO PUERTA DE CALLE, PLANTA BAJA – LA VÍBORA 🏢', 'precio': 19500, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/apartamento-puerta-de-calle-planta-baja-la-vibora-58361077', 'permuta': False, 'id_anuncio': 58361077, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:41'}, {'titulo': '30,000 USD Oportunidad en Santo Suárez.  En venta amplio biplanta en bajos del año 1940, con 84,51 m² y excelente ubicación !!!', 'precio': 30000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/oportunidad-en-santo-suarez-en-venta-amplio-biplanta-en-bajos-del-ano-1940-con-8451-m2-y-excelente-ubicacion-52642522', 'permuta': False, 'id_anuncio': 52642522, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:46'}, {'titulo': '35,000 USD En venta biplanta en bajos con 4 cuartos y garaje en Casino Deportivo !!!', 'precio': 35000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/en-venta-biplanta-en-bajos-con-4-cuartos-y-garaje-en-casino-deportivo-57728706', 'permuta': False, 'id_anuncio': 57728706, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:46'}, {'titulo': '50,000 USD JOYA CAPITALISTA EN BAJOS: IDEAL PARA NEGOCIO O VIVIENDA ( Cercana a ZAPATA E INFANTA)', 'precio': 50000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/joya-capitalista-en-bajos-ideal-para-negocio-o-vivienda-cercana-a-zapata-e-infanta-53110209', 'permuta': False, 'id_anuncio': 53110209, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:46'}, {'titulo': '13,500 USD Casa en luyano planta baja placa ocupada', 'precio': 13500, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/casa-en-luyano-planta-baja-placa-ocupada-56798447', 'permuta': False, 'id_anuncio': 56798447, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 16:00:05'}] anuncios especifican planta baja (8 con precio declarado).
-   > Precio promedio: $33,125.00 USD
+> - 2 cuartos: **$22,400.00 USD** (n = 5)
+> - 3 cuartos: **$37,166.67 USD** (n = 6)
+> 
+> Los anuncios de 2 y 3 cuartos son los únicos subgrupos con al menos 5 casos. El precio promedio sube de 2 a 3 cuartos en **$14,766.67 USD**.
 
-17. ¿Qué porcentaje menciona metraje (m²) y cuál es el promedio?
-   > [{'titulo': '🔴Casa Grande para Almacén 240m²📦', 'precio': 80000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/casa-grande-para-almacen-240m2-56416044', 'permuta': False, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:51:11'}, {'titulo': 'Se vende apartamento capitalista en la Víbora 92m2 cerca del Palacio de los matrimonios y matias Rodríguez', 'precio': 25000, 'moneda': 'USD', 'municipio': '10 de Octubre', 'enlace': 'https://www.revolico.com/item/se-vende-apartamento-capitalista-en-la-vibora-92m2-cerca-del-palacio-de-los-matrimonios-y-matias-rodriguez-58325911', 'permuta': False, 'estado': 'activo', 'motivo_estado': 'Activo', 'fecha_verificacion': '2026-10-31 15:55:57'}, {'titulo': '30,000 USD Oportunidad en Santo Suárez.  En venta amplio biplanta en bajos del año 1940, con 84,51 m² y excelente ubicación !!!', 'precio': 30000, 'moneda': 'USD', 'municipio': 'Diez de Octubre', 'enlace': 'https://www.revolico.com/item/oportunidad-en-santo-suarez-en-venta-amplio-biplanta-en-bajos-del-ano-1940-con-8451-m2-y-excelente-ubicacion-52642522', 'permuta': False, 'id_anuncio': 52642522, 'fuente': 'nuevo_scraping', 'fecha_agregado': '2026-10-31', 'estado': 'activo', 'motivo_estado': 'Nuevo anuncio', 'fecha_verificacion': '2026-10-31 15:59:46'}] de 171 anuncios (1.8%) mencionan metraje.
-   > Precio promedio: $45,000.00 USD (n=3)
+**15. ¿Qué porcentaje de anuncios menciona garaje y cómo se relaciona con el precio?**
 
-18. ¿Qué características físicas se mencionan con más frecuencia?
-   > Garaje: 8 anuncios
-   > Cuarto: 6 anuncios
-   > Baño: 3 anuncios
-   > Terraza: 2 anuncios
-   > Balcón: 1 anuncios
-   > Azotea: 1 anuncios
-   > Sala: 1 anuncios
-   > Patio: 1 anuncios
+> **8 de 171 anuncios (4.7%)** mencionan garaje. Entre los que declaran precio en USD, el promedio con garaje es **$43,375.00 USD** (n = 8) frente a **$32,020.31 USD** sin garaje (n = 128): una diferencia de **$11,354.69 USD** (35.5% más). El subgrupo con garaje es pequeño (n = 8), así que la diferencia es indicativa, no concluyente.
+
+**16. ¿Cuántos anuncios especifican 'planta baja' y cuál es su precio promedio?**
+
+> **8 anuncios (4.7%)** mencionan planta baja o bajos; los **8** con precio en USD promedian **$33,125.00 USD**. Es un grupo pequeño (n = 8), por lo que solo describe una tendencia.
+
+**17. ¿Qué proporción de anuncios incluye al menos una característica física explícita?**
+
+> **24 de 171 anuncios (14.0%)** mencionan al menos una característica física (garaje, patio, azotea, terraza, balcón, baño, cuartos o habitaciones). De ellos, **20** declaran precio en USD.
+
+**18. ¿Qué características físicas se mencionan con más frecuencia?**
+
+> - Garaje: **8 anuncios**
+> - Cuarto: **6 anuncios**
+> - Baño: **3 anuncios**
+> - Terraza: **2 anuncios**
+> - Balcón: **1 anuncio**
+> - Azotea: **1 anuncio**
+> - Sala: **1 anuncio**
+> - Patio: **1 anuncio**
 
 ### Bloque D: Ubicación dentro de Diez de Octubre
 
-19. ¿Qué zonas o barrios aparecen con más frecuencia en los anuncios?
-   > Santos Suárez: 14 anuncios
-   > Lawton: 11 anuncios
-   > La Víbora: 9 anuncios
-   > El Sevillano: 8 anuncios
-   > El Mónaco: 5 anuncios
-   > Luyano: 4 anuncios
-   > Santa Catalina: 1 anuncios
-   > Vía Blanca: 1 anuncios
+**19. ¿Qué zonas o barrios aparecen con más frecuencia en los anuncios?**
 
-20. ¿Qué zona tiene el precio promedio de venta más alto?
-   > Respuesta: La Víbora con $52,277.78 USD promedio (9 anuncios)
+> - Santos Suárez: **14 anuncios**
+> - Lawton: **11 anuncios**
+> - La Víbora: **9 anuncios**
+> - El Sevillano: **8 anuncios**
+> - El Mónaco: **5 anuncios**
+> - Luyano: **4 anuncios**
+> - Santa Catalina: **1 anuncio**
+> - Vía Blanca: **1 anuncio**
+> - Calzada 10 de Octubre: **1 anuncio**
+> 
+> **117 de 171 anuncios (68.4%)** no especifican zona en el título.
 
-21. ¿Qué zona tiene la mayor cantidad de anuncios publicados?
-   > Respuesta: Santos Suárez con 14 anuncios
+**20. ¿Qué zona tiene el precio promedio de venta más alto?**
 
-22. ¿Hay diferencia de precios entre zonas dentro del mismo municipio?
-   > Respuesta: Sí. La zona más cara es La Víbora ($52,277.78 USD) y la más barata es Luyano ($22,125.00 USD). Diferencia: $30,152.78 USD.
+> Entre las zonas con al menos 5 anuncios con precio, **La Víbora** tiene el promedio más alto: **$52,277.78 USD** (n = 9). Si se exige n ≥ 10, la más cara es **Santos Suárez** ($25,923.08 USD, n = 13).
 
-23. ¿Qué zonas aparecen solo en venta o solo en alquiler?
-   > Zonas solo en venta (6): El Mónaco, La Víbora, Lawton, Luyano, Santos Suárez, Vía Blanca
-   > Zonas solo en alquiler (0): Ninguna
-   > Zonas en ambas categorías (1): El Sevillano
+**21. ¿Qué zona tiene la mayor cantidad de anuncios publicados?**
 
-24. ¿Cuántos anuncios no especifican zona dentro del municipio?
-   > Respuesta: 118 de 171 anuncios (69.0%) no especifican zona dentro de Diez de Octubre.
+> **Santos Suárez**, con **14 anuncios** (13 de ellos con precio en USD).
+
+**22. ¿Hay diferencia de precios entre zonas dentro del mismo municipio?**
+
+> Sí. Entre las zonas con al menos 5 anuncios con precio, **La Víbora** promedia **$52,277.78 USD** (n = 9) y **Lawton** promedia **$23,600.00 USD** (n = 10): una diferencia de **$28,677.78 USD**. Si se comparan solo zonas con n ≥ 10, la diferencia entre Santos Suárez y Lawton es de **$2,323.08 USD**.
+
+**23. ¿Qué proporción de los anuncios con zona identificada se concentra en las cuatro zonas principales?**
+
+> Las cuatro zonas principales —Santos Suárez, Lawton, La Víbora, El Sevillano— reúnen **42 de 54 anuncios con zona identificada (77.8%)**. La oferta está, por tanto, muy concentrada en pocos barrios.
+
+**24. ¿Cuántos anuncios no especifican zona dentro del municipio?**
+
+> **117 de 171 anuncios (68.4%)** no especifican zona en el título ni en el enlace.
 
 ### Bloque E: Moneda y mercado informal
 
-25. ¿Qué proporción de anuncios declara precios en USD frente a CUP?
-   > USD: 136 anuncios (99.3%)
-   > CUP: 1 anuncios (0.7%)
+**25. ¿Qué proporción de anuncios con moneda declarada usa USD frente a CUP?**
 
-26. ¿Cuál es el precio promedio de los anuncios declarados en CUP?
-   > Respuesta: No hay datos suficientes (menos de 3 anuncios con precio en CUP).
+> USD: **136 de 137 (99.3%)**. CUP: **1 de 137 (0.7%)**. Además, 34 anuncios no declaran precio ni moneda. En el total del universo, el USD aparece en **79.5%** de los anuncios.
 
-27. ¿Qué porcentaje de anuncios incluye palabras como 'oportunidad', 'ganga' o 'permuta'?
-   > 15 de 171 anuncios (8.8%) incluyen palabras de mercado informal.
-      - Oportunidad: 12 menciones
-      - Permuta: 2 menciones
-      - Cambio: 1 menciones
+**26. ¿Los anuncios con lenguaje informal declaran precio con más frecuencia que los anuncios con lenguaje neutro?**
 
-28. ¿Qué rango de precios es más frecuente para ventas en USD?
-   > Respuesta: El rango 10,000 - 20,000 es el más frecuente con 21 anuncios (42.0% de los anuncios de venta con precio USD).
+> Sí. Entre los **15 anuncios** con palabras como 'oportunidad', 'ganga', 'permuta', 'intercambio' o 'cambio', **14 (93.3%)** declaran precio. Entre los **156 anuncios** con lenguaje neutro, lo hacen **123 (78.8%)**. La diferencia es de **14.5 puntos porcentuales**.
 
-   Distribución completa:
-      10,000 - 20,000: 21 anuncios (42.0%)
-      0 - 10,000: 8 anuncios (16.0%)
-      30,000 - 40,000: 7 anuncios (14.0%)
-      20,000 - 30,000: 6 anuncios (12.0%)
-      40,000 - 50,000: 4 anuncios (8.0%)
-      60,000 - 70,000: 2 anuncios (4.0%)
-      70,000 - 80,000: 2 anuncios (4.0%)
+**27. ¿Qué porcentaje de anuncios incluye palabras de mercado informal?**
 
-29. ¿Cuántos anuncios parecen ser de particulares frente a posibles anuncios repetidos o agencias (por lenguaje o título)?
-   > Total de títulos únicos: 171
-   > Anuncios con título único (probables particulares): 171
-   > Anuncios con título repetido (posibles agencias o anuncios duplicados): 0 anuncios en 0 títulos repetidos
+> **15 de 171 anuncios (8.8%)**. Distribución: oportunidad (12), permuta (2), cambio (1).
 
-30. ¿Qué recomendación práctica se puede hacer a alguien que quiera comprar o alquilar en Diez de Octubre según estos datos?
+**28. ¿Qué rango de precios es más frecuente para ventas en USD?**
 
-   > Respuesta: Basado en el análisis de los datos del mercado inmobiliario digital en Diez de Octubre:
+> El rango **10,000 - 20,000 USD** es el más frecuente, con **34 anuncios (25.0% de los 136 con precio en USD)**.
 
-   1. **Precios razonables**: El precio promedio de venta en USD es de ${promedio_venta:,.2f}, con una mediana de ${mediana_venta:,.2f} USD. El rango más común de precios se encuentra entre ${p10:,.2f} y ${p90:,.2f} USD.
+> Distribución completa:
+>
+> - 0 - 10,000: 22 anuncios (16.2%)
+> - 10,000 - 20,000: 34 anuncios (25.0%)
+> - 20,000 - 30,000: 22 anuncios (16.2%)
+> - 30,000 - 40,000: 18 anuncios (13.2%)
+> - 40,000 - 50,000: 14 anuncios (10.3%)
+> - 50,000 - 60,000: 5 anuncios (3.7%)
+> - 60,000 - 70,000: 5 anuncios (3.7%)
+> - 70,000 - 80,000: 7 anuncios (5.1%)
+> - 80,000+: 9 anuncios (6.6%)
 
-   2. **Zonas más activas**: Santos Suárez, La Víbora, Lawton y Luyano son las zonas con mayor cantidad de anuncios publicados.
+**29. ¿Cuántos anuncios parecen de particulares frente a posibles anuncios repetidos o agencias?**
 
-   3. **Precios por zona**: Hay diferencias significativas de precios entre zonas dentro del mismo municipio. Se recomienda investigar específicamente la zona de interés antes de tomar una decisión.
+> La base no incluye un campo de vendedor que permita distinguir particulares de agencias. Como aproximación, **171 de 171 títulos son únicos** y **0 están repetidos**. La ausencia de duplicados exactos no muestra indicios de publicación masiva, pero tampoco descarta que una misma agencia use títulos distintos.
 
-   4. **Moneda**: La gran mayoría de los anuncios se declaran en USD, por lo que se recomienda contar con esta moneda para realizar transacciones inmobiliarias en el área.
+**30. ¿Qué recomendación práctica se puede hacer a alguien que quiera comprar o alquilar en Diez de Octubre?**
 
-   5. **Permuta**: El mercado de permutas está presente en el mercado, lo que puede ser una opción para quienes no cuentan con efectivo completo.
-
-   6. **Precaución**: Dado que muchos anuncios no declaran precio y algunos títulos son genéricos, se recomienda verificar directamente con el vendedor antes de realizar cualquier gestión.
-
-   7. **Análisis por zona**: Se recomienda enfocarse en zonas específicas según el presupuesto disponible, ya que existen diferencias de precios entre zonas dentro del mismo municipio.
+> 1. **Presupuesto:** la mediana de los anuncios con precio en USD es **$24,000.00 USD** (en ventas explícitas, **$17,000.00 USD**) y el 80% central de los precios está entre **$8,000.00 y $70,000.00 USD**. El tramo más frecuente es **$10,000–$20,000 USD** (34 anuncios, 25.0%).
+> 2. **Tipo de inmueble:** un apartamento promedia **$19,425.00 USD** (n = 40) y una casa **$36,626.47 USD** (n = 68); el apartamento es la opción más económica.
+> 3. **Zonas:** Santos Suárez concentra la mayor oferta (14 anuncios), seguida por Lawton (11) y La Víbora (9). El promedio más alto entre zonas con al menos 5 anuncios con precio es La Víbora (**$52,277.78 USD**, n = 9), mientras que Lawton (**$23,600.00 USD**, n = 10) es la alternativa más económica de ese grupo.
+> 4. **Moneda:** el mercado está dolarizado: **136 de 137 anuncios con moneda declarada (99.3%)** usan USD. Hay que contar con divisas o verificar el tipo de cambio si se paga en CUP.
+> 5. **Información incompleta:** **34 anuncios (19.9%)** no declaran precio y **117 (68.4%)** no especifican zona. Verifique siempre precio, ubicación y estado legal directamente con el vendedor.
+> 6. **Precaución estadística:** los promedios por zona y por características se basan en subgrupos pequeños; úselos como orientación, no como precio de referencia definitivo.
 
 ## Conclusiones
 
-1. El mercado inmobiliario digital en Diez de Octubre está dominado por anuncios en USD, lo que refleja la dollarización del mercado inmobiliario en Cuba.
-
-2. Las casas independientes son el tipo de inmueble más publicado, seguidas por los apartamentos, lo que sugiere una preferencia por viviendas unifamiliares en el área.
-
-3. Santos Suárez, La Víbora, Lawton y Luyano son las zonas con mayor cantidad de anuncios publicados, lo que indica una mayor oferta en estas áreas.
-
-4. Existen diferencias de precios entre zonas dentro del mismo municipio, por lo que es importante investigar específicamente la zona de interés.
-
-5. El mercado de permutas está presente y representa una alternativa para quienes no cuentan con efectivo completo.
-
-6. Muchos anuncios no declaran precio, lo que dificulta el análisis del mercado y requiere contacto directo con el vendedor.
-
-7. El rango de precios más frecuente para ventas en USD está entre $10,000 y $30,000, que representa más del 50% de los anuncios.
-
-8. El promedio de precios en el rango P10-P90 (excluyendo valores atípicos) es de $28,131.82 USD, con una mediana de $24,000 USD.
+1. El mercado está dolarizado: 136 de 137 anuncios con moneda declarada (99.3%) están en USD.
+2. Los precios están sesgados a la derecha: la media ($32,688.24) supera a la mediana ($24,000.00) y 26 anuncios (19.1%) quedan fuera del tramo P10–P90.
+3. Las casas son el tipo más publicado (81 anuncios, 47.4%). Entre casa y apartamento, la casa es más cara en promedio ($36,626.47 USD) que el apartamento ($19,425.00 USD).
+4. La oferta se concentra en pocas zonas: las cuatro principales reúnen 77.8% de los anuncios con zona identificada.
+5. Existen diferencias de precio entre zonas: La Víbora promedia $52,277.78 USD y Lawton $23,600.00 USD (zonas con al menos 5 anuncios con precio).
+6. La información está incompleta: 34 anuncios (19.9%) no declaran precio y 117 (68.4%) no especifican zona.
 
 ## Limitaciones
 
-- Los datos provienen únicamente de anuncios publicados en un portal digital (Revolico), no representan la totalidad del mercado físico.
-- Muchos anuncios no declaran precio ni ubicación específica dentro del municipio.
-- La detección de municipio y zona se basa en palabras clave presentes en el título y el enlace del anuncio, lo que puede generar falsos positivos.
-- La muestra es limitada (171 anuncios limpios) y puede no ser representativa del mercado completo.
+- Los datos provienen solo de Revolico; no representan todo el mercado inmobiliario de Diez de Octubre.
+- La muestra es de 171 anuncios y puede no ser representativa del mercado completo.
+- La clasificación de tipo, zona y características depende de palabras clave y puede contener errores.
+- Los precios de alquiler no se pudieron analizar: solo 1 anuncio de alquiler declara precio en USD y 1 en CUP.
+- Los subgrupos por zona, garaje, planta baja y número de cuartos tienen tamaños pequeños; sus promedios son descriptivos.
 
 ---
-Informe generado automáticamente por el Proyecto de Ciencia de Datos - Universidad de La Habana
+Informe generado por el Proyecto de Ciencia de Datos — Universidad de La Habana
 Facultad de Matemática y Computación (MATCOM)
 Profesor: Yudivian Almeida Cruz
 
----
