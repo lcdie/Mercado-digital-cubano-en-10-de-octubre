@@ -1,7 +1,7 @@
 # Mercado inmobiliario digital en Diez de Octubre
 ## Opacidad, dolarización, desigualdad territorial e informalidad
 
-**Fecha de generación:** 05/11/2026 00:27
+**Fecha de generación:** 05/11/2026 01:00
 **Corte de los datos:** 2026-10-31 (Revolico); Facebook sin fecha homogénea
 **Universo:** 122 publicaciones confirmadas dentro del municipio (83 de Revolico + 39 de Facebook)
 **Verificación espacial:** polígono municipal DPA `23.09` de `datos/geo/lha.geojson`
@@ -10,6 +10,7 @@
 ## Resumen ejecutivo
 
 Esta versión no usa los 134 anuncios que el scraper *etiquetaba* como Diez de Octubre. Usa las **122 publicaciones que la verificación espacial confirmó dentro del municipio**: 83 de Revolico y 39 de Facebook. De las 176 publicaciones unificadas, 46 pertenecen a otro municipio y 8 no son verificables; todas quedan fuera. La clasificación aplica el **título como evidencia principal**: si nombra Diez de Octubre o un reparto interno, confirma; si nombra un lugar externo, descarta. La ficha y el resto del texto solo se usan cuando el título no aporta señal. El detalle está en `analisis/verificacion_municipal_geojson_20261104.md`.
+Los **55 registros no incluidos** (46 `NO`, 8 `INDETERMINADO` y 1 fuera del universo) se conservan íntegros en `datos/limpios/descartados_diez_octubre.json` y `.csv`, con su motivo, su registro original y el registro unificado exacto.
 
 Los hallazgos principales son:
 
@@ -17,7 +18,7 @@ Los hallazgos principales son:
 - **Precios de compra:** mediana **$20,000.00 USD**; P10–P90 **$6,200.00–$60,000.00 USD**; media **$26,023.26 USD** (n = 43 ventas explícitas con precio en USD).
 - **Alquiler:** 1 de 3 alquileres declaran precio y **ninguno lo hace en USD**; el precio de alquiler no es estimable con esta base.
 - **Opacidad:** 15 de 122 publicaciones (12.3%) no declaran precio; 31 (25.4%) no especifican zona; solo 82 (67.2%) permiten cruzar precio y zona.
-- **Desigualdad territorial:** las cuatro zonas principales concentran 69 de 91 publicaciones con zona identificada (75.8%). Entre las zonas con n ≥ 10, La Víbora tiene la media y la mediana más altas; entre las de n ≥ 5, El Mónaco las supera, pero con solo 5 casos.
+- **Desigualdad territorial:** las cuatro zonas principales concentran 69 de 91 publicaciones con zona identificada (75.8%). Entre las zonas con n ≥ 10, La Víbora tiene la media más alta ($49,590.91 USD, n = 11) y El Sevillano la mediana más alta ($36,000.00 USD, n = 10); entre las de n ≥ 5, El Mónaco lidera la media ($57,666.67 USD, n = 6), pero la mediana más alta sigue siendo la de El Sevillano ($36,000.00 USD, n = 10).
 - **Informalidad:** 12 de 122 publicaciones (9.8%) usan lenguaje de oportunidad, permuta o cambio. Todas son de Revolico: Facebook no aporta texto suficiente para medir esta dimensión, así que el dato es una cota inferior.
 - **Tipo de inmueble:** el apartamento es la opción más accesible: media **$18,181.82 USD** y mediana **$15,000.00 USD** (n = 33), frente a la casa con media **$42,842.11 USD** y mediana **$33,000.00 USD** (n = 57).
 
@@ -50,6 +51,7 @@ El campo `municipio` del scraper no es fiable: asigna «Diez de Octubre» a anun
 | INDETERMINADO | 5 | 3 | 8 |
 
 La base final son las **122 publicaciones con resultado SÍ**. Las 46 de otro municipio y las 8 indeterminadas se excluyen. Los 8 casos que la regla anterior marcaba como contradictorios tenían un título con un reparto interno y se confirman por la regla de título. Esa exclusión reduce el tamaño de la muestra, pero evita atribuir a Diez de Octubre precios y zonas que pertenecen a otros municipios.
+Los **55 registros no incluidos** se conservan íntegros: 46 `NO`, 8 `INDETERMINADO` y 1 que ya estaba fuera de la base unificada (`facebook-27`). Cada uno guarda su motivo, la evidencia, el registro original y el registro unificado exacto en `datos/limpios/descartados_diez_octubre.json` y `.csv`.
 
 La verificación tiene un límite explícito: el polígono es una simplificación de 11 vértices y no resuelve casos catastrales a pocos metros del borde. Además, la ficha se apoya en la ubicación que declara el anunciante, no en la dirección exacta de la propiedad. La regla de título puede confirmar un anuncio con ficha mal declarada, y los casos indeterminados son aquellos en los que ninguna evidencia alcanza para decidir.
 
@@ -295,11 +297,11 @@ La lectura social es directa: la opacidad no afecta a todos por igual. Quien pue
 
 ## Conclusiones
 
-1. **La base verificada es de 122 publicaciones.** La versión anterior usaba 134 anuncios etiquetados como Diez de Octubre, pero 83 de ellos están confirmados en el municipio. Esta versión usa las 122 publicaciones confirmadas (83 de Revolico y 39 de Facebook) y excluye 46 de otros municipios y 8 indeterminadas.
+1. **La base verificada es de 122 publicaciones.** La versión anterior usaba 134 anuncios etiquetados como Diez de Octubre; la verificación confirmó 83 de Revolico. Con 39 de Facebook, esta versión usa las 122 publicaciones confirmadas (83 de Revolico + 39 de Facebook) y excluye 46 de otros municipios y 8 indeterminadas.
 2. **El mercado está dolarizado.** 106 de 107 publicaciones con moneda declarada (99.1%) están en USD; en el total, la proporción es 86.9% y la cota superior posible es 99.2%. Quien no tiene divisas enfrenta una barrera de acceso estructural.
 3. **El precio de compra típico es mucho menor que el promedio.** La mediana de las ventas con precio USD es $20,000.00 USD, mientras que la media es $26,023.26 USD. El 80% central está entre $6,200.00 y $60,000.00 USD (n = 43). La media sola sobreestima el precio al que se concentra la oferta.
 4. **El alquiler no tiene precio estimable.** Solo 1 de 3 alquileres declara precio, y ninguno en USD. No se puede responder cuánto cuesta alquilar con esta base; esa ausencia es un hallazgo sobre el funcionamiento del segmento.
-5. **La desigualdad territorial existe, pero hay que medirla con medianas.** Las cuatro zonas principales concentran 75.8% de las publicaciones con zona. Entre las zonas con n ≥ 10, El Sevillano tiene la mediana más alta ($36,000.00 USD); entre las de n ≥ 5, El Sevillano la supera ($36,000.00 USD) pero con solo 10 casos. La diferencia entre media y mediana en La Víbora muestra que los valores extremos inflan el promedio.
+5. **La desigualdad territorial existe, pero hay que medirla con medianas.** Las cuatro zonas principales concentran 75.8% de las publicaciones con zona. Entre las zonas con n ≥ 10, La Víbora tiene la media más alta ($49,590.91 USD, n = 11) y El Sevillano la mediana más alta ($36,000.00 USD, n = 10); entre las de n ≥ 5, El Mónaco lidera la media ($57,666.67 USD, n = 6), pero la mediana más alta sigue siendo la de El Sevillano ($36,000.00 USD, n = 10). La diferencia entre media y mediana en La Víbora muestra que los valores extremos inflan el promedio.
 6. **La opacidad es importante en zona y moderada en precio.** 25.4% no especifica zona, 12.3% no declara precio y 67.2% permite cruzar ambos datos. El 4.9% no tiene ninguno de los dos. La ausencia de información es un mecanismo de desigualdad: quien no puede verificar queda expuesto a la intermediación.
 7. **La informalidad es visible pero no domina.** 9.8% usa lenguaje de oportunidad, permuta o cambio. Se concentra en venta y en publicaciones sin operación declarada; no aparece en alquiler. Las informales declaran precio algo más que las neutras (91.7% frente a 87.3%), pero el subgrupo es pequeño y la diferencia no es concluyente. Además, el indicador solo cubre Revolico: es una cota inferior.
 8. **El apartamento es la opción más accesible.** Su media es $18,181.82 USD y su mediana $15,000.00 USD (n = 33), frente a la casa ($42,842.11 y $33,000.00 USD; n = 57). La diferencia se mantiene en P10–P90. Entre los tipos con n ≥ 10, el Inmueble sin tipo específico es el más opaco y el más caro en media, lo que sugiere que la falta de información sobre el tipo se asocia con operaciones de mayor valor.
@@ -319,6 +321,43 @@ En conjunto, el mercado digital de Diez de Octubre no es un espacio transparente
 - **CUP:** el único precio en CUP no se convierte a USD porque no se dispone de un tipo de cambio oficial o de mercado claramente definido para el corte. Se reporta como hallazgo, no como precio comparable.
 - **Precios de oferta:** los valores son precios publicados, no precios de transacción. La diferencia entre lo que se pide y lo que se paga no es observable con estos datos.
 - **Sesgo de publicación:** las viviendas que no se publican, o que se publican en canales cerrados, no aparecen en la base. La opacidad medida es la del mercado digital visible, no la del mercado total.
+
+## Anexo: fuentes, cobertura y referencias
+
+### A.1 Fuentes y captura
+
+| Fuente | Uso en el análisis | Corte o captura | Confirmadas |
+|---|---|---|---:|
+| Revolico | Anuncios inmobiliarios: título, precio, enlace y fecha de verificación | 2026-10-31 | 83 |
+| Facebook | Anuncios y descripciones: precio y texto parcial | 2026-11-04 | 39 |
+| GeoJSON municipal | Polígono DPA `23.09` para la comprobación punto-en-polígono | Copia versionada | — |
+| Nominatim / OpenStreetMap | Geocodificación de topónimos; caché local | `datos/geo/geocoding_lha.json` | — |
+| ONEI, Anuario Estadístico de Cuba | Contexto de población, vivienda y tenencia | `fuentes/anuario_estadistico_notas.md` | — |
+
+### A.2 Cobertura por campo
+
+| Campo | Cobertura | n | Lectura |
+|---|---:|---:|---|
+| Precio declarado en USD | 86.9% | 106/122 | Base principal de los análisis de precio. |
+| Precio declarado en CUP | 0.8% | 1/122 | No se convierte a USD. |
+| Sin precio | 12.3% | 15/122 | Se conserva y se reporta como opacidad. |
+| Zona identificada | 74.6% | 91/122 | 84 en ficha + 7 recuperadas del texto. |
+| Operación declarada | 43.4% | 53/122 | 50 ventas y 3 alquileres; 69 sin clasificar. |
+| Habitaciones | 0.0% | 0/122 | No hay campo homogéneo; no se estima. |
+| Baños | 0.0% | 0/122 | No hay campo homogéneo; no se estima. |
+| Superficie (m²) | 4.9% | 6/122 | Solo Facebook (`detalles_propiedad.area_m2`). |
+| Teléfono | 23.8% | 29/122 | Contacto declarado; no se usa para inferir intermediación. |
+| Enlace | 68.0% | 83/122 | Todos de Revolico. |
+
+### A.3 Referencias
+
+- **ONEI.** *Anuario Estadístico de Cuba*. Oficina Nacional de Estadística e Información, República de Cuba. Notas de uso en `fuentes/anuario_estadistico_notas.md`.
+- **OpenStreetMap / Nominatim.** Servicio de geocodificación usado para traducir topónimos a coordenadas; resultados cacheados en `datos/geo/geocoding_lha.json`.
+- **GeoJSON municipal.** `datos/geo/lha.geojson`, copia versionada del polígono de La Habana; SHA-256 `b9bbcce811d9bbfcee15f5e904d97dc24cf044cabcf17a870487ad361bb7c9e6`.
+- **Revolico.** Portal de anuncios clasificados; captura del 2026-10-31. URL base: `https://www.revolico.com`.
+- **Facebook.** Publicaciones de grupos y páginas de compraventa; captura del 2026-11-04. No se reproducen enlaces individuales por privacidad.
+
+> **Nota sobre la evidencia:** los precios son precios de oferta, no de transacción. No hay datos homogéneos de metros cuadrados, habitaciones, baños, estado legal ni año de construcción. Las ausencias se reportan; no se imputan.
 
 ---
 

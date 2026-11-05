@@ -50,6 +50,9 @@ INPUT_VERIF_REVOLICO = os.path.join(
 INPUT_VERIF_FACEBOOK = os.path.join(
     RAIZ, "datos", "limpios", "verificacion_municipal_facebook.json"
 )
+INPUT_DESCARTADOS = os.path.join(
+    RAIZ, "datos", "limpios", "descartados_diez_octubre.json"
+)
 OUTPUT_FILE = os.path.join(RAIZ, "analisis", "informe_final.md")
 REPORTE_VERIFICACION = "analisis/verificacion_municipal_geojson_20261104.md"
 
@@ -308,6 +311,10 @@ def main():
     stats_zona = {z: stats(v) for z, v in precios_zona.items()}
     zonas_5 = {z: s for z, s in stats_zona.items() if s["n"] >= 5}
     zonas_10 = {z: s for z, s in stats_zona.items() if s["n"] >= 10}
+    zona_cara_5 = max(zonas_5, key=lambda z: zonas_5[z]["mean"])
+    zona_cara_10 = max(zonas_10, key=lambda z: zonas_10[z]["mean"])
+    zona_mediana_5 = max(zonas_5, key=lambda z: zonas_5[z]["median"])
+    zona_mediana_10 = max(zonas_10, key=lambda z: zonas_10[z]["median"])
 
     top4 = zonas.most_common(4)
     top4_total = sum(c for _, c in top4)
@@ -386,6 +393,45 @@ def main():
         a for a in anuncios if a.get("posibles_duplicados")
     ]
 
+    # Cobertura por campo para el anexo. Se cuenta el dato tal como está en la
+    # base: vacío o «No especificado» significa que el anuncio no lo declara.
+    def tiene_dato(valor):
+        return valor not in (None, "", "No especificado", "Sin especificar", [], {})
+
+    n_habitaciones = sum(
+        1 for a in anuncios
+        if tiene_dato((a.get("detalles_propiedad") or {}).get("habitaciones"))
+    )
+    n_banos = sum(
+        1 for a in anuncios
+        if tiene_dato((a.get("detalles_propiedad") or {}).get("banos"))
+    )
+    n_area = sum(
+        1 for a in anuncios
+        if tiene_dato((a.get("detalles_propiedad") or {}).get("area_m2"))
+    )
+    n_telefono = sum(
+        1 for a in anuncios
+        if tiene_dato((a.get("contacto") or {}).get("telefono"))
+    )
+    n_enlace = sum(
+        1 for a in anuncios
+        if tiene_dato((a.get("publicacion") or {}).get("enlace"))
+    )
+    n_operacion_declarada = sum(
+        1 for a in anuncios if a["_op"] != "Sin clasificar"
+    )
+    n_zona_cruda = sum(
+        1 for a in anuncios
+        if tiene_dato((a.get("detalles_propiedad") or {}).get("zona"))
+    )
+
+    descartados = cargar_json(INPUT_DESCARTADOS).get("registros", [])
+    n_descartados = len(descartados)
+    n_descartados_fuera = sum(
+        1 for d in descartados if not d.get("en_universo_unificado")
+    )
+
     L = []
 
     # ------------------------------------------------------------------
@@ -418,6 +464,14 @@ def main():
         f"cuando el título no aporta señal. El detalle está en "
         f"`{REPORTE_VERIFICACION}`."
     )
+    L.append(
+        f"Los **{n_descartados} registros no incluidos** "
+        f"({conteo_uni.get('NO', 0)} `NO`, "
+        f"{conteo_uni.get('INDETERMINADO', 0)} `INDETERMINADO` y "
+        f"{n_descartados_fuera} fuera del universo) se conservan íntegros en "
+        f"`datos/limpios/descartados_diez_octubre.json` y `.csv`, con su motivo, "
+        f"su registro original y el registro unificado exacto."
+    )
     L.append("")
     L.append("Los hallazgos principales son:")
     L.append("")
@@ -448,8 +502,17 @@ def main():
         f"- **Desigualdad territorial:** las cuatro zonas principales concentran "
         f"{top4_total} de {total_con_zona} publicaciones con zona identificada "
         f"({pct(top4_total, total_con_zona):.1f}%). Entre las zonas con n ≥ 10, "
-        f"La Víbora tiene la media y la mediana más altas; entre las de n ≥ 5, "
-        f"El Mónaco las supera, pero con solo 5 casos."
+        f"{zona_cara_10} tiene la media más alta "
+        f"(${fmt(zonas_10[zona_cara_10]['mean'])} USD, "
+        f"n = {zonas_10[zona_cara_10]['n']}) y {zona_mediana_10} la mediana más "
+        f"alta (${fmt(zonas_10[zona_mediana_10]['median'])} USD, "
+        f"n = {zonas_10[zona_mediana_10]['n']}); entre las de n ≥ 5, "
+        f"{zona_cara_5} lidera la media "
+        f"(${fmt(zonas_5[zona_cara_5]['mean'])} USD, "
+        f"n = {zonas_5[zona_cara_5]['n']}), pero la mediana más alta sigue "
+        f"siendo la de {zona_mediana_5} "
+        f"(${fmt(zonas_5[zona_mediana_5]['median'])} USD, "
+        f"n = {zonas_5[zona_mediana_5]['n']})."
     )
     L.append(
         f"- **Informalidad:** {len(informal)} de {total} publicaciones "
@@ -565,6 +628,15 @@ def main():
         f"título con un reparto interno y se confirman por la regla de título. "
         f"Esa exclusión reduce el tamaño de la muestra, pero evita atribuir a "
         f"Diez de Octubre precios y zonas que pertenecen a otros municipios."
+    )
+    L.append(
+        f"Los **{n_descartados} registros no incluidos** se conservan íntegros: "
+        f"{conteo_uni.get('NO', 0)} `NO`, "
+        f"{conteo_uni.get('INDETERMINADO', 0)} `INDETERMINADO` y "
+        f"{n_descartados_fuera} que ya estaba fuera de la base unificada "
+        f"(`facebook-27`). Cada uno guarda su motivo, la evidencia, el registro "
+        f"original y el registro unificado exacto en "
+        f"`datos/limpios/descartados_diez_octubre.json` y `.csv`."
     )
     L.append("")
     L.append(
@@ -761,8 +833,6 @@ def main():
         f"barrios."
     )
     L.append("")
-    zona_cara_5 = max(zonas_5, key=lambda z: zonas_5[z]["mean"])
-    zona_cara_10 = max(zonas_10, key=lambda z: zonas_10[z]["mean"])
     L.append(
         f"**B2. ¿Qué zona tiene el precio promedio más alto?** 🟡 "
         f"(n = {zonas_5[zona_cara_5]['n']} en {zona_cara_5})"
@@ -787,8 +857,6 @@ def main():
             f"**${fmt(s['median'])} USD** (n = {s['n']})"
         )
     L.append("")
-    zona_mediana_5 = max(zonas_5, key=lambda z: zonas_5[z]["median"])
-    zona_mediana_10 = max(zonas_10, key=lambda z: zonas_10[z]["median"])
     L.append(
         f"**B3. ¿Qué zona tiene la mediana más alta?** 🟡 "
         f"(n = {zonas_5[zona_mediana_5]['n']} en {zona_mediana_5})"
@@ -1322,11 +1390,12 @@ def main():
     L.append("")
     L.append(
         f"1. **La base verificada es de {total} publicaciones.** La versión "
-        f"anterior usaba 134 anuncios etiquetados como Diez de Octubre, pero 83 "
-        f"de ellos están confirmados en el municipio. Esta versión usa las "
-        f"{total} publicaciones confirmadas ({n_revolico} de Revolico y "
-        f"{n_facebook} de Facebook) y excluye {conteo_uni.get('NO', 0)} de otros "
-        f"municipios y {conteo_uni.get('INDETERMINADO', 0)} indeterminadas."
+        f"anterior usaba 134 anuncios etiquetados como Diez de Octubre; la "
+        f"verificación confirmó {n_revolico} de Revolico. Con {n_facebook} de "
+        f"Facebook, esta versión usa las {total} publicaciones confirmadas "
+        f"({n_revolico} de Revolico + {n_facebook} de Facebook) y excluye "
+        f"{conteo_uni.get('NO', 0)} de otros municipios y "
+        f"{conteo_uni.get('INDETERMINADO', 0)} indeterminadas."
     )
     L.append(
         f"2. **El mercado está dolarizado.** {usd_declarada} de "
@@ -1354,11 +1423,17 @@ def main():
         f"5. **La desigualdad territorial existe, pero hay que medirla con "
         f"medianas.** Las cuatro zonas principales concentran "
         f"{pct(top4_total, total_con_zona):.1f}% de las publicaciones con zona. "
-        f"Entre las zonas con n ≥ 10, {zona_mediana_10} tiene la mediana más alta "
-        f"(${fmt(zonas_10[zona_mediana_10]['median'])} USD); entre las de n ≥ 5, "
-        f"{zona_mediana_5} la supera "
-        f"(${fmt(zonas_5[zona_mediana_5]['median'])} USD) pero con solo "
-        f"{zonas_5[zona_mediana_5]['n']} casos. La diferencia entre media y "
+        f"Entre las zonas con n ≥ 10, {zona_cara_10} tiene la media más alta "
+        f"(${fmt(zonas_10[zona_cara_10]['mean'])} USD, "
+        f"n = {zonas_10[zona_cara_10]['n']}) y {zona_mediana_10} la mediana más "
+        f"alta (${fmt(zonas_10[zona_mediana_10]['median'])} USD, "
+        f"n = {zonas_10[zona_mediana_10]['n']}); entre las de n ≥ 5, "
+        f"{zona_cara_5} lidera la media "
+        f"(${fmt(zonas_5[zona_cara_5]['mean'])} USD, "
+        f"n = {zonas_5[zona_cara_5]['n']}), pero la mediana más alta sigue "
+        f"siendo la de {zona_mediana_5} "
+        f"(${fmt(zonas_5[zona_mediana_5]['median'])} USD, "
+        f"n = {zonas_5[zona_mediana_5]['n']}). La diferencia entre media y "
         f"mediana en {zona_a} muestra que los valores extremos inflan el "
         f"promedio."
     )
@@ -1477,6 +1552,119 @@ def main():
         "- **Sesgo de publicación:** las viviendas que no se publican, o que se "
         "publican en canales cerrados, no aparecen en la base. La opacidad "
         "medida es la del mercado digital visible, no la del mercado total."
+    )
+    L.append("")
+
+    # ------------------------------------------------------------------
+    # Anexo: fuentes, cobertura y referencias
+    # ------------------------------------------------------------------
+    L.append("## Anexo: fuentes, cobertura y referencias")
+    L.append("")
+    L.append("### A.1 Fuentes y captura")
+    L.append("")
+    L.append("| Fuente | Uso en el análisis | Corte o captura | Confirmadas |")
+    L.append("|---|---|---|---:|")
+    L.append(
+        f"| Revolico | Anuncios inmobiliarios: título, precio, enlace y fecha "
+        f"de verificación | 2026-10-31 | {n_revolico} |"
+    )
+    L.append(
+        f"| Facebook | Anuncios y descripciones: precio y texto parcial | "
+        f"2026-11-04 | {n_facebook} |"
+    )
+    L.append(
+        "| GeoJSON municipal | Polígono DPA `23.09` para la comprobación "
+        "punto-en-polígono | Copia versionada | — |"
+    )
+    L.append(
+        "| Nominatim / OpenStreetMap | Geocodificación de topónimos; caché "
+        "local | `datos/geo/geocoding_lha.json` | — |"
+    )
+    L.append(
+        "| ONEI, Anuario Estadístico de Cuba | Contexto de población, vivienda "
+        "y tenencia | `fuentes/anuario_estadistico_notas.md` | — |"
+    )
+    L.append("")
+    L.append("### A.2 Cobertura por campo")
+    L.append("")
+    L.append("| Campo | Cobertura | n | Lectura |")
+    L.append("|---|---:|---:|---|")
+    L.append(
+        f"| Precio declarado en USD | {pct(usd_declarada, total):.1f}% | "
+        f"{usd_declarada}/{total} | Base principal de los análisis de precio. |"
+    )
+    L.append(
+        f"| Precio declarado en CUP | {pct(len(cup), total):.1f}% | "
+        f"{len(cup)}/{total} | No se convierte a USD. |"
+    )
+    L.append(
+        f"| Sin precio | {pct(sin_precio_n, total):.1f}% | "
+        f"{sin_precio_n}/{total} | Se conserva y se reporta como opacidad. |"
+    )
+    L.append(
+        f"| Zona identificada | {pct(total_con_zona, total):.1f}% | "
+        f"{total_con_zona}/{total} | {n_zona_cruda} en ficha + "
+        f"{total_con_zona - n_zona_cruda} recuperadas del texto. |"
+    )
+    L.append(
+        f"| Operación declarada | {pct(n_operacion_declarada, total):.1f}% | "
+        f"{n_operacion_declarada}/{total} | "
+        f"{len(ventas)} ventas y {len(alquileres)} alquileres; "
+        f"{len(sin_clasificar)} sin clasificar. |"
+    )
+    L.append(
+        f"| Habitaciones | {pct(n_habitaciones, total):.1f}% | "
+        f"{n_habitaciones}/{total} | No hay campo homogéneo; no se estima. |"
+    )
+    L.append(
+        f"| Baños | {pct(n_banos, total):.1f}% | {n_banos}/{total} | "
+        f"No hay campo homogéneo; no se estima. |"
+    )
+    L.append(
+        f"| Superficie (m²) | {pct(n_area, total):.1f}% | {n_area}/{total} | "
+        f"Solo Facebook (`detalles_propiedad.area_m2`). |"
+    )
+    L.append(
+        f"| Teléfono | {pct(n_telefono, total):.1f}% | {n_telefono}/{total} | "
+        f"Contacto declarado; no se usa para inferir intermediación. |"
+    )
+    L.append(
+        f"| Enlace | {pct(n_enlace, total):.1f}% | {n_enlace}/{total} | "
+        f"Todos de Revolico. |"
+    )
+    L.append("")
+    L.append("### A.3 Referencias")
+    L.append("")
+    L.append(
+        "- **ONEI.** *Anuario Estadístico de Cuba*. Oficina Nacional de "
+        "Estadística e Información, República de Cuba. Notas de uso en "
+        "`fuentes/anuario_estadistico_notas.md`."
+    )
+    L.append(
+        "- **OpenStreetMap / Nominatim.** Servicio de geocodificación usado "
+        "para traducir topónimos a coordenadas; resultados cacheados en "
+        "`datos/geo/geocoding_lha.json`."
+    )
+    L.append(
+        "- **GeoJSON municipal.** `datos/geo/lha.geojson`, copia versionada del "
+        "polígono de La Habana; SHA-256 "
+        "`b9bbcce811d9bbfcee15f5e904d97dc24cf044cabcf17a870487ad361bb7c9e6`."
+    )
+    L.append(
+        "- **Revolico.** Portal de anuncios clasificados; captura del "
+        "2026-10-31. URL base: `https://www.revolico.com`."
+    )
+    L.append(
+        "- **Facebook.** Publicaciones de grupos y páginas de compraventa; "
+        "captura del 2026-11-04. No se reproducen enlaces individuales por "
+        "privacidad."
+    )
+    L.append("")
+    L.append(
+        "> **Nota sobre la evidencia:** los precios son precios de oferta, no "
+        "de transacción. No hay datos homogéneos de metros cuadrados, "
+        "habitaciones, baños, estado legal ni año de construcción. Las "
+        "ausencias se reportan; no se imputan."
     )
     L.append("")
 
