@@ -33,6 +33,8 @@ La pregunta inicial —**¿cuánto cuesta realmente vivir en Diez de Octubre?**�
 | **Duplicado entre fuentes** | 1 par | `facebook-35` / `revolico-58326838`; n efectivo 121 |
 | **Pruebas de contrato** | 8/8 pasando | `tests/test_verificacion.py` |
 | **Cifras de control** | 36/36 verificadas | `scripts/cifras_control.py` |
+| **Entrevistas de audio** | 13 grabaciones anónimas | `evidencias/entrevistas_audio/` |
+| **Capturas de Facebook** | 86 capturas de pantalla | `evidencias/facebook_fotos/` |
 
 ---
 
@@ -219,6 +221,15 @@ El informe completo está en `analisis/informe_final.md` y su entrega en `analis
 - **GeoJSON municipal.** `datos/geo/lha.geojson`, copia versionada del polígono de La Habana; SHA-256 `b9bbcce811d9bbfcee15f5e904d97dc24cf044cabcf17a870487ad361bb7c9e6`.
 - **Revolico.** Portal de anuncios clasificados; captura del 2026-10-31. `https://www.revolico.com`.
 - **Facebook.** Publicaciones de grupos y páginas de compraventa; captura del 2026-11-04. `https://www.facebook.com`. No se reproducen enlaces individuales ni nombres de grupos por privacidad.
+
+## Evidencia cualitativa complementaria
+
+Además de los 122 anuncios verificados, el proyecto incluye evidencia cualitativa que no forma parte del universo cuantitativo, pero que aporta contexto sobre la percepción del mercado en Diez de Octubre:
+
+- **13 entrevistas de audio** (E-01 a E-13): grabaciones anónimas de residentes sobre su experiencia buscando, comprando, vendiendo o alquilando vivienda en el municipio. No constituyen una muestra representativa; se usan como evidencia cualitativa suelta que ilustra temas como opacidad, dolarización e informalidad.
+- **86 capturas de pantalla de Facebook**: anuncios publicados en grupos y páginas de compraventa, capturados entre octubre y noviembre de 2026. Se usan como referencia visual del tipo de publicaciones que circulan en canales informales.
+
+> **Nota:** ni las entrevistas ni las capturas de Facebook se contabilizan como parte del universo de 122 publicaciones verificadas. No se hace mapeo por zonas ni se calculan porcentajes sobre ellas; se presentan como acompañamiento cualitativo del informe principal.
 
 > **Nota sobre la evidencia:** los precios son precios de oferta, no de transacción. No hay datos homogéneos de metros cuadrados, habitaciones, baños, estado legal ni año de construcción. Las ausencias se reportan; no se imputan.
 
