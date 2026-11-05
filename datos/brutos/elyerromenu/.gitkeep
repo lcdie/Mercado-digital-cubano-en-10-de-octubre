@@ -1,5 +1,0 @@
-# .gitkeep
-
-Este archivo mantiene el directorio vacío en el control de versiones.
-Los datos brutos de elyerromenu no se versionan automáticamente;
-se generan al ejecutar el scraper localmente.
