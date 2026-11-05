@@ -1,0 +1,56 @@
+id_unico,fuente,resultado,confianza,evidencia_principal,municipio_ficha,titulo,evidencia_titulo_dentro,evidencia_titulo_fuera,evidencia_titulo_ambigua,motivo_descarte
+revolico-56030942,revolico,INDETERMINADO,baja,sin evidencia,,Apartamento de dos  cuartos,,,,"El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+revolico-57324516,revolico,INDETERMINADO,baja,sin evidencia,,Casa bastante grande,,,,"El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+revolico-57459566,revolico,NO,alta,título,Playa,"70,000 USD Económica  Casa en bajos de Biplanta en Zona Residencial de Atavey",,Atavey/Atabey,,El título nombra un lugar fuera de Diez de Octubre: Atavey/Atabey. Se descarta por la regla de título.
+revolico-57104450,revolico,NO,alta,ficha,Boyeros,🏠RENTA DE HABITACIÓN POR 24 HORAS PARA PAREJAS 👥,,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57676803,revolico,NO,alta,título,Habana del Este,Casa Angela en Boca Ciega,,Boca Ciega,,El título nombra un lugar fuera de Diez de Octubre: Boca Ciega. Se descarta por la regla de título.
+revolico-57676658,revolico,NO,alta,título,Habana del Este,Villa César Palace en Boca Ciega,,Boca Ciega,,El título nombra un lugar fuera de Diez de Octubre: Boca Ciega. Se descarta por la regla de título.
+revolico-57164208,revolico,NO,alta,ficha,La Lisa,"1,000 USD PERMUTO Y DOY VUELTO X ENCIMA",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-50092611,revolico,NO,alta,ficha,Habana Vieja,Renta de apartamentos en la Haban Vieja.En oferta.  No hay problemas eléctricos.,,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-55279906,revolico,NO,alta,ficha,Habana Vieja,Renta de apartamentos totalmente independientes.,,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-56679549,revolico,NO,alta,ficha,Marianao,"10,000 USD Se vende casa en Mariano grande en precio de regalo",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57257916,revolico,NO,alta,título,Marianao,"8,500 USD Casa Grande en Artemisa de placa",,Artemisa,,El título nombra un lugar fuera de Diez de Octubre: Artemisa. Se descarta por la regla de título.
+revolico-47221935,revolico,NO,alta,ficha,Playa,"55,000 USD Dos casas en una por solo 55 mil USD. Ocasión !!!!!",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57622171,revolico,NO,alta,ficha,Marianao,"30,000 USD Casa en venta",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58494253,revolico,NO,alta,ficha,Habana Vieja,"40,000 USD Apartamento independiente en calle Obispo",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-50729594,revolico,NO,alta,ficha,Arroyo Naranjo,"65,000 USD CASA DE 2 PLANTAS TODA AMUEBLADA.",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-56899858,revolico,NO,alta,ficha,Cerro,"10,000 USD A Una Cuadra Exacta De Ayestaran y 20 De Mayo:Calle Masó y 20 de Mayo,Puerta Calle New Original de 1/4(SIGNIFICA Q TIENE",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57863488,revolico,NO,alta,ficha,Cerro,"22,000 USD Apartamento céntrico en 6to piso con elevador",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57302632,revolico,NO,alta,ficha,Centro Habana,"10,000 USD San Rafael y Escobar,Apto Colonial,1er Piso,2 Balcones a 2 Calles Diferentes, Varios Ventanales,2/4 Originales ,Sala,Sal",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-54609932,revolico,NO,alta,ficha,Centro Habana,"11,000 USD Casa Colonial En Espada y Anima:Esquinas e/ Cine Pionero y Callejón de Hamel,Posib.d Garaje (114m)..,2 Cuadras d Infanta",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58207274,revolico,NO,alta,ficha,Playa,"35,000 USD Se vende o permuta !!!!!!",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57672019,revolico,NO,alta,título,Guanabacoa,"30,000 USD 🏡Casa amplia de 3 habitaciones en el Chibás",,Chibás,,El título nombra un lugar fuera de Diez de Octubre: Chibás. Se descarta por la regla de título.
+revolico-55991777,revolico,NO,alta,título,Playa,"35,000 USD 🏡 ¡FRENTE AL MAR EN EL NÁUTICO! Casa en Bajos (2 Hab) 🌊",,Náutico,,El título nombra un lugar fuera de Diez de Octubre: Náutico. Se descarta por la regla de título.
+revolico-57842493,revolico,NO,alta,ficha,Guanabacoa,"120,000 USD 🏡 ¡LA CASA DE TUS SUEÑOS! 😎 CASA INDEPENDIENTE CON JARDÍN, GARAJE Y 5 HABITACIONES",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57214504,revolico,NO,alta,título,Arroyo Naranjo,"2,500 USD Apartamento en Mantilla",,Mantilla,,El título nombra un lugar fuera de Diez de Octubre: Mantilla. Se descarta por la regla de título.
+revolico-58429029,revolico,NO,alta,ficha,Centro Habana,"96,000 USD En venta casa de renta de 4 habitaciones",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57655468,revolico,NO,alta,ficha,Centro Habana,"35,000 USD Apartamento Renovado",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57642323,revolico,NO,alta,ficha,Cerro,"15,000 USD Apartamento en venta",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58493964,revolico,NO,alta,ficha,Centro Habana,"5,000 USD Venta de Casa Modesta con terreno",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-56738436,revolico,NO,alta,título,Arroyo Naranjo,"45,000 USD AMPLIA CASA INDEPENDIENTE EN VÍBORA PARK POR 45 000 !!!",,Víbora Park,,El título nombra un lugar fuera de Diez de Octubre: Víbora Park. Se descarta por la regla de título.
+revolico-57728706,revolico,NO,alta,título,Cerro,"35,000 USD En venta biplanta en bajos con 4 cuartos y garaje en Casino Deportivo !!!",,Casino Deportivo,,El título nombra un lugar fuera de Diez de Octubre: Casino Deportivo. Se descarta por la regla de título.
+revolico-53110209,revolico,NO,alta,ficha,Plaza,"50,000 USD JOYA CAPITALISTA EN BAJOS: IDEAL PARA NEGOCIO O VIVIENDA ( Cercana a ZAPATA E INFANTA)",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58493825,revolico,NO,alta,ficha,Centro Habana,"5,000 USD Casa puerta calle de dos cuartos con negocio",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58493802,revolico,NO,alta,ficha,Playa,"15,000 USD Tejas para su negocio lindas  y resistentes",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58274792,revolico,NO,alta,título,Habana del Este,JCasa de renta /PIMIENTA | BOCA CIEGA 🌊BC-002,,Boca Ciega; Pimienta,,"El título nombra un lugar fuera de Diez de Octubre: Boca Ciega, Pimienta. Se descarta por la regla de título."
+revolico-57053121,revolico,NO,alta,título,Cerro,"15,000 USD 🏠 Vendo Casa en El Casino Deportivo.",,Casino Deportivo,,El título nombra un lugar fuera de Diez de Octubre: Casino Deportivo. Se descarta por la regla de título.
+revolico-58189135,revolico,NO,alta,ficha,La Lisa,Venta de casa y apartamento.,,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58298543,revolico,NO,alta,ficha,Centro Habana,J Apartamento de renta frente al malecón habanero con bellas vistas electricidad permanente 3 habitaciones CH-005,,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58319228,revolico,NO,alta,ficha,Habana del Este,"17,000 USD 🏡✨ ¡OPORTUNIDAD:SE VENDE CASA ✨🏡",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58040776,revolico,NO,alta,ficha,Cerro,"10,000 USD Vendo apartamento",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57694182,revolico,NO,alta,ficha,Plaza,"40,000 USD Venta de casa",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58333162,revolico,NO,alta,ficha,Centro Habana,"18,000 USD Venta de apartamentos en edificio capitalista",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57043414,revolico,NO,alta,ficha,Centro Habana,"13,000 USD Se vende casa",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-56579365,revolico,NO,alta,ficha,Plaza,Se busca alquiler,,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-58278229,revolico,INDETERMINADO,baja,sin evidencia,,"3,000 USD Se vende casa",,,,"El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+revolico-58477961,revolico,INDETERMINADO,baja,sin evidencia,,"2,600 USD Casa",,,,"El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+revolico-56610100,revolico,NO,alta,título,Cerro,"42,000 USD SE VENDE -Casa biplanta en el Casino",,Casino Deportivo,,El título nombra un lugar fuera de Diez de Octubre: Casino Deportivo. Se descarta por la regla de título.
+revolico-58166797,revolico,NO,alta,ficha,Cerro,"14,500 USD APARTAMENTO EN LA IZQUINA DE TEJA",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-57812335,revolico,NO,alta,título,La Lisa,"18,000 USD San Agustín",,San Agustín,,El título nombra un lugar fuera de Diez de Octubre: San Agustín. Se descarta por la regla de título.
+revolico-57812443,revolico,NO,alta,ficha,La Lisa,"120,000 USD Exclusividad",,,,El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana.
+revolico-50860667,revolico,NO,alta,título,Plaza,"15,000 USD 🏡 Oportunidad Única en Consolación del Sur Se vende una excelente propiedad con placa libre, ideal para quienes buscan",,Consolación del Sur,,El título nombra un lugar fuera de Diez de Octubre: Consolación del Sur. Se descarta por la regla de título.
+revolico-58492338,revolico,INDETERMINADO,baja,sin evidencia,,"15,000 USD Venta de casa",,,,"El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+facebook-8,facebook,INDETERMINADO,baja,sin evidencia,,,,,,"El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+facebook-16,facebook,INDETERMINADO,baja,sin evidencia,,,,,,"El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+facebook-17,facebook,INDETERMINADO,baja,sin evidencia,,,,,,"El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+facebook-27,facebook,NO,alta,título,,"SE VENDE AMPLIA CASA DE DOS PLANTAS EN SANTA AMALIA, LA HABANA, CUBA",,Santa Amalia,,El título nombra un lugar fuera de Diez de Octubre: Santa Amalia. Se descarta por la regla de título.

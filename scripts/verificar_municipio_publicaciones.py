@@ -69,6 +69,8 @@ OUT_CSV = "datos/limpios/verificacion_municipal.csv"
 OUT_REV_CONFIRMADOS = "datos/limpios/revolico_confirmados_diez_octubre.json"
 OUT_FB_CONFIRMADOS = "datos/limpios/facebook_confirmados_diez_octubre.json"
 OUT_UNI_CONFIRMADOS = "datos/limpios/unificado_confirmados_diez_octubre.json"
+OUT_DESCARTADOS = "datos/limpios/descartados_diez_octubre.json"
+OUT_DESCARTADOS_CSV = "datos/limpios/descartados_diez_octubre.csv"
 BASE_UNIFICADA = "datos/limpios/datos_unificados_facebook_revolico.json"
 OUT_REPORTE = "analisis/verificacion_municipal_geojson_20261104.md"
 
@@ -297,54 +299,150 @@ def analizar_texto(texto, anillos, cache):
     }
 
 
-def clasificar(ficha_estado, senales):
-    """Devuelve (resultado, confianza, pertenece, motivo)."""
-    dentro = senales["dentro"]
-    fuera = senales["fuera"]
-    ambigua = senales["ambigua"]
+def combinar_senales(*listas):
+    """Une varias salidas de ``analizar_texto`` sin duplicar evidencias."""
+    vistos = set()
+    todas = []
+    for senales in listas:
+        for evidencia in senales["todas"]:
+            clave = (
+                evidencia.get("nombre"),
+                evidencia.get("estado"),
+                evidencia.get("patron"),
+            )
+            if clave in vistos:
+                continue
+            vistos.add(clave)
+            todas.append(evidencia)
+    return {
+        "dentro": [e for e in todas if e["estado"] == "dentro"],
+        "fuera": [e for e in todas if e["estado"] == "fuera"],
+        "ambigua": [e for e in todas if e["estado"] in ("ambigua", "frontera")],
+        "todas": todas,
+    }
+
+
+def nombres_evidencia(evidencias):
+    return ", ".join(e["nombre"] for e in evidencias)
+
+
+def evidencias_dentro_efectivas(senales):
+    """Señales internas, incluidas las ambiguas que sí geocodificaron dentro.
+
+    ``Reparto Flores`` es un topónimo ambiguo (puede existir en más de un
+    municipio), pero la única coincidencia verificable en OSM cae en Flores,
+    Santos Suárez, Diez de Octubre. Cuando el título lo nombra y la
+    geocodificación lo sitúa dentro, se cuenta como evidencia interna de
+    confianza media, no como señal externa.
+    """
+    dentro = list(senales["dentro"])
+    for evidencia in senales["ambigua"]:
+        if (
+            evidencia.get("dentro_poligono") is True
+            or normalizar(evidencia.get("municipio_osm")) == "diez de octubre"
+        ):
+            dentro.append(evidencia)
+    return dentro
+
+
+def es_evidencia_fuerte(evidencia):
+    """Una señal es fuerte si nombra el municipio o un reparto identificado."""
+    return evidencia.get("tipo") in ("dentro_explicito", "lugar")
+
+
+def clasificar_titulo_primero(senales_titulo, senales_resto, ficha_estado):
+    """Clasifica con prioridad del título sobre la ficha y el resto del texto.
+
+    Regla:
+    1. Si el título nombra un lugar fuera del municipio, el anuncio se descarta
+       aunque la ficha diga otra cosa.
+    2. Si el título nombra Diez de Octubre o un reparto interno, se confirma
+       aunque la ficha declare otro municipio.
+    3. Solo cuando el título no aporta señal se usa la ficha y, después, el
+       resto del texto (enlace de Revolico o grupo/ubicación de Facebook).
+
+    Devuelve ``(resultado, confianza, pertenece, motivo, evidencia_principal)``.
+    """
+    t_dentro = evidencias_dentro_efectivas(senales_titulo)
+    t_fuera = senales_titulo["fuera"]
+    t_ambigua = [
+        e for e in senales_titulo["ambigua"] if e not in t_dentro
+    ]
+
+    if t_fuera and t_dentro:
+        return "CONTRADICTORIO", "baja", None, (
+            "El título mezcla referencias dentro y fuera del municipio: "
+            f"dentro [{nombres_evidencia(t_dentro)}], "
+            f"fuera [{nombres_evidencia(t_fuera)}]."
+        ), "título"
+
+    if t_fuera:
+        return "NO", "alta", False, (
+            "El título nombra un lugar fuera de Diez de Octubre: "
+            f"{nombres_evidencia(t_fuera)}. Se descarta por la regla de título."
+        ), "título"
+
+    if t_dentro:
+        fuerte = any(es_evidencia_fuerte(e) for e in t_dentro)
+        # Si el título solo aporta un topónimo ambiguo que geocodificó dentro
+        # (por ejemplo, Reparto Flores), la evidencia es media, no alta.
+        confianza = "alta" if fuerte and not t_ambigua else "media"
+        motivo = (
+            "El título nombra Diez de Octubre o un reparto interno: "
+            f"{nombres_evidencia(t_dentro)}."
+        )
+        if t_ambigua:
+            motivo += (
+                " El título también contiene un topónimo ambiguo: "
+                f"{nombres_evidencia(t_ambigua)}; se conserva por la señal interna."
+            )
+        return "SÍ", confianza, True, motivo, "título"
+
+    # El título no decide: se usa la ficha del anuncio y el resto del texto.
+    r_dentro = evidencias_dentro_efectivas(senales_resto)
+    r_fuera = senales_resto["fuera"]
 
     if ficha_estado == "dentro":
-        if fuera:
+        if r_fuera:
             return "CONTRADICTORIO", "baja", None, (
-                "La ficha declara Diez de Octubre, pero el texto menciona un lugar fuera del municipio."
-            )
-        if ambigua:
-            return "CONTRADICTORIO", "baja", None, (
-                "La ficha declara Diez de Octubre, pero hay un topónimo ambiguo o de frontera."
-            )
+                "El título no aporta señal; la ficha declara Diez de Octubre, "
+                f"pero el resto del texto menciona un lugar fuera: {nombres_evidencia(r_fuera)}."
+            ), "ficha"
         return "SÍ", "alta", True, (
-            "La ficha del anuncio declara Diez de Octubre, La Habana."
-        )
+            "El título no aporta señal; la ficha del anuncio declara Diez de Octubre, La Habana."
+        ), "ficha"
 
     if ficha_estado == "fuera":
-        if dentro:
+        if r_dentro:
             return "CONTRADICTORIO", "baja", None, (
-                "La ficha declara otro municipio, pero el texto menciona Diez de Octubre o un reparto suyo."
-            )
-        if ambigua:
-            return "CONTRADICTORIO", "baja", None, (
-                "La ficha declara otro municipio, pero hay un topónimo ambiguo o de frontera."
-            )
+                "El título no aporta señal; la ficha declara otro municipio, "
+                f"pero el resto del texto menciona Diez de Octubre o un reparto suyo: {nombres_evidencia(r_dentro)}."
+            ), "ficha"
         return "NO", "alta", False, (
-            "La ficha del anuncio declara otro municipio de La Habana."
-        )
+            "El título no aporta señal y la ficha del anuncio declara otro municipio de La Habana."
+        ), "ficha"
 
-    # Ficha sin ubicación (página retirada o sin dato)
-    if dentro and not fuera:
-        return "SÍ", "media", True, (
-            "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo."
-        )
-    if fuera and not dentro:
-        return "NO", "media", False, (
-            "Sin ubicación en la ficha, pero el texto menciona un lugar fuera del municipio."
-        )
-    if dentro and fuera:
+    # Sin ficha municipal (página retirada o publicación sin ubicación).
+    if r_dentro and r_fuera:
         return "CONTRADICTORIO", "baja", None, (
-            "El texto mezcla referencias dentro y fuera del municipio."
-        )
+            "El título y la ficha no aportan señal; el resto del texto mezcla "
+            f"referencias dentro [{nombres_evidencia(r_dentro)}] y fuera [{nombres_evidencia(r_fuera)}]."
+        ), "texto"
+    if r_dentro:
+        fuerte = any(es_evidencia_fuerte(e) for e in r_dentro)
+        return "SÍ", ("media" if fuerte else "baja"), True, (
+            "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre "
+            f"o un reparto suyo: {nombres_evidencia(r_dentro)}."
+        ), "texto"
+    if r_fuera:
+        return "NO", "media", False, (
+            "Sin ficha municipal, pero el resto del texto menciona un lugar fuera "
+            f"del municipio: {nombres_evidencia(r_fuera)}."
+        ), "texto"
+
     return "INDETERMINADO", "baja", None, (
-        "No hay ficha municipal ni topónimo verificable en el texto."
-    )
+        "El título, la ficha y el resto del texto no aportan una ubicación municipal verificable."
+    ), "sin evidencia"
 
 
 def preparar_revolico(anillos, cache):
@@ -365,29 +463,35 @@ def preparar_revolico(anillos, cache):
         else:
             ficha_estado = "sin ubicación"
 
-        texto = " ".join([
-            anuncio.get("titulo", "") or "",
-            anuncio.get("enlace", "") or "",
-        ])
-        senales = analizar_texto(texto, anillos, cache)
-        resultado, confianza, pertenece, motivo = clasificar(ficha_estado, senales)
+        titulo = anuncio.get("titulo", "") or ""
+        # El enlace se usa solo como respaldo cuando el título no aporta señal.
+        resto = (anuncio.get("enlace", "") or "").replace("-", " ").replace("/", " ")
+        senales_titulo = analizar_texto(titulo, anillos, cache)
+        senales_resto = analizar_texto(resto, anillos, cache)
+        senales = combinar_senales(senales_titulo, senales_resto)
+        resultado, confianza, pertenece, motivo, evidencia_principal = (
+            clasificar_titulo_primero(senales_titulo, senales_resto, ficha_estado)
+        )
 
         resultados.append({
             "id_unico": f"revolico-{identificador}",
             "id_anuncio": identificador,
             "indice_base": indice,
             "fuente": "revolico",
-            "titulo": anuncio.get("titulo", ""),
+            "titulo": titulo,
             "enlace": anuncio.get("enlace", ""),
             "ficha": {
                 "ubicacion_pagina": ubicacion_pagina,
                 "municipio": municipio_ficha,
                 "estado": ficha_estado,
             },
+            "senales_titulo": senales_titulo,
+            "senales_resto": senales_resto,
             "senales_texto": senales,
             "resultado": resultado,
             "confianza": confianza,
             "pertenece": pertenece,
+            "evidencia_principal": evidencia_principal,
             "motivo": motivo,
             "registro_original": anuncio,
         })
@@ -403,23 +507,28 @@ def preparar_facebook(anillos, cache):
     for registro in publicaciones:
         publicacion = registro.get("publicacion") or {}
         detalles = registro.get("detalles_propiedad") or {}
-        texto = " ".join(str(x) for x in [
+        titulo = publicacion.get("titulo") or ""
+        resto = " ".join(str(x) for x in [
             publicacion.get("grupo"),
-            publicacion.get("titulo"),
             publicacion.get("autor"),
             detalles.get("ubicacion"),
             detalles.get("zona"),
         ] if x)
 
-        senales = analizar_texto(texto, anillos, cache)
-        # Facebook no tiene ficha municipal normalizada: se usa el texto.
-        resultado, confianza, pertenece, motivo = clasificar("sin ubicación", senales)
+        senales_titulo = analizar_texto(titulo, anillos, cache)
+        senales_resto = analizar_texto(resto, anillos, cache)
+        senales = combinar_senales(senales_titulo, senales_resto)
+        # Facebook no tiene ficha municipal normalizada: se usa el título y,
+        # si no aporta señal, el resto del texto.
+        resultado, confianza, pertenece, motivo, evidencia_principal = (
+            clasificar_titulo_primero(senales_titulo, senales_resto, "sin ubicación")
+        )
 
         resultados.append({
             "id_unico": f"facebook-{registro.get('id_publicacion')}",
             "id_publicacion": registro.get("id_publicacion"),
             "fuente": "facebook",
-            "titulo": publicacion.get("titulo", ""),
+            "titulo": titulo,
             "ubicacion": detalles.get("ubicacion", ""),
             "en_base_limpia": True,
             "ficha": {
@@ -427,10 +536,13 @@ def preparar_facebook(anillos, cache):
                 "municipio": None,
                 "estado": "no_aplica",
             },
+            "senales_titulo": senales_titulo,
+            "senales_resto": senales_resto,
             "senales_texto": senales,
             "resultado": resultado,
             "confianza": confianza,
             "pertenece": pertenece,
+            "evidencia_principal": evidencia_principal,
             "motivo": motivo,
             "registro_original": registro,
         })
@@ -440,22 +552,26 @@ def preparar_facebook(anillos, cache):
     for registro in rechazadas:
         publicacion = registro.get("publicacion") or {}
         detalles = registro.get("detalles_propiedad") or {}
-        texto = " ".join(str(x) for x in [
+        titulo = publicacion.get("titulo") or ""
+        resto = " ".join(str(x) for x in [
             publicacion.get("grupo"),
-            publicacion.get("titulo"),
             publicacion.get("autor"),
             detalles.get("ubicacion"),
             detalles.get("zona"),
         ] if x)
 
-        senales = analizar_texto(texto, anillos, cache)
-        resultado, confianza, pertenece, motivo = clasificar("sin ubicación", senales)
+        senales_titulo = analizar_texto(titulo, anillos, cache)
+        senales_resto = analizar_texto(resto, anillos, cache)
+        senales = combinar_senales(senales_titulo, senales_resto)
+        resultado, confianza, pertenece, motivo, evidencia_principal = (
+            clasificar_titulo_primero(senales_titulo, senales_resto, "sin ubicación")
+        )
 
         resultados.append({
             "id_unico": f"facebook-{registro.get('id_publicacion')}",
             "id_publicacion": registro.get("id_publicacion"),
             "fuente": "facebook",
-            "titulo": publicacion.get("titulo", ""),
+            "titulo": titulo,
             "ubicacion": detalles.get("ubicacion", ""),
             "en_base_limpia": False,
             "motivo_rechazo_previo": registro.get("motivo_eliminacion"),
@@ -465,10 +581,13 @@ def preparar_facebook(anillos, cache):
                 "municipio": None,
                 "estado": "no_aplica",
             },
+            "senales_titulo": senales_titulo,
+            "senales_resto": senales_resto,
             "senales_texto": senales,
             "resultado": resultado,
             "confianza": confianza,
             "pertenece": pertenece,
+            "evidencia_principal": evidencia_principal,
             "motivo": motivo,
             "registro_original": registro,
         })
@@ -620,22 +739,89 @@ def main():
         })
     escribir_json(OUT_UNI_CONFIRMADOS, confirmados_salida)
 
+    # Archivo de descartados: conserva íntegros los registros que no quedaron
+    # dentro del municipio, con el motivo y la evidencia que produjo el
+    # descarte. No se borra ningún campo de la base original: se adjunta tanto
+    # el registro de origen usado para clasificar como el registro exacto tal
+    # como aparece en la base unificada.
+    ids_universo = {r["id_unico"] for r in unificado}
+    descartados = [
+        r for r in revolico + facebook_completo if r["resultado"] != "SÍ"
+    ]
+    descartados_salida = {
+        "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "criterio": (
+            "Se conserva solo lo confirmado dentro de Diez de Octubre. "
+            "El título tiene prioridad: si nombra un lugar externo, el registro "
+            "se descarta; si nombra el municipio o un reparto interno, se "
+            "incluye. La ficha y el resto del texto solo se usan cuando el "
+            "título no aporta señal."
+        ),
+        "universo_unificado": len(unificado),
+        "incluidos": len(confirmados_uni),
+        "descartados": len(descartados),
+        "por_resultado": dict(Counter(r["resultado"] for r in descartados)),
+        "registros": [
+            {
+                "id_unico": r["id_unico"],
+                "fuente": r["fuente"],
+                "resultado": r["resultado"],
+                "confianza": r["confianza"],
+                "evidencia_principal": r["evidencia_principal"],
+                "motivo_descarte": r["motivo"],
+                "titulo": r["titulo"],
+                "ficha": r["ficha"],
+                "senales_titulo": r["senales_titulo"],
+                "senales_resto": r["senales_resto"],
+                "en_universo_unificado": r["id_unico"] in ids_universo,
+                "registro_original": r["registro_original"],
+                "registro_unificado": por_id.get(r["id_unico"]),
+            }
+            for r in descartados
+        ],
+    }
+    escribir_json(OUT_DESCARTADOS, descartados_salida)
+
+    with open(OUT_DESCARTADOS_CSV, "w", encoding="utf-8", newline="") as f:
+        escritor = csv.writer(f, lineterminator="\n")
+        escritor.writerow([
+            "id_unico", "fuente", "resultado", "confianza",
+            "evidencia_principal", "municipio_ficha", "titulo",
+            "evidencia_titulo_dentro", "evidencia_titulo_fuera",
+            "evidencia_titulo_ambigua", "motivo_descarte",
+        ])
+        for r in descartados:
+            escritor.writerow([
+                r["id_unico"], r["fuente"], r["resultado"], r["confianza"],
+                r["evidencia_principal"], r["ficha"]["municipio"], r["titulo"],
+                "; ".join(e["nombre"] for e in r["senales_titulo"]["dentro"]),
+                "; ".join(e["nombre"] for e in r["senales_titulo"]["fuera"]),
+                "; ".join(e["nombre"] for e in r["senales_titulo"]["ambigua"]),
+                r["motivo"],
+            ])
+
     with open(OUT_CSV, "w", encoding="utf-8", newline="") as f:
-        escritor = csv.writer(f)
+        escritor = csv.writer(f, lineterminator="\n")
         escritor.writerow([
             "id_unico", "fuente", "resultado", "confianza", "pertenece",
-            "municipio_ficha", "ubicacion_ficha", "evidencia_dentro",
-            "evidencia_fuera", "evidencia_ambigua", "titulo",
+            "evidencia_principal", "municipio_ficha", "ubicacion_ficha",
+            "evidencia_dentro", "evidencia_fuera", "evidencia_ambigua",
+            "titulo", "evidencia_titulo_dentro", "evidencia_titulo_fuera",
+            "evidencia_titulo_ambigua",
         ])
         for r in unificado:
             escritor.writerow([
                 r["id_unico"], r["fuente"], r["resultado"], r["confianza"],
                 "" if r["pertenece"] is None else ("sí" if r["pertenece"] else "no"),
+                r["evidencia_principal"],
                 r["ficha"]["municipio"], r["ficha"]["ubicacion_pagina"],
                 "; ".join(e["nombre"] for e in r["senales_texto"]["dentro"]),
                 "; ".join(e["nombre"] for e in r["senales_texto"]["fuera"]),
                 "; ".join(e["nombre"] for e in r["senales_texto"]["ambigua"]),
                 r["titulo"],
+                "; ".join(e["nombre"] for e in r["senales_titulo"]["dentro"]),
+                "; ".join(e["nombre"] for e in r["senales_titulo"]["fuera"]),
+                "; ".join(e["nombre"] for e in r["senales_titulo"]["ambigua"]),
             ])
 
     # Reporte
@@ -651,13 +837,13 @@ def main():
     lineas = []
     lineas.append("# Verificación de pertenencia al municipio Diez de Octubre")
     lineas.append("")
-    lineas.append(f"**Fecha:** {datetime.now().strftime('%d/%m/%Y')}  ")
+    lineas.append(f"**Fecha:** {datetime.now().strftime('%d/%m/%Y')}")
     lineas.append(
         f"**Fuente geoespacial:** `{GEOJSON}`, copia versionada de "
         f"`/home/luis/Downloads/lha.geojson` (mismo archivo; SHA-256 "
         f"`b9bbcce811d9bbfcee15f5e904d97dc24cf044cabcf17a870487ad361bb7c9e6`)."
     )
-    lineas.append("**Método:** polígono municipal + ubicación de la ficha + geocodificación de topónimos.")
+    lineas.append("**Método:** título primero + polígono municipal + ficha como respaldo + geocodificación de topónimos.")
     lineas.append("")
     lineas.append("## 1. Análisis del GeoJSON")
     lineas.append("")
@@ -702,14 +888,25 @@ def main():
     lineas.append("")
     lineas.append("## 2. Cómo se diferenció el municipio")
     lineas.append("")
-    lineas.append("1. **Ficha del anuncio:** en Revolico se extrajo `data-cy=\"adLocation\"` de cada página. Es la ubicación que declara el propio anuncio.")
-    lineas.append("2. **Texto:** se buscaron menciones a Diez de Octubre, a sus repartos (Lawton, Luyanó, La Víbora, Santos Suárez, El Sevillano, Santa Catalina, Vista Alegre, El Mónaco, La Asunción, Reparto Flores, Plaza Roja) y a otros municipios o repartos.")
-    lineas.append("3. **Geocodificación:** cada topónimo se convirtió en coordenadas con Nominatim y se comprobó con `punto_en_poligono` contra el polígono de Diez de Octubre.")
-    lineas.append("4. **Criterio de resultado:**")
-    lineas.append("   - **SÍ:** la ficha declara Diez de Octubre, o el texto lo declara y no hay contradicción.")
-    lineas.append("   - **NO:** la ficha declara otro municipio, o el topónimo geocodificado queda fuera, sin señal interna que lo contradiga.")
-    lineas.append("   - **CONTRADICTORIO:** la ficha y el texto apuntan a municipios distintos; requiere revisión manual.")
-    lineas.append("   - **INDETERMINADO:** no hay ficha municipal ni topónimo verificable.")
+    lineas.append("1. **Título (evidencia principal):** se analiza primero el título de cada publicación. Si nombra Diez de Octubre o un reparto interno, la publicación se incluye; si nombra un municipio, reparto o localidad externa, se descarta.")
+    lineas.append("2. **Ficha del anuncio:** en Revolico se extrajo `data-cy=\"adLocation\"` de cada página. Solo se usa cuando el título no aporta una señal municipal.")
+    lineas.append("3. **Resto del texto:** enlace de Revolico y grupo, autor, ubicación o zona de Facebook. Es el último respaldo cuando ni el título ni la ficha deciden.")
+    lineas.append("4. **Geocodificación:** cada topónimo se convirtió en coordenadas con Nominatim y se comprobó con `punto_en_poligono` contra el polígono de Diez de Octubre.")
+    lineas.append("5. **Criterio de resultado:**")
+    lineas.append("   - **SÍ:** el título nombra Diez de Octubre o un reparto interno; si el título no aporta señal, la ficha (o el resto del texto) declara el municipio.")
+    lineas.append("   - **NO:** el título nombra un lugar fuera del municipio; si el título no aporta señal, la ficha (o el resto del texto) declara otro municipio.")
+    lineas.append("   - **CONTRADICTORIO:** el título mezcla referencias internas y externas, o la ficha contradice al resto del texto cuando el título no decide.")
+    lineas.append("   - **INDETERMINADO:** ni el título, ni la ficha, ni el resto del texto aportan una ubicación verificable.")
+    lineas.append("")
+    lineas.append(
+        "> **Regla de título:** la mención explícita del título prevalece sobre la "
+        "ficha del anuncio. Un título que dice «Santos Suárez», «Lawton», «La "
+        "Víbora», «Luyanó», «El Sevillano», «10 de Octubre» o «Calzada 10 de "
+        "Octubre» confirma la pertenencia aunque la ficha declare Cerro o Arroyo "
+        "Naranjo. Lo mismo vale en sentido contrario: «Víbora Park», «Boca "
+        "Ciega», «Casino Deportivo» o «Santa Amalia» descartan la publicación "
+        "aunque la ficha diga Diez de Octubre."
+    )
     lineas.append("")
     lineas.append("## 3. Resultado en Revolico (n = 134)")
     lineas.append("")
@@ -737,15 +934,24 @@ def main():
         f"no tienen ubicación recuperable."
     )
     lineas.append("")
+    confirmados_rev = [r for r in revolico if r["resultado"] == "SÍ"]
+    confirmados_ficha_dentro = [
+        r for r in confirmados_rev if r["ficha"]["estado"] == "dentro"
+    ]
+    confirmados_titulo_ficha_fuera = [
+        r for r in confirmados_rev
+        if r["evidencia_principal"] == "título" and r["ficha"]["estado"] == "fuera"
+    ]
     sin_ficha_confirmados = [
-        r for r in revolico
-        if r["resultado"] == "SÍ" and r["ficha"]["estado"] == "sin ubicación"
+        r for r in confirmados_rev if r["ficha"]["estado"] == "sin ubicación"
     ]
     lineas.append(
-        f"Los **{sum(1 for r in revolico if r['resultado']=='SÍ')}** confirmados de Revolico "
-        f"se componen de **{sum(1 for r in revolico if r['resultado']=='SÍ' and r['ficha']['estado']=='dentro')}** "
-        f"cuya ficha declara Diez de Octubre más **{len(sin_ficha_confirmados)}** sin ubicación "
-        f"recuperable pero con el municipio explícito en el título: "
+        f"Los **{len(confirmados_rev)}** confirmados de Revolico se componen de "
+        f"**{len(confirmados_ficha_dentro)}** cuya ficha declara Diez de Octubre, "
+        f"**{len(confirmados_titulo_ficha_fuera)}** con ficha de otro municipio pero "
+        f"título que nombra un reparto interno (la regla de título prevalece) y "
+        f"**{len(sin_ficha_confirmados)}** sin ficha recuperable que se confirman "
+        f"por el título: "
         + ", ".join(f"`{r['id_anuncio']}`" for r in sin_ficha_confirmados)
         + "."
     )
@@ -757,19 +963,24 @@ def main():
     for municipio, n in fuera_por_municipio.most_common():
         lineas.append(f"| {municipio} | {n} |")
     lineas.append("")
-    lineas.append("### 3.3 Casos contradictorios")
+    lineas.append("### 3.3 Casos con ficha de otro municipio resueltos por el título")
     lineas.append("")
-    contradictorios = [r for r in revolico if r["resultado"] == "CONTRADICTORIO"]
-    if contradictorios:
-        lineas.append("| ID | Ficha | Evidencia textual | Título |")
+    if confirmados_titulo_ficha_fuera:
+        lineas.append(
+            "Estos anuncios tienen ficha en otro municipio, pero el título nombra "
+            "un reparto de Diez de Octubre. La regla de título los confirma y se "
+            "conservan con la contradicción documentada."
+        )
+        lineas.append("")
+        lineas.append("| ID | Ficha | Título | Evidencia interna del título |")
         lineas.append("|---|---|---|---|")
-        for r in contradictorios:
+        for r in confirmados_titulo_ficha_fuera:
             lineas.append(
                 f"| {r['id_unico']} | {r['ficha']['ubicacion_pagina']} | "
-                f"{evidencia_texto(r['senales_texto'])} | {r['titulo'][:90]} |"
+                f"{r['titulo'][:90]} | {evidencia_texto(r['senales_titulo'])} |"
             )
     else:
-        lineas.append("No se detectaron contradicciones.")
+        lineas.append("No se detectaron casos de este tipo.")
     lineas.append("")
     lineas.append("### 3.4 Casos indeterminados")
     lineas.append("")
@@ -781,6 +992,24 @@ def main():
             lineas.append(f"| {r['id_unico']} | {r['titulo'][:90]} | {r['motivo']} |")
     else:
         lineas.append("No se detectaron casos indeterminados.")
+    lineas.append("")
+    lineas.append("### 3.5 Casos contradictorios residuales")
+    lineas.append("")
+    contradictorios = [r for r in revolico if r["resultado"] == "CONTRADICTORIO"]
+    if contradictorios:
+        lineas.append("| ID | Ficha | Evidencia textual | Título |")
+        lineas.append("|---|---|---|---|")
+        for r in contradictorios:
+            lineas.append(
+                f"| {r['id_unico']} | {r['ficha']['ubicacion_pagina']} | "
+                f"{evidencia_texto(r['senales_texto'])} | {r['titulo'][:90]} |"
+            )
+    else:
+        lineas.append(
+            "Ninguno. Los 8 casos que la regla anterior marcaba como "
+            "contradictorios tenían un título con un reparto interno y quedaron "
+            "confirmados por la regla de título (ver sección 3.3)."
+        )
     lineas.append("")
     lineas.append("## 4. Resultado en Facebook (n = 42 + 1 rechazada)")
     lineas.append("")
@@ -794,11 +1023,11 @@ def main():
     lineas.append(
         f"La publicación rechazada previamente (id 27) queda clasificada como "
         f"**{next(r['resultado'] for r in facebook_completo if not r['en_base_limpia'])}**: "
-        f"menciona Santa Amalia, que OpenStreetMap ubica en Arroyo Naranjo, a 0.77 km "
-        f"del polígono de Diez de Octubre. La alusión a la Calzada de 10 de Octubre "
-        f"es una referencia de cercanía («a solo 3 cuadras»), no la ubicación de la "
-        f"propiedad, por lo que no se contó como señal interna. El rechazo anterior "
-        f"fue correcto."
+        f"su título nombra **Santa Amalia**, que OpenStreetMap ubica en Arroyo "
+        f"Naranjo, a 0.77 km del polígono de Diez de Octubre. La alusión a la "
+        f"Calzada de 10 de Octubre, en el resto del texto, es una referencia de "
+        f"cercanía («a solo 3 cuadras»), no la ubicación de la propiedad. La regla "
+        f"de título descarta la publicación y confirma el rechazo anterior."
     )
     lineas.append("")
     lineas.append("### 4.1 Casos indeterminados de Facebook")
@@ -845,6 +1074,17 @@ def main():
         "produce `analisis/informe_final.md`."
     )
     lineas.append("")
+    lineas.append(
+        "Ningún registro se elimina de las bases originales. Los "
+        f"**{len(descartados)}** registros no incluidos (más la publicación "
+        "rechazada previamente) se conservan íntegros en "
+        "`datos/limpios/descartados_diez_octubre.json`, con su resultado, "
+        "confianza, evidencia principal, motivo de descarte, registro original "
+        "y registro unificado exacto. "
+        "También hay una versión tabular en "
+        "`datos/limpios/descartados_diez_octubre.csv`."
+    )
+    lineas.append("")
     lineas.append("## 7. Archivos generados")
     lineas.append("")
     lineas.append("| Archivo | Contenido |")
@@ -856,14 +1096,18 @@ def main():
     lineas.append(f"| `{OUT_REV_CONFIRMADOS}` | {len(confirmados_rev)} anuncios de Revolico confirmados |")
     lineas.append(f"| `{OUT_FB_CONFIRMADOS}` | {len(confirmados_fb)} publicaciones de Facebook confirmadas |")
     lineas.append(f"| `{OUT_UNI_CONFIRMADOS}` | {len(confirmados_uni)} registros confirmados |")
+    lineas.append(f"| `{OUT_DESCARTADOS}` | {len(descartados)} registros descartados con motivo, registro original y registro unificado |")
+    lineas.append(f"| `{OUT_DESCARTADOS_CSV}` | Versión tabular de los descartados |")
     lineas.append("")
     lineas.append("## 8. Limitaciones")
     lineas.append("")
     lineas.append("- El polígono de Diez de Octubre tiene 11 vértices: es una simplificación administrativa, no un límite catastral.")
-    lineas.append("- La ubicación de la ficha de Revolico la declara el anunciante y puede contener errores.")
+    lineas.append("- La regla de título prioriza la mención textual sobre la ficha. Si el título usa un topónimo ambiguo, la publicación se conserva con confianza media y la ambigüedad queda documentada.")
+    lineas.append("- **Ampliación del Sevillano** y **Reparto Flores** se incluyen por mención interna en el título. El topónimo completo no se pudo geocodificar; la señal verificable es «Sevillano» (Diez de Octubre) y «Flores» (Santos Suárez, Diez de Octubre). Por eso su confianza es media, no alta.")
+    lineas.append("- La ubicación de la ficha de Revolico la declara el anunciante y puede contener errores. La regla de título puede confirmar un anuncio aunque la ficha esté mal declarada.")
     lineas.append("- Los topónimos se geocodifican a un punto representativo del reparto, no a la dirección exacta de la propiedad.")
     lineas.append("- La verificación cubre los 134 anuncios conservados y las 43 publicaciones de Facebook; no se re-verificaron los 136 anuncios rechazados por el filtro anterior.")
-    lineas.append("- Los casos contradictorios e indeterminados se reportan como tales; no se imputa municipio.")
+    lineas.append("- Los casos indeterminados se reportan como tales; no se imputa municipio. Los descartados se conservan íntegros en `datos/limpios/descartados_diez_octubre.json`.")
     lineas.append("")
     lineas.append("---")
     lineas.append("")
@@ -890,6 +1134,7 @@ def main():
     for k in ["SÍ", "NO", "CONTRADICTORIO", "INDETERMINADO"]:
         print(f"  {k}: {resumen_uni.get(k,0)}")
     print(f"\nConfirmados unificados: {len(confirmados_uni)}")
+    print(f"Descartados conservados: {len(descartados)} en {OUT_DESCARTADOS}")
     print(f"Reporte: {OUT_REPORTE}")
 
 

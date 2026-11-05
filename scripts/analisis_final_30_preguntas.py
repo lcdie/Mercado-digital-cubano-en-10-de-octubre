@@ -5,14 +5,15 @@ Genera el informe final A-F del mercado inmobiliario digital de Diez de Octubre.
 
 Base de datos:
     datos/limpios/unificado_confirmados_diez_octubre.json
-    114 publicaciones confirmadas dentro del municipio por la verificación
+    122 publicaciones confirmadas dentro del municipio por la verificación
     espacial con el polígono DPA 23.09 de datos/geo/lha.geojson:
-    75 de Revolico + 39 de Facebook.
+    83 de Revolico + 39 de Facebook.
 
     La base de 134 anuncios de Revolico era una muestra *etiquetada* como
-    Diez de Octubre, no verificada: 46 fichas declaraban otro municipio, 8
-    eran contradictorias y 5 no eran verificables. Este informe sustituye
-    aquel universo por el de 114 publicaciones confirmadas.
+    Diez de Octubre, no verificada: 46 fichas declaraban otro municipio, 8 de
+    ellas tenían un título con un reparto interno que las confirma y 5 no eran
+    verificables. Este informe sustituye aquel universo por el de 122
+    publicaciones confirmadas, aplicando el título como evidencia principal.
 
 Entrada auxiliar:
     datos/limpios/verificacion_municipal_unificado.json
@@ -409,10 +410,13 @@ def main():
         f"Diez de Octubre. Usa las **{total} publicaciones que la verificación "
         f"espacial confirmó dentro del municipio**: {n_revolico} de Revolico y "
         f"{n_facebook} de Facebook. De las 176 publicaciones unificadas, "
-        f"{conteo_uni.get('NO', 0)} pertenecen a otro municipio, "
-        f"{conteo_uni.get('CONTRADICTORIO', 0)} son contradictorias y "
+        f"{conteo_uni.get('NO', 0)} pertenecen a otro municipio y "
         f"{conteo_uni.get('INDETERMINADO', 0)} no son verificables; todas quedan "
-        f"fuera. El detalle está en `{REPORTE_VERIFICACION}`."
+        f"fuera. La clasificación aplica el **título como evidencia principal**: "
+        f"si nombra Diez de Octubre o un reparto interno, confirma; si nombra un "
+        f"lugar externo, descarta. La ficha y el resto del texto solo se usan "
+        f"cuando el título no aporta señal. El detalle está en "
+        f"`{REPORTE_VERIFICACION}`."
     )
     L.append("")
     L.append("Los hallazgos principales son:")
@@ -520,15 +524,18 @@ def main():
     # ------------------------------------------------------------------
     L.append("## Metodología y verificación municipal")
     L.append("")
-    L.append("### Por qué el universo es 114 y no 134")
+    L.append(f"### Por qué el universo es {total} y no 134")
     L.append("")
     L.append(
         "El campo `municipio` del scraper no es fiable: asigna «Diez de Octubre» "
         "a anuncios que en su ficha declaran otro municipio. Para corregirlo se "
-        "usó el polígono municipal de `datos/geo/lha.geojson` y tres evidencias "
-        "por publicación: la ubicación declarada por la ficha de Revolico, los "
-        "topónimos del texto y la geocodificación de esos topónimos con "
-        "comprobación punto-en-polígono."
+        "usó el **título como evidencia principal**. Si el título nombra Diez de "
+        "Octubre o un reparto interno, la publicación se confirma; si nombra un "
+        "municipio, reparto o localidad externa, se descarta. Solo cuando el "
+        "título no aporta señal se recurre a la ficha de Revolico y al resto del "
+        "texto (enlace, grupo, ubicación o zona). Los topónimos se geocodificaron "
+        "con Nominatim y se comprobaron punto-en-polígono contra "
+        "`datos/geo/lha.geojson`."
     )
     L.append("")
     L.append("| Resultado | Revolico (n=134) | Facebook (n=42) | Unificado (n=176) |")
@@ -552,19 +559,22 @@ def main():
     L.append("")
     L.append(
         f"La base final son las **{conteo_uni.get('SÍ', 0)} publicaciones con "
-        f"resultado SÍ**. Las 46 de otro municipio, las 8 contradictorias y las 8 "
-        f"indeterminadas se excluyen. Esa exclusión es una decisión metodológica: "
-        f"reduce el tamaño de la muestra, pero evita atribuir a Diez de Octubre "
-        f"precios y zonas que pertenecen a otros municipios."
+        f"resultado SÍ**. Las {conteo_uni.get('NO', 0)} de otro municipio y las "
+        f"{conteo_uni.get('INDETERMINADO', 0)} indeterminadas se excluyen. Los 8 "
+        f"casos que la regla anterior marcaba como contradictorios tenían un "
+        f"título con un reparto interno y se confirman por la regla de título. "
+        f"Esa exclusión reduce el tamaño de la muestra, pero evita atribuir a "
+        f"Diez de Octubre precios y zonas que pertenecen a otros municipios."
     )
     L.append("")
     L.append(
         "La verificación tiene un límite explícito: el polígono es una "
         "simplificación de 11 vértices y no resuelve casos catastrales a pocos "
-        "metros del borde. Además, se apoya en la ubicación que declara el "
-        "anunciante, no en la dirección exacta de la propiedad. Los casos "
-        "contradictorios e indeterminados son, precisamente, aquellos en los que "
-        "la evidencia no alcanza para decidir."
+        "metros del borde. Además, la ficha se apoya en la ubicación que declara "
+        "el anunciante, no en la dirección exacta de la propiedad. La regla de "
+        "título puede confirmar un anuncio con ficha mal declarada, y los casos "
+        "indeterminados son aquellos en los que ninguna evidencia alcanza para "
+        "decidir."
     )
     L.append("")
     L.append("### Fuentes y normalización")
@@ -614,11 +624,12 @@ def main():
     L.append(
         "El informe anterior respondía 30 preguntas sobre 134 anuncios de "
         "Revolico etiquetados como Diez de Octubre. La verificación muestra que "
-        "solo 75 de esos 134 estaban confirmados en el municipio. Esta versión "
-        "recalcula el informe con las 114 publicaciones confirmadas e incorpora "
-        "39 de Facebook. No es una actualización de cifras: es un cambio de "
-        "universo. Las cifras anteriores no deben compararse directamente con "
-        "las de este informe."
+        "83 de esos 134 están confirmados en el municipio: 73 con ficha que "
+        "declara Diez de Octubre y 10 por mención interna en el título. Esta "
+        "versión recalcula el informe con las 122 publicaciones confirmadas e "
+        "incorpora 39 de Facebook. No es una actualización de cifras: es un "
+        "cambio de universo. Las cifras anteriores no deben compararse "
+        "directamente con las de este informe."
     )
     L.append("")
     L.append(
@@ -1298,9 +1309,9 @@ def main():
             f"> **Nota de duplicidad:** la base contiene un par de publicaciones "
             f"que describen la misma propiedad y el mismo precio en Revolico y "
             f"Facebook ({ids_dup}). Se conserva para no alterar el universo "
-            f"acordado de 114, pero el n efectivo sería 113 si se eliminara. El "
-            f"par no cambia las conclusiones: ambos registros son ventas en USD "
-            f"y no modifican las medianas de forma apreciable."
+            f"acordado de {total}, pero el n efectivo sería {total - 1} si se "
+            f"eliminara. El par no cambia las conclusiones: ambos registros son "
+            f"ventas en USD y no modifican las medianas de forma apreciable."
         )
         L.append("")
 
@@ -1311,11 +1322,11 @@ def main():
     L.append("")
     L.append(
         f"1. **La base verificada es de {total} publicaciones.** La versión "
-        f"anterior usaba 134 anuncios etiquetados como Diez de Octubre, pero solo "
-        f"75 de ellos estaban confirmados en el municipio. Esta versión usa las "
-        f"114 publicaciones confirmadas ({n_revolico} de Revolico y "
-        f"{n_facebook} de Facebook) y excluye 46 de otros municipios, 8 "
-        f"contradictorias y 8 indeterminadas."
+        f"anterior usaba 134 anuncios etiquetados como Diez de Octubre, pero 83 "
+        f"de ellos están confirmados en el municipio. Esta versión usa las "
+        f"{total} publicaciones confirmadas ({n_revolico} de Revolico y "
+        f"{n_facebook} de Facebook) y excluye {conteo_uni.get('NO', 0)} de otros "
+        f"municipios y {conteo_uni.get('INDETERMINADO', 0)} indeterminadas."
     )
     L.append(
         f"2. **El mercado está dolarizado.** {usd_declarada} de "
@@ -1415,17 +1426,18 @@ def main():
     )
     L.append(
         "- **Duplicado entre fuentes:** se detectó un par Revolico–Facebook de la "
-        "misma propiedad y el mismo precio. Se conserva en la base de 114 para "
-        "no alterar el universo acordado; el n efectivo sería 113 si se "
-        "eliminara."
+        f"misma propiedad y el mismo precio. Se conserva en la base de {total} "
+        f"para no alterar el universo acordado; el n efectivo sería {total - 1} "
+        f"si se eliminara."
     )
     L.append(
         "- **Verificación municipal:** el polígono es una simplificación de 11 "
-        "vértices y no resuelve casos catastrales a pocos metros del borde. Se "
-        "apoya en la ubicación declarada por el anunciante y en topónimos "
-        "geocodificados a un punto representativo, no en la dirección exacta de "
-        "la propiedad. Las 8 contradictorias y 8 indeterminadas se excluyen, lo "
-        "que puede introducir un sesgo de selección."
+        "vértices y no resuelve casos catastrales a pocos metros del borde. La "
+        "regla de título usa la mención textual del anuncio; cuando el título es "
+        "ambiguo (por ejemplo, «Ampliación del Sevillano» o «Reparto Flores»), la "
+        "publicación se conserva con confianza media y la ambigüedad se "
+        "documenta. Las 8 indeterminadas se excluyen, lo que puede introducir un "
+        "sesgo de selección."
     )
     L.append(
         "- **Clasificación:** el tipo y la operación se toman de los campos "

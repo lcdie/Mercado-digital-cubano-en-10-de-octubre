@@ -11,6 +11,46 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Plaza Roja",
+          "tipo": "lugar",
+          "patron": "\\bplaza\\s*roja\\b",
+          "estado": "dentro",
+          "lat": 23.0906083,
+          "lon": -82.3652249,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Plaza Roja, Víbora, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.88,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.88 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Plaza Roja",
+          "tipo": "lugar",
+          "patron": "\\bplaza\\s*roja\\b",
+          "estado": "dentro",
+          "lat": 23.0906083,
+          "lon": -82.3652249,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Plaza Roja, Víbora, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.88,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.88 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -48,7 +88,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Plaza Roja.",
     "registro_original": {
       "id_publicacion": 1,
       "publicacion": {
@@ -116,6 +157,86 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -193,7 +314,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, La Víbora, Vista Alegre.",
     "registro_original": {
       "id_publicacion": 2,
       "publicacion": {
@@ -254,6 +376,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Mónaco",
+          "tipo": "lugar",
+          "patron": "\\bmonaco\\b",
+          "estado": "dentro",
+          "lat": 23.0894333,
+          "lon": -82.3778736,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.35,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.35 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Mónaco",
+          "tipo": "lugar",
+          "patron": "\\bmonaco\\b",
+          "estado": "dentro",
+          "lat": 23.0894333,
+          "lon": -82.3778736,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.35,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.35 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -305,7 +481,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, El Mónaco.",
     "registro_original": {
       "id_publicacion": 3,
       "publicacion": {
@@ -374,6 +551,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -425,7 +656,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, El Sevillano.",
     "registro_original": {
       "id_publicacion": 4,
       "publicacion": {
@@ -492,6 +724,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -543,7 +829,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, El Sevillano.",
     "registro_original": {
       "id_publicacion": 5,
       "publicacion": {
@@ -603,6 +890,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -654,7 +995,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, El Sevillano.",
     "registro_original": {
       "id_publicacion": 6,
       "publicacion": {
@@ -718,6 +1060,75 @@
       "ubicacion_pagina": null,
       "municipio": null,
       "estado": "no_aplica"
+    },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        },
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ]
     },
     "senales_texto": {
       "dentro": [
@@ -785,7 +1196,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Luyanó.",
     "registro_original": {
       "id_publicacion": 7,
       "publicacion": {
@@ -855,6 +1267,18 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
     "senales_texto": {
       "dentro": [],
       "fuera": [],
@@ -864,7 +1288,8 @@
     "resultado": "INDETERMINADO",
     "confianza": "baja",
     "pertenece": null,
-    "motivo": "No hay ficha municipal ni topónimo verificable en el texto.",
+    "evidencia_principal": "sin evidencia",
+    "motivo": "El título, la ficha y el resto del texto no aportan una ubicación municipal verificable.",
     "registro_original": {
       "id_publicacion": 8,
       "publicacion": {
@@ -927,6 +1352,86 @@
       "ubicacion_pagina": null,
       "municipio": null,
       "estado": "no_aplica"
+    },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
     },
     "senales_texto": {
       "dentro": [
@@ -1005,7 +1510,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Santa Catalina, Calzada 10 de Octubre.",
     "registro_original": {
       "id_publicacion": 9,
       "publicacion": {
@@ -1074,6 +1580,34 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -1099,7 +1633,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre.",
     "registro_original": {
       "id_publicacion": 10,
       "publicacion": {
@@ -1162,6 +1697,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -1213,7 +1802,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Lawton.",
     "registro_original": {
       "id_publicacion": 11,
       "publicacion": {
@@ -1277,6 +1867,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -1328,7 +1972,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Lawton.",
     "registro_original": {
       "id_publicacion": 12,
       "publicacion": {
@@ -1390,6 +2035,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -1441,7 +2140,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Lacret.",
     "registro_original": {
       "id_publicacion": 13,
       "publicacion": {
@@ -1504,6 +2204,46 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -1541,7 +2281,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Lawton.",
     "registro_original": {
       "id_publicacion": 14,
       "publicacion": {
@@ -1609,6 +2350,46 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -1646,7 +2427,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Santos Suárez.",
     "registro_original": {
       "id_publicacion": 15,
       "publicacion": {
@@ -1695,6 +2477,18 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
     "senales_texto": {
       "dentro": [],
       "fuera": [],
@@ -1704,7 +2498,8 @@
     "resultado": "INDETERMINADO",
     "confianza": "baja",
     "pertenece": null,
-    "motivo": "No hay ficha municipal ni topónimo verificable en el texto.",
+    "evidencia_principal": "sin evidencia",
+    "motivo": "El título, la ficha y el resto del texto no aportan una ubicación municipal verificable.",
     "registro_original": {
       "id_publicacion": 16,
       "publicacion": {
@@ -1757,6 +2552,18 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
     "senales_texto": {
       "dentro": [],
       "fuera": [],
@@ -1766,7 +2573,8 @@
     "resultado": "INDETERMINADO",
     "confianza": "baja",
     "pertenece": null,
-    "motivo": "No hay ficha municipal ni topónimo verificable en el texto.",
+    "evidencia_principal": "sin evidencia",
+    "motivo": "El título, la ficha y el resto del texto no aportan una ubicación municipal verificable.",
     "registro_original": {
       "id_publicacion": 17,
       "publicacion": {
@@ -1810,6 +2618,60 @@
       "ubicacion_pagina": null,
       "municipio": null,
       "estado": "no_aplica"
+    },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
     },
     "senales_texto": {
       "dentro": [
@@ -1862,7 +2724,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Lawton.",
     "registro_original": {
       "id_publicacion": 18,
       "publicacion": {
@@ -1919,6 +2782,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -1970,7 +2887,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Lawton.",
     "registro_original": {
       "id_publicacion": 19,
       "publicacion": {
@@ -2031,6 +2949,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -2082,7 +3054,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Santos Suárez.",
     "registro_original": {
       "id_publicacion": 20,
       "publicacion": {
@@ -2134,6 +3107,86 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -2211,7 +3264,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Santos Suárez, Santa Catalina.",
     "registro_original": {
       "id_publicacion": 21,
       "publicacion": {
@@ -2259,6 +3313,102 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ]
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -2334,9 +3484,10 @@
       ]
     },
     "resultado": "SÍ",
-    "confianza": "media",
+    "confianza": "alta",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "título",
+    "motivo": "El título nombra Diez de Octubre o un reparto interno: Diez de Octubre.",
     "registro_original": {
       "id_publicacion": 22,
       "publicacion": {
@@ -2394,6 +3545,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Dolores",
+          "tipo": "lugar",
+          "patron": "\\bdolores\\b",
+          "estado": "dentro",
+          "lat": 23.0898805,
+          "lon": -82.3491411,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Dolores (Avenida Camilo Cienfuegos), Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.51,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.51 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Dolores",
+          "tipo": "lugar",
+          "patron": "\\bdolores\\b",
+          "estado": "dentro",
+          "lat": 23.0898805,
+          "lon": -82.3491411,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Dolores (Avenida Camilo Cienfuegos), Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.51,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.51 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -2445,7 +3650,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Dolores.",
     "registro_original": {
       "id_publicacion": 23,
       "publicacion": {
@@ -2489,6 +3695,75 @@
       "ubicacion_pagina": null,
       "municipio": null,
       "estado": "no_aplica"
+    },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        },
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ]
     },
     "senales_texto": {
       "dentro": [
@@ -2556,7 +3831,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Luyanó.",
     "registro_original": {
       "id_publicacion": 24,
       "publicacion": {
@@ -2640,6 +3916,86 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "El Mónaco",
+          "tipo": "lugar",
+          "patron": "\\bmonaco\\b",
+          "estado": "dentro",
+          "lat": 23.0894333,
+          "lon": -82.3778736,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.35,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.35 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "El Mónaco",
+          "tipo": "lugar",
+          "patron": "\\bmonaco\\b",
+          "estado": "dentro",
+          "lat": 23.0894333,
+          "lon": -82.3778736,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Parque El Mónaco, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.35,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.35 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -2717,7 +4073,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, La Víbora, El Mónaco.",
     "registro_original": {
       "id_publicacion": 25,
       "publicacion": {
@@ -2820,6 +4177,112 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        },
+        {
+          "nombre": "Juan Delgado",
+          "tipo": "lugar",
+          "patron": "\\bjuan\\s*delgado\\b",
+          "estado": "dentro",
+          "lat": 23.0923691,
+          "lon": -82.3756184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Juan Delgado, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        },
+        {
+          "nombre": "Juan Delgado",
+          "tipo": "lugar",
+          "patron": "\\bjuan\\s*delgado\\b",
+          "estado": "dentro",
+          "lat": 23.0923691,
+          "lon": -82.3756184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Juan Delgado, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -2923,7 +4386,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Santos Suárez, Lacret, Juan Delgado.",
     "registro_original": {
       "id_publicacion": 26,
       "publicacion": {
@@ -3002,6 +4466,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -3053,7 +4571,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Lawton.",
     "registro_original": {
       "id_publicacion": 28,
       "publicacion": {
@@ -3113,6 +4632,128 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ]
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -3188,9 +4829,10 @@
       ]
     },
     "resultado": "SÍ",
-    "confianza": "media",
+    "confianza": "alta",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "título",
+    "motivo": "El título nombra Diez de Octubre o un reparto interno: Diez de Octubre, Santos Suárez.",
     "registro_original": {
       "id_publicacion": 29,
       "publicacion": {
@@ -3279,6 +4921,86 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -3356,7 +5078,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Santos Suárez, Calzada 10 de Octubre.",
     "registro_original": {
       "id_publicacion": 30,
       "publicacion": {
@@ -3419,6 +5142,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "El Sevillano",
+          "tipo": "lugar",
+          "patron": "\\bsevillano\\b",
+          "estado": "dentro",
+          "lat": 23.0827312,
+          "lon": -82.3713079,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "El Sevillano, Sevillano, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.13,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.13 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -3470,7 +5247,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, El Sevillano.",
     "registro_original": {
       "id_publicacion": 31,
       "publicacion": {
@@ -3531,6 +5309,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -3582,7 +5414,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Calzada 10 de Octubre.",
     "registro_original": {
       "id_publicacion": 32,
       "publicacion": {
@@ -3639,6 +5472,102 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ]
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Vista Alegre",
+          "tipo": "lugar",
+          "patron": "\\bvista\\s*alegre\\b",
+          "estado": "dentro",
+          "lat": 23.082259,
+          "lon": -82.3420059,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.22,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.22 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -3688,9 +5617,10 @@
       ]
     },
     "resultado": "SÍ",
-    "confianza": "media",
+    "confianza": "alta",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "título",
+    "motivo": "El título nombra Diez de Octubre o un reparto interno: Diez de Octubre, Vista Alegre.",
     "registro_original": {
       "id_publicacion": 33,
       "publicacion": {
@@ -3761,6 +5691,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lacret",
+          "tipo": "lugar",
+          "patron": "\\blacret\\b",
+          "estado": "dentro",
+          "lat": 23.1008449,
+          "lon": -82.3718184,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lacret, General Lacret, Loma del Chaple, Santos Suárez, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.72,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.72 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -3812,7 +5796,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Lacret.",
     "registro_original": {
       "id_publicacion": 34,
       "publicacion": {
@@ -3886,6 +5871,117 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Asunción",
+          "tipo": "lugar",
+          "patron": "\\basuncion\\b",
+          "estado": "dentro",
+          "lat": 23.1032441,
+          "lon": -82.3524331,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Asunción, Jesús del Monte, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.79,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.79 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Asunción",
+          "tipo": "lugar",
+          "patron": "\\basuncion\\b",
+          "estado": "dentro",
+          "lat": 23.1032441,
+          "lon": -82.3524331,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Asunción, Jesús del Monte, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.79,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.79 km del borde"
+        }
+      ]
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Asunción",
+          "tipo": "lugar",
+          "patron": "\\basuncion\\b",
+          "estado": "dentro",
+          "lat": 23.1032441,
+          "lon": -82.3524331,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Asunción, Jesús del Monte, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.79,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.79 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Asunción",
+          "tipo": "lugar",
+          "patron": "\\basuncion\\b",
+          "estado": "dentro",
+          "lat": 23.1032441,
+          "lon": -82.3524331,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Asunción, Jesús del Monte, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.79,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.79 km del borde"
+        },
+        {
+          "nombre": "Hospital Hijas de Galicia",
+          "tipo": "lugar",
+          "patron": "\\bhijas?\\s*de\\s*galicia\\b",
+          "estado": "ambigua",
+          "detalle": "sin resultado de geocodificación"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -3950,9 +6046,10 @@
       ]
     },
     "resultado": "SÍ",
-    "confianza": "media",
+    "confianza": "alta",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "título",
+    "motivo": "El título nombra Diez de Octubre o un reparto interno: Diez de Octubre, La Asunción.",
     "registro_original": {
       "id_publicacion": 35,
       "publicacion": {
@@ -4042,6 +6139,126 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Porvenir",
+          "tipo": "lugar",
+          "patron": "\\bporvenir\\b",
+          "estado": "dentro",
+          "lat": 23.0932272,
+          "lon": -82.3560296,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.0,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.0 km del borde"
+        },
+        {
+          "nombre": "Aguilera",
+          "tipo": "lugar",
+          "patron": "\\baguilera\\b",
+          "estado": "dentro",
+          "lat": 23.1023873,
+          "lon": -82.3486801,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Aguilera, Lawton, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.57,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.57 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Porvenir",
+          "tipo": "lugar",
+          "patron": "\\bporvenir\\b",
+          "estado": "dentro",
+          "lat": 23.0932272,
+          "lon": -82.3560296,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.0,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.0 km del borde"
+        },
+        {
+          "nombre": "Aguilera",
+          "tipo": "lugar",
+          "patron": "\\baguilera\\b",
+          "estado": "dentro",
+          "lat": 23.1023873,
+          "lon": -82.3486801,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Aguilera, Lawton, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.57,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.57 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -4129,9 +6346,10 @@
       ]
     },
     "resultado": "SÍ",
-    "confianza": "media",
+    "confianza": "alta",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "título",
+    "motivo": "El título nombra Diez de Octubre o un reparto interno: Lawton.",
     "registro_original": {
       "id_publicacion": 36,
       "publicacion": {
@@ -4215,6 +6433,76 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ]
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "La Víbora",
+          "tipo": "lugar",
+          "patron": "\\bvibora\\b",
+          "estado": "dentro",
+          "lat": 23.0942844,
+          "lon": -82.3704078,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Funeraria La Víbora, Avenida Santa Catalina, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -4264,9 +6552,10 @@
       ]
     },
     "resultado": "SÍ",
-    "confianza": "media",
+    "confianza": "alta",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "título",
+    "motivo": "El título nombra Diez de Octubre o un reparto interno: Diez de Octubre.",
     "registro_original": {
       "id_publicacion": 37,
       "publicacion": {
@@ -4332,6 +6621,72 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        },
+        {
+          "nombre": "Santa Ana",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*ana\\b",
+          "estado": "dentro",
+          "lat": 23.1085946,
+          "lon": -82.3599849,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Calle Santa Ana, Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.53,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.53 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Luyanó",
+          "tipo": "lugar",
+          "patron": "\\bluyano\\b",
+          "estado": "dentro",
+          "lat": 23.1077993,
+          "lon": -82.3599026,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.62,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.62 km del borde"
+        },
+        {
+          "nombre": "Santa Ana",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*ana\\b",
+          "estado": "dentro",
+          "lat": 23.1085946,
+          "lon": -82.3599849,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Calle Santa Ana, Luyanó, Diez de Octubre, La Habana, 90700, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.53,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.53 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -4395,7 +6750,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Luyanó, Santa Ana.",
     "registro_original": {
       "id_publicacion": 38,
       "publicacion": {
@@ -4477,6 +6833,34 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -4502,7 +6886,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre.",
     "registro_original": {
       "id_publicacion": 39,
       "publicacion": {
@@ -4559,6 +6944,60 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -4610,7 +7049,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Calzada 10 de Octubre.",
     "registro_original": {
       "id_publicacion": 40,
       "publicacion": {
@@ -4679,6 +7119,86 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        },
+        {
+          "nombre": "Calzada 10 de Octubre",
+          "tipo": "lugar",
+          "patron": "\\bcalzada\\s*(?:de\\s*)?(?:10|diez)\\s*(?:de\\s*)?octubre\\b",
+          "estado": "dentro",
+          "lat": 23.0878085,
+          "lon": -82.3663003,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Iglesia Bethel en Cuba, Calzada del 10 de Octubre, Víbora, Diez de Octubre, La Habana, 10055, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.59,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.59 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -4756,7 +7276,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Santa Catalina, Calzada 10 de Octubre.",
     "registro_original": {
       "id_publicacion": 41,
       "publicacion": {
@@ -4833,6 +7354,86 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [],
+      "ambigua": [],
+      "todas": []
+    },
+    "senales_resto": {
+      "dentro": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Porvenir",
+          "tipo": "lugar",
+          "patron": "\\bporvenir\\b",
+          "estado": "dentro",
+          "lat": 23.0932272,
+          "lon": -82.3560296,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.0,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.0 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Lawton",
+          "tipo": "lugar",
+          "patron": "\\blawton\\b|\\blautow\\b",
+          "estado": "dentro",
+          "lat": 23.096077,
+          "lon": -82.3524781,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Lawton, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.18,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.18 km del borde"
+        },
+        {
+          "nombre": "Porvenir",
+          "tipo": "lugar",
+          "patron": "\\bporvenir\\b",
+          "estado": "dentro",
+          "lat": 23.0932272,
+          "lon": -82.3560296,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Avenida Porvenir, Lawton, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 1.0,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 1.0 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [
         {
@@ -4910,7 +7511,8 @@
     "resultado": "SÍ",
     "confianza": "media",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "texto",
+    "motivo": "Sin ficha municipal, pero el resto del texto menciona Diez de Octubre o un reparto suyo: Diez de Octubre, Lawton, Porvenir.",
     "registro_original": {
       "id_publicacion": 42,
       "publicacion": {
@@ -4970,7 +7572,41 @@
       "municipio": null,
       "estado": "no_aplica"
     },
-    "senales_texto": {
+    "senales_titulo": {
+      "dentro": [
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        }
+      ]
+    },
+    "senales_resto": {
       "dentro": [
         {
           "nombre": "Diez de Octubre",
@@ -5044,10 +7680,85 @@
         }
       ]
     },
+    "senales_texto": {
+      "dentro": [
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        }
+      ],
+      "fuera": [],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Santos Suárez",
+          "tipo": "lugar",
+          "patron": "\\bsantos?\\s*suarez\\b",
+          "estado": "dentro",
+          "lat": 23.0986461,
+          "lon": -82.3715339,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santos Suárez, Diez de Octubre, La Habana, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.92,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.92 km del borde"
+        },
+        {
+          "nombre": "Diez de Octubre",
+          "tipo": "dentro_explicito",
+          "patron": "\\b(?:10\\s*(?:de\\s*)?octubre|diez\\s*de\\s*octubre|10\\s*/\\s*10|10\\s*octubre)\\b",
+          "estado": "dentro",
+          "detalle": "mención textual explícita al municipio"
+        },
+        {
+          "nombre": "Santa Catalina",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*catalina\\b",
+          "estado": "dentro",
+          "lat": 23.0807911,
+          "lon": -82.3423123,
+          "municipio_osm": "Diez de Octubre",
+          "display_name_osm": "Santa Catalina, Vista Alegre, Diez de Octubre, La Habana, 10722, Cuba",
+          "dentro_poligono": true,
+          "distancia_borde_km": 0.15,
+          "detalle": "OSM: Diez de Octubre; dentro del polígono; 0.15 km del borde"
+        }
+      ]
+    },
     "resultado": "SÍ",
-    "confianza": "media",
+    "confianza": "alta",
     "pertenece": true,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona Diez de Octubre o un reparto suyo.",
+    "evidencia_principal": "título",
+    "motivo": "El título nombra Diez de Octubre o un reparto interno: Santos Suárez.",
     "registro_original": {
       "id_publicacion": 43,
       "publicacion": {
@@ -5146,6 +7857,74 @@
       "municipio": null,
       "estado": "no_aplica"
     },
+    "senales_titulo": {
+      "dentro": [],
+      "fuera": [
+        {
+          "nombre": "Santa Amalia",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*amalia\\b",
+          "estado": "fuera",
+          "lat": 23.0755379,
+          "lon": -82.3647416,
+          "municipio_osm": "Arroyo Naranjo",
+          "display_name_osm": "Santa Amalia, Poey, Arroyo Naranjo, La Habana, 10055, Cuba",
+          "dentro_poligono": false,
+          "distancia_borde_km": 0.77,
+          "detalle": "OSM: Arroyo Naranjo; fuera del polígono; 0.77 km del borde"
+        }
+      ],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Santa Amalia",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*amalia\\b",
+          "estado": "fuera",
+          "lat": 23.0755379,
+          "lon": -82.3647416,
+          "municipio_osm": "Arroyo Naranjo",
+          "display_name_osm": "Santa Amalia, Poey, Arroyo Naranjo, La Habana, 10055, Cuba",
+          "dentro_poligono": false,
+          "distancia_borde_km": 0.77,
+          "detalle": "OSM: Arroyo Naranjo; fuera del polígono; 0.77 km del borde"
+        }
+      ]
+    },
+    "senales_resto": {
+      "dentro": [],
+      "fuera": [
+        {
+          "nombre": "Santa Amalia",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*amalia\\b",
+          "estado": "fuera",
+          "lat": 23.0755379,
+          "lon": -82.3647416,
+          "municipio_osm": "Arroyo Naranjo",
+          "display_name_osm": "Santa Amalia, Poey, Arroyo Naranjo, La Habana, 10055, Cuba",
+          "dentro_poligono": false,
+          "distancia_borde_km": 0.77,
+          "detalle": "OSM: Arroyo Naranjo; fuera del polígono; 0.77 km del borde"
+        }
+      ],
+      "ambigua": [],
+      "todas": [
+        {
+          "nombre": "Santa Amalia",
+          "tipo": "lugar",
+          "patron": "\\bsanta\\s*amalia\\b",
+          "estado": "fuera",
+          "lat": 23.0755379,
+          "lon": -82.3647416,
+          "municipio_osm": "Arroyo Naranjo",
+          "display_name_osm": "Santa Amalia, Poey, Arroyo Naranjo, La Habana, 10055, Cuba",
+          "dentro_poligono": false,
+          "distancia_borde_km": 0.77,
+          "detalle": "OSM: Arroyo Naranjo; fuera del polígono; 0.77 km del borde"
+        }
+      ]
+    },
     "senales_texto": {
       "dentro": [],
       "fuera": [
@@ -5181,9 +7960,10 @@
       ]
     },
     "resultado": "NO",
-    "confianza": "media",
+    "confianza": "alta",
     "pertenece": false,
-    "motivo": "Sin ubicación en la ficha, pero el texto menciona un lugar fuera del municipio.",
+    "evidencia_principal": "título",
+    "motivo": "El título nombra un lugar fuera de Diez de Octubre: Santa Amalia. Se descarta por la regla de título.",
     "registro_original": {
       "id_publicacion": 27,
       "publicacion": {
