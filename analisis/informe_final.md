@@ -1,7 +1,7 @@
 # Mercado inmobiliario digital en Diez de Octubre
 ## Opacidad, dolarización, desigualdad territorial e informalidad
 
-**Fecha de generación:** 05/11/2026 01:00
+**Fecha de generación:** 05/11/2026 02:55
 **Corte de los datos:** 2026-10-31 (Revolico); Facebook sin fecha homogénea
 **Universo:** 122 publicaciones confirmadas dentro del municipio (83 de Revolico + 39 de Facebook)
 **Verificación espacial:** polígono municipal DPA `23.09` de `datos/geo/lha.geojson`

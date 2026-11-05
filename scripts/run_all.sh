@@ -26,6 +26,9 @@ python3 scripts/cifras_control.py
 echo "==> Paso 4: Pruebas de contrato"
 python3 -m unittest discover -s tests -t .
 
+echo "==> Paso opcional: generar gráficas de exposición"
+python3 graficos/generar_graficas.py
+
 echo "==> Paso opcional: regenerar PDF"
 if [ -x .venv-docs/bin/python ]; then
   .venv-docs/bin/python scripts/generar_pdf_informe.py
