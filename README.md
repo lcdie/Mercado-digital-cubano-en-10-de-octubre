@@ -51,6 +51,26 @@ El informe final responde **30 preguntas** organizadas en seis bloques (A–F), 
 
 ---
 
+## Resultados principales (presentación)
+
+Estos son los hallazgos clave del estudio, respaldados por los datos verificados y las visualizaciones en `graficos/`.
+
+| Gráfica | Pregunta respondida | Qué muestra |
+|---|---|---|
+| `graficos/grafico_1_precios_venta_usd.png` | A2 — ¿Cuál es la mediana y el rango P10–P90 del precio de compra? | Distribución de 43 ventas en USD: mediana $20.000, media $26.023, P10–P90 $6.200–$60.000. La media supera la mediana por valores extremos. |
+| `graficos/grafico_2_oferta_por_zona.png` | B1 — ¿Qué zonas concentran la mayor oferta? | Top-8 zonas con más anuncios. Santos Suárez, Lawton, La Víbora y El Sevillano concentran el 75.8% de las publicaciones con zona. |
+| `graficos/grafico_3_media_mediana_zona.png` | B3 — ¿Qué zona tiene la mediana más alta? | Comparación media vs mediana por zona (n ≥ 5). El Sevillano lidera la mediana ($36.000), La Víbora lidera la media ($49.591) por valores extremos. |
+| `graficos/grafico_4_moneda.png` | C1 — ¿Qué porcentaje de anuncios con moneda declarada está en USD? | 106 de 107 anuncios con moneda declarada están en USD (99.1%); 1 en CUP; 15 sin precio. |
+| `graficos/grafico_5_opacidad.png` | D3 — ¿Cuántos anuncios carecen de precio y zona a la vez? | 67.2% tiene precio y zona; 4.9% no tiene ninguno de los dos; 25.4% sin zona; 12.3% sin precio. |
+
+Todos los gráficos se generan con `python3 graficos/generar_graficas.py` a partir de `datos/limpios/unificado_confirmados_diez_octubre.json`.
+
+**Informe completo:** `analisis/informe_final.md` (Markdown) y `analisis/informe_final.pdf` (PDF, 16 páginas).
+
+**¿Qué hace singular a este estudio?** Se enfoca exclusivamente en el municipio Diez de Octubre (no en La Habana entera), aplica la **título como evidencia principal** para verificar la pertenencia municipal (corrigiendo que el campo `municipio` del scraper no es fiable), conserva íntegros los 55 registros descartados con su motivo, y reporta la ausencia de datos (sin precio, sin zona) como hallazgo, no como defecto.
+
+---
+
 ## Estructura del repositorio
 
 ```
