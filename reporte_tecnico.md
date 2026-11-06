@@ -339,9 +339,9 @@ Este proyecto fue desarrollado utilizando el siguiente conjunto de herramientas:
 - **Deepseek y ChatGPT** — Modelos de lenguaje adicionales utilizados para revisar código, generar ideas y redactar secciones del informe. Todas las decisiones finales fueron revisadas y validadas por el autor del proyecto.
 
 ### Herramientas de captura y transcripción
-- **whisper.cpp (modelo base)** — Transcripción automática de las 13 grabaciones de audio de entrevistas (`evidencias/entrevistas_audio/`). Las transcripciones no se incluyen en el repositorio para proteger la privacidad de los entrevistados.
-- **whisper.cpp (modelo base)** — Transcripción automática de las 24 entrevistas adicionales en texto (`evidencias/entrevistas_audio/`).
-- **whisper.cpp (modelo base)** — Transcripción automática de las 24 entrevistas adicionales en texto (`evidencias/entrevistas_audio/`), realizadas directamente en formato escrito.
+- **whisper.cpp (modelo base)** — Transcripción automática de las 13 grabaciones de audio de entrevistas (E-01 a E-13). Las transcripciones resultantes se conservan como evidencia cualitativa.
+- **Transcripción manual** — Las 24 entrevistas adicionales en texto (E-14 a E-37) fueron transcritas directamente en formato escrito durante el trabajo de campo; no se grabaron en audio.
+- **Samsung Galaxy A56** — Dispositivo móvil utilizado para grabar las entrevistas de audio.
 - **Samsung Galaxy A56** — Dispositivo móvil utilizado para grabar las entrevistas de audio.
 - **Capturas de pantalla** — 86 capturas de publicaciones de Facebook (`evidencias/facebook_fotos/`), utilizadas como evidencia visual de anuncios publicados.
 

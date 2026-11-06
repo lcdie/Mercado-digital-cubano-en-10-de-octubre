@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-11-06 15:47:20",
+  "fecha": "2026-11-06 17:17:37",
   "criterio": "Se conserva solo lo confirmado dentro de Diez de Octubre. El título tiene prioridad: si nombra un lugar externo, el registro se descarta; si nombra el municipio o un reparto interno, se incluye. La ficha y el resto del texto solo se usan cuando el título no aporta señal.",
   "universo_unificado": 176,
   "incluidos": 122,
@@ -5039,7 +5039,7 @@
         },
         "contacto": {
           "metodo": "WhatsApp",
-          "telefono": "52956130"
+          "telefono": "***-***-6130"
         },
         "equipamiento_incluido": [],
         "operacion": "Sin clasificar",
@@ -5082,7 +5082,7 @@
         },
         "contacto": {
           "metodo": "WhatsApp",
-          "telefono": "52956130"
+          "telefono": "***-***-6130"
         },
         "operacion": "Sin clasificar",
         "municipio": "Diez de Octubre",
@@ -5160,7 +5160,7 @@
         },
         "contacto": {
           "metodo": "Teléfono",
-          "telefono": "55838566"
+          "telefono": "***-***-8566"
         },
         "servicios_y_caracteristicas": [],
         "equipamiento_incluido": [],
@@ -5203,7 +5203,7 @@
         },
         "contacto": {
           "metodo": "Teléfono",
-          "telefono": "55838566"
+          "telefono": "***-***-8566"
         },
         "operacion": "Venta",
         "municipio": "Diez de Octubre",
@@ -5262,7 +5262,7 @@
         },
         "contacto": {
           "metodo": "Teléfono",
-          "telefono": "55838566"
+          "telefono": "***-***-8566"
         },
         "servicios_y_caracteristicas": [],
         "equipamiento_incluido": [],
@@ -5297,7 +5297,7 @@
         },
         "contacto": {
           "metodo": "Teléfono",
-          "telefono": "55838566"
+          "telefono": "***-***-8566"
         },
         "operacion": "Venta",
         "municipio": "Diez de Octubre",
@@ -5425,7 +5425,7 @@
         },
         "contacto": {
           "metodo": "Mensaje privado",
-          "telefono": "51279170"
+          "telefono": "***-***-9170"
         },
         "motivo_eliminacion": "MUNICIPIO_DISTINTO_A_DIEZ_DE_OCTUBRE",
         "patron_detectado": "santa amalia"

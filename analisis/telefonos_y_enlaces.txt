@@ -8,7 +8,7 @@ Anuncios con telefono: 17
 Anuncios sin telefono: 84
 
 --------------------------------------------------------------------------------
-1. TELEFONO: 5148754
+1. TELEFONO: ***-***-8754
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apto-en-bajo-en-santos-suarez-cerca-de-santa-catalina-58042185
+     Enlace: https://www.revolico.com/item/apto-en-bajo-en-santos-suarez-cerca-de-santa-catalina-***-***-2185
 
    ANUNCIO 2:
      Titulo: Casa en Santos Suárez
@@ -28,10 +28,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-santos-suarez-57431071
+     Enlace: https://www.revolico.com/item/casa-en-santos-suarez-***-***-1071
 
 --------------------------------------------------------------------------------
-2. TELEFONO: 5351194
+2. TELEFONO: ***-***-1194
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -42,10 +42,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-57317211?p
+     Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-***-***-7211?p
 
 --------------------------------------------------------------------------------
-3. TELEFONO: 5375769
+3. TELEFONO: ***-***-5769
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -56,10 +56,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-grande-para-almacen-240m2-56416044
+     Enlace: https://www.revolico.com/item/casa-grande-para-almacen-240m2-***-***-6044
 
 --------------------------------------------------------------------------------
-4. TELEFONO: 5517730
+4. TELEFONO: ***-***-7730
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -70,10 +70,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-lawton-10-de-octubreplaca-libregarajepatio-y-papeles-en-regla-56370283
+     Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-lawton-10-de-octubreplaca-libregarajepatio-y-papeles-en-regla-***-***-0283
 
 --------------------------------------------------------------------------------
-5. TELEFONO: 6091960
+5. TELEFONO: ***-***-1960
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -84,10 +84,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/al297-biplanta-en-santos-suarez53o22922-44935344
+     Enlace: https://www.revolico.com/item/al297-biplanta-en-santos-suarez53o22922-***-***-5344
 
 --------------------------------------------------------------------------------
-6. TELEFONO: 6295484
+6. TELEFONO: ***-***-5484
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -98,7 +98,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-apartamento-58193578
+     Enlace: https://www.revolico.com/item/se-vende-apartamento-***-***-3578
 
    ANUNCIO 2:
      Titulo: SE VENDE CASA
@@ -107,10 +107,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-57692514
+     Enlace: https://www.revolico.com/item/se-vende-casa-***-***-2514
 
 --------------------------------------------------------------------------------
-7. TELEFONO: 6499871
+7. TELEFONO: ***-***-9871
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -121,21 +121,21 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-venta-56985062
+     Enlace: https://www.revolico.com/item/casa-en-venta-***-***-5062
 
 --------------------------------------------------------------------------------
-8. TELEFONO: 53022922
+8. TELEFONO: ***-***-2922
    NOMBRE: 
 --------------------------------------------------------------------------------
 
    ANUNCIO 1:
-     Titulo: (al319)-25000-Casa independiente en Santos Suárez.(53022922).
+     Titulo: (al319)-25000-Casa independiente en Santos Suárez.(***-***-2922).
      Precio: 25000
      Moneda: USD
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-en-santos-suarez53022922-mandy-44964739
+     Enlace: https://www.revolico.com/item/casa-independiente-en-santos-suarez53022922-mandy-***-***-4739
 
    ANUNCIO 2:
      Titulo: (al297)-Biplanta en Santos Suárez.(53o22922).
@@ -144,7 +144,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/al297-biplanta-en-santos-suarez53o22922-44935344
+     Enlace: https://www.revolico.com/item/al297-biplanta-en-santos-suarez53o22922-***-***-5344
 
    ANUNCIO 3:
      Titulo: (al313)-70000-Casa independiente de 4 niveles en Santos Suárez.(53o22922).(www.ventacasasmandy.com)
@@ -153,10 +153,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/al313-78000-casa-independiente-de-4-niveles-en-santos-suarez53o22922wwwventacasasmandycom-51131233
+     Enlace: https://www.revolico.com/item/al313-78000-casa-independiente-de-4-niveles-en-santos-suarez53o22922wwwventacasasmandycom-***-***-1233
 
 --------------------------------------------------------------------------------
-9. TELEFONO: 54485987
+9. TELEFONO: ***-***-5987
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -167,7 +167,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-54960186
+     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-***-***-0186
 
    ANUNCIO 2:
      Titulo: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
@@ -176,7 +176,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
+     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-***-***-9235
 
    ANUNCIO 3:
      Titulo: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
@@ -185,10 +185,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
+     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-***-***-1362
 
 --------------------------------------------------------------------------------
-10. TELEFONO: 54500104
+10. TELEFONO: ***-***-0104
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -199,7 +199,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-54960186
+     Enlace: https://www.revolico.com/item/apartamento-en-la-vibora-***-***-0186
 
    ANUNCIO 2:
      Titulo: Se vende casa independiente preparada para renta con todo incluído y generador eléctrico en La Vibora
@@ -208,7 +208,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-54519235
+     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-preparada-para-renta-en-la-vibora-***-***-9235
 
    ANUNCIO 3:
      Titulo: Apartamento en el Mónaco con todo incluído garaje 3 cuartos y 3 baños
@@ -217,10 +217,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-56461362
+     Enlace: https://www.revolico.com/item/apartamento-en-el-monaco-con-todo-incluido-garaje-3-cuartos-y-3-banos-***-***-1362
 
 --------------------------------------------------------------------------------
-11. TELEFONO: 54834613
+11. TELEFONO: ***-***-4613
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -231,10 +231,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-o-permuta-de-apartamento-en-el-sevillano-57695761
+     Enlace: https://www.revolico.com/item/venta-o-permuta-de-apartamento-en-el-sevillano-***-***-5761
 
 --------------------------------------------------------------------------------
-12. TELEFONO: 55351194
+12. TELEFONO: ***-***-1194
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -245,10 +245,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-57317211?p
+     Enlace: https://www.revolico.com/item/venta-apto-24-en-santo-suarez-municipio-10-octubre-***-***-7211?p
 
 --------------------------------------------------------------------------------
-13. TELEFONO: 56295484
+13. TELEFONO: ***-***-5484
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -259,10 +259,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-57692514
+     Enlace: https://www.revolico.com/item/se-vende-casa-***-***-2514
 
 --------------------------------------------------------------------------------
-14. TELEFONO: 58140525
+14. TELEFONO: ***-***-0525
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -273,10 +273,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-58279727
+     Enlace: https://www.revolico.com/item/reparto-residencial-asuncion-10-de-octubre-70000-usd-***-***-9727
 
 --------------------------------------------------------------------------------
-15. TELEFONO: 59032598
+15. TELEFONO: ***-***-2598
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -287,10 +287,10 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
+     Enlace: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-***-***-9762?p
 
 --------------------------------------------------------------------------------
-16. TELEFONO: 78676471
+16. TELEFONO: ***-***-6471
    NOMBRE: 
 --------------------------------------------------------------------------------
 
@@ -301,7 +301,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p
+     Enlace: https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-***-***-9762?p
 
 --------------------------------------------------------------------------------
 17. TELEFONO: 
@@ -326,7 +326,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/compro-apto-en-playa-vedado-y-nuevo-vedado-tengo-8500-57956298
+     Enlace: https://www.revolico.com/item/compro-apto-en-playa-vedado-y-nuevo-vedado-tengo-8500-***-***-6298
 
    ANUNCIO 3:
      Titulo: Casa independiente en Santo Suárez con garaje
@@ -335,7 +335,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-en-santo-suarez-con-garaje-58176457
+     Enlace: https://www.revolico.com/item/casa-independiente-en-santo-suarez-con-garaje-***-***-6457
 
    ANUNCIO 4:
      Titulo: Casa apto en un 1er piso cerca de Santa Catalina
@@ -344,7 +344,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-apto-en-un-1er-piso-cerca-de-santa-catalina-56642821
+     Enlace: https://www.revolico.com/item/casa-apto-en-un-1er-piso-cerca-de-santa-catalina-***-***-2821
 
    ANUNCIO 5:
      Titulo: Casa Independiente en Santos Suárez cerca d Santa Catalina
@@ -353,7 +353,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-en-santos-suarez-cerca-d-santa-catalina-55718174
+     Enlace: https://www.revolico.com/item/casa-independiente-en-santos-suarez-cerca-d-santa-catalina-***-***-8174
 
    ANUNCIO 6:
      Titulo: 22,500 USD
@@ -362,7 +362,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/ganga-2-en-1-por-el-precio-de-1-casa-en-luyano-2-en-1-25-000-usd-57683040
+     Enlace: https://www.revolico.com/item/ganga-2-en-1-por-el-precio-de-1-casa-en-luyano-2-en-1-25-000-usd-***-***-3040
 
    ANUNCIO 7:
      Titulo: Venta de casa en Lautow/ placa libre
@@ -371,7 +371,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-casa-en-lautow-placa-libre-58319790
+     Enlace: https://www.revolico.com/item/venta-de-casa-en-lautow-placa-libre-***-***-9790
 
    ANUNCIO 8:
      Titulo: 25,000 USD
@@ -380,7 +380,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/nueva-casa-puesta-en-venta-en-10-de-octubre-santo-suares-con-todo-adentro-55866599
+     Enlace: https://www.revolico.com/item/nueva-casa-puesta-en-venta-en-10-de-octubre-santo-suares-con-todo-adentro-***-***-6599
 
    ANUNCIO 9:
      Titulo: Casa en la Víbora en bajos, 3 hab con garaje.
@@ -389,25 +389,25 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-la-vibora-3-hab-con-garaje-55492641
+     Enlace: https://www.revolico.com/item/casa-en-la-vibora-3-hab-con-garaje-***-***-2641
 
    ANUNCIO 10:
      Titulo: Permuto y recojo buelto a mi favor
-     Precio: 11223778
+     Precio: ***-***-3778
      Moneda: USD
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58334346
+     Enlace: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-***-***-4346
 
    ANUNCIO 11:
      Titulo: Permuto casa en 10 de octubre
-     Precio: 11122222
+     Precio: ***-***-2222
      Moneda: USD
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/permuto-casa-en-10-de-octubre-58334287
+     Enlace: https://www.revolico.com/item/permuto-casa-en-10-de-octubre-***-***-4287
 
    ANUNCIO 12:
      Titulo: Permuto y recojo buelto a mi favor
@@ -416,7 +416,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-58333525
+     Enlace: https://www.revolico.com/item/permuto-y-recojo-buelto-a-mi-favor-***-***-3525
 
    ANUNCIO 13:
      Titulo: Permuto 2 apartamento y recojo buelto a mi favor
@@ -425,7 +425,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/permuto-2-apartamento-y-recojo-buelto-a-mi-favor-58333411
+     Enlace: https://www.revolico.com/item/permuto-2-apartamento-y-recojo-buelto-a-mi-favor-***-***-3411
 
    ANUNCIO 14:
      Titulo: Apartamento de dos  cuartos
@@ -434,7 +434,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-de-dos-cuartos-56030942
+     Enlace: https://www.revolico.com/item/apartamento-de-dos-cuartos-***-***-0942
 
    ANUNCIO 15:
      Titulo: CASA_EN ALTOS_ LUYANÓ_ DIEZ DE OCTUBRE
@@ -443,7 +443,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa_en-altos_-luyano_-diez-de-octubre-58095731
+     Enlace: https://www.revolico.com/item/casa_en-altos_-luyano_-diez-de-octubre-***-***-5731
 
    ANUNCIO 16:
      Titulo: VENTA_APARTAMENTO_EN ALTOS_LUYANÓ_DIEZ DE OCTUBRE
@@ -452,7 +452,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta_apartamento_en-altos_luyano_diez-de-octubre-58117455
+     Enlace: https://www.revolico.com/item/venta_apartamento_en-altos_luyano_diez-de-octubre-***-***-7455
 
    ANUNCIO 17:
      Titulo: VENTA_CASA EN ALTO_MÓNACO_DIEZ DE OCTUBRE  ¡
@@ -461,7 +461,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta_casa-en-alto_monaco_diez-de-octubre-58088194
+     Enlace: https://www.revolico.com/item/venta_casa-en-alto_monaco_diez-de-octubre-***-***-8194
 
    ANUNCIO 18:
      Titulo: VENTA_CASA EN LA ASUNCIÓN_LAWTON_DIEZ DE OCTUBRE
@@ -470,7 +470,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta_casa-en-la-asuncion_lawton_diez-de-octubre-58095520
+     Enlace: https://www.revolico.com/item/venta_casa-en-la-asuncion_lawton_diez-de-octubre-***-***-5520
 
    ANUNCIO 19:
      Titulo: Alquiler de apartamento con electricidad e internet 24H (Ideal para agentes de ventas)
@@ -479,7 +479,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/alquiler-de-apartamento-con-electricidad-e-internet-24h-ideal-para-agentes-de-ventas-57230152
+     Enlace: https://www.revolico.com/item/alquiler-de-apartamento-con-electricidad-e-internet-24h-ideal-para-agentes-de-ventas-***-***-0152
 
    ANUNCIO 20:
      Titulo: Vendo casa grande totalmente independientes en reparto Santos Suárez
@@ -488,7 +488,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-casa-grande-totalmente-independientes-en-reparto-santos-suarez-56360375
+     Enlace: https://www.revolico.com/item/vendo-casa-grande-totalmente-independientes-en-reparto-santos-suarez-***-***-0375
 
    ANUNCIO 21:
      Titulo: Vendo casa de dos plantas en santos Suárez
@@ -497,7 +497,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-casa-de-dos-plantas-en-santos-suarez-56678413
+     Enlace: https://www.revolico.com/item/vendo-casa-de-dos-plantas-en-santos-suarez-***-***-8413
 
    ANUNCIO 22:
      Titulo: Biplanta independiente en el Cerro
@@ -506,7 +506,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/biplanta-independiente-en-el-cerro-57954437
+     Enlace: https://www.revolico.com/item/biplanta-independiente-en-el-cerro-***-***-4437
 
    ANUNCIO 23:
      Titulo: Vendo apto. de 3/4 en la Víbora
@@ -515,7 +515,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-apto-de-34-en-la-vibora-58330788
+     Enlace: https://www.revolico.com/item/vendo-apto-de-34-en-la-vibora-***-***-0788
 
    ANUNCIO 24:
      Titulo: Alquiler
@@ -524,7 +524,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/alquiler-58286882
+     Enlace: https://www.revolico.com/item/alquiler-***-***-6882
 
    ANUNCIO 25:
      Titulo: Venta de Casa en Lawton
@@ -533,7 +533,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-casa-en-lawton-58329459
+     Enlace: https://www.revolico.com/item/venta-de-casa-en-lawton-***-***-9459
 
    ANUNCIO 26:
      Titulo: Venta de casa en Playa
@@ -542,7 +542,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-casa-en-paya-58329119
+     Enlace: https://www.revolico.com/item/venta-de-casa-en-paya-***-***-9119
 
    ANUNCIO 27:
      Titulo: Venta de casa en Lawton
@@ -551,7 +551,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-casas-55845341
+     Enlace: https://www.revolico.com/item/venta-de-casas-***-***-5341
 
    ANUNCIO 28:
      Titulo: Se vende casa independiente en Santo Suárez
@@ -560,7 +560,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-57689093
+     Enlace: https://www.revolico.com/item/se-vende-casa-independiente-en-santo-suarez-***-***-9093
 
    ANUNCIO 29:
      Titulo: 🚨 Se Vende propiedad independiente
@@ -569,7 +569,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-propiedad-independiente-57323098
+     Enlace: https://www.revolico.com/item/se-vende-propiedad-independiente-***-***-3098
 
    ANUNCIO 30:
      Titulo: Se Vende Casa en santos Suárez
@@ -578,7 +578,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-en-santos-suarez-57961246
+     Enlace: https://www.revolico.com/item/se-vende-casa-en-santos-suarez-***-***-1246
 
    ANUNCIO 31:
      Titulo: Vende tu casa rápido
@@ -587,7 +587,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vende-tu-casa-rapido-57282965
+     Enlace: https://www.revolico.com/item/vende-tu-casa-rapido-***-***-2965
 
    ANUNCIO 32:
      Titulo: ✨ GRAN OPORTUNIDAD DE INVERSIÓN Y VIVIENDA – 10 DE OCTUBRE 🏡
@@ -596,7 +596,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/gran-oportunidad-de-inversion-y-vivienda-10-de-octubre-58327646
+     Enlace: https://www.revolico.com/item/gran-oportunidad-de-inversion-y-vivienda-10-de-octubre-***-***-7646
 
    ANUNCIO 33:
      Titulo: Permuto 1x2
@@ -605,7 +605,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/permuto-1x2-57895191
+     Enlace: https://www.revolico.com/item/permuto-1x2-***-***-5191
 
    ANUNCIO 34:
      Titulo: ✨ VENTA DE CASA – REPARTO RESIDENCIAL ASUNCIÓN, 10 DE OCTUBRE 🏡
@@ -614,7 +614,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-casa-reparto-residencial-asuncion-10-de-octubre-58326838
+     Enlace: https://www.revolico.com/item/venta-de-casa-reparto-residencial-asuncion-10-de-octubre-***-***-6838
 
    ANUNCIO 35:
      Titulo: ✨ OPORTUNIDAD ÚNICA: HOGAR + NEGOCIO EN UN SOLO INMUEBLE 🏠
@@ -623,7 +623,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-58326298
+     Enlace: https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-***-***-6298
 
    ANUNCIO 36:
      Titulo: 250 USD
@@ -632,7 +632,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/habitacion-independiente-con-cocina-y-patio-en-la-vibora-ref-1394-51079049
+     Enlace: https://www.revolico.com/item/habitacion-independiente-con-cocina-y-patio-en-la-vibora-ref-1394-***-***-9049
 
    ANUNCIO 37:
      Titulo: Vendo casa independiente en Nuevo Vedado
@@ -641,7 +641,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-nuevo-vedado-56754991
+     Enlace: https://www.revolico.com/item/vendo-casa-independiente-en-nuevo-vedado-***-***-4991
 
    ANUNCIO 38:
      Titulo: Venta de casa interior
@@ -650,7 +650,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-casa-interior-57847360
+     Enlace: https://www.revolico.com/item/venta-de-casa-interior-***-***-7360
 
    ANUNCIO 39:
      Titulo: 🏡 SE VENDE APARTAMENTO CAPITALISTA – LA VÍBORA (42)
@@ -659,7 +659,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-apartamento-capitalista-la-vibora-42-57579769
+     Enlace: https://www.revolico.com/item/se-vende-apartamento-capitalista-la-vibora-42-***-***-9769
 
    ANUNCIO 40:
      Titulo: Hoteles todo incluído - Varadero - Jibacoa - Cayo Santa María (Kinetica)
@@ -668,7 +668,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/ofertas-de-verano-varadero-la-habana-cayo-santa-maria-kinetica-55738219
+     Enlace: https://www.revolico.com/item/ofertas-de-verano-varadero-la-habana-cayo-santa-maria-kinetica-***-***-8219
 
    ANUNCIO 41:
      Titulo: Oportunidad de apartamento en Diez de Octubre
@@ -677,7 +677,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/oportunidad-de-apartamento-en-diez-de-octubre-56202133
+     Enlace: https://www.revolico.com/item/oportunidad-de-apartamento-en-diez-de-octubre-***-***-2133
 
    ANUNCIO 42:
      Titulo: Oportunidad de inmueble en Lawton, Diez de Octubre
@@ -686,7 +686,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/oportunidad-de-inmueble-en-lawton-diez-de-octubre-57455124
+     Enlace: https://www.revolico.com/item/oportunidad-de-inmueble-en-lawton-diez-de-octubre-***-***-5124
 
    ANUNCIO 43:
      Titulo: Se vende apartamento capitalista en la Víbora 92m2 cerca del Palacio de los matrimonios y matias Rodríguez
@@ -695,7 +695,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-apartamento-capitalista-en-la-vibora-92m2-cerca-del-palacio-de-los-matrimonios-y-matias-rodriguez-58325911
+     Enlace: https://www.revolico.com/item/se-vende-apartamento-capitalista-en-la-vibora-92m2-cerca-del-palacio-de-los-matrimonios-y-matias-rodriguez-***-***-5911
 
    ANUNCIO 44:
      Titulo: Oportunidad de vivienda en el Sevillano-10 de octubre
@@ -704,7 +704,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/oportunidad-de-vivienda-en-el-sevillano-10-de-octubre-55201555
+     Enlace: https://www.revolico.com/item/oportunidad-de-vivienda-en-el-sevillano-10-de-octubre-***-***-1555
 
    ANUNCIO 45:
      Titulo: Oportunidad de inmueble en Reparto Lawton,Diez de Octubre
@@ -713,7 +713,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/oportunidad-de-inmueble-en-reparto-lawtondiez-de-octubre-57455071
+     Enlace: https://www.revolico.com/item/oportunidad-de-inmueble-en-reparto-lawtondiez-de-octubre-***-***-5071
 
    ANUNCIO 46:
      Titulo: PISCINA DISPONIBLE PARA RENTA EN SAN MIGUEL.
@@ -722,7 +722,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/piscina-disponible-para-renta-en-san-miguel-57832714
+     Enlace: https://www.revolico.com/item/piscina-disponible-para-renta-en-san-miguel-***-***-2714
 
    ANUNCIO 47:
      Titulo: Vendo casa en Lawton
@@ -731,7 +731,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-casa-en-lawton-58132964
+     Enlace: https://www.revolico.com/item/vendo-casa-en-lawton-***-***-2964
 
    ANUNCIO 48:
      Titulo: Se vende casa en Santo Suarez
@@ -740,7 +740,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-en-santo-suarez-57427179
+     Enlace: https://www.revolico.com/item/se-vende-casa-en-santo-suarez-***-***-7179
 
    ANUNCIO 49:
      Titulo: Vendo apartamento capitalista garaje último piso con balcón semi interior en la Víbora cerca del Tribunal provincial
@@ -749,7 +749,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-apartamento-capitalista-garaje-ultimo-piso-con-balcon-semi-interior-en-la-vibora-cerca-del-tribunal-provincial-58325597
+     Enlace: https://www.revolico.com/item/vendo-apartamento-capitalista-garaje-ultimo-piso-con-balcon-semi-interior-en-la-vibora-cerca-del-tribunal-provincial-***-***-5597
 
    ANUNCIO 50:
      Titulo: 🏡 SE VENDE O SE PERMUTA APARTAMENTO EN PLANTA BAJA, SEVILLANO, 10 DE OCTUBRE.
@@ -758,7 +758,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: SI
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-o-se-permuta-apartamento-en-planta-baja-sevillano-10-de-octubre-55911834
+     Enlace: https://www.revolico.com/item/se-vende-o-se-permuta-apartamento-en-planta-baja-sevillano-10-de-octubre-***-***-1834
 
    ANUNCIO 51:
      Titulo: 10 de Octubre y Vía Blanca:Apto de 2/4 en 3erPiso,Ventanales a la Calle,Azotea Propia,y Una Casita De Madera Independien
@@ -767,7 +767,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/10-de-octubre-y-via-blancaapto-de-24-en-3erpisoventanales-a-la-calleazotea-propiay-una-casita-de-madera-independien-57857150
+     Enlace: https://www.revolico.com/item/10-de-octubre-y-via-blancaapto-de-24-en-3erpisoventanales-a-la-calleazotea-propiay-una-casita-de-madera-independien-***-***-7150
 
    ANUNCIO 52:
      Titulo: 💥6500💥
@@ -776,7 +776,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/6500-58324814
+     Enlace: https://www.revolico.com/item/6500-***-***-4814
 
    ANUNCIO 53:
      Titulo: 4,000 USD
@@ -785,7 +785,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/4000-usd-con-cosas-dentro-58324660
+     Enlace: https://www.revolico.com/item/4000-usd-con-cosas-dentro-***-***-4660
 
    ANUNCIO 54:
      Titulo: Casa bastante grande
@@ -794,7 +794,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-bastante-grande-57324516
+     Enlace: https://www.revolico.com/item/casa-bastante-grande-***-***-4516
 
    ANUNCIO 55:
      Titulo: 35 USD
@@ -803,7 +803,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-espacioso-de-1-habitacion-en-la-vibora-ref-1393-50373980
+     Enlace: https://www.revolico.com/item/apartamento-espacioso-de-1-habitacion-en-la-vibora-ref-1393-***-***-3980
 
    ANUNCIO 56:
      Titulo: 35 USD
@@ -812,7 +812,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-independiente-en-santos-suarez-de-2-cuartos-pasadias-a-varadero-y-vinales-ref-1303-49744411
+     Enlace: https://www.revolico.com/item/apartamento-independiente-en-santos-suarez-de-2-cuartos-pasadias-a-varadero-y-vinales-ref-1303-***-***-4411
 
    ANUNCIO 57:
      Titulo: Casa independiente en el sevillano
@@ -821,7 +821,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-en-el-sevillano-57760771
+     Enlace: https://www.revolico.com/item/casa-independiente-en-el-sevillano-***-***-0771
 
    ANUNCIO 58:
      Titulo: Casa independiente con respaldo energetico en la vibora
@@ -830,7 +830,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-independiente-con-respaldo-energetico-en-la-vibora-57509349
+     Enlace: https://www.revolico.com/item/casa-independiente-con-respaldo-energetico-en-la-vibora-***-***-9349
 
    ANUNCIO 59:
      Titulo: Apartamento amplio en 10 de octubre la víbora
@@ -839,7 +839,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-amplio-en-10-de-octubre-la-vibora-58323680
+     Enlace: https://www.revolico.com/item/apartamento-amplio-en-10-de-octubre-la-vibora-***-***-3680
 
    ANUNCIO 60:
      Titulo: Apartamento en Sevillano
@@ -848,7 +848,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apartamento-en-sevillano-57531862
+     Enlace: https://www.revolico.com/item/apartamento-en-sevillano-***-***-1862
 
    ANUNCIO 61:
      Titulo: Casa en Sevillano Diez de Octubre 43m²
@@ -857,7 +857,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-sevillano-diez-de-octubre-43m2-55602820
+     Enlace: https://www.revolico.com/item/casa-en-sevillano-diez-de-octubre-43m2-***-***-2820
 
    ANUNCIO 62:
      Titulo: ✨ CASA EN ALTO EN LUYANO – OPORTUNIDAD 🏡🔑
@@ -866,7 +866,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-alto-en-luyano-oportunidad-58323247
+     Enlace: https://www.revolico.com/item/casa-en-alto-en-luyano-oportunidad-***-***-3247
 
    ANUNCIO 63:
      Titulo: ✨ CASA EN ALTO EN EL MÓNACO – DIEZ DE OCTUBRE 🏠
@@ -875,7 +875,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-alto-en-el-monaco-diez-de-octubre-58323094
+     Enlace: https://www.revolico.com/item/casa-en-alto-en-el-monaco-diez-de-octubre-***-***-3094
 
    ANUNCIO 64:
      Titulo: 🏠 *OPORTUNIDAD ÚNICA: HOGAR + NEGOCIO EN UN SOLO INMUEBLE | CALZADA 10 DE OCTUBRE*
@@ -884,7 +884,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-calzada-10-de-octubre-57758389
+     Enlace: https://www.revolico.com/item/oportunidad-unica-hogar-negocio-en-un-solo-inmueble-calzada-10-de-octubre-***-***-8389
 
    ANUNCIO 65:
      Titulo: ¡SE VENDE CASA EN ALTO  EN MÓNACO! #154
@@ -893,7 +893,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-en-alto-en-monaco-154-57941793
+     Enlace: https://www.revolico.com/item/se-vende-casa-en-alto-en-monaco-154-***-***-1793
 
    ANUNCIO 66:
      Titulo: Casa en alto en Luyano #155
@@ -902,7 +902,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-en-alto-en-luyano-155-57941736
+     Enlace: https://www.revolico.com/item/casa-en-alto-en-luyano-155-***-***-1736
 
    ANUNCIO 67:
      Titulo: Apto micro en la vibora
@@ -911,7 +911,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apto-micro-en-la-vibora-57925343
+     Enlace: https://www.revolico.com/item/apto-micro-en-la-vibora-***-***-5343
 
    ANUNCIO 68:
      Titulo: Casa de 2 plantas y auto. El hogar para la  familia por siempre 45 000 usd. Lawton
@@ -920,7 +920,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-de-2-plantas-y-auto-el-hogar-para-la-familia-por-siempre-45-000-usd-lawton-58322852
+     Enlace: https://www.revolico.com/item/casa-de-2-plantas-y-auto-el-hogar-para-la-familia-por-siempre-45-000-usd-lawton-***-***-2852
 
    ANUNCIO 69:
      Titulo: Casa de 2 plantas y auto. El hogar para la  familia por siempre 45 000 usd. Lawton
@@ -929,7 +929,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-de-2-plantas-y-auto-el-hogar-para-la-familia-por-siempre-45-000-usd-lawton-58322851
+     Enlace: https://www.revolico.com/item/casa-de-2-plantas-y-auto-el-hogar-para-la-familia-por-siempre-45-000-usd-lawton-***-***-2851
 
    ANUNCIO 70:
      Titulo: Casa biplanta en 10 de octubre
@@ -938,7 +938,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-biplanta-en-10-de-octubre-56110832
+     Enlace: https://www.revolico.com/item/casa-biplanta-en-10-de-octubre-***-***-0832
 
    ANUNCIO 71:
      Titulo: SE VENDE CASA EN LUYANO..GANGA!!!🛑
@@ -947,7 +947,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/se-vende-casa-en-luyanoganga-56917688
+     Enlace: https://www.revolico.com/item/se-vende-casa-en-luyanoganga-***-***-7688
 
    ANUNCIO 72:
      Titulo: J Casa de renta para parejas o grupos en Reparto Sevillano municipio Diez de Octubre. OCT-003
@@ -956,7 +956,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/j-casa-de-renta-para-parejas-o-grupos-en-reparto-sevillano-municipio-diez-de-octubre-oct-003-58276593
+     Enlace: https://www.revolico.com/item/j-casa-de-renta-para-parejas-o-grupos-en-reparto-sevillano-municipio-diez-de-octubre-oct-003-***-***-6593
 
    ANUNCIO 73:
      Titulo: apto en alto en lawton
@@ -965,7 +965,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/apto-en-alto-en-lawton-57022144
+     Enlace: https://www.revolico.com/item/apto-en-alto-en-lawton-***-***-2144
 
    ANUNCIO 74:
      Titulo: 150 USD
@@ -974,7 +974,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/150-usd-apartamento-de-14-en-santos-suarez-58160551
+     Enlace: https://www.revolico.com/item/150-usd-apartamento-de-14-en-santos-suarez-***-***-0551
 
    ANUNCIO 75:
      Titulo: Puertas blindadas Polimetalicas
@@ -983,7 +983,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/puertas-blindadas-polimetalicas-53869917
+     Enlace: https://www.revolico.com/item/puertas-blindadas-polimetalicas-***-***-9917
 
    ANUNCIO 76:
      Titulo: Casa en interior, 5 cuartos, 4 baños + piscina, 2 entradas independientes. Cerca de Santa Catalina y 10 de Octubre
@@ -992,7 +992,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-con-5-cuartos-4-banos-piscina-2-entradas-independientes-cerca-de-santa-catalina-y-10-de-octubre-54193773
+     Enlace: https://www.revolico.com/item/casa-con-5-cuartos-4-banos-piscina-2-entradas-independientes-cerca-de-santa-catalina-y-10-de-octubre-***-***-3773
 
    ANUNCIO 77:
      Titulo: Puerta para exterior e interior
@@ -1001,7 +1001,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/puerta-para-exterior-e-interior-58321879
+     Enlace: https://www.revolico.com/item/puerta-para-exterior-e-interior-***-***-1879
 
    ANUNCIO 78:
      Titulo: ☀️ ¡EL PLAN PERFECTO EN LAWTON! ☀️
@@ -1010,7 +1010,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/el-plan-perfecto-en-lawton-56219131
+     Enlace: https://www.revolico.com/item/el-plan-perfecto-en-lawton-***-***-9131
 
    ANUNCIO 79:
      Titulo: ¡Piscina, Jacuzzi y Privacidad Total para tus Pasadías y Estancias! 🏊♂️🌴
@@ -1019,7 +1019,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/piscina-jacuzzi-y-privacidad-total-para-tus-pasadias-y-estancias-58180723
+     Enlace: https://www.revolico.com/item/piscina-jacuzzi-y-privacidad-total-para-tus-pasadias-y-estancias-***-***-0723
 
    ANUNCIO 80:
      Titulo: Vendo mi casa por el Semáforo de Acosta y Porvenir descripción abajo ⬇️ 38mil ajustable con cosas adentro
@@ -1028,7 +1028,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/vendo-mi-casa-por-el-semaforo-de-acosta-y-porvenir-descripcion-abajo-38mil-ajustable-con-cosas-adentro-58321529
+     Enlace: https://www.revolico.com/item/vendo-mi-casa-por-el-semaforo-de-acosta-y-porvenir-descripcion-abajo-38mil-ajustable-con-cosas-adentro-***-***-1529
 
    ANUNCIO 81:
      Titulo: Venta de Casa Independiente 3 habitaciones(Santo Suárez)🏠
@@ -1037,7 +1037,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/venta-de-casa-independiente-3-habitacionessanto-suarez-58279874
+     Enlace: https://www.revolico.com/item/venta-de-casa-independiente-3-habitacionessanto-suarez-***-***-9874
 
    ANUNCIO 82:
      Titulo: 450 USD
@@ -1046,7 +1046,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/amplia-casa-de-2-habitaciones-en-santos-suarez-10-de-octubre-57482712
+     Enlace: https://www.revolico.com/item/amplia-casa-de-2-habitaciones-en-santos-suarez-10-de-octubre-***-***-2712
 
    ANUNCIO 83:
      Titulo: Casa de Renta
@@ -1055,7 +1055,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/casa-de-renta-57619950
+     Enlace: https://www.revolico.com/item/casa-de-renta-***-***-9950
 
    ANUNCIO 84:
      Titulo: Gran vivienda en venta en 10 de octubre
@@ -1064,7 +1064,7 @@ Anuncios sin telefono: 84
      Municipio: 10 de Octubre
      Permuta: NO
      Fuente: revolico
-     Enlace: https://www.revolico.com/item/gran-vivienda-en-venta-en-10-de-octubre-58320925
+     Enlace: https://www.revolico.com/item/gran-vivienda-en-venta-en-10-de-octubre-***-***-0925
 
 ================================================================================
 FIN DE LISTA

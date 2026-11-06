@@ -1,7 +1,7 @@
 # Mercado inmobiliario digital en Diez de Octubre
 ## Opacidad, dolarización, desigualdad territorial e informalidad
 
-**Fecha de generación:** 06/11/2026 15:47
+**Fecha de generación:** 06/11/2026 17:19
 **Corte de los datos:** 2026-10-31 (Revolico); Facebook sin fecha homogénea
 **Universo:** 122 publicaciones confirmadas dentro del municipio (83 de Revolico + 39 de Facebook)
 **Verificación espacial:** polígono municipal DPA `23.09` de `datos/geo/lha.geojson`
@@ -14,13 +14,13 @@ Los **55 registros no incluidos** (46 `NO`, 8 `INDETERMINADO` y 1 fuera del univ
 
 Los hallazgos principales son:
 
-- **Dolarización:** 106 de 107 publicaciones con moneda declarada están en USD (**99.1%**), y 106 de 122 del total (**86.9%**). El único precio declarado en CUP es un alquiler. **Evidencia cualitativa:** una compradora pagó **en dólares, en efectivo, todo de una vez** (E-24); una vendedora de casa heredada cobró **una parte en dólares y otra en CUP, en efectivo** (E-17); una compradora con familiar en el exterior pagó **en dólares, por transferencia y efectivo** (E-19); otra compradora pagó **en dólares, en efectivo, por partes** (E-14); y una compradora pagó **en dólares, todo en dólares** (E-21). También hay pagos en CUP: una inquilina pagó **en CUP, mensual, en efectivo** (E-25); una permuta se compensó con **una parte en CUP y otra en dólares** (E-16). Esto valida la dolarización medida (86.9% del universo en USD) y al mismo tiempo muestra que el CUP no ha desaparecido del todo.
-- **Precios de compra:** mediana **$20,000.00 USD**; P10–P90 **$6,200.00–$60,000.00 USD**; media **$26,023.26 USD** (n = 43 ventas explícitas con precio en USD).
+- **Dolarización:** 106 de 107 publicaciones con moneda declarada están en USD (**99.1%**), y 106 de 122 del total (**86.9%**). El único precio declarado en CUP es un alquiler.
+- **Precios de compra:** mediana **$21,000.00 USD**; P10–P90 **$6,100.00–$60,000.00 USD**; media **$26,357.14 USD** (n = 42 ventas explícitas con precio en USD).
 - **Alquiler:** 1 de 3 alquileres declaran precio y **ninguno lo hace en USD**; el precio de alquiler no es estimable con esta base.
 - **Opacidad:** 15 de 122 publicaciones (12.3%) no declaran precio; 31 (25.4%) no especifican zona; solo 82 (67.2%) permiten cruzar precio y zona.
-- **Desigualdad territorial:** las cuatro zonas principales concentran 69 de 91 publicaciones con zona identificada (75.8%). Entre las zonas con n ≥ 10, La Víbora tiene la media más alta ($49,590.91 USD, n = 11) y El Sevillano la mediana más alta ($36,000.00 USD, n = 10); entre las de n ≥ 5, El Mónaco lidera la media ($57,666.67 USD, n = 6), pero la mediana más alta sigue siendo la de El Sevillano ($36,000.00 USD, n = 10).
+- **Desigualdad territorial:** las cuatro zonas principales concentran 21 de 91 publicaciones con zona identificada (23.1%). Entre las zonas con n ≥ 10, N/D tiene la media más alta ($N/D USD, n = 0) y N/D la mediana más alta ($N/D USD, n = 0); entre las de n ≥ 5, Santos Suárez lidera la media ($25,000.00 USD, n = 8), pero la mediana más alta sigue siendo la de Santos Suárez ($20,250.00 USD, n = 8).
 - **Informalidad:** 12 de 122 publicaciones (9.8%) usan lenguaje de oportunidad, permuta o cambio. Todas son de Revolico: Facebook no aporta texto suficiente para medir esta dimensión, así que el dato es una cota inferior.
-- **Tipo de inmueble:** el apartamento es la opción más accesible: media **$18,181.82 USD** y mediana **$15,000.00 USD** (n = 33), frente a la casa con media **$42,842.11 USD** y mediana **$33,000.00 USD** (n = 57).
+- **Tipo de inmueble:** el apartamento es la opción más accesible: media **$16,409.09 USD** y mediana **$15,000.00 USD** (n = 11), frente a la casa con media **$31,500.00 USD** y mediana **$22,500.00 USD** (n = 27).
 
 La ausencia de datos no se trata como un simple defecto: se mide y se reporta como un rasgo del mercado. Una publicación sin precio, sin zona o sin operación limita la capacidad de comparar y de verificar, y esa limitación es parte del problema social que el estudio documenta.
 
@@ -77,13 +77,13 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 ### Bloque A: Precios de referencia
 
-**A1. ¿Cuál es el precio promedio de compra en USD?** ✅ (n = 43)
+**A1. ¿Cuál es el precio promedio de compra en USD?** ✅ (n = 42)
 
-> **$26,023.26 USD** entre las 43 ventas explícitas con precio en USD. Si se incluyen todas las publicaciones con precio USD (ventas y publicaciones sin operación declarada; no hay alquileres en USD), la media sube a **$36,000.00 USD** (n = 106), porque las publicaciones sin operación declarada incluyen inmuebles de mayor precio. La media de compra es una referencia, no el precio típico: la mediana es bastante menor (A2).
+> **$26,357.14 USD** entre las 42 ventas explícitas con precio en USD. Si se incluyen todas las publicaciones con precio USD (ventas y publicaciones sin operación declarada; no hay alquileres en USD), la media sube a **$36,000.00 USD** (n = 106), porque las publicaciones sin operación declarada incluyen inmuebles de mayor precio. La media de compra es una referencia, no el precio típico: la mediana es bastante menor (A2).
 
-**A2. ¿Cuál es la mediana y el rango P10–P90 del precio de compra en USD?** ✅ (n = 43)
+**A2. ¿Cuál es la mediana y el rango P10–P90 del precio de compra en USD?** ✅ (n = 42)
 
-> Mediana **$20,000.00 USD**. El 80% central de las ventas está entre **$6,200.00 USD** (P10) y **$60,000.00 USD** (P90). El mínimo es **$2,500.00 USD** y el máximo **$70,000.00 USD**. La mediana es menor que la media ($26,023.26), señal de una distribución sesgada a la derecha: unas pocas publicaciones muy caras elevan el promedio.
+> Mediana **$21,000.00 USD** (IC95% bootstrap (n = 42): $15,000.00–$25,000.00 USD). El 80% central de las ventas está entre **$6,100.00 USD** (P10) y **$60,000.00 USD** (P90). El mínimo es **$2,500.00 USD** y el máximo **$70,000.00 USD**. La mediana es menor que la media ($26,357.14), señal de una distribución sesgada a la derecha: unas pocas publicaciones muy caras elevan el promedio. El IC95% indica que la mediana poblacional probablemente está entre $15,000.00 y $25,000.00 USD.
 
 **A3. ¿Cuál es el precio promedio o mediano del alquiler?** 🔴 (no estimable)
 
@@ -95,60 +95,49 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 **A5. ¿La compra declara precio más que el alquiler?** ✅ (censo de ventas y alquileres)
 
-> Sí. **43 de 50 ventas (86.0%)** declaran precio, frente a **1 de 3 alquileres (33.3%)**. La brecha es de **52.7 puntos porcentuales**. El mercado de compra es mucho más transparente en precio que el de alquiler, que funciona casi por contacto directo. La conclusión es descriptiva: el alquiler tiene solo 3 casos.
+> Sí. **42 de 48 ventas (87.5%)** declaran precio, frente a **1 de 3 alquileres (33.3%)**. La brecha es de **54.2 puntos porcentuales**. El mercado de compra es mucho más transparente en precio que el de alquiler, que funciona casi por contacto directo. La conclusión es descriptiva: el alquiler tiene solo 3 casos.
 
 ### Bloque B: Desigualdades territoriales
 
 **B1. ¿Qué zonas concentran la mayor oferta?** ✅ (91 publicaciones con zona identificada)
 
-> - Santos Suárez: **26 anuncios** (28.6% de las publicaciones con zona)
-> - Lawton: **19 anuncios** (20.9% de las publicaciones con zona)
-> - La Víbora: **12 anuncios** (13.2% de las publicaciones con zona)
-> - El Sevillano: **12 anuncios** (13.2% de las publicaciones con zona)
-> - Luyano: **7 anuncios** (7.7% de las publicaciones con zona)
-> - El Mónaco: **6 anuncios** (6.6% de las publicaciones con zona)
-> - Santa Catalina: **5 anuncios** (5.5% de las publicaciones con zona)
-> - Calzada 10 de Octubre: **2 anuncios** (2.2% de las publicaciones con zona)
+> - Santos Suárez: **8 anuncios** (8.8% de las publicaciones con zona)
+> - Lawton: **7 anuncios** (7.7% de las publicaciones con zona)
+> - El Mónaco: **3 anuncios** (3.3% de las publicaciones con zona)
+> - La Víbora: **3 anuncios** (3.3% de las publicaciones con zona)
+> - Santa Catalina: **3 anuncios** (3.3% de las publicaciones con zona)
+> - Luyano: **2 anuncios** (2.2% de las publicaciones con zona)
 > - Vía Blanca: **1 anuncio** (1.1% de las publicaciones con zona)
+> - El Sevillano: **1 anuncio** (1.1% de las publicaciones con zona)
 > - Vista Alegre: **1 anuncio** (1.1% de las publicaciones con zona)
 >
-> **91 de 122 publicaciones (74.6%)** especifican zona; **31 (25.4%)** no lo hacen. Las cuatro zonas principales —Santos Suárez, Lawton, La Víbora, El Sevillano— reúnen **69 de 91 (75.8%)** de la oferta con zona identificada: la información territorial está concentrada en pocos barrios.
+> **91 de 122 publicaciones (74.6%)** especifican zona; **31 (25.4%)** no lo hacen. Las cuatro zonas principales —Santos Suárez, Lawton, El Mónaco, La Víbora— reúnen **21 de 91 (23.1%)** de la oferta con zona identificada: la información territorial está concentrada en pocos barrios.
 
-**B2. ¿Qué zona tiene el precio promedio más alto?** 🟡 (n = 6 en El Mónaco)
+**B2. ¿Qué zona tiene el precio promedio más alto?** 🟡 (n = 8 en Santos Suárez)
 
-> **El Mónaco**, con una media de **$57,666.67 USD** (n = 6). Es un resultado descriptivo: el grupo tiene menos de 10 publicaciones y su media puede estar influida por valores extremos. Si se exige n ≥ 10, la zona con media más alta es **La Víbora** ($49,590.91 USD, n = 11).
+> **Santos Suárez**, con una media de **$25,000.00 USD** (n = 8). Es un resultado descriptivo: el grupo tiene menos de 10 publicaciones y su media puede estar influida por valores extremos. Si se exige n ≥ 10, la zona con media más alta es **N/D** ($N/D USD, n = 0).
 
 > Orden por media entre las zonas con n ≥ 5:
 >
-> - El Mónaco: media **$57,666.67 USD**, mediana **$33,000.00 USD** (n = 6)
-> - La Víbora: media **$49,590.91 USD**, mediana **$26,000.00 USD** (n = 11)
-> - El Sevillano: media **$39,700.00 USD**, mediana **$36,000.00 USD** (n = 10)
-> - Santa Catalina: media **$37,200.00 USD**, mediana **$35,000.00 USD** (n = 5)
-> - Santos Suárez: media **$31,565.22 USD**, mediana **$22,500.00 USD** (n = 23)
-> - Luyano: media **$25,928.57 USD**, mediana **$25,000.00 USD** (n = 7)
-> - Lawton: media **$20,656.25 USD**, mediana **$20,000.00 USD** (n = 16)
+> - Santos Suárez: media **$25,000.00 USD**, mediana **$20,250.00 USD** (n = 8)
+> - Lawton: media **$21,357.14 USD**, mediana **$20,000.00 USD** (n = 7)
 
-**B3. ¿Qué zona tiene la mediana más alta?** 🟡 (n = 10 en El Sevillano)
+**B3. ¿Qué zona tiene la mediana más alta?** 🟡 (n = 8 en Santos Suárez)
 
-> **El Sevillano**, con una mediana de **$36,000.00 USD** (n = 10). Si se exige n ≥ 10, la mediana más alta corresponde a **El Sevillano** ($36,000.00 USD, n = 10).
+> **Santos Suárez**, con una mediana de **$20,250.00 USD** (n = 8). Si se exige n ≥ 10, la mediana más alta corresponde a **N/D** ($N/D USD, n = 0).
 
 > Orden por mediana entre las zonas con n ≥ 5:
 >
-> - El Sevillano: mediana **$36,000.00 USD** (n = 10)
-> - Santa Catalina: mediana **$35,000.00 USD** (n = 5)
-> - El Mónaco: mediana **$33,000.00 USD** (n = 6)
-> - La Víbora: mediana **$26,000.00 USD** (n = 11)
-> - Luyano: mediana **$25,000.00 USD** (n = 7)
-> - Santos Suárez: mediana **$22,500.00 USD** (n = 23)
-> - Lawton: mediana **$20,000.00 USD** (n = 16)
+> - Santos Suárez: mediana **$20,250.00 USD** (n = 8)
+> - Lawton: mediana **$20,000.00 USD** (n = 7)
 
-**B4. ¿La brecha La Víbora–Lawton se mantiene al usar medianas?** 🟡 (n = 11 y 16)
+**B4. ¿La brecha La Víbora–Lawton se mantiene al usar medianas?** 🟡 (n = 3 y 7)
 
-> **No se mantiene con la misma magnitud.** Por media, La Víbora ($49,590.91 USD) supera a Lawton ($20,656.25 USD) en **$28,934.66 USD**. Por mediana, la diferencia es de solo **$6,000.00 USD** ($26,000.00 frente a $20,000.00). La brecha por media es **4.8 veces** la brecha por mediana. El máximo de La Víbora ($180,000.00 USD) y su P90 ($100,000.00 USD) explican buena parte de la diferencia: la media describe el extremo alto, no el precio típico. Para comparar barrios conviene usar la mediana.
+> **No se mantiene con la misma magnitud.** Por media, La Víbora ($18,333.33 USD) supera a Lawton ($21,357.14 USD) en **$-3,023.81 USD**. Por mediana, la diferencia es de solo **$-5,000.00 USD** ($15,000.00 frente a $20,000.00). La brecha por media es **0.6 veces** la brecha por mediana. El máximo de La Víbora ($25,000.00 USD) y su P90 ($23,000.00 USD) explican buena parte de la diferencia: la media describe el extremo alto, no el precio típico. Para comparar barrios conviene usar la mediana.
 
 **B5. ¿La falta de zona afecta igual a compra y alquiler?** ✅ (censo de operaciones)
 
-> No. La falta de zona es más frecuente en alquiler: **2 de 3 (66.7%)** alquileres no especifican zona, frente a **17 de 50 (34.0%)** ventas y **12 de 69 (17.4%)** publicaciones sin operación declarada. El alquiler combina las dos opacidades: casi nunca declara precio y casi nunca declara zona. Con solo 3 alquileres, la evidencia es descriptiva.
+> No. La falta de zona es más frecuente en alquiler: **2 de 3 (66.7%)** alquileres no especifican zona, frente a **15 de 48 (31.2%)** ventas y **13 de 70 (18.6%)** publicaciones sin operación declarada. El alquiler combina las dos opacidades: casi nunca declara precio y casi nunca declara zona. Con solo 3 alquileres, la evidencia es descriptiva.
 
 ### Bloque C: Dolarización
 
@@ -181,7 +170,7 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 **D1. ¿Qué porcentaje no declara precio?** ✅ (n = 122)
 
-> **15 de 122 (12.3%)**. Son publicaciones que no permiten comparar precios sin contactar al vendedor. **Evidencia cualitativa:** una compradora relató que el anuncio tenía **solo fotos y un número de WhatsApp; tuvieron que escribir para saber precio y dirección** (E-14). Otro comprador dijo que **los anuncios pedían cosas raras o no daban dirección** (E-15). Otra compradora confirmó que el anuncio **no daba la dirección exacta, solo el reparto; la dirección la dieron después de escribir** (E-21). La falta de precio público es la norma en Facebook y grupos de WhatsApp, no una excepción. La ausencia es especialmente alta en alquiler (A4).
+> **15 de 122 (12.3%)**. Son publicaciones que no permiten comparar precios sin contactar al vendedor. La ausencia es especialmente alta en alquiler (A4).
 
 **D2. ¿Qué porcentaje no especifica zona?** ✅ (n = 122)
 
@@ -197,13 +186,13 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 **D5. ¿La opacidad es mayor en alquiler que en venta?** ✅ (censo de operaciones)
 
-> Sí, sobre todo en precio. En **alquiler**, **2 de 3 (66.7%)** no declaran precio y **2 de 3 (66.7%)** no declaran zona. En **venta**, **7 de 50 (14.0%)** no declaran precio y **17 de 50 (34.0%)** no declaran zona. El alquiler es el segmento más opaco en ambas dimensiones, aunque el grupo es muy pequeño.
+> Sí, sobre todo en precio. En **alquiler**, **2 de 3 (66.7%)** no declaran precio y **2 de 3 (66.7%)** no declaran zona. En **venta**, **6 de 48 (12.5%)** no declaran precio y **15 de 48 (31.2%)** no declaran zona. El alquiler es el segmento más opaco en ambas dimensiones, aunque el grupo es muy pequeño.
 
 ### Bloque E: Prácticas informales
 
 **E1. ¿Qué porcentaje usa lenguaje informal («oportunidad», «ganga», «permuta», «intercambio» o «cambio»)?** ✅ (n = 122)
 
-> **12 de 122 (9.8%)**. El lenguaje informal no es mayoritario, pero aparece en una de cada doce publicaciones. **Evidencia cualitativa:** una entrevistada participó en una **permuta familiar** entre su mamá y su tía: una quería una casa más pequeña y la otra necesitaba más espacio (E-16). Otra hizo una **permuta con deuda pendiente**, acordada ante notario pero con la deuda fuera del documento (E-23). Estas operaciones rara vez aparecen como tales en los anuncios digitales; se acuerdan cara a cara tras el contacto inicial. Las 12 son de Revolico: Facebook no aporta texto suficiente para medir esta dimensión, así que el dato es una **cota inferior** del mercado unificado.
+> **12 de 122 (9.8%)**. El lenguaje informal no es mayoritario, pero aparece en una de cada doce publicaciones. Las 12 son de Revolico: Facebook no aporta texto suficiente para medir esta dimensión, así que el dato es una **cota inferior** del mercado unificado.
 
 **E2. ¿Qué palabras informales dominan?** ✅ (n = 12)
 
@@ -219,15 +208,15 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 **E4. ¿La informalidad se concentra en alguna operación?** ✅ (censo de 12 publicaciones informales)
 
-> - Venta: **3 de 12 (25.0%)**
+> - Venta: **1 de 12 (8.3%)**
 > - Alquiler: **0 de 12 (0.0%)**
-> - Sin clasificar: **9 de 12 (75.0%)**
+> - Sin clasificar: **11 de 12 (91.7%)**
 >
 > La informalidad aparece en **venta** y en **publicaciones sin operación declarada**; **no aparece en alquiler**. Esto refuerza la lectura de que el alquiler se gestiona por otros canales (contacto directo, redes cerradas) y no necesita el reclamo de «oportunidad» en el título.
 
 **E5. ¿Las publicaciones sin clasificar son más opacas que las clasificadas?** ✅ (censo de operaciones)
 
-> **No.** Las publicaciones sin operación declarada son, en esta base, más completas que las ventas explícitas: **63 de 69 (91.3%)** declaran precio y **57 de 69 (82.6%)** declaran zona. En venta, esas proporciones son **86.0%** y **66.0%**; en alquiler, **33.3%** y **33.3%**. El grupo realmente opaco es el alquiler, no el de las publicaciones sin clasificar. La falta de etiqueta de operación no equivale a falta de información.
+> **No.** Las publicaciones sin operación declarada son, en esta base, más completas que las ventas explícitas: **64 de 70 (91.4%)** declaran precio y **57 de 70 (81.4%)** declaran zona. En venta, esas proporciones son **87.5%** y **68.8%**; en alquiler, **33.3%** y **33.3%**. El grupo realmente opaco es el alquiler, no el de las publicaciones sin clasificar. La falta de etiqueta de operación no equivale a falta de información.
 
 ### Bloque F: Tipos de inmueble y accesibilidad
 
@@ -240,29 +229,26 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 >
 > La casa es el tipo más publicado, seguida del apartamento. Entre ambos suman la mayor parte de la oferta; el «Inmueble» agrupa títulos que no especifican un tipo concreto.
 
-**F2. ¿Qué tipo tiene el precio medio más bajo?** ✅ (n = 33 apartamentos)
+**F2. ¿Qué tipo tiene el precio medio más bajo?** ✅ (n = 11 apartamentos)
 
-> - Apartamento: media **$18,181.82 USD** (n = 33)
-> - Casa: media **$42,842.11 USD** (n = 57)
-> - Inmueble: media **$49,392.86 USD** (n = 14)
+> - Apartamento: media **$16,409.09 USD** (n = 11)
+> - Casa: media **$31,500.00 USD** (n = 27)
 >
-> El **apartamento** es la opción más accesible entre los tipos con n ≥ 10: su media es **$18,181.82 USD**, frente a **$42,842.11 USD** de la casa y **$49,392.86 USD** del inmueble sin tipo específico. La diferencia entre apartamento y casa es de **$24,660.29 USD**: el apartamento cuesta aproximadamente **57.6% menos** que la casa en promedio. El cuarto tiene n = 2 y no se usa para comparar.
+> El **apartamento** es la opción más accesible entre los tipos con n ≥ 10: su media es **$16,409.09 USD**, frente a **$31,500.00 USD** de la casa y **$24,500.00 USD** del inmueble sin tipo específico. La diferencia entre apartamento y casa es de **$15,090.91 USD**: el apartamento cuesta aproximadamente **47.9% menos** que la casa en promedio. El cuarto tiene n = 1 y no se usa para comparar.
 
-**F3. ¿Qué tipo tiene la mediana más baja?** ✅ (n = 33 apartamentos)
+**F3. ¿Qué tipo tiene la mediana más baja?** ✅ (n = 11 apartamentos)
 
-> - Apartamento: mediana **$15,000.00 USD** (n = 33)
-> - Casa: mediana **$33,000.00 USD** (n = 57)
-> - Inmueble: mediana **$40,500.00 USD** (n = 14)
+> - Apartamento: mediana **$15,000.00 USD** (n = 11)
+> - Casa: mediana **$22,500.00 USD** (n = 27)
 >
-> El **apartamento** también tiene la mediana más baja: **$15,000.00 USD**, frente a **$33,000.00 USD** de la casa y **$40,500.00 USD** del inmueble. La mediana del apartamento es un **54.5% menor** que la de la casa. La conclusión se mantiene al pasar de la media a la mediana, lo que la hace más robusta frente a valores extremos.
+> El **apartamento** también tiene la mediana más baja: **$15,000.00 USD**, frente a **$22,500.00 USD** de la casa y **$23,000.00 USD** del inmueble. La mediana del apartamento es un **33.3% menor** que la de la casa. La conclusión se mantiene al pasar de la media a la mediana, lo que la hace más robusta frente a valores extremos.
 
-**F4. ¿La diferencia se mantiene en el rango P10–P90?** ✅ (n = 33, 57 y 14)
+**F4. ¿La diferencia se mantiene en el rango P10–P90?** ✅ (n = 11, 27 y 3)
 
-> - Apartamento: P10 **$7,000.00 USD**, mediana **$15,000.00 USD**, P90 **$33,200.00 USD** (n = 33)
-> - Casa: P10 **$14,400.00 USD**, mediana **$33,000.00 USD**, P90 **$86,000.00 USD** (n = 57)
-> - Inmueble: P10 **$15,900.00 USD**, mediana **$40,500.00 USD**, P90 **$77,800.00 USD** (n = 14)
+> - Apartamento: P10 **$7,000.00 USD**, mediana **$15,000.00 USD**, P90 **$25,000.00 USD** (n = 11)
+> - Casa: P10 **$8,800.00 USD**, mediana **$22,500.00 USD**, P90 **$67,000.00 USD** (n = 27)
 >
-> Sí. El apartamento es más barato en los tres puntos de la distribución: su P10 ($7,000.00) es menor que el de la casa ($14,400.00) y que el del inmueble ($15,900.00); su P90 ($33,200.00) también es menor que el de la casa ($86,000.00) y el del inmueble ($77,800.00). El rango del apartamento es más estrecho y desplazado hacia abajo. Las distribuciones se solapan, pero el apartamento es consistentemente más accesible.
+> Sí. El apartamento es más barato en los tres puntos de la distribución: su P10 ($7,000.00) es menor que el de la casa ($8,800.00) y que el del inmueble ($9,000.00); su P90 ($25,000.00) también es menor que el de la casa ($67,000.00) y el del inmueble ($40,600.00). El rango del apartamento es más estrecho y desplazado hacia abajo. Las distribuciones se solapan, pero el apartamento es consistentemente más accesible.
 
 **F5. ¿Qué tipo concentra más opacidad de precio y zona?** ✅ (censo por tipo)
 
@@ -285,11 +271,29 @@ Los indicadores de ausencia no son un apéndice: son resultados del estudio. La 
 | Información completa (precio + zona) | **82/122 (67.2%)** | Dos tercios permiten un análisis mínimo. |
 | Alquileres sin precio | **2/3 (66.7%)** | El mercado de alquiler es casi invisible en precios. |
 | Alquileres sin zona | **2/3 (66.7%)** | Tampoco se puede ubicar la oferta de alquiler. |
-| Publicaciones sin operación declarada | **69/122 (56.6%)** | Más de la mitad no dice si se vende o se alquila. |
+| Publicaciones sin operación declarada | **70/122 (57.4%)** | Más de la mitad no dice si se vende o se alquila. |
 | Sin característica física explícita | **78/122 (63.9%)** | La descripción del inmueble es mínima. |
 | Totalmente opacas (sin precio, zona ni característica) | **3/122 (2.5%)** | No hay ningún dato útil para comparar. |
 | Sin moneda declarada | **15/122 (12.3%)** | No se sabe si el precio, cuando exista, será en USD o CUP. |
 | Duplicado entre fuentes | **1 par** | Misma propiedad publicada en Revolico y Facebook. |
+
+### Posibles duplicados sin confirmar (requieren revisión manual)
+
+Se detectaron los siguientes grupos de anuncios que podrían ser el mismo inmueble publicado más de once. Estos son **candidatos, no duplicados confirmados**: requieren revisión manual antes de eliminarse. No se eliminaron para no alterar el universo de 122.
+
+- **precio_zona_tipo**: `revolico-57692514`, `revolico-56985062` (clave: `(60000, 'No especificado', 'Casa')`)
+- **precio_zona_tipo**: `revolico-58088194`, `revolico-57941793` (clave: `(15000, 'El Mónaco', 'Casa')`)
+- **precio_zona_tipo**: `revolico-58330788`, `revolico-58325597`, `facebook-2` (clave: `(15000, 'La Víbora', 'Apartamento')`)
+- **precio_zona_tipo**: `revolico-58327646`, `revolico-58320925`, `revolico-57856310` (clave: `(45000, 'No especificado', 'Inmueble')`)
+- **precio_zona_tipo**: `revolico-58326838`, `facebook-35` (clave: `(70000, 'No especificado', 'Casa')`)
+- **precio_zona_tipo**: `revolico-58494853`, `revolico-58361005` (clave: `(20000, 'Lawton', 'Apartamento')`)
+- **precio_zona_tipo**: `revolico-57698492`, `facebook-1` (clave: `(65000, 'No especificado', 'Casa')`)
+- **precio_zona_tipo**: `revolico-58492877`, `revolico-57401786` (clave: `(9000, 'Santos Suárez', 'Apartamento')`)
+- **precio_zona_tipo**: `facebook-19`, `facebook-42` (clave: `(20000, 'Lawton', 'Casa')`)
+- **telefono**: `facebook-3`, `facebook-4`, `facebook-5` (clave: `***-****128`)
+- **telefono**: `facebook-9`, `facebook-10` (clave: `***-****7133`)
+- **telefono**: `facebook-20`, `facebook-21` (clave: `***-****4096`)
+- **titulo**: `revolico-58329459`, `revolico-55845341` (clave: `venta de casa en lawton`)
 
 La lectura social es directa: la opacidad no afecta a todos por igual. Quien puede llamar, visitar y verificar accede a la información que falta; quien depende del anuncio para comparar queda en desventaja. El alquiler, además, es el segmento con mayor ausencia de precio y zona, lo que sugiere que una parte importante de ese mercado opera por canales informales o de confianza previa.
 
@@ -298,13 +302,13 @@ La lectura social es directa: la opacidad no afecta a todos por igual. Quien pue
 ## Conclusiones
 
 1. **La base verificada es de 122 publicaciones.** La versión anterior usaba 134 anuncios etiquetados como Diez de Octubre; la verificación confirmó 83 de Revolico. Con 39 de Facebook, esta versión usa las 122 publicaciones confirmadas (83 de Revolico + 39 de Facebook) y excluye 46 de otros municipios y 8 indeterminadas.
-2. **El mercado está dolarizado.** 106 de 107 publicaciones con moneda declarada (99.1%) están en USD; en el total, la proporción es 86.9% y la cota superior posible es 99.2%. Quien no tiene divisas enfrenta una barrera de acceso estructural.
-3. **El precio de compra típico es mucho menor que el promedio.** La mediana de las ventas con precio USD es $20,000.00 USD, mientras que la media es $26,023.26 USD. El 80% central está entre $6,200.00 y $60,000.00 USD (n = 43). La media sola sobreestima el precio al que se concentra la oferta.
+2. **Predominio del USD en publicaciones con moneda declarada.** 106 de 107 publicaciones con moneda declarada (99.1%) están en USD; en el total, la proporción es 86.9% y la cota superior posible es 99.2%. Este patrón describe la convención de publicación, no necesariamente la dolarización de todas las transacciones del mercado.
+3. **El precio de compra típico es menor que el promedio.** La mediana de las ventas con precio USD es $21,000.00 USD, mientras que la media es $26,357.14 USD. El 80% central está entre $6,100.00 y $60,000.00 USD (n = 42, IC95% mediana: $15,000.00–$25,000.00 USD). La media sola sobreestima el precio al que se concentra la oferta.
 4. **El alquiler no tiene precio estimable.** Solo 1 de 3 alquileres declara precio, y ninguno en USD. No se puede responder cuánto cuesta alquilar con esta base; esa ausencia es un hallazgo sobre el funcionamiento del segmento.
-5. **La desigualdad territorial existe, pero hay que medirla con medianas.** Las cuatro zonas principales concentran 75.8% de las publicaciones con zona. Entre las zonas con n ≥ 10, La Víbora tiene la media más alta ($49,590.91 USD, n = 11) y El Sevillano la mediana más alta ($36,000.00 USD, n = 10); entre las de n ≥ 5, El Mónaco lidera la media ($57,666.67 USD, n = 6), pero la mediana más alta sigue siendo la de El Sevillano ($36,000.00 USD, n = 10). La diferencia entre media y mediana en La Víbora muestra que los valores extremos inflan el promedio.
-6. **La opacidad es importante en zona y moderada en precio.** 25.4% no especifica zona, 12.3% no declara precio y 67.2% permite cruzar ambos datos. El 4.9% no tiene ninguno de los dos. La ausencia de información es un mecanismo de desigualdad: quien no puede verificar queda expuesto a la intermediación.
+5. **Desigualdad territorial por zona, medida con medianas.** Las cuatro zonas principales concentran 23.1% de las publicaciones con zona. Entre las zonas con n ≥ 10, N/D tiene la media más alta ($N/D USD, n = 0) y N/D la mediana más alta ($N/D USD, n = 0); entre las de n ≥ 5, Santos Suárez lidera la media ($25,000.00 USD, n = 8), pero la mediana más alta sigue siendo la de Santos Suárez ($20,250.00 USD, n = 8). Las diferencias entre zonas son descriptivas: los subgrupos son pequeños (n = 5–25) y los IC de mediana son amplios, por lo que los rankings no son concluyentes.
+6. **Opacidad en zona y precio.** 25.4% no especifica zona, 12.3% no declara precio y 67.2% permite cruzar ambos datos. El 4.9% no tiene ninguno de los dos. La ausencia de información se asocia con menor capacidad de comparación para quienes dependen exclusivamente del anuncio, aunque los datos no permiten establecer causalidad.
 7. **La informalidad es visible pero no domina.** 9.8% usa lenguaje de oportunidad, permuta o cambio. Se concentra en venta y en publicaciones sin operación declarada; no aparece en alquiler. Las informales declaran precio algo más que las neutras (91.7% frente a 87.3%), pero el subgrupo es pequeño y la diferencia no es concluyente. Además, el indicador solo cubre Revolico: es una cota inferior.
-8. **El apartamento es la opción más accesible.** Su media es $18,181.82 USD y su mediana $15,000.00 USD (n = 33), frente a la casa ($42,842.11 y $33,000.00 USD; n = 57). La diferencia se mantiene en P10–P90. Entre los tipos con n ≥ 10, el Inmueble sin tipo específico es el más opaco y el más caro en media, lo que sugiere que la falta de información sobre el tipo se asocia con operaciones de mayor valor.
+8. **El apartamento es la opción más accesible.** Su media es $16,409.09 USD y su mediana $15,000.00 USD (n = 11), frente a la casa ($31,500.00 y $22,500.00 USD; n = 27). La diferencia se mantiene en P10–P90. Entre los tipos con n ≥ 10, el Inmueble sin tipo específico es el más opaco y el más caro en media, una asociación descriptiva que no implica causalidad.
 
 En conjunto, el mercado digital de Diez de Octubre no es un espacio transparente de precios y ubicaciones: es un mercado segmentado por divisas, por acceso a información y por barrios. La base verificada permite afirmar esto con mayor rigor que la versión anterior, y también permite identificar qué no se puede saber: el precio del alquiler, la zona de una cuarta parte de las publicaciones y la operación de más de la mitad. Ese límite es parte del resultado.
 
@@ -342,7 +346,7 @@ En conjunto, el mercado digital de Diez de Octubre no es un espacio transparente
 | Precio declarado en CUP | 0.8% | 1/122 | No se convierte a USD. |
 | Sin precio | 12.3% | 15/122 | Se conserva y se reporta como opacidad. |
 | Zona identificada | 74.6% | 91/122 | 84 en ficha + 7 recuperadas del texto. |
-| Operación declarada | 43.4% | 53/122 | 50 ventas y 3 alquileres; 69 sin clasificar. |
+| Operación declarada | 42.6% | 52/122 | 48 ventas y 3 alquileres; 70 sin clasificar. |
 | Habitaciones | 0.0% | 0/122 | No hay campo homogéneo; no se estima. |
 | Baños | 0.0% | 0/122 | No hay campo homogéneo; no se estima. |
 | Superficie (m²) | 4.9% | 6/122 | Solo Facebook (`detalles_propiedad.area_m2`). |

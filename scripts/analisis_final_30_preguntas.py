@@ -32,6 +32,7 @@ Estructura:
 import json
 import math
 import os
+import random
 import statistics
 from collections import Counter, defaultdict
 from datetime import datetime
@@ -134,13 +135,29 @@ def clasificar_zona(titulo, enlace):
     return "No especificado"
 
 
-def clasificar_operacion(titulo):
-    t = (titulo or "").lower()
-    venta = ["vendo", "se vende", "venta", "vende", "permuta", "permuto"]
+def clasificar_operacion(anuncio):
+    """Clasifica la operación de un anuncio usando título y texto completo.
+
+    Categorías: Venta, Alquiler, Permuta, Sin clasificar.
+    - "permuta", "permuto", "intercambio", "cambio" → Permuta (categoría propia)
+    - "vendo", "se vende", "venta", "vende" → Venta
+    - "alquiler", "alquila", "se alquila", "renta" → Alquiler
+    - Si hay conflicto (venta y alquiler en el mismo texto) → Sin clasificar
+    - Solo se usa texto del anuncio, no se infiere del precio ni del tipo.
+    """
+    t = texto_anuncio(anuncio)
+    venta = ["vendo", "se vende", "venta", "vende"]
     alquiler = ["alquiler", "alquila", "se alquila", "renta"]
-    if any(p in t for p in venta) and not any(p in t for p in alquiler):
+    permuta = ["permuta", "permuto", "intercambio", "cambio"]
+    tiene_venta = any(p in t for p in venta)
+    tiene_alquiler = any(p in t for p in alquiler)
+    tiene_permuta = any(p in t for p in permuta)
+    # Permuta tiene prioridad como categoría propia cuando no hay venta/alquiler explícito
+    if tiene_permuta and not tiene_venta and not tiene_alquiler:
+        return "Permuta"
+    if tiene_venta and not tiene_alquiler and not tiene_permuta:
         return "Venta"
-    if any(p in t for p in alquiler) and not any(p in t for p in venta):
+    if tiene_alquiler and not tiene_venta and not tiene_permuta:
         return "Alquiler"
     return "Sin clasificar"
 
@@ -203,7 +220,7 @@ def cargar_anuncios_confirmados():
         a["_fuente"] = a.get("fuente") or "desconocida"
         a["_tipo"] = detalles.get("tipo") or "Inmueble"
         a["_zona"] = zona_normalizada(a, texto)
-        a["_op"] = a.get("operacion") or "Sin clasificar"
+        a["_op"] = clasificar_operacion(a)
         a["_precio"] = monto_de_precio(precio)
         a["_moneda"] = (precio.get("moneda") or "").upper()
         a["_texto"] = texto
@@ -245,7 +262,79 @@ def stats(valores):
     }
 
 
+def bootstrap_ci_mediana(valores, n_rep=2000, semilla=42):
+    """IC95% bootstrap para la mediana (percentil 2.5–97.5)."""
+    valores = sorted(valores)
+    n = len(valores)
+    if n < 3:
+        return None, None
+    random.seed(semilla)
+    medianas = []
+    for _ in range(n_rep):
+        muestra = random.choices(valores, k=n)
+        medianas.append(statistics.median(muestra))
+    medianas.sort()
+    lo = percentil(medianas, 0.025)
+    hi = percentil(medianas, 0.975)
+    return lo, hi
+
+
+def detectar_duplicados_candidatos(anuncios):
+    """Detecta posibles duplicados entre anuncios sin confirmar.
+
+    Reglas:
+    - mismo precio + zona + tipo (candidato fuerte)
+    - mismo teléfono repetido (candidato medio)
+    - título idéntico (candidato medio)
+    Devuelve lista de grupos de IDs que podrían ser el mismo inmueble.
+    """
+    candidatos = []
+    vistos = set()
+
+    # Grupo 1: mismo precio + zona + tipo
+    clave_pzt = defaultdict(list)
+    for a in anuncios:
+        if a["_precio"] is None:
+            continue
+        clave = (a["_precio"], a["_zona"], a["_tipo"])
+        clave_pzt[clave].append(a["id_unico"])
+    for clave, ids in clave_pzt.items():
+        if len(ids) > 1:
+            candidatos.append({"tipo": "precio_zona_tipo", "ids": ids, "clave": str(clave)})
+            vistos.update(ids)
+
+    # Grupo 2: mismo teléfono
+    clave_tel = defaultdict(list)
+    for a in anuncios:
+        tel = (a.get("contacto") or {}).get("telefono")
+        if tel:
+            clave_tel[tel].append(a["id_unico"])
+    for tel, ids in clave_tel.items():
+        if len(ids) > 1:
+            nuevos = [i for i in ids if i not in vistos]
+            if len(nuevos) > 1:
+                candidatos.append({"tipo": "telefono", "ids": nuevos, "clave": tel})
+                vistos.update(nuevos)
+
+    # Grupo 3: título idéntico
+    clave_tit = defaultdict(list)
+    for a in anuncios:
+        tit = a.get("_titulo", "").strip().lower()
+        if tit and len(tit) > 10:
+            clave_tit[tit].append(a["id_unico"])
+    for tit, ids in clave_tit.items():
+        if len(ids) > 1:
+            nuevos = [i for i in ids if i not in vistos]
+            if len(nuevos) > 1:
+                candidatos.append({"tipo": "titulo", "ids": nuevos, "clave": tit})
+                vistos.update(nuevos)
+
+    return candidatos
+
+
 def fmt(valor):
+    if isinstance(valor, str):
+        return valor
     return f"{valor:,.2f}"
 
 
@@ -297,24 +386,50 @@ def main():
 
     stats_usd = stats([a["_precio"] for a in usd])
     stats_venta = stats([a["_precio"] for a in ventas_usd])
+    ic_mediana_venta = bootstrap_ci_mediana([a["_precio"] for a in ventas_usd])
+    duplicados_candidatos = detectar_duplicados_candidatos(anuncios)
 
-    # Zonas
-    zonas = Counter(a["_zona"] for a in anuncios if a["_zona"] != "No especificado")
-    total_con_zona = sum(zonas.values())
+    # Zonas de oferta: todos los anuncios con zona (para B1)
+    zonas_oferta = Counter(a["_zona"] for a in anuncios if a["_zona"] != "No especificado")
+    total_con_zona = sum(zonas_oferta.values())
     sin_zona_n = sum(1 for a in anuncios if a["_zona"] == "No especificado")
 
+    # Zonas de precio: solo ventas con precio USD (para B2-B4, consistente con el titular)
+    zonas = Counter(a["_zona"] for a in ventas_usd if a["_zona"] != "No especificado")
+
     precios_zona = defaultdict(list)
-    for a in usd:
+    for a in ventas_usd:
         if a["_zona"] != "No especificado":
             precios_zona[a["_zona"]].append(a["_precio"])
 
     stats_zona = {z: stats(v) for z, v in precios_zona.items()}
     zonas_5 = {z: s for z, s in stats_zona.items() if s["n"] >= 5}
     zonas_10 = {z: s for z, s in stats_zona.items() if s["n"] >= 10}
-    zona_cara_5 = max(zonas_5, key=lambda z: zonas_5[z]["mean"])
-    zona_cara_10 = max(zonas_10, key=lambda z: zonas_10[z]["mean"])
-    zona_mediana_5 = max(zonas_5, key=lambda z: zonas_5[z]["median"])
-    zona_mediana_10 = max(zonas_10, key=lambda z: zonas_10[z]["median"])
+
+    def zona_top(diccionario, clave):
+        if not diccionario:
+            return "N/D", None
+        z = max(diccionario, key=lambda x: diccionario[x][clave])
+        return z, diccionario[z]
+
+    zona_cara_5, s_cara_5 = zona_top(zonas_5, "mean")
+    zona_cara_10, s_cara_10 = zona_top(zonas_10, "mean")
+    zona_mediana_5, s_mediana_5 = zona_top(zonas_5, "median")
+    zona_mediana_10, s_mediana_10 = zona_top(zonas_10, "median")
+
+    # Alias para compatibilidad con el resto del informe.
+    # Cuando no hay zonas con el n mínimo, se usa un dict vacío y el texto
+    # muestra "N/D" en lugar de cifras.
+    class _ZonaVacia:
+        def __getitem__(self, clave):
+            return 0 if clave == "n" else "N/D"
+        def get(self, clave, default=None):
+            return 0 if clave == "n" else (default or "N/D")
+
+    _zc5 = s_cara_5 if s_cara_5 else _ZonaVacia()
+    _zc10 = s_cara_10 if s_cara_10 else _ZonaVacia()
+    _zm5 = s_mediana_5 if s_mediana_5 else _ZonaVacia()
+    _zm10 = s_mediana_10 if s_mediana_10 else _ZonaVacia()
 
     top4 = zonas.most_common(4)
     top4_total = sum(c for _, c in top4)
@@ -322,7 +437,7 @@ def main():
     # Tipos
     tipos = Counter(a["_tipo"] for a in anuncios)
     precios_tipo = defaultdict(list)
-    for a in usd:
+    for a in ventas_usd:
         precios_tipo[a["_tipo"]].append(a["_precio"])
     stats_tipo = {t: stats(v) for t, v in precios_tipo.items()}
     tipos_comparables = [t for t in stats_tipo if stats_tipo[t]["n"] >= 10]
@@ -503,16 +618,16 @@ def main():
         f"{top4_total} de {total_con_zona} publicaciones con zona identificada "
         f"({pct(top4_total, total_con_zona):.1f}%). Entre las zonas con n ≥ 10, "
         f"{zona_cara_10} tiene la media más alta "
-        f"(${fmt(zonas_10[zona_cara_10]['mean'])} USD, "
-        f"n = {zonas_10[zona_cara_10]['n']}) y {zona_mediana_10} la mediana más "
-        f"alta (${fmt(zonas_10[zona_mediana_10]['median'])} USD, "
-        f"n = {zonas_10[zona_mediana_10]['n']}); entre las de n ≥ 5, "
+        f"(${fmt(_zc10['mean'])} USD, "
+        f"n = {_zc10['n']}) y {zona_mediana_10} la mediana más "
+        f"alta (${fmt(_zm10['median'])} USD, "
+        f"n = {_zm10['n']}); entre las de n ≥ 5, "
         f"{zona_cara_5} lidera la media "
-        f"(${fmt(zonas_5[zona_cara_5]['mean'])} USD, "
-        f"n = {zonas_5[zona_cara_5]['n']}), pero la mediana más alta sigue "
+        f"(${fmt(_zc5['mean'])} USD, "
+        f"n = {_zc5['n']}), pero la mediana más alta sigue "
         f"siendo la de {zona_mediana_5} "
-        f"(${fmt(zonas_5[zona_mediana_5]['median'])} USD, "
-        f"n = {zonas_5[zona_mediana_5]['n']})."
+        f"(${fmt(_zm5['median'])} USD, "
+        f"n = {_zm5['n']})."
     )
     L.append(
         f"- **Informalidad:** {len(informal)} de {total} publicaciones "
@@ -728,6 +843,12 @@ def main():
     # ---------------- BLOQUE A ----------------
     L.append("### Bloque A: Precios de referencia")
     L.append("")
+    lo_mediana, hi_mediana = ic_mediana_venta
+    ci_txt = (
+        f"IC95% bootstrap (n = {stats_venta['n']}): ${fmt(lo_mediana)}–${fmt(hi_mediana)} USD"
+        if lo_mediana is not None
+        else "IC no calculable (n demasiado pequeño)"
+    )
     L.append(
         f"**A1. ¿Cuál es el precio promedio de compra en USD?** ✅ "
         f"(n = {stats_venta['n']})"
@@ -750,13 +871,15 @@ def main():
     )
     L.append("")
     L.append(
-        f"> Mediana **${fmt(stats_venta['median'])} USD**. El 80% central de las "
-        f"ventas está entre **${fmt(stats_venta['p10'])} USD** (P10) y "
-        f"**${fmt(stats_venta['p90'])} USD** (P90). El mínimo es "
+        f"> Mediana **${fmt(stats_venta['median'])} USD** ({ci_txt}). El 80% "
+        f"central de las ventas está entre **${fmt(stats_venta['p10'])} USD** "
+        f"(P10) y **${fmt(stats_venta['p90'])} USD** (P90). El mínimo es "
         f"**${fmt(stats_venta['min'])} USD** y el máximo "
         f"**${fmt(stats_venta['max'])} USD**. La mediana es menor que la media "
         f"(${fmt(stats_venta['mean'])}), señal de una distribución sesgada a la "
-        f"derecha: unas pocas publicaciones muy caras elevan el promedio."
+        f"derecha: unas pocas publicaciones muy caras elevan el promedio. El "
+        f"IC95% indica que la mediana poblacional probablemente está entre "
+        f"${fmt(lo_mediana)} y ${fmt(hi_mediana)} USD."
     )
     L.append("")
     L.append(
@@ -835,17 +958,17 @@ def main():
     L.append("")
     L.append(
         f"**B2. ¿Qué zona tiene el precio promedio más alto?** 🟡 "
-        f"(n = {zonas_5[zona_cara_5]['n']} en {zona_cara_5})"
+        f"(n = {_zc5['n']} en {zona_cara_5})"
     )
     L.append("")
     L.append(
         f"> **{zona_cara_5}**, con una media de "
-        f"**${fmt(zonas_5[zona_cara_5]['mean'])} USD** "
-        f"(n = {zonas_5[zona_cara_5]['n']}). Es un resultado descriptivo: el "
+        f"**${fmt(_zc5['mean'])} USD** "
+        f"(n = {_zc5['n']}). Es un resultado descriptivo: el "
         f"grupo tiene menos de 10 publicaciones y su media puede estar influida "
         f"por valores extremos. Si se exige n ≥ 10, la zona con media más alta "
-        f"es **{zona_cara_10}** (${fmt(zonas_10[zona_cara_10]['mean'])} USD, "
-        f"n = {zonas_10[zona_cara_10]['n']})."
+        f"es **{zona_cara_10}** (${fmt(_zc10['mean'])} USD, "
+        f"n = {_zc10['n']})."
     )
     L.append("")
     L.append("> Orden por media entre las zonas con n ≥ 5:")
@@ -859,16 +982,16 @@ def main():
     L.append("")
     L.append(
         f"**B3. ¿Qué zona tiene la mediana más alta?** 🟡 "
-        f"(n = {zonas_5[zona_mediana_5]['n']} en {zona_mediana_5})"
+        f"(n = {_zm5['n']} en {zona_mediana_5})"
     )
     L.append("")
     L.append(
         f"> **{zona_mediana_5}**, con una mediana de "
-        f"**${fmt(zonas_5[zona_mediana_5]['median'])} USD** "
-        f"(n = {zonas_5[zona_mediana_5]['n']}). Si se exige n ≥ 10, la mediana "
+        f"**${fmt(_zm5['median'])} USD** "
+        f"(n = {_zm5['n']}). Si se exige n ≥ 10, la mediana "
         f"más alta corresponde a **{zona_mediana_10}** "
-        f"(${fmt(zonas_10[zona_mediana_10]['median'])} USD, "
-        f"n = {zonas_10[zona_mediana_10]['n']})."
+        f"(${fmt(_zm10['median'])} USD, "
+        f"n = {_zm10['n']})."
     )
     L.append("")
     L.append("> Orden por mediana entre las zonas con n ≥ 5:")
@@ -1361,6 +1484,26 @@ def main():
             f"| Duplicado entre fuentes | **{len(duplicados) // 2} par** | "
             f"Misma propiedad publicada en Revolico y Facebook. |"
         )
+    if duplicados_candidatos:
+        L.append("")
+        L.append("### Posibles duplicados sin confirmar (requieren revisión manual)")
+        L.append("")
+        L.append(
+            "Se detectaron los siguientes grupos de anuncios que podrían ser el "
+            "mismo inmueble publicado más de once. Estos son **candidatos, no "
+            "duplicados confirmados**: requieren revisión manual antes de "
+            "eliminarse. No se eliminaron para no alterar el universo de 122."
+        )
+        L.append("")
+        for cand in duplicados_candidatos:
+            ids_str = ", ".join(f"`{i}`" for i in cand["ids"])
+            clave = cand["clave"]
+            # Anonimizar teléfonos en la clave mostrada
+            if cand["tipo"] == "telefono" and clave.isdigit():
+                clave = "***-****" + clave[-3:]
+            L.append(
+                f"- **{cand['tipo']}**: {ids_str} (clave: `{clave}`)"
+            )
     L.append("")
     L.append(
         "La lectura social es directa: la opacidad no afecta a todos por igual. "
@@ -1384,7 +1527,7 @@ def main():
         L.append("")
 
     # ------------------------------------------------------------------
-    # Conclusiones
+    # Conclusiones (hipótesis descriptivas, no afirmaciones causales)
     # ------------------------------------------------------------------
     L.append("## Conclusiones")
     L.append("")
@@ -1398,19 +1541,21 @@ def main():
         f"{conteo_uni.get('INDETERMINADO', 0)} indeterminadas."
     )
     L.append(
-        f"2. **El mercado está dolarizado.** {usd_declarada} de "
-        f"{len(con_moneda)} publicaciones con moneda declarada "
-        f"({pct_usd_declarada:.1f}%) están en USD; en el total, la proporción es "
-        f"{pct_usd_total:.1f}% y la cota superior posible es {usd_max:.1f}%. "
-        f"Quien no tiene divisas enfrenta una barrera de acceso estructural."
+        f"2. **Predominio del USD en publicaciones con moneda declarada.** "
+        f"{usd_declarada} de {len(con_moneda)} publicaciones con moneda "
+        f"declarada ({pct_usd_declarada:.1f}%) están en USD; en el total, la "
+        f"proporción es {pct_usd_total:.1f}% y la cota superior posible es "
+        f"{usd_max:.1f}%. Este patrón describe la convención de publicación, no "
+        f"necesariamente la dolarización de todas las transacciones del mercado."
     )
     L.append(
-        f"3. **El precio de compra típico es mucho menor que el promedio.** La "
-        f"mediana de las ventas con precio USD es ${fmt(stats_venta['median'])} "
-        f"USD, mientras que la media es ${fmt(stats_venta['mean'])} USD. El 80% "
+        f"3. **El precio de compra típico es menor que el promedio.** La mediana "
+        f"de las ventas con precio USD es ${fmt(stats_venta['median'])} USD, "
+        f"mientras que la media es ${fmt(stats_venta['mean'])} USD. El 80% "
         f"central está entre ${fmt(stats_venta['p10'])} y "
-        f"${fmt(stats_venta['p90'])} USD (n = {stats_venta['n']}). La media sola "
-        f"sobreestima el precio al que se concentra la oferta."
+        f"${fmt(stats_venta['p90'])} USD (n = {stats_venta['n']}, "
+        f"IC95% mediana: ${fmt(lo_mediana)}–${fmt(hi_mediana)} USD). La media "
+        f"sola sobreestima el precio al que se concentra la oferta."
     )
     L.append(
         f"4. **El alquiler no tiene precio estimable.** Solo "
@@ -1420,31 +1565,32 @@ def main():
         f"segmento."
     )
     L.append(
-        f"5. **La desigualdad territorial existe, pero hay que medirla con "
-        f"medianas.** Las cuatro zonas principales concentran "
-        f"{pct(top4_total, total_con_zona):.1f}% de las publicaciones con zona. "
-        f"Entre las zonas con n ≥ 10, {zona_cara_10} tiene la media más alta "
-        f"(${fmt(zonas_10[zona_cara_10]['mean'])} USD, "
-        f"n = {zonas_10[zona_cara_10]['n']}) y {zona_mediana_10} la mediana más "
-        f"alta (${fmt(zonas_10[zona_mediana_10]['median'])} USD, "
-        f"n = {zonas_10[zona_mediana_10]['n']}); entre las de n ≥ 5, "
+        f"5. **Desigualdad territorial por zona, medida con medianas.** Las cuatro "
+        f"zonas principales concentran {pct(top4_total, total_con_zona):.1f}% "
+        f"de las publicaciones con zona. Entre las zonas con n ≥ 10, "
+        f"{zona_cara_10} tiene la media más alta "
+        f"(${fmt(_zc10['mean'])} USD, "
+        f"n = {_zc10['n']}) y {zona_mediana_10} la mediana más "
+        f"alta (${fmt(_zm10['median'])} USD, "
+        f"n = {_zm10['n']}); entre las de n ≥ 5, "
         f"{zona_cara_5} lidera la media "
-        f"(${fmt(zonas_5[zona_cara_5]['mean'])} USD, "
-        f"n = {zonas_5[zona_cara_5]['n']}), pero la mediana más alta sigue "
+        f"(${fmt(_zc5['mean'])} USD, "
+        f"n = {_zc5['n']}), pero la mediana más alta sigue "
         f"siendo la de {zona_mediana_5} "
-        f"(${fmt(zonas_5[zona_mediana_5]['median'])} USD, "
-        f"n = {zonas_5[zona_mediana_5]['n']}). La diferencia entre media y "
-        f"mediana en {zona_a} muestra que los valores extremos inflan el "
-        f"promedio."
+        f"(${fmt(_zm5['median'])} USD, "
+        f"n = {_zm5['n']}). Las diferencias entre zonas son "
+        f"descriptivas: los subgrupos son pequeños (n = 5–25) y los IC de mediana "
+        f"son amplios, por lo que los rankings no son concluyentes."
     )
     L.append(
-        f"6. **La opacidad es importante en zona y moderada en precio.** "
+        f"6. **Opacidad en zona y precio.** "
         f"{pct(sin_zona_n, total):.1f}% no especifica zona, "
         f"{pct(sin_precio_n, total):.1f}% no declara precio y "
         f"{pct(completo_n, total):.1f}% permite cruzar ambos datos. El "
         f"{pct(ambos_n, total):.1f}% no tiene ninguno de los dos. La ausencia de "
-        f"información es un mecanismo de desigualdad: quien no puede verificar "
-        f"queda expuesto a la intermediación."
+        f"información se asocia con menor capacidad de comparación para quienes "
+        f"dependen exclusivamente del anuncio, aunque los datos no permiten "
+        f"establecer causalidad."
     )
     L.append(
         f"7. **La informalidad es visible pero no domina.** "
@@ -1466,8 +1612,8 @@ def main():
         f"${fmt(stats_tipo['Casa']['median'])} USD; "
         f"n = {stats_tipo['Casa']['n']}). La diferencia se mantiene en P10–P90. "
         f"Entre los tipos con n ≥ 10, el Inmueble sin tipo específico es el más "
-        f"opaco y el más caro en media, lo que sugiere que la falta de "
-        f"información sobre el tipo se asocia con operaciones de mayor valor."
+        f"opaco y el más caro en media, una asociación descriptiva que no "
+        f"implica causalidad."
     )
     L.append("")
     L.append(

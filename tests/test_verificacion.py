@@ -119,10 +119,10 @@ class UniversoVerificadoTests(unittest.TestCase):
         s = stats(ventas)
         self.assertEqual(len(usd), 106)
         self.assertEqual(len(cup), 1)
-        self.assertEqual(len(ventas), 43)
-        self.assertAlmostEqual(s["mean"], 26023.26, places=2)
-        self.assertAlmostEqual(s["median"], 20000.00, places=2)
-        self.assertAlmostEqual(s["p10"], 6200.00, places=2)
+        self.assertEqual(len(ventas), 42)
+        self.assertAlmostEqual(s["mean"], 26357.14, places=2)
+        self.assertAlmostEqual(s["median"], 21000.00, places=2)
+        self.assertAlmostEqual(s["p10"], 6100.00, places=2)
         self.assertAlmostEqual(s["p90"], 60000.00, places=2)
 
     def test_08_duplicado_conocido_y_n_efectivo(self):
