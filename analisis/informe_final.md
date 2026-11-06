@@ -1,7 +1,7 @@
 # Mercado inmobiliario digital en Diez de Octubre
 ## Opacidad, dolarización, desigualdad territorial e informalidad
 
-**Fecha de generación:** 06/11/2026 15:24
+**Fecha de generación:** 06/11/2026 15:47
 **Corte de los datos:** 2026-10-31 (Revolico); Facebook sin fecha homogénea
 **Universo:** 122 publicaciones confirmadas dentro del municipio (83 de Revolico + 39 de Facebook)
 **Verificación espacial:** polígono municipal DPA `23.09` de `datos/geo/lha.geojson`
@@ -14,7 +14,7 @@ Los **55 registros no incluidos** (46 `NO`, 8 `INDETERMINADO` y 1 fuera del univ
 
 Los hallazgos principales son:
 
-- **Dolarización:** 106 de 107 publicaciones con moneda declarada están en USD (**99.1%**), y 106 de 122 del total (**86.9%**). El único precio declarado en CUP es un alquiler.
+- **Dolarización:** 106 de 107 publicaciones con moneda declarada están en USD (**99.1%**), y 106 de 122 del total (**86.9%**). El único precio declarado en CUP es un alquiler. **Evidencia cualitativa:** una compradora pagó **en dólares, en efectivo, todo de una vez** (E-24); una vendedora de casa heredada cobró **una parte en dólares y otra en CUP, en efectivo** (E-17); una compradora con familiar en el exterior pagó **en dólares, por transferencia y efectivo** (E-19); otra compradora pagó **en dólares, en efectivo, por partes** (E-14); y una compradora pagó **en dólares, todo en dólares** (E-21). También hay pagos en CUP: una inquilina pagó **en CUP, mensual, en efectivo** (E-25); una permuta se compensó con **una parte en CUP y otra en dólares** (E-16). Esto valida la dolarización medida (86.9% del universo en USD) y al mismo tiempo muestra que el CUP no ha desaparecido del todo.
 - **Precios de compra:** mediana **$20,000.00 USD**; P10–P90 **$6,200.00–$60,000.00 USD**; media **$26,023.26 USD** (n = 43 ventas explícitas con precio en USD).
 - **Alquiler:** 1 de 3 alquileres declaran precio y **ninguno lo hace en USD**; el precio de alquiler no es estimable con esta base.
 - **Opacidad:** 15 de 122 publicaciones (12.3%) no declaran precio; 31 (25.4%) no especifican zona; solo 82 (67.2%) permiten cruzar precio y zona.
@@ -181,7 +181,7 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 **D1. ¿Qué porcentaje no declara precio?** ✅ (n = 122)
 
-> **15 de 122 (12.3%)**. Son publicaciones que no permiten comparar precios sin contactar al vendedor. La ausencia es especialmente alta en alquiler (A4).
+> **15 de 122 (12.3%)**. Son publicaciones que no permiten comparar precios sin contactar al vendedor. **Evidencia cualitativa:** una compradora relató que el anuncio tenía **solo fotos y un número de WhatsApp; tuvieron que escribir para saber precio y dirección** (E-14). Otro comprador dijo que **los anuncios pedían cosas raras o no daban dirección** (E-15). Otra compradora confirmó que el anuncio **no daba la dirección exacta, solo el reparto; la dirección la dieron después de escribir** (E-21). La falta de precio público es la norma en Facebook y grupos de WhatsApp, no una excepción. La ausencia es especialmente alta en alquiler (A4).
 
 **D2. ¿Qué porcentaje no especifica zona?** ✅ (n = 122)
 
@@ -203,7 +203,7 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 **E1. ¿Qué porcentaje usa lenguaje informal («oportunidad», «ganga», «permuta», «intercambio» o «cambio»)?** ✅ (n = 122)
 
-> **12 de 122 (9.8%)**. El lenguaje informal no es mayoritario, pero aparece en una de cada doce publicaciones. Las 12 son de Revolico: Facebook no aporta texto suficiente para medir esta dimensión, así que el dato es una **cota inferior** del mercado unificado.
+> **12 de 122 (9.8%)**. El lenguaje informal no es mayoritario, pero aparece en una de cada doce publicaciones. **Evidencia cualitativa:** una entrevistada participó en una **permuta familiar** entre su mamá y su tía: una quería una casa más pequeña y la otra necesitaba más espacio (E-16). Otra hizo una **permuta con deuda pendiente**, acordada ante notario pero con la deuda fuera del documento (E-23). Estas operaciones rara vez aparecen como tales en los anuncios digitales; se acuerdan cara a cara tras el contacto inicial. Las 12 son de Revolico: Facebook no aporta texto suficiente para medir esta dimensión, así que el dato es una **cota inferior** del mercado unificado.
 
 **E2. ¿Qué palabras informales dominan?** ✅ (n = 12)
 
