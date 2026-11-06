@@ -2,7 +2,7 @@
 
 Esta carpeta contiene recursos de evidencia que no son código ni datos estructurados, pero que sustentan el informe y la exposición:
 
-- `entrevistas_audio/`: 13 grabaciones de entrevistas anónimas (E-01 a E-13)
+- `entrevistas_audio/`: 37 entrevistas (E-01 a E-37): 13 grabaciones de audio (.m4a) y 24 transcripciones de texto (.txt)
 - `facebook_fotos/`: 86 capturas de pantalla de publicaciones de Facebook
 - `anuncios_ejemplo/`: ejemplos textuales de anuncios confirmados y descartados
 
