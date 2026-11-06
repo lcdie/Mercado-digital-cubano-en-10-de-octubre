@@ -18,7 +18,7 @@
 | `fecha_verificacion` | Momento de captura del anuncio (Revolico no expone fecha de publicación). No es fecha de venta ni de publicación original. |
 | `n` | Número de publicaciones que apoyan el resultado; siempre se indica junto al estadístico. |
 | Nivel de evidencia | ✅ sólida (n ≥ 30 o censo del subgrupo), 🟡 descriptiva (n = 5–29), 🔴 no estimable (la ausencia es el hallazgo). |
-| Entrevista | Entrevista cualitativa anónima a residentes de Diez de Octubre sobre su experiencia en el mercado inmobiliario. Las 13 grabaciones de audio (E-01 a E-13) se conservan en `evidencias/entrevistas_audio/`. |
+| Entrevista | Entrevista cualitativa anónima a residentes de Diez de Octubre sobre su experiencia en el mercado inmobiliario. Las 13 grabaciones de audio (E-01 a E-13) y las 24 transcripciones de texto (E-14 a E-37) se conservan en `evidencias/entrevistas_audio/`. Total: 37 entrevistas. |
 
 
 ---

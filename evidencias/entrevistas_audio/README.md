@@ -6,19 +6,19 @@ Esta carpeta contiene 37 entrevistas anónimas realizadas para el proyecto de me
 
 | Código | Archivo | Tamaño aproximado | Tipo |
 |--------|---------|-------------------|------|
-| E-01 | `1ra ent.m4a` | ~2.7 MB | Audio |
-| E-02 | `2da ent.m4a` | ~2.7 MB | Audio |
-| E-03 | `3ra ent.m4a` | ~2.5 MB | Audio |
-| E-04 | `4ta ent.m4a` | ~1.9 MB | Audio |
-| E-05 | `5ta ent.m4a` | ~2.7 MB | Audio |
-| E-06 | `6ta ent.m4a` | ~2.5 MB | Audio |
-| E-07 | `7ma ent.m4a` | ~3.4 MB | Audio |
-| E-08 | `8va ent.m4a` | ~2.1 MB | Audio |
-| E-09 | `9na ent.m4a` | ~2.3 MB | Audio |
-| E-10 | `10na entrevista.m4a` | ~3.2 MB | Audio |
-| E-11 | `11na entrevista.m4a` | ~3.2 MB | Audio |
-| E-12 | `12 na ent.m4a` | ~2.4 MB | Audio |
-| E-13 | `13ra entrevista.m4a` | ~3.4 MB | Audio |
+| E-01 | `E-01_entrevista.m4a` | ~2.7 MB | Audio |
+| E-02 | `E-02_entrevista.m4a` | ~2.7 MB | Audio |
+| E-03 | `E-03_entrevista.m4a` | ~2.5 MB | Audio |
+| E-04 | `E-04_entrevista.m4a` | ~1.9 MB | Audio |
+| E-05 | `E-05_entrevista.m4a` | ~2.7 MB | Audio |
+| E-06 | `E-06_entrevista.m4a` | ~2.5 MB | Audio |
+| E-07 | `E-07_entrevista.m4a` | ~3.4 MB | Audio |
+| E-08 | `E-08_entrevista.m4a` | ~2.1 MB | Audio |
+| E-09 | `E-09_entrevista.m4a` | ~2.3 MB | Audio |
+| E-10 | `E-10_entrevista.m4a` | ~3.2 MB | Audio |
+| E-11 | `E-11_entrevista.m4a` | ~3.2 MB | Audio |
+| E-12 | `E-12_entrevista.m4a` | ~2.4 MB | Audio |
+| E-13 | `E-13_entrevista.m4a` | ~3.4 MB | Audio |
 
 ## Archivos de texto (transcripciones)
 
