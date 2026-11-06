@@ -1,6 +1,6 @@
 # Verificación de pertenencia al municipio Diez de Octubre
 
-**Fecha:** 05/11/2026
+**Fecha:** 06/11/2026
 **Fuente geoespacial:** `/home/luis/proyecto-mercado-10-octubre/datos/geo/lha.geojson`, copia versionada de `/home/luis/Downloads/lha.geojson` (mismo archivo; SHA-256 `b9bbcce811d9bbfcee15f5e904d97dc24cf044cabcf17a870487ad361bb7c9e6`).
 **Método:** título primero + polígono municipal + ficha como respaldo + geocodificación de topónimos.
 
