@@ -220,8 +220,12 @@ El informe completo está en `analisis/informe_final.md` y su entrega en `analis
 
 Este proyecto fue desarrollado utilizando el siguiente conjunto de herramientas:
 
-### Herramientas de desarrollo y programación
+### Entorno de desarrollo
+- **Archlinux** — Sistema operativo utilizado para todo el desarrollo.
+- **Vim y Visual Studio Code** — Editores de código utilizados para escribir y editar los scripts y la documentación.
 - **Python 3.x** — Lenguaje de programación principal.
+
+### Librerías y paquetes de Python
 - **pandas** — Manipulación y análisis de datos tabulares.
 - **matplotlib / seaborn** — Generación de visualizaciones estadísticas (gráficos de exposición).
 - **requests** — Peticiones HTTP para scraping y obtención de datos.
@@ -238,15 +242,20 @@ Este proyecto fue desarrollado utilizando el siguiente conjunto de herramientas:
 - **Git / GitHub** — Control de versiones y alojamiento del repositorio (`lcdie/Mercado-digital-cubano-en-10-de-octubre`).
 - **GitHub Actions** — Integración continua que ejecuta pruebas y cifras de control en cada push.
 - **OpenCode (Nemotron 3.5 Super VL Free)** — Asistente de IA utilizado para redactar scripts, documentar, estructurar el repositorio, revisar consistencia de cifras y redactar el informe y la presentación. Todas las decisiones de análisis y clasificación municipal fueron validadas por el autor del proyecto.
+- **Deepseek y ChatGPT** — Modelos de lenguaje adicionales utilizados para revisar código, generar ideas y redactar secciones del informe. Todas las decisiones finales fueron revisadas y validadas por el autor del proyecto.
 
 ### Herramientas de captura y transcripción
-- **Whisper** — Transcripción automática de las 13 grabaciones de audio de entrevistas (`evidencias/entrevistas_audio/`). Las transcripciones no se incluyen en el repositorio para proteger la privacidad de los entrevistados.
+- **whisper.cpp (modelo base)** — Transcripción automática de las 13 grabaciones de audio de entrevistas (`evidencias/entrevistas_audio/`). Las transcripciones no se incluyen en el repositorio para proteger la privacidad de los entrevistados.
+- **Samsung Galaxy A56** — Dispositivo móvil utilizado para grabar las entrevistas de audio.
 - **Capturas de pantalla** — 86 capturas de publicaciones de Facebook (`evidencias/facebook_fotos/`), utilizadas como evidencia visual de anuncios publicados.
 
 ### Herramientas de análisis estadístico
 - **Python `statistics`** — Cálculo de mediana, percentiles P10 y P90.
 - **`collections.Counter`** — Conteo de frecuencias por fuente, zona, tipo de inmueble, operación y moneda.
 - **JSON** — Formato de almacenamiento de bases de datos limpias y descartes.
+
+### Bases de datos
+No se utilizó ningún sistema de gestión de bases de datos relacional o NoSQL. Todos los datos se almacenan en archivos JSON y CSV planos.
 
 ## Referencias
 
