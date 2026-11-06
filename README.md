@@ -33,7 +33,7 @@ La pregunta inicial —**¿cuánto cuesta realmente vivir en Diez de Octubre?**�
 | **Duplicado entre fuentes** | 1 par | `facebook-35` / `revolico-58326838`; n efectivo 121 |
 | **Pruebas de contrato** | 8/8 pasando | `tests/test_verificacion.py` |
 | **Cifras de control** | 36/36 verificadas | `scripts/cifras_control.py` |
-| **Entrevistas de audio** | 37 grabaciones anónimas | `evidencias/entrevistas_audio/` |
+| **Entrevistas** | 37 (13 de audio + 24 de texto) | `evidencias/entrevistas_audio/` |
 | **Capturas de Facebook** | 86 capturas de pantalla | `evidencias/facebook_fotos/` |
 
 ---
@@ -269,7 +269,7 @@ No se utilizó ningún sistema de gestión de bases de datos relacional o NoSQL.
 
 Además de los 122 anuncios verificados, el proyecto incluye evidencia cualitativa que no forma parte del universo cuantitativo, pero que aporta contexto sobre la percepción del mercado en Diez de Octubre:
 
-- **37 entrevistas de audio** (E-01 a E-37): grabaciones anónimas de residentes sobre su experiencia buscando, comprando, vendiendo o alquilando vivienda en el municipio. No constituyen una muestra representativa; se usan como evidencia cualitativa suelta que ilustra temas como opacidad, dolarización e informalidad.
+- **41 entrevistas** (E-01 a E-41, 13 de audio y 24 de texto): grabaciones anónimas de residentes sobre su experiencia buscando, comprando, vendiendo o alquilando vivienda en el municipio. No constituyen una muestra representativa; se usan como evidencia cualitativa suelta que ilustra temas como opacidad, dolarización e informalidad.
 - **86 capturas de pantalla de Facebook**: anuncios publicados en grupos y páginas de compraventa, capturados entre octubre y noviembre de 2026. Se usan como referencia visual del tipo de publicaciones que circulan en canales informales.
 
 > **Nota:** ni las entrevistas ni las capturas de Facebook se contabilizan como parte del universo de 122 publicaciones verificadas. No se hace mapeo por zonas ni se calculan porcentajes sobre ellas; se presentan como acompañamiento cualitativo del informe principal.

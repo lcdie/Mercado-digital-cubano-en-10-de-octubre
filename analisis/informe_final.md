@@ -14,7 +14,7 @@ Los **55 registros no incluidos** (46 `NO`, 8 `INDETERMINADO` y 1 fuera del univ
 
 Los hallazgos principales son:
 
-- **Dolarización:** 106 de 107 publicaciones con moneda declarada están en USD (**99.1%**), y 106 de 122 del total (**86.9%**). El único precio declarado en CUP es un alquiler.
+- **Dolarización:** 106 de 107 publicaciones con moneda declarada están en USD (**99.1%**), y 106 de 122 del total (**86.9%**). El único precio declarado en CUP es un alquiler. **Evidencia cualitativa:** Una compradora pagó **en dólares, en efectivo, todo de una vez** (Entrevista 11); una vendedora cobró **en dólares, en efectivo, en la notaría** (Entrevista 17); una compradora con apoyo de familiar en el exterior pagó **en dólares, por transferencia y efectivo** (Entrevista 22). Otro comprador pagó **en dólares, en efectivo, por partes** (Entrevista 38). También hay pagos en CUP: una vendedora cobró **en efectivo, en CUP** (Entrevista 5); una inquilina pagó **en CUP, mensual, en efectivo** (Entrevista 12); una permuta se compensó **en CUP, en efectivo** (Entrevista 19); una vendedora cobró **una parte en dólares y otra en CUP, en efectivo** (Entrevista 41). Esto valida la dolarización medida (86.9% del universo en USD) y al mismo tiempo muestra que el CUP no ha desaparecido del todo.
 - **Precios de compra:** mediana **$20,000.00 USD**; P10–P90 **$6,200.00–$60,000.00 USD**; media **$26,023.26 USD** (n = 43 ventas explícitas con precio en USD).
 - **Alquiler:** 1 de 3 alquileres declaran precio y **ninguno lo hace en USD**; el precio de alquiler no es estimable con esta base.
 - **Opacidad:** 15 de 122 publicaciones (12.3%) no declaran precio; 31 (25.4%) no especifican zona; solo 82 (67.2%) permiten cruzar precio y zona.
@@ -158,7 +158,7 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 > **106 de 107 (99.1%)**. El único anuncio con moneda declarada que no está en USD es un alquiler en CUP (50,000 CUP). Las 15 publicaciones sin precio no declaran moneda y quedan fuera de este denominador.
 >
-> **Evidencia cualitativa:** Las entrevistas confirman la predominancia del dólar en las transacciones inmobiliarias. Una compradora pagó **en dólares, en efectivo, todo de una vez** (Entrevista 11); una vendedora de casa heredada cobró **en dólares, en efectivo, en la notaría** (Entrevista 17); una compradora con apoyo de familiar en el exterior pagó **en dólares, por transferencia y efectivo** (Entrevista 22). Otro comprador pagó **en dólares, en efectivo, por partes** (Entrevista 1). La dolarización no es solo un dato del anuncio: es la práctica dominante en las transacciones cerradas.
+> **Evidencia cualitativa:** Las entrevistas confirman la predominancia del dólar en las transacciones inmobiliarias. Una compradora pagó **en dólares, en efectivo, todo de una vez** (Entrevista 11); una vendedora de casa heredada cobró **en dólares, en efectivo, en la notaría** (Entrevista 17); una compradora con apoyo de familiar en el exterior pagó **en dólares, por transferencia y efectivo** (Entrevista 22). Otro comprador pagó **en dólares, en efectivo, por partes** (Entrevista 38). Otra compradora pagó **en dólares, por transferencia y efectivo** (Entrevista 40). Una vendedora cobró **en dólares, en efectivo, en la notaría** (Entrevista 39). Otra compradora pagó **en dólares, en efectivo, todo de una vez** (Entrevista 11). La dolarización no es solo un dato del anuncio: es la práctica dominante en las transacciones cerradas.
 
 **C2. ¿Qué porcentaje del total está en USD?** ✅ (n = 122)
 
@@ -187,7 +187,7 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 
 > **15 de 122 (12.3%)**. Son publicaciones que no permiten comparar precios sin contactar al vendedor. La ausencia es especialmente alta en alquiler (A4).
 >
-> **Evidencia cualitativa:** Las entrevistas confirman que la ausencia de precio en los anuncios es la norma, no la excepción. Una compradora relató que el anuncio tenía **solo fotos y un número de WhatsApp; tuvieron que escribir para saber precio y dirección** (Entrevista 1). Otro comprador dijo que los anuncios **pedían cosas raras o no daban dirección** (Entrevista 2). Un vendedor explicó que ponía el número de WhatsApp para que le escribieran y así daban los detalles (Entrevista 9na). La falta de precio público es la norma en Facebook y grupos de WhatsApp, no una excepción.
+> **Evidencia cualitativa:** Las entrevistas confirman que la ausencia de precio en los anuncios es la norma, no la excepción. Una compradora relató que el anuncio tenía **solo fotos y un número de WhatsApp; tuvieron que escribir para saber precio y dirección** (Entrevista 1). Otro comprador dijo que los anuncios **pedían cosas raras o no daban dirección** (Entrevista 2). Un vendedor explicó que ponía el número de WhatsApp para que le escribieran y así daban los detalles (Entrevista 9na). Otra compradora dijo que en los anuncios **ponían precios irreales** (Entrevista 20). Otra compradora dijo que el anuncio tenía **solo fotos y un número de WhatsApp; tuvieron que escribir para saber precio y dirección** (Entrevista 38). Otra compradora pagó **en dólares, por transferencia y efectivo** (Entrevista 40). La falta de precio público es la norma en Facebook y grupos de WhatsApp, no una excepción.
 
 **D2. ¿Qué porcentaje no especifica zona?** ✅ (n = 122)
 
@@ -305,7 +305,7 @@ La lectura social es directa: la opacidad no afecta a todos por igual. Quien pue
 
 ## Evidencia cualitativa complementaria: entrevistas a residentes
 
-Además de las 122 publicaciones verificadas, el proyecto incluye **37 entrevistas a residentes de Diez de Octubre** (E-01 a E-37), grabadas en audio y conservadas en `evidencias/entrevistas_audio/`. Estas entrevistas no constituyen una muestra representativa del municipio: son relatos individuales de personas que han comprado, vendido, alquilado o permutado vivienda. Se presentan como evidencia cualitativa que ilumina los hallazgos cuantitativos, no como estadística poblacional.
+Además de las 122 publicaciones verificadas, el proyecto incluye **41 entrevistas a residentes de Diez de Octubre** (E-01 a E-41), grabadas en audio y como transcripciones de texto, conservadas en `evidencias/entrevistas_audio/`. Estas entrevistas no constituyen una muestra representativa del municipio: son relatos individuales de personas que han comprado, vendido, alquilado o permutado vivienda. Se presentan como evidencia cualitativa que ilumina los hallazgos cuantitativos, no como estadística poblacional.
 
 ### Hallazgos de las entrevistas y su relación con los datos
 

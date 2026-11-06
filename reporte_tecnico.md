@@ -340,6 +340,9 @@ Este proyecto fue desarrollado utilizando el siguiente conjunto de herramientas:
 
 ### Herramientas de captura y transcripción
 - **whisper.cpp (modelo base)** — Transcripción automática de las 37 grabaciones de audio de entrevistas (`evidencias/entrevistas_audio/`). Las transcripciones no se incluyen en el repositorio para proteger la privacidad de los entrevistados.
+- **whisper.cpp (modelo base)** — Transcripción automática de las 24 entrevistas adicionales en texto (`evidencias/entrevistas_audio/`).
+- **whisper.cpp (modelo base)** — Transcripción automática de las 24 entrevistas adicionales en texto (`evidencias/entrevistas_audio/`).
+- **whisper.cpp (modelo base)** — Transcripción automática de las 24 entrevistas adicionales en texto (`evidencias/entrevistas_audio/`), realizadas directamente en formato escrito.
 - **Samsung Galaxy A56** — Dispositivo móvil utilizado para grabar las entrevistas de audio.
 - **Capturas de pantalla** — 86 capturas de publicaciones de Facebook (`evidencias/facebook_fotos/`), utilizadas como evidencia visual de anuncios publicados.
 
