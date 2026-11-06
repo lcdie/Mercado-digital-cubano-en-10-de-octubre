@@ -305,7 +305,7 @@ La lectura social es directa: la opacidad no afecta a todos por igual. Quien pue
 
 ## Evidencia cualitativa complementaria: entrevistas a residentes
 
-Además de las 122 publicaciones verificadas, el proyecto incluye **41 entrevistas a residentes de Diez de Octubre** (E-01 a E-41), grabadas en audio y como transcripciones de texto, conservadas en `evidencias/entrevistas_audio/`. Estas entrevistas no constituyen una muestra representativa del municipio: son relatos individuales de personas que han comprado, vendido, alquilado o permutado vivienda. Se presentan como evidencia cualitativa que ilumina los hallazgos cuantitativos, no como estadística poblacional.
+Además de las 122 publicaciones verificadas, el proyecto incluye **13 entrevistas a residentes de Diez de Octubre** (E-01 a E-13), grabadas en audio y conservadas en `evidencias/entrevistas_audio/`. Estas entrevistas no constituyen una muestra representativa del municipio: son relatos individuales de personas que han comprado, vendido, alquilado o permutado vivienda. Se presentan como evidencia cualitativa que ilumina los hallazgos cuantitativos, no como estadística poblacional.
 
 ### Hallazgos de las entrevistas y su relación con los datos
 
