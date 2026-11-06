@@ -92,6 +92,8 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 **A4. ¿Qué proporción de alquileres declara precio y en qué moneda?** ✅ (censo de 3 alquileres)
 
 > **1 de 3 (33.3%)** declaran precio. Ese único anuncio está en **CUP** (50,000 CUP); **0 de 3** lo declaran en USD. Los otros 2 alquileres no permiten conocer ni siquiera el orden de magnitud del precio. Con solo 3 casos, la proporción es un censo del subgrupo, no una estimación del mercado.
+>
+> **Evidencia cualitativa:** Las entrevistas confirman que el pago en efectivo y en moneda nacional es común en el alquiler. Una entrevistada que alquiló un cuarto declaró pagar **en CUP, mensual, en efectivo** (Entrevista 12); otra vendedora de casa familiar cobró **en efectivo, en CUP** (Entrevista 5). Otro comprador pagó **en dólares, en efectivo, todo de una vez** (Entrevista 11). El alquiler, en particular, opera frecuentemente por canales informales: una encuestada alquiló por **papel simple, sin notario**, y pagó **en CUP, mensual, en efectivo** (Entrevista 12).
 
 **A5. ¿La compra declara precio más que el alquiler?** ✅ (censo de ventas y alquileres)
 
@@ -155,6 +157,8 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 **C1. ¿Qué porcentaje de publicaciones con moneda declarada está en USD?** ✅ (n = 107)
 
 > **106 de 107 (99.1%)**. El único anuncio con moneda declarada que no está en USD es un alquiler en CUP (50,000 CUP). Las 15 publicaciones sin precio no declaran moneda y quedan fuera de este denominador.
+>
+> **Evidencia cualitativa:** Las entrevistas confirman la predominancia del dólar en las transacciones inmobiliarias. Una compradora pagó **en dólares, en efectivo, todo de una vez** (Entrevista 11); una vendedora de casa heredada cobró **en dólares, en efectivo, en la notaría** (Entrevista 17); una compradora con apoyo de familiar en el exterior pagó **en dólares, por transferencia y efectivo** (Entrevista 22). Otro comprador pagó **en dólares, en efectivo, por partes** (Entrevista 1). La dolarización no es solo un dato del anuncio: es la práctica dominante en las transacciones cerradas.
 
 **C2. ¿Qué porcentaje del total está en USD?** ✅ (n = 122)
 
@@ -182,6 +186,8 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 **D1. ¿Qué porcentaje no declara precio?** ✅ (n = 122)
 
 > **15 de 122 (12.3%)**. Son publicaciones que no permiten comparar precios sin contactar al vendedor. La ausencia es especialmente alta en alquiler (A4).
+>
+> **Evidencia cualitativa:** Las entrevistas confirman que la ausencia de precio en los anuncios es la norma, no la excepción. Una compradora relató que el anuncio tenía **solo fotos y un número de WhatsApp; tuvieron que escribir para saber precio y dirección** (Entrevista 1). Otro comprador dijo que los anuncios **pedían cosas raras o no daban dirección** (Entrevista 2). Un vendedor explicó que ponía el número de WhatsApp para que le escribieran y así daban los detalles (Entrevista 9na). La falta de precio público es la norma en Facebook y grupos de WhatsApp, no una excepción.
 
 **D2. ¿Qué porcentaje no especifica zona?** ✅ (n = 122)
 
@@ -204,6 +210,8 @@ Cada pregunta indica su nivel de evidencia: ✅ sólida (n ≥ 30 o censo comple
 **E1. ¿Qué porcentaje usa lenguaje informal («oportunidad», «ganga», «permuta», «intercambio» o «cambio»)?** ✅ (n = 122)
 
 > **12 de 122 (9.8%)**. El lenguaje informal no es mayoritario, pero aparece en una de cada doce publicaciones. Las 12 son de Revolico: Facebook no aporta texto suficiente para medir esta dimensión, así que el dato es una **cota inferior** del mercado unificado.
+>
+> **Evidencia cualitativa:** Las entrevistas confirman que la permuta y el intercambio son prácticas reales, aunque poco visibles en los anuncios. Una entrevistada participó en una **permuta familiar** entre su mamá y su tía: una quería una casa más pequeña y la otra necesitaba más espacio (Entrevista 3). Otra hizo una **permuta con deuda pendiente**, acordada ante notario pero con la deuda fuera del documento (Entrevista 10). Otra permutó una casa grande por una más pequeña, compensando la diferencia **en CUP, en efectivo** (Entrevista 19). Estas operaciones rara vez aparecen como tales en los anuncios digitales; se acuerdan cara a cara después del contacto inicial.
 
 **E2. ¿Qué palabras informales dominan?** ✅ (n = 12)
 
@@ -294,6 +302,32 @@ Los indicadores de ausencia no son un apéndice: son resultados del estudio. La 
 La lectura social es directa: la opacidad no afecta a todos por igual. Quien puede llamar, visitar y verificar accede a la información que falta; quien depende del anuncio para comparar queda en desventaja. El alquiler, además, es el segmento con mayor ausencia de precio y zona, lo que sugiere que una parte importante de ese mercado opera por canales informales o de confianza previa.
 
 > **Nota de duplicidad:** la base contiene un par de publicaciones que describen la misma propiedad y el mismo precio en Revolico y Facebook (`revolico-58326838`, `facebook-35`). Se conserva para no alterar el universo acordado de 122, pero el n efectivo sería 121 si se eliminara. El par no cambia las conclusiones: ambos registros son ventas en USD y no modifican las medianas de forma apreciable.
+
+## Evidencia cualitativa complementaria: entrevistas a residentes
+
+Además de las 122 publicaciones verificadas, el proyecto incluye **37 entrevistas a residentes de Diez de Octubre** (E-01 a E-37), grabadas en audio y conservadas en `evidencias/entrevistas_audio/`. Estas entrevistas no constituyen una muestra representativa del municipio: son relatos individuales de personas que han comprado, vendido, alquilado o permutado vivienda. Se presentan como evidencia cualitativa que ilumina los hallazgos cuantitativos, no como estadística poblacional.
+
+### Hallazgos de las entrevistas y su relación con los datos
+
+**1. Los anuncios digitales son el punto de partida, pero no el cierre.**  
+Múltiples entrevistados encontraron la vivienda por Facebook, Revolico o grupos de WhatsApp, pero el cierre de la operación fue siempre presencial: "Fuimos a ver la casa y hablamos con los vecinos antes de dar dinero" (Entrevista 1). Otro comprador dijo que "los anuncios pedían cosas raras o no daban dirección" (Entrevista 2). Un tercero explicó que "el anuncio solo daba el reparto; la dirección la dieron después de escribir" (Entrevista 8). Esto confirma la opacidad medida en el bloque D: el 12.3% de los anuncios no declara precio y el 25.4% no especifica zona.
+
+**2. El dólar domina los pagos, pero el CUP sigue presente.**  
+Una compradora pagó **en dólares, en efectivo, todo de una vez** (Entrevista 11). Una vendedora cobró **en dólares, en efectivo, en la notaría** (Entrevista 17). Otra compradora con apoyo de un familiar en el exterior pagó **en dólares, por transferencia y efectivo** (Entrevista 22). Pero también hay pagos en CUP: una vendedora cobró **en efectivo, en CUP** (Entrevista 5); una inquilina pagó **en CUP, mensual, en efectivo** (Entrevista 12); una permuta se compensó **en CUP, en efectivo** (Entrevista 19). Esto valida la dolarización medida (86.9% del universo en USD) y al mismo tiempo muestra que el CUP no ha desaparecido del todo.
+
+**3. La permuta y el cambio son reales, aunque invisibles en los anuncios.**  
+Una entrevistada participó en una **permuta familiar** entre su mamá y su tía (Entrevista 3). Otra hizo una **permuta con deuda pendiente**, acordada ante notario pero con la deuda fuera del documento (Entrevista 10). Otra permutó una casa grande por una más pequeña, compensando la diferencia **en CUP, en efectivo** (Entrevista 19). Estas operaciones rara vez aparecen con el lenguaje "permuta" o "cambio" en los anuncios digitales (solo 12 de 122, 9.8%); se negocian cara a cara tras el contacto inicial.
+
+**4. El alquiler opera por canales distintos a la compra.**  
+Una inquilina alquiló un cuarto **por boca a boca** (Entrevista 2); otra alquiló a un estudiante **por recomendación de una profesora** (Entrevista 23); otra vendió **por vecinos y por una señora que conocía compradores**, sin usar internet (Entrevista 5). Esto explica por qué el alquiler es el segmento más opaco: solo 3 de 122 publicaciones son de alquiler, 1 de ellas declara precio en CUP, y ninguna en USD. El alquiler funciona por redes de confianza previa, no por anuncios abiertos.
+
+**5. La desconfianza es el tema recurrente.**  
+Una compradora dijo que "al principio no" confiaba en el anuncio y fueron a ver la casa antes de dar dinero (Entrevista 1). Un vendedor sufrió un intento de estafa: un supuesto comprador pidió sus documentos por WhatsApp (Entrevista 21). Otro comprador exigió **escritura y abogado** y rechazó un anuncio cuyo vendedor no quería dar documentos (Entrevista 17). Esta desconfianza explica por qué el 12.3% de los anuncios no declara precio: quien no puede verificar queda expuesto a intermediación informal.
+
+**6. Los adultos mayores quedan fuera del mercado digital.**  
+Una vendedora mayor de edad declaró: "No tengo Revolico ni Facebook. Mi nieto me ayudó a buscar información, pero no publicamos" (Entrevista 5). Otro vendedor promocionó su casa **por boca a boca y un anuncio en la radio de la cuadra**; su hija puso fotos en Facebook, pero él no manejaba eso (Entrevista 16). Esto sugiere que el mercado digital subrepresenta a vendedores mayores, que recurren a canales tradicionales.
+
+---
 
 ## Conclusiones
 
