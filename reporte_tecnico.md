@@ -309,3 +309,36 @@ Resultado: 8/8 pasando.
 ---
 
 > **Nota sobre la evidencia:** los precios son precios de oferta, no de transacción. No hay datos homogéneos de metros cuadrados, habitaciones, baños, estado legal ni año de construcción. Las ausencias se reportan; no se imputan. Cualquier cifra citada de este reporte puede ser verificada ejecutando `scripts/cifras_control.py` y `tests/test_verificacion.py`.
+
+## 16. Herramientas utilizadas
+
+Este proyecto fue desarrollado utilizando el siguiente conjunto de herramientas:
+
+### Herramientas de desarrollo y programación
+- **Python 3.x** — Lenguaje de programación principal.
+- **pandas** — Manipulación y análisis de datos tabulares.
+- **matplotlib / seaborn** — Generación de visualizaciones estadísticas (gráficos de exposición).
+- **requests** — Peticiones HTTP para scraping y obtención de datos.
+- **BeautifulSoup4** — Parseo de HTML para extracción de anuncios de Revolico.
+- **weasyprint** — Conversión de Markdown a PDF para el informe final.
+- **markdown** — Procesamiento de archivos Markdown.
+
+### Herramientas geoespaciales y de datos
+- **GeoJSON municipal DPA 23.09** (`datos/geo/lha.geojson`) — Polígono de La Habana para verificación punto-en-polígono.
+- **Nominatim / OpenStreetMap** — Geocodificación de topónimos a coordenadas (caché en `datos/geo/geocoding_lha.json`).
+- **ONEI / Anuario Estadístico de Cuba** — Contexto oficial de población, vivienda y tenencia (`fuentes/anuario_estadistico_notas.md`).
+
+### Herramientas de control de calidad y reproducibilidad
+- **Git / GitHub** — Control de versiones y alojamiento del repositorio (`lcdie/Mercado-digital-cubano-en-10-de-octubre`).
+- **GitHub Actions** — Integración continua que ejecuta pruebas y cifras de control en cada push.
+- **OpenCode (Nemotron 3.5 Super VL Free)** — Asistente de IA utilizado para redactar scripts, documentar, estructurar el repositorio, revisar consistencia de cifras y redactar el informe y la presentación. Todas las decisiones de análisis y clasificación municipal fueron validadas por el autor del proyecto.
+
+### Herramientas de captura y transcripción
+- **Whisper** — Transcripción automática de las 13 grabaciones de audio de entrevistas (`evidencias/entrevistas_audio/`). Las transcripciones no se incluyen en el repositorio para proteger la privacidad de los entrevistados.
+- **Capturas de pantalla** — 86 capturas de publicaciones de Facebook (`evidencias/facebook_fotos/`), utilizadas como evidencia visual de anuncios publicados.
+
+### Herramientas de análisis estadístico
+- **Python `statistics`** — Cálculo de mediana, percentiles P10 y P90.
+- **`collections.Counter`** — Conteo de frecuencias por fuente, zona, tipo de inmueble, operación y moneda.
+- **JSON** — Formato de almacenamiento de bases de datos limpias y descartes.
+
